@@ -1,0 +1,76 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerAyuda",
+        "designer|userAlias": "containerayuda",
+        "html": "En construcción...",
+        "id": "containerAyuda",
+        "itemId": "containerAyuda",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen52098",
+    "designerId": "082cb9cb-390d-4295-9778-d54077deabde",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar",
+                "docked": "top",
+                "height": "10%",
+                "id": "toolbarContainerAyuda",
+                "style": "background: #3E3737"
+            },
+            "designerId": "cc32401c-2170-4c17-845b-736ceb0dc3f9",
+            "cn": [
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyImage5",
+                        "centered": true,
+                        "height": "100%%",
+                        "html": "<img src=\"./resources/logo/Logo_DD.png\" width=\"100%\" height=\"100%\">",
+                        "id": "imagenToolbarContainerAyuda",
+                        "itemId": "myimage2",
+                        "width": "40%"
+                    },
+                    "designerId": "a28f98ec-072b-4956-8ef8-62447ae07b41",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onImagenToolbarContainerAyudaTap",
+                                "fn": "onImagenToolbarContainerAyudaTap",
+                                "implHandler": [
+                                    "//Para devolverse hacia el container Inicio desde Ayuda",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerInicio\"));"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "ceed9f3d-40f0-4442-86ad-0b924242b0df"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

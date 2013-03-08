@@ -1,0 +1,992 @@
+{
+    "name": "didiBuffer",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 678,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "4660893e-6043-4677-9817-7dfe724af706": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "0c16d8f0-f8f4-44f4-b642-ef359bc39ba6": {
+            "paths": [
+                "metadata/view/tabPanelPrincipal",
+                "app/view/override/tabPanelPrincipal.js",
+                "app/view/tabPanelPrincipal.js"
+            ],
+            "className": "tabPanelPrincipal"
+        },
+        "4ef37034-bc8a-4264-9d05-fadfeb2a74ba": {
+            "paths": [
+                "metadata/view/containerInicio",
+                "app/view/override/containerInicio.js",
+                "app/view/containerInicio.js"
+            ],
+            "className": "containerInicio"
+        },
+        "d4fc699c-6a81-4f20-b7f0-df358bad9062": {
+            "paths": [
+                "metadata/store/storeCarouselInicio",
+                "app/store/override/storeCarouselInicio.js",
+                "app/store/storeCarouselInicio.js"
+            ],
+            "className": "storeCarouselInicio"
+        },
+        "6396d1b5-bba5-4c52-a141-c782016519b5": {
+            "paths": [
+                "metadata/model/modelCarouselInicio",
+                "app/model/override/modelCarouselInicio.js",
+                "app/model/modelCarouselInicio.js"
+            ],
+            "className": "modelCarouselInicio"
+        },
+        "ee5181cd-7e45-4088-9bf8-9aae1f3e23fd": {
+            "paths": [
+                "metadata/view/containerLogIn",
+                "app/view/override/containerLogIn.js",
+                "app/view/containerLogIn.js"
+            ],
+            "className": "containerLogIn"
+        },
+        "31fd4c96-61db-4878-8610-7d0cc837f732": {
+            "paths": [
+                "metadata/store/storeDidiRapidos",
+                "app/store/override/storeDidiRapidos.js",
+                "app/store/storeDidiRapidos.js"
+            ],
+            "className": "storeDidiRapidos"
+        },
+        "cdc90898-246e-40de-9f86-e302d05a85d1": {
+            "paths": [
+                "metadata/model/modelDidiRapidos",
+                "app/model/override/modelDidiRapidos.js",
+                "app/model/modelDidiRapidos.js"
+            ],
+            "className": "modelDidiRapidos"
+        },
+        "c59d9188-f37b-4ff1-8d56-3a945ebd823f": {
+            "paths": [
+                "metadata/view/BASURERO",
+                "app/view/override/BASURERO.js",
+                "app/view/BASURERO.js"
+            ],
+            "className": "BASURERO"
+        },
+        "c5d258a7-4d35-4466-964c-9d7e2be3ff76": {
+            "paths": [
+                "metadata/resource/packager",
+                "",
+                "packager.json"
+            ],
+            "className": "packager"
+        },
+        "166acb82-59a2-4e8b-9173-f559bd4eb73c": {
+            "paths": [
+                "metadata/view/containerCategorias",
+                "app/view/override/containerCategorias.js",
+                "app/view/containerCategorias.js"
+            ],
+            "className": "containerCategorias"
+        },
+        "483a3da4-b944-4ad4-8115-91fe07321f70": {
+            "paths": [
+                "metadata/store/storeCategorias",
+                "app/store/override/storeCategorias.js",
+                "app/store/storeCategorias.js"
+            ],
+            "className": "storeCategorias"
+        },
+        "1979fb48-cc1e-4960-bc10-b413a0ba4a2a": {
+            "paths": [
+                "metadata/model/modelCategorias",
+                "app/model/override/modelCategorias.js",
+                "app/model/modelCategorias.js"
+            ],
+            "className": "modelCategorias"
+        },
+        "9bc2644b-e417-4f9b-a552-70ab7515c428": {
+            "paths": [
+                "metadata/view/containerAppDidiRapidos",
+                "app/view/override/containerAppDidiRapidos.js",
+                "app/view/containerAppDidiRapidos.js"
+            ],
+            "className": "containerAppDidiRapidos"
+        },
+        "b1adf3d9-7994-4a17-be91-21874ccb46ea": {
+            "paths": [
+                "metadata/controller/controladorDataViewDidiRapidos",
+                "app/controller/override/controladorDataViewDidiRapidos.js",
+                "app/controller/controladorDataViewDidiRapidos.js"
+            ],
+            "className": "controladorDataViewDidiRapidos"
+        },
+        "96024e93-be84-4556-9eb7-ffccada68aef": {
+            "paths": [
+                "metadata/view/containerEventos",
+                "app/view/override/containerEventos.js",
+                "app/view/containerEventos.js"
+            ],
+            "className": "containerEventos"
+        },
+        "b6996316-2808-4275-990f-e4852042fbec": {
+            "paths": [
+                "metadata/model/modelEventos",
+                "app/model/override/modelEventos.js",
+                "app/model/modelEventos.js"
+            ],
+            "className": "modelEventos"
+        },
+        "623343ea-c997-4d7d-a131-21c92573f6ea": {
+            "paths": [
+                "metadata/store/storeEventos",
+                "app/store/override/storeEventos.js",
+                "app/store/storeEventos.js"
+            ],
+            "className": "storeEventos"
+        },
+        "a87ecdd3-62bc-41be-8e85-e83b15b848f3": {
+            "paths": [
+                "metadata/view/containerMapaPrincipal",
+                "app/view/override/containerMapaPrincipal.js",
+                "app/view/containerMapaPrincipal.js"
+            ],
+            "className": "containerMapaPrincipal"
+        },
+        "0ca9deae-9411-4400-8733-0643303784ba": {
+            "paths": [
+                "metadata/view/mapaCercaniaEventos",
+                "app/view/override/mapaCercaniaEventos.js",
+                "app/view/mapaCercaniaEventos.js"
+            ],
+            "className": "mapaCercaniaEventos"
+        },
+        "41e5da4b-a94a-42cc-af69-3350b58a0ac9": {
+            "paths": [
+                "metadata/resource/GoogleMapsAPI"
+            ],
+            "className": "GoogleMapsAPI"
+        },
+        "0618f83f-070a-475b-ba11-5b9aca815c44": {
+            "paths": [
+                "metadata/view/mapaContainerMapa",
+                "app/view/override/mapaContainerMapa.js",
+                "app/view/mapaContainerMapa.js"
+            ],
+            "className": "mapaContainerMapa"
+        },
+        "8acc0ec3-a6f7-4e87-99b8-dd85f93be847": {
+            "paths": [
+                "metadata/store/storeSelectFieldContainerMapa",
+                "app/store/override/storeSelectFieldContainerMapa.js",
+                "app/store/storeSelectFieldContainerMapa.js"
+            ],
+            "className": "storeSelectFieldContainerMapa"
+        },
+        "171e77c7-1f72-4614-aefb-524ae1901191": {
+            "paths": [
+                "metadata/model/modelSelectFieldContainerMapa",
+                "app/model/override/modelSelectFieldContainerMapa.js",
+                "app/model/modelSelectFieldContainerMapa.js"
+            ],
+            "className": "modelSelectFieldContainerMapa"
+        },
+        "9e2c7f29-7b73-4722-b63d-4920c4f61681": {
+            "paths": [
+                "metadata/model/modelListadoTotalDeLasEmpresas",
+                "app/model/override/modelListadoTotalDeLasEmpresas.js",
+                "app/model/modelListadoTotalDeLasEmpresas.js"
+            ],
+            "className": "modelListadoTotalDeLasEmpresas"
+        },
+        "7bb28e86-d037-41aa-8fec-40974cdd8e28": {
+            "paths": [
+                "metadata/store/storeListadoTotalDeLasEmpresas",
+                "app/store/override/storeListadoTotalDeLasEmpresas.js",
+                "app/store/storeListadoTotalDeLasEmpresas.js"
+            ],
+            "className": "storeListadoTotalDeLasEmpresas"
+        },
+        "84c925ac-b7c1-4d29-a8b7-deeb3e4a46e6": {
+            "paths": [
+                "metadata/view/containerOfertas",
+                "app/view/override/containerOfertas.js",
+                "app/view/containerOfertas.js"
+            ],
+            "className": "containerOfertas"
+        },
+        "082cb9cb-390d-4295-9778-d54077deabde": {
+            "paths": [
+                "metadata/view/containerAyuda",
+                "app/view/override/containerAyuda.js",
+                "app/view/containerAyuda.js"
+            ],
+            "className": "containerAyuda"
+        },
+        "ffe3229e-ae41-46cd-b5ee-791964bdf317": {
+            "paths": [
+                "metadata/store/storeSubcategorias",
+                "app/store/override/storeSubcategorias.js",
+                "app/store/storeSubcategorias.js"
+            ],
+            "className": "storeSubcategorias"
+        },
+        "14bb518f-703c-4efc-8dbf-21c62221b69d": {
+            "paths": [
+                "metadata/model/modelSubcategorias",
+                "app/model/override/modelSubcategorias.js",
+                "app/model/modelSubcategorias.js"
+            ],
+            "className": "modelSubcategorias"
+        },
+        "12d1b08c-2619-45d4-8f85-54fbacb02ae7": {
+            "paths": [
+                "metadata/view/containerSubcategorias",
+                "app/view/override/containerSubcategorias.js",
+                "app/view/containerSubcategorias.js"
+            ],
+            "className": "containerSubcategorias"
+        },
+        "1da1d939-470d-4a85-9f92-4882308b8e2a": {
+            "paths": [
+                "metadata/controller/controladorDataViewCategorias",
+                "app/controller/override/controladorDataViewCategorias.js",
+                "app/controller/controladorDataViewCategorias.js"
+            ],
+            "className": "controladorDataViewCategorias"
+        },
+        "63ce417f-73e2-4c2e-948f-6e0a14895edb": {
+            "paths": [
+                "metadata/store/storeListaEmpresasEnSubcategoria",
+                "app/store/override/storeListaEmpresasEnSubcategoria.js",
+                "app/store/storeListaEmpresasEnSubcategoria.js"
+            ],
+            "className": "storeListaEmpresasEnSubcategoria"
+        },
+        "1e9747dc-e232-4b25-b30e-8b66786830e7": {
+            "paths": [
+                "metadata/model/modelListaEmpresasEnSubcategoria",
+                "app/model/override/modelListaEmpresasEnSubcategoria.js",
+                "app/model/modelListaEmpresasEnSubcategoria.js"
+            ],
+            "className": "modelListaEmpresasEnSubcategoria"
+        },
+        "00ad7220-bbcb-4c03-9702-43cf64b5e768": {
+            "paths": [
+                "metadata/view/containerListaEmpresasEnSubcategoria",
+                "app/view/override/containerListaEmpresasEnSubcategoria.js",
+                "app/view/containerListaEmpresasEnSubcategoria.js"
+            ],
+            "className": "containerListaEmpresasEnSubcategoria"
+        },
+        "f71e63ca-37bc-4502-a8d9-804797400feb": {
+            "paths": [
+                "metadata/controller/controladorDataViewListaEmpresasEnSubcategoria",
+                "app/controller/override/controladorDataViewListaEmpresasEnSubcategoria.js",
+                "app/controller/controladorDataViewListaEmpresasEnSubcategoria.js"
+            ],
+            "className": "controladorDataViewListaEmpresasEnSubcategoria"
+        },
+        "ca9e649d-624c-4456-b47e-784789390675": {
+            "paths": [
+                "metadata/view/containerDescripcionEmpresa",
+                "app/view/override/containerDescripcionEmpresa.js",
+                "app/view/containerDescripcionEmpresa.js"
+            ],
+            "className": "containerDescripcionEmpresa"
+        },
+        "a352c3ce-aba0-4869-93f9-f7b3c7a01345": {
+            "paths": [
+                "metadata/view/containerSubEventos",
+                "app/view/override/containerSubEventos.js",
+                "app/view/containerSubEventos.js"
+            ],
+            "className": "containerSubEventos"
+        },
+        "b0b09fe8-d2da-4b6f-aa6c-77493f322b4b": {
+            "paths": [
+                "metadata/store/storeEmpresaEnDescripcionEmpresa",
+                "app/store/override/storeEmpresaEnDescripcionEmpresa.js",
+                "app/store/storeEmpresaEnDescripcionEmpresa.js"
+            ],
+            "className": "storeEmpresaEnDescripcionEmpresa"
+        },
+        "e8772d52-1f71-424e-8d7c-dee1a65fbb34": {
+            "paths": [
+                "metadata/model/modelEmpresaEnDescripcionEmpresa",
+                "app/model/override/modelEmpresaEnDescripcionEmpresa.js",
+                "app/model/modelEmpresaEnDescripcionEmpresa.js"
+            ],
+            "className": "modelEmpresaEnDescripcionEmpresa"
+        },
+        "5ec584a3-a041-4168-a372-7ce72f5d8c33": {
+            "paths": [
+                "metadata/view/containerDescripcionEventos",
+                "app/view/override/containerDescripcionEventos.js",
+                "app/view/containerDescripcionEventos.js"
+            ],
+            "className": "containerDescripcionEventos"
+        },
+        "6ea0b62f-6c24-479a-9bda-be1e2bb377a8": {
+            "paths": [
+                "metadata/view/containerFormularioGeolocalizacion",
+                "app/view/override/containerFormularioGeolocalizacion.js",
+                "app/view/containerFormularioGeolocalizacion.js"
+            ],
+            "className": "containerFormularioGeolocalizacion"
+        },
+        "c925aee1-90fd-4f6e-a095-e6ec879949f3": {
+            "paths": [
+                "metadata/store/storeDescripcionEventos",
+                "app/store/override/storeDescripcionEventos.js",
+                "app/store/storeDescripcionEventos.js"
+            ],
+            "className": "storeDescripcionEventos"
+        },
+        "aa8009ad-4eb8-47ad-8d32-2afacd9ee999": {
+            "paths": [
+                "metadata/model/modelDescripcionEventos",
+                "app/model/override/modelDescripcionEventos.js",
+                "app/model/modelDescripcionEventos.js"
+            ],
+            "className": "modelDescripcionEventos"
+        },
+        "69ccfa0e-4072-4752-af2f-667c6df528db": {
+            "paths": [
+                "metadata/store/storeSubEventos",
+                "app/store/override/storeSubEventos.js",
+                "app/store/storeSubEventos.js"
+            ],
+            "className": "storeSubEventos"
+        },
+        "5aa2936f-d0ec-42a8-8439-bd373e4755ce": {
+            "paths": [
+                "metadata/model/modelSubEventos",
+                "app/model/override/modelSubEventos.js",
+                "app/model/modelSubEventos.js"
+            ],
+            "className": "modelSubEventos"
+        },
+        "16c6a557-c57b-49ab-837d-0e7d208a02c4": {
+            "paths": [
+                "metadata/controller/controladorListaCatEventos",
+                "app/controller/override/controladorListaCatEventos.js",
+                "app/controller/controladorListaCatEventos.js"
+            ],
+            "className": "controladorListaCatEventos"
+        },
+        "1591e8d1-9d36-4ecb-997b-38519eec3baa": {
+            "paths": [
+                "metadata/view/containerModuloReservaciones",
+                "app/view/override/containerModuloReservaciones.js",
+                "app/view/containerModuloReservaciones.js"
+            ],
+            "className": "containerModuloReservaciones"
+        },
+        "96bdde08-0561-4826-a944-6b7357ebc95c": {
+            "paths": [
+                "metadata/view/containerMapaSolicitudTaxi",
+                "app/view/override/containerMapaSolicitudTaxi.js",
+                "app/view/containerMapaSolicitudTaxi.js"
+            ],
+            "className": "containerMapaSolicitudTaxi"
+        },
+        "d80d043e-7d74-4707-aa46-6880b5dcaf35": {
+            "paths": [
+                "metadata/view/mapaSolicitudTaxi",
+                "app/view/override/mapaSolicitudTaxi.js",
+                "app/view/mapaSolicitudTaxi.js"
+            ],
+            "className": "mapaSolicitudTaxi"
+        },
+        "05fc98aa-2fc7-4bd0-8f39-92c145256756": {
+            "paths": [
+                "metadata/store/storeEnvioSolicitudTaxi",
+                "app/store/override/storeEnvioSolicitudTaxi.js",
+                "app/store/storeEnvioSolicitudTaxi.js"
+            ],
+            "className": "storeEnvioSolicitudTaxi"
+        },
+        "c786c6f7-ff10-4d1d-9764-4ec2a76e2adc": {
+            "paths": [
+                "metadata/model/modelEstadoEnvio",
+                "app/model/override/modelEstadoEnvio.js",
+                "app/model/modelEstadoEnvio.js"
+            ],
+            "className": "modelEstadoEnvio"
+        },
+        "d5e60839-750b-47f0-a1b3-d4d37c3da77d": {
+            "paths": [
+                "metadata/controller/controladorDataViewDidiMapaPrincipalEnTabPanel",
+                "app/controller/override/controladorDataViewDidiMapaPrincipalEnTabPanel.js",
+                "app/controller/controladorDataViewDidiMapaPrincipalEnTabPanel.js"
+            ],
+            "className": "controladorDataViewDidiMapaPrincipalEnTabPanel"
+        },
+        "dc6cf7f4-38f1-486e-aa17-bd612537de43": {
+            "paths": [
+                "metadata/store/storeCategoriasEventos",
+                "app/store/override/storeCategoriasEventos.js",
+                "app/store/storeCategoriasEventos.js"
+            ],
+            "className": "storeCategoriasEventos"
+        },
+        "cbf5cd6d-1e03-405c-ac70-3b75d075b0d0": {
+            "paths": [
+                "metadata/model/modelCategoriasEventos",
+                "app/model/override/modelCategoriasEventos.js",
+                "app/model/modelCategoriasEventos.js"
+            ],
+            "className": "modelCategoriasEventos"
+        },
+        "511a8161-7d36-4eb7-bdc3-4a0007ddef2e": {
+            "paths": [
+                "metadata/controller/controladorDataViewDidiMapaEventos",
+                "app/controller/override/controladorDataViewDidiMapaEventos.js",
+                "app/controller/controladorDataViewDidiMapaEventos.js"
+            ],
+            "className": "controladorDataViewDidiMapaEventos"
+        },
+        "8233967b-6f81-4508-9027-9b56beff028b": {
+            "paths": [
+                "metadata/view/containerMapa",
+                "app/view/override/containerMapa.js",
+                "app/view/containerMapa.js"
+            ],
+            "className": "containerMapa"
+        },
+        "4690be3a-cde1-4a7a-8d6c-4bd6fbf4a774": {
+            "paths": [
+                "metadata/view/containerMapaEventos",
+                "app/view/override/containerMapaEventos.js",
+                "app/view/containerMapaEventos.js"
+            ],
+            "className": "containerMapaEventos"
+        },
+        "479f7320-80a8-473f-b3d4-d131738755ba": {
+            "paths": [
+                "metadata/view/containerCalendarioEventos",
+                "app/view/override/containerCalendarioEventos.js",
+                "app/view/containerCalendarioEventos.js"
+            ],
+            "className": "containerCalendarioEventos"
+        },
+        "49dcdd10-e45b-4481-9540-b83ea08bbd4b": {
+            "paths": [
+                "metadata/resource/css1"
+            ],
+            "className": "css1"
+        },
+        "a797fcd6-955a-4a2a-9ab7-c0a4d4bac17a": {
+            "paths": [
+                "metadata/view/containerBusquedaAvanzada",
+                "app/view/override/containerBusquedaAvanzada.js",
+                "app/view/containerBusquedaAvanzada.js"
+            ],
+            "className": "containerBusquedaAvanzada"
+        },
+        "e9ffb7d6-e59d-4e33-8d43-8edc41c11b25": {
+            "paths": [
+                "metadata/controller/controladorDataviewCategoriasBusquedaAvanzada",
+                "app/controller/override/controladorDataviewCategoriasBusquedaAvanzada.js",
+                "app/controller/controladorDataviewCategoriasBusquedaAvanzada.js"
+            ],
+            "className": "controladorDataviewCategoriasBusquedaAvanzada"
+        },
+        "84e32554-ba15-488c-9751-49d2f6308f6c": {
+            "paths": [
+                "metadata/controller/controladorListaSubategoriasBusquedaAvanzada",
+                "app/controller/override/controladorListaSubategoriasBusquedaAvanzada.js",
+                "app/controller/controladorListaSubategoriasBusquedaAvanzada.js"
+            ],
+            "className": "controladorListaSubategoriasBusquedaAvanzada"
+        },
+        "8d07aef3-b6df-44eb-854b-f6b557b2de91": {
+            "paths": [
+                "metadata/model/modelProvinciasBusquedaAvanzada",
+                "app/model/override/modelProvinciasBusquedaAvanzada.js",
+                "app/model/modelProvinciasBusquedaAvanzada.js"
+            ],
+            "className": "modelProvinciasBusquedaAvanzada"
+        },
+        "d5d91476-c6d0-49e9-8199-eb8cf1886040": {
+            "paths": [
+                "metadata/store/storeProvinciasBusquedaAvanzada",
+                "app/store/override/storeProvinciasBusquedaAvanzada.js",
+                "app/store/storeProvinciasBusquedaAvanzada.js"
+            ],
+            "className": "storeProvinciasBusquedaAvanzada"
+        },
+        "08fd7eaa-6305-43d1-9701-2dc7e83eee5b": {
+            "paths": [
+                "metadata/controller/controladorProvinciasBusquedaAvanzada",
+                "app/controller/override/controladorProvinciasBusquedaAvanzada.js",
+                "app/controller/controladorProvinciasBusquedaAvanzada.js"
+            ],
+            "className": "controladorProvinciasBusquedaAvanzada"
+        },
+        "602d2ecd-53dd-4c23-9410-3e0f2b5cf941": {
+            "paths": [
+                "metadata/store/storeCantonBusquedaAvanzada",
+                "app/store/override/storeCantonBusquedaAvanzada.js",
+                "app/store/storeCantonBusquedaAvanzada.js"
+            ],
+            "className": "storeCantonBusquedaAvanzada"
+        },
+        "18e340b7-f0df-4357-98be-c77dc34b61e5": {
+            "paths": [
+                "metadata/model/modelCantonBusquedaAvanzada",
+                "app/model/override/modelCantonBusquedaAvanzada.js",
+                "app/model/modelCantonBusquedaAvanzada.js"
+            ],
+            "className": "modelCantonBusquedaAvanzada"
+        },
+        "45cf4ea5-cb8d-4050-894a-70b5a3ef6100": {
+            "paths": [
+                "metadata/controller/controladorCantonBusquedaAvanzada",
+                "app/controller/override/controladorCantonBusquedaAvanzada.js",
+                "app/controller/controladorCantonBusquedaAvanzada.js"
+            ],
+            "className": "controladorCantonBusquedaAvanzada"
+        },
+        "92907c63-aead-4290-a90e-fda1b075a95a": {
+            "paths": [
+                "metadata/view/containerPromocionEmpresa",
+                "app/view/override/containerPromocionEmpresa.js",
+                "app/view/containerPromocionEmpresa.js"
+            ],
+            "className": "containerPromocionEmpresa"
+        },
+        "1c76cc62-9ef2-4647-b3e6-041f18f186e7": {
+            "paths": [
+                "metadata/model/modelReservaEvento",
+                "app/model/override/modelReservaEvento.js",
+                "app/model/modelReservaEvento.js"
+            ],
+            "className": "modelReservaEvento"
+        },
+        "90839b3d-d02b-4358-9456-5b6124d2c451": {
+            "paths": [
+                "metadata/model/modelEnvioSolicitudReserva",
+                "app/model/override/modelEnvioSolicitudReserva.js",
+                "app/model/modelEnvioSolicitudReserva.js"
+            ],
+            "className": "modelEnvioSolicitudReserva"
+        },
+        "b2ecd52b-93d4-4a6c-906a-31a85b274093": {
+            "paths": [
+                "metadata/store/storeEnvioSolicitudReserva",
+                "app/store/override/storeEnvioSolicitudReserva.js",
+                "app/store/storeEnvioSolicitudReserva.js"
+            ],
+            "className": "storeEnvioSolicitudReserva"
+        },
+        "33412f94-7df9-4566-aefb-badd33663000": {
+            "paths": [
+                "metadata/view/containerPrincipalDeApp",
+                "app/view/override/containerPrincipalDeApp.js",
+                "app/view/containerPrincipalDeApp.js"
+            ],
+            "className": "containerPrincipalDeApp"
+        },
+        "8bb8f7c3-8542-49d8-af8f-991474372fb4": {
+            "paths": [
+                "metadata/view/containerNotificacionesPerfilUsuario",
+                "app/view/override/containerNotificacionesPerfilUsuario.js",
+                "app/view/containerNotificacionesPerfilUsuario.js"
+            ],
+            "className": "containerNotificacionesPerfilUsuario"
+        },
+        "fdbede1c-f384-4f3e-a6cf-15e65d567bf3": {
+            "paths": [
+                "metadata/view/containerReservasPerfilUsuario",
+                "app/view/override/containerReservasPerfilUsuario.js",
+                "app/view/containerReservasPerfilUsuario.js"
+            ],
+            "className": "containerReservasPerfilUsuario"
+        },
+        "6c9ed1a9-144b-4789-b951-ccc41bfbb876": {
+            "paths": [
+                "metadata/store/storeReservaEvento",
+                "app/store/override/storeReservaEvento.js",
+                "app/store/storeReservaEvento.js"
+            ],
+            "className": "storeReservaEvento"
+        },
+        "b5f70155-4915-4203-a383-9edadbcc6442": {
+            "paths": [
+                "metadata/controller/controladorListaReservasPerfilUsuario",
+                "app/controller/override/controladorListaReservasPerfilUsuario.js",
+                "app/controller/controladorListaReservasPerfilUsuario.js"
+            ],
+            "className": "controladorListaReservasPerfilUsuario"
+        },
+        "7103e281-4d01-4e2c-9985-5d578f9bcc0d": {
+            "paths": [
+                "metadata/model/modelCancelarReservaPerfilUsuario",
+                "app/model/override/modelCancelarReservaPerfilUsuario.js",
+                "app/model/modelCancelarReservaPerfilUsuario.js"
+            ],
+            "className": "modelCancelarReservaPerfilUsuario"
+        },
+        "da9d2b47-a6fd-4421-90e4-73f7fb0ae552": {
+            "paths": [
+                "metadata/store/storeCancelarReservaPerfilUsuario",
+                "app/store/override/storeCancelarReservaPerfilUsuario.js",
+                "app/store/storeCancelarReservaPerfilUsuario.js"
+            ],
+            "className": "storeCancelarReservaPerfilUsuario"
+        },
+        "0f88869a-6d86-4b8b-a38a-ec8cb51a83fd": {
+            "paths": [
+                "metadata/view/containerFavoritosEmpresasPerfilUsuario",
+                "app/view/override/containerFavoritosEmpresasPerfilUsuario.js",
+                "app/view/containerFavoritosEmpresasPerfilUsuario.js"
+            ],
+            "className": "containerFavoritosEmpresasPerfilUsuario"
+        },
+        "69ce6e6e-1c49-42e3-bbeb-3a596d440792": {
+            "paths": [
+                "metadata/view/containerFavoritosEventosPerfilUsuario",
+                "app/view/override/containerFavoritosEventosPerfilUsuario.js",
+                "app/view/containerFavoritosEventosPerfilUsuario.js"
+            ],
+            "className": "containerFavoritosEventosPerfilUsuario"
+        },
+        "ee2f91b8-3f03-4f26-b3d2-16faf4fa0b49": {
+            "paths": [
+                "metadata/store/storeEnvioAgregadoFavoritosPerfilUsuario",
+                "app/store/override/storeEnvioAgregadoFavoritosPerfilUsuario.js",
+                "app/store/storeEnvioAgregadoFavoritosPerfilUsuario.js"
+            ],
+            "className": "storeEnvioAgregadoFavoritosPerfilUsuario"
+        },
+        "74ec5711-9569-41e9-b42e-edde9b0b0af9": {
+            "paths": [
+                "metadata/model/modelEnvioAgregadoFavoritosPerfilUsuario",
+                "app/model/override/modelEnvioAgregadoFavoritosPerfilUsuario.js",
+                "app/model/modelEnvioAgregadoFavoritosPerfilUsuario.js"
+            ],
+            "className": "modelEnvioAgregadoFavoritosPerfilUsuario"
+        },
+        "25cc4a05-1edd-4fae-9425-28f6da67088f": {
+            "paths": [
+                "metadata/store/storeExtraccionFavoritosPerfilUsuario",
+                "app/store/override/storeExtraccionFavoritosPerfilUsuario.js",
+                "app/store/storeExtraccionFavoritosPerfilUsuario.js"
+            ],
+            "className": "storeExtraccionFavoritosPerfilUsuario"
+        },
+        "7c494875-220c-4a63-87a6-ab96041b2953": {
+            "paths": [
+                "metadata/store/storeEnvioAgregadoFavoritosEmpresasPerfilUsuario",
+                "app/store/override/storeEnvioAgregadoFavoritosEmpresasPerfilUsuario.js",
+                "app/store/storeEnvioAgregadoFavoritosEmpresasPerfilUsuario.js"
+            ],
+            "className": "storeEnvioAgregadoFavoritosEmpresasPerfilUsuario"
+        },
+        "5827ce84-bbb8-44f9-8e85-4eacbfdc7bdf": {
+            "paths": [
+                "metadata/model/modelEnvioAgregadoFavoritosEmpresasPerfilUsuario",
+                "app/model/override/modelEnvioAgregadoFavoritosEmpresasPerfilUsuario.js",
+                "app/model/modelEnvioAgregadoFavoritosEmpresasPerfilUsuario.js"
+            ],
+            "className": "modelEnvioAgregadoFavoritosEmpresasPerfilUsuario"
+        },
+        "7001b775-a016-4f47-9642-749eae7dc9e1": {
+            "paths": [
+                "metadata/store/storeExtraccionFavoritasEmpresasPerfilUsuario",
+                "app/store/override/storeExtraccionFavoritasEmpresasPerfilUsuario.js",
+                "app/store/storeExtraccionFavoritasEmpresasPerfilUsuario.js"
+            ],
+            "className": "storeExtraccionFavoritasEmpresasPerfilUsuario"
+        },
+        "b73daf66-1486-498e-91ff-08ef4c2ee263": {
+            "paths": [
+                "metadata/store/storeVerificadoEventoFavoritosPerfilUsuario",
+                "app/store/override/storeVerificadoEventoFavoritosPerfilUsuario.js",
+                "app/store/storeVerificadoEventoFavoritosPerfilUsuario.js"
+            ],
+            "className": "storeVerificadoEventoFavoritosPerfilUsuario"
+        },
+        "ca48b6bb-a9a0-4c58-a2cd-82f338ef5141": {
+            "paths": [
+                "metadata/store/storeVerificadoEmpresaFavoritaPerfilUsuario",
+                "app/store/override/storeVerificadoEmpresaFavoritaPerfilUsuario.js",
+                "app/store/storeVerificadoEmpresaFavoritaPerfilUsuario.js"
+            ],
+            "className": "storeVerificadoEmpresaFavoritaPerfilUsuario"
+        },
+        "a8f244f9-37e5-40d7-be26-c57de7f83eee": {
+            "paths": [
+                "metadata/view/containerPerfilPerfilUsuario",
+                "app/view/override/containerPerfilPerfilUsuario.js",
+                "app/view/containerPerfilPerfilUsuario.js"
+            ],
+            "className": "containerPerfilPerfilUsuario"
+        },
+        "c24a5c11-ed80-4b9a-8c92-587bdb7a9329": {
+            "paths": [
+                "metadata/controller/controladorListaFavoritosEventosPerfilUsuario",
+                "app/controller/override/controladorListaFavoritosEventosPerfilUsuario.js",
+                "app/controller/controladorListaFavoritosEventosPerfilUsuario.js"
+            ],
+            "className": "controladorListaFavoritosEventosPerfilUsuario"
+        },
+        "5eb352c5-0975-4df3-87a6-4f02b5f7e9f9": {
+            "paths": [
+                "metadata/controller/controladorListaFavoritosEmpresasPerfilUsuario",
+                "app/controller/override/controladorListaFavoritosEmpresasPerfilUsuario.js",
+                "app/controller/controladorListaFavoritosEmpresasPerfilUsuario.js"
+            ],
+            "className": "controladorListaFavoritosEmpresasPerfilUsuario"
+        },
+        "ec7bca70-38fa-4f7a-aa28-527628777021": {
+            "paths": [
+                "metadata/model/modelModuloDetalleDescripcionEmpresa",
+                "app/model/override/modelModuloDetalleDescripcionEmpresa.js",
+                "app/model/modelModuloDetalleDescripcionEmpresa.js"
+            ],
+            "className": "modelModuloDetalleDescripcionEmpresa"
+        },
+        "0d1fe628-b692-4e4b-ade0-401ba7a67b6e": {
+            "paths": [
+                "metadata/store/storeModuloDetalleDescripcionEmpresa",
+                "app/store/override/storeModuloDetalleDescripcionEmpresa.js",
+                "app/store/storeModuloDetalleDescripcionEmpresa.js"
+            ],
+            "className": "storeModuloDetalleDescripcionEmpresa"
+        },
+        "6e8d60bd-821b-4d16-9da5-5fcd7e43cc87": {
+            "paths": [
+                "metadata/store/storePromocionEmpresa",
+                "app/store/override/storePromocionEmpresa.js",
+                "app/store/storePromocionEmpresa.js"
+            ],
+            "className": "storePromocionEmpresa"
+        },
+        "771f2fba-9f78-45b4-aae1-51d91da9f897": {
+            "paths": [
+                "metadata/model/modelPromocionEmpresa",
+                "app/model/override/modelPromocionEmpresa.js",
+                "app/model/modelPromocionEmpresa.js"
+            ],
+            "className": "modelPromocionEmpresa"
+        },
+        "93863c25-af59-4d0a-a9d4-d79ac7b68c80": {
+            "paths": [
+                "metadata/store/storeSubEventosMapa",
+                "app/store/override/storeSubEventosMapa.js",
+                "app/store/storeSubEventosMapa.js"
+            ],
+            "className": "storeSubEventosMapa"
+        },
+        "203a1f63-de12-45a4-afe8-5f81129d60e9": {
+            "paths": [
+                "metadata/store/storeConfigDidiReserva",
+                "app/store/override/storeConfigDidiReserva.js",
+                "app/store/storeConfigDidiReserva.js"
+            ],
+            "className": "storeConfigDidiReserva"
+        },
+        "5c7f2707-e9d3-41aa-a603-9274f670070c": {
+            "paths": [
+                "metadata/model/modelConfigDidiReserva",
+                "app/model/override/modelConfigDidiReserva.js",
+                "app/model/modelConfigDidiReserva.js"
+            ],
+            "className": "modelConfigDidiReserva"
+        },
+        "64a7c875-a39c-4668-9525-058680476981": {
+            "paths": [
+                "metadata/view/containerPickersReservaRestaurante",
+                "app/view/override/containerPickersReservaRestaurante.js",
+                "app/view/containerPickersReservaRestaurante.js"
+            ],
+            "className": "containerPickersReservaRestaurante"
+        },
+        "91702c1a-f7a1-466d-bef2-609c7514ae06": {
+            "paths": [
+                "metadata/store/storeInfoUsuarioLoginFacebook",
+                "app/store/override/storeInfoUsuarioLoginFacebook.js",
+                "app/store/storeInfoUsuarioLoginFacebook.js"
+            ],
+            "className": "storeInfoUsuarioLoginFacebook"
+        },
+        "9f1db438-ad66-4672-826d-8160599088e0": {
+            "paths": [
+                "metadata/model/modelInfoUsuarioLoginFacebook",
+                "app/model/override/modelInfoUsuarioLoginFacebook.js",
+                "app/model/modelInfoUsuarioLoginFacebook.js"
+            ],
+            "className": "modelInfoUsuarioLoginFacebook"
+        },
+        "785c6249-7d29-4a8f-90f9-0784a2c80490": {
+            "paths": [
+                "metadata/store/storeRefrescadoLatLngPosTaxista",
+                "app/store/override/storeRefrescadoLatLngPosTaxista.js",
+                "app/store/storeRefrescadoLatLngPosTaxista.js"
+            ],
+            "className": "storeRefrescadoLatLngPosTaxista"
+        },
+        "20ca63f2-9528-4af2-9991-185a95886844": {
+            "paths": [
+                "metadata/model/modelRefrescadoLatLngPosTaxista",
+                "app/model/override/modelRefrescadoLatLngPosTaxista.js",
+                "app/model/modelRefrescadoLatLngPosTaxista.js"
+            ],
+            "className": "modelRefrescadoLatLngPosTaxista"
+        },
+        "45c20472-c0f4-4f1e-9642-c786b484c512": {
+            "paths": [
+                "metadata/store/storeCambioEstadoSolicitudTaxi",
+                "app/store/override/storeCambioEstadoSolicitudTaxi.js",
+                "app/store/storeCambioEstadoSolicitudTaxi.js"
+            ],
+            "className": "storeCambioEstadoSolicitudTaxi"
+        },
+        "5360c44a-fc1b-4e4e-8c3d-cf2e2a5fb023": {
+            "paths": [
+                "metadata/model/modelCambioEstadoSolicitudTaxi",
+                "app/model/override/modelCambioEstadoSolicitudTaxi.js",
+                "app/model/modelCambioEstadoSolicitudTaxi.js"
+            ],
+            "className": "modelCambioEstadoSolicitudTaxi"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "64a7c875-a39c-4668-9525-058680476981",
+            "33412f94-7df9-4566-aefb-badd33663000",
+            "0c16d8f0-f8f4-44f4-b642-ef359bc39ba6",
+            "4ef37034-bc8a-4264-9d05-fadfeb2a74ba",
+            "ee5181cd-7e45-4088-9bf8-9aae1f3e23fd",
+            "166acb82-59a2-4e8b-9173-f559bd4eb73c",
+            "9bc2644b-e417-4f9b-a552-70ab7515c428",
+            "96024e93-be84-4556-9eb7-ffccada68aef",
+            "4690be3a-cde1-4a7a-8d6c-4bd6fbf4a774",
+            "479f7320-80a8-473f-b3d4-d131738755ba",
+            "a87ecdd3-62bc-41be-8e85-e83b15b848f3",
+            "84c925ac-b7c1-4d29-a8b7-deeb3e4a46e6",
+            "082cb9cb-390d-4295-9778-d54077deabde",
+            "12d1b08c-2619-45d4-8f85-54fbacb02ae7",
+            "00ad7220-bbcb-4c03-9702-43cf64b5e768",
+            "ca9e649d-624c-4456-b47e-784789390675",
+            "a352c3ce-aba0-4869-93f9-f7b3c7a01345",
+            "5ec584a3-a041-4168-a372-7ce72f5d8c33",
+            "6ea0b62f-6c24-479a-9bda-be1e2bb377a8",
+            "a797fcd6-955a-4a2a-9ab7-c0a4d4bac17a",
+            "1591e8d1-9d36-4ecb-997b-38519eec3baa",
+            "96bdde08-0561-4826-a944-6b7357ebc95c",
+            "8233967b-6f81-4508-9027-9b56beff028b",
+            "92907c63-aead-4290-a90e-fda1b075a95a",
+            "8bb8f7c3-8542-49d8-af8f-991474372fb4",
+            "fdbede1c-f384-4f3e-a6cf-15e65d567bf3",
+            "0f88869a-6d86-4b8b-a38a-ec8cb51a83fd",
+            "69ce6e6e-1c49-42e3-bbeb-3a596d440792",
+            "a8f244f9-37e5-40d7-be26-c57de7f83eee",
+            "c59d9188-f37b-4ff1-8d56-3a945ebd823f",
+            "0ca9deae-9411-4400-8733-0643303784ba",
+            "0618f83f-070a-475b-ba11-5b9aca815c44",
+            "d80d043e-7d74-4707-aa46-6880b5dcaf35"
+        ],
+        "store": [
+            "d4fc699c-6a81-4f20-b7f0-df358bad9062",
+            "31fd4c96-61db-4878-8610-7d0cc837f732",
+            "483a3da4-b944-4ad4-8115-91fe07321f70",
+            "623343ea-c997-4d7d-a131-21c92573f6ea",
+            "8acc0ec3-a6f7-4e87-99b8-dd85f93be847",
+            "7bb28e86-d037-41aa-8fec-40974cdd8e28",
+            "ffe3229e-ae41-46cd-b5ee-791964bdf317",
+            "63ce417f-73e2-4c2e-948f-6e0a14895edb",
+            "b0b09fe8-d2da-4b6f-aa6c-77493f322b4b",
+            "c925aee1-90fd-4f6e-a095-e6ec879949f3",
+            "69ccfa0e-4072-4752-af2f-667c6df528db",
+            "05fc98aa-2fc7-4bd0-8f39-92c145256756",
+            "dc6cf7f4-38f1-486e-aa17-bd612537de43",
+            "d5d91476-c6d0-49e9-8199-eb8cf1886040",
+            "602d2ecd-53dd-4c23-9410-3e0f2b5cf941",
+            "b2ecd52b-93d4-4a6c-906a-31a85b274093",
+            "6c9ed1a9-144b-4789-b951-ccc41bfbb876",
+            "da9d2b47-a6fd-4421-90e4-73f7fb0ae552",
+            "ee2f91b8-3f03-4f26-b3d2-16faf4fa0b49",
+            "25cc4a05-1edd-4fae-9425-28f6da67088f",
+            "7c494875-220c-4a63-87a6-ab96041b2953",
+            "7001b775-a016-4f47-9642-749eae7dc9e1",
+            "b73daf66-1486-498e-91ff-08ef4c2ee263",
+            "ca48b6bb-a9a0-4c58-a2cd-82f338ef5141",
+            "0d1fe628-b692-4e4b-ade0-401ba7a67b6e",
+            "6e8d60bd-821b-4d16-9da5-5fcd7e43cc87",
+            "93863c25-af59-4d0a-a9d4-d79ac7b68c80",
+            "203a1f63-de12-45a4-afe8-5f81129d60e9",
+            "91702c1a-f7a1-466d-bef2-609c7514ae06",
+            "785c6249-7d29-4a8f-90f9-0784a2c80490",
+            "45c20472-c0f4-4f1e-9642-c786b484c512"
+        ],
+        "controller": [
+            "b1adf3d9-7994-4a17-be91-21874ccb46ea",
+            "1da1d939-470d-4a85-9f92-4882308b8e2a",
+            "f71e63ca-37bc-4502-a8d9-804797400feb",
+            "16c6a557-c57b-49ab-837d-0e7d208a02c4",
+            "d5e60839-750b-47f0-a1b3-d4d37c3da77d",
+            "511a8161-7d36-4eb7-bdc3-4a0007ddef2e",
+            "e9ffb7d6-e59d-4e33-8d43-8edc41c11b25",
+            "84e32554-ba15-488c-9751-49d2f6308f6c",
+            "08fd7eaa-6305-43d1-9701-2dc7e83eee5b",
+            "45cf4ea5-cb8d-4050-894a-70b5a3ef6100",
+            "b5f70155-4915-4203-a383-9edadbcc6442",
+            "c24a5c11-ed80-4b9a-8c92-587bdb7a9329",
+            "5eb352c5-0975-4df3-87a6-4f02b5f7e9f9"
+        ],
+        "model": [
+            "6396d1b5-bba5-4c52-a141-c782016519b5",
+            "cdc90898-246e-40de-9f86-e302d05a85d1",
+            "1979fb48-cc1e-4960-bc10-b413a0ba4a2a",
+            "171e77c7-1f72-4614-aefb-524ae1901191",
+            "b6996316-2808-4275-990f-e4852042fbec",
+            "9e2c7f29-7b73-4722-b63d-4920c4f61681",
+            "14bb518f-703c-4efc-8dbf-21c62221b69d",
+            "1e9747dc-e232-4b25-b30e-8b66786830e7",
+            "e8772d52-1f71-424e-8d7c-dee1a65fbb34",
+            "aa8009ad-4eb8-47ad-8d32-2afacd9ee999",
+            "5aa2936f-d0ec-42a8-8439-bd373e4755ce",
+            "c786c6f7-ff10-4d1d-9764-4ec2a76e2adc",
+            "cbf5cd6d-1e03-405c-ac70-3b75d075b0d0",
+            "8d07aef3-b6df-44eb-854b-f6b557b2de91",
+            "18e340b7-f0df-4357-98be-c77dc34b61e5",
+            "1c76cc62-9ef2-4647-b3e6-041f18f186e7",
+            "90839b3d-d02b-4358-9456-5b6124d2c451",
+            "7103e281-4d01-4e2c-9985-5d578f9bcc0d",
+            "74ec5711-9569-41e9-b42e-edde9b0b0af9",
+            "5827ce84-bbb8-44f9-8e85-4eacbfdc7bdf",
+            "ec7bca70-38fa-4f7a-aa28-527628777021",
+            "771f2fba-9f78-45b4-aae1-51d91da9f897",
+            "5c7f2707-e9d3-41aa-a603-9274f670070c",
+            "9f1db438-ad66-4672-826d-8160599088e0",
+            "20ca63f2-9528-4af2-9991-185a95886844",
+            "5360c44a-fc1b-4e4e-8c3d-cf2e2a5fb023"
+        ],
+        "resource": [
+            "4660893e-6043-4677-9817-7dfe724af706",
+            "c5d258a7-4d35-4466-964c-9d7e2be3ff76",
+            "41e5da4b-a94a-42cc-af69-3350b58a0ac9",
+            "49dcdd10-e45b-4481-9540-b83ea08bbd4b",
+            "49dcdd10-e45b-4481-9540-b83ea08bbd4b"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

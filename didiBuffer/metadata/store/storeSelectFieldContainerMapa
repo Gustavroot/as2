@@ -1,0 +1,46 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeSelectFieldContainerMapa",
+        "autoSync": true,
+        "model": "modelSelectFieldContainerMapa",
+        "storeId": "storeSelectFieldContainerMapa"
+    },
+    "id": "ExtBox1-ext-gen34965",
+    "designerId": "8acc0ec3-a6f7-4e87-99b8-dd85f93be847",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy4",
+                "url": "http://www.didicr.com/php/categorias.php"
+            },
+            "designerId": "e1e16b3f-6e8c-41df-9d04-6addf46ad07b",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "68f2f127-5ad2-41c6-acc6-54fe50422b4b"
+                }
+            ]
+        }
+    ]
+}

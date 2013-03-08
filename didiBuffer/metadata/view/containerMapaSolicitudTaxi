@@ -1,0 +1,1269 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerMapaSolicitudTaxi",
+        "designer|userAlias": "containermapasolicitudtaxi",
+        "id": "containerMapaSolicitudTaxi",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen4193",
+    "designerId": "96bdde08-0561-4826-a944-6b7357ebc95c",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onContainerInitialize",
+                "fn": "onContainerInitialize",
+                "implHandler": [
+                    "funcionTrazadoLineaEntreTaxistaYUsuario=function(){",
+                    "    //aqui es donde se hace uso de storeRefrescadoLatLngPosTaxista",
+                    "    //alert(\"feg5ry\");",
+                    "    setTimeout(funcionTrazadoLineaEntreTaxistaYUsuario,1000);//?",
+                    "};",
+                    "",
+                    "",
+                    "//Esta funcion se llama cuando se ha asociado un taxi",
+                    "//al pasajero",
+                    "funcionLadoPasajeroTaxiAsociado=function(buttonId){",
+                    "    if(buttonId==\"no\"){",
+                    "        //Con esta linea se hace que aparezca el panel, ya que se ha decidido",
+                    "        //no continuar con la solicitud de taxi",
+                    "        Ext.getCmp(\"panelPorQueCanceloAceptacionDeTaxi\").setHidden(0);",
+                    "        //Con esta linea se oculta el boton de cancelado, que es el que se acaba de",
+                    "        //presionar",
+                    "        Ext.getCmp(\"containerBotonCancelarPedidoTaxi\").setHidden(1);",
+                    "        //Con estas dos lineas, se mandan los parametros necesarios para que en la base",
+                    "        //de datos quede registrado que ya no se esta pidiendo taxi por parte de este",
+                    "        //usuario",
+                    "        Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('idPedido',Ext.getStore(\"storeEnvioSolicitudTaxi\").first().get(\"idPedido\"));//En vez de 66 aqui va Ext.getStore(\"storeEnvioSolicitudTaxi\").first().get(\"idPedido\")",
+                    "        Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('estado',6);",
+                    "        Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").load();",
+                    "    }",
+                    "    else{",
+                    "        //alert();",
+                    "        Ext.getCmp(\"containerBotonCancelarTaxiEnCamino\").setHidden(0);",
+                    "        Ext.getCmp(\"containerBotonYaRecogieronAlPasajero\").setHidden(0);",
+                    "        Ext.Msg.alert('Aviso', 'Taxi en camino.', Ext.emptyFn);",
+                    "        //Con estas tres lineas se ocultan los botones para configuracion del envio",
+                    "        //ya que ya se ha solicitado el taxi",
+                    "        Ext.getCmp(\"containerBotonVolverPosActual\").setHidden(1);",
+                    "        Ext.getCmp(\"containerBotonEnviarSolicitud\").setHidden(1);",
+                    "        Ext.getCmp(\"containerBotonAjustesPedidoTaxi\").setHidden(1);",
+                    "        //Con esta linea se hace aparecer el boton que da la opcion de cancelar",
+                    "        //el pedido del taxi",
+                    "        Ext.getCmp(\"containerBotonCancelarTaxiEnCamino\").setHidden(0);",
+                    "",
+                    "        //En caso de que el usuario acepte el taxi, se hace un trazado de la linea entre el",
+                    "        //taxista y el usuario",
+                    "",
+                    "        funcionTrazadoLineaEntreTaxistaYUsuario();",
+                    "",
+                    "        Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('idPedido',Ext.getStore(\"storeEnvioSolicitudTaxi\").first().get(\"idPedido\"));//En vez de 66 aqui va Ext.getStore(\"storeEnvioSolicitudTaxi\").first().get(\"idPedido\")",
+                    "        Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('estado',3);",
+                    "        Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").load();",
+                    "",
+                    "",
+                    "    }",
+                    "};"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "e8db4c95-60ee-46fe-b98b-a1aa0f4b0675"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "20958f1f-14e8-4137-84f5-8643c60a9baf",
+            "masterInstanceId": "ExtBox1-ext-gen6377"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer1",
+                "border": 0,
+                "bottom": "10%",
+                "height": "10%",
+                "id": "containerBotonVolverPosActual",
+                "left": "40%",
+                "style": "background: transparent",
+                "width": "20%",
+                "layout": "fit"
+            },
+            "designerId": "32d5dca0-607f-4ae3-8579-227b2a5d33d2",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton",
+                        "height": "100%",
+                        "id": "botonVolverPoActual",
+                        "ui": "confirm-round",
+                        "width": "100%",
+                        "iconCls": "locate",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "d7b0c2e8-e6ca-454a-ba72-9dc518e31abf",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Con este codigo se permite que el mapa se vuelva a centrar en la posicion",
+                                    "//actual propia",
+                                    "if (navigator.geolocation) {",
+                                    "    navigator.geolocation.getCurrentPosition(",
+                                    "    function(position){",
+                                    "        //Se crea un objeto de posicion, con latitud y longitud actuales",
+                                    "        posActual = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);",
+                                    "        Ext.getCmp(\"mapaSolicitudTaxi\").setMapCenter({latitude: posActual.lat(), longitude: posActual.lng()});",
+                                    "    }",
+                                    "    );",
+                                    "}",
+                                    ""
+                                ]
+                            },
+                            "designerId": "ddb55d7e-d99a-4754-96ef-36e0e03074ee"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer2",
+                "border": 0,
+                "bottom": "10%",
+                "height": "10%",
+                "id": "containerBotonEnviarSolicitud",
+                "left": "70%",
+                "style": "background: transparent",
+                "width": "20%",
+                "layout": "fit"
+            },
+            "designerId": "87e14a73-aa96-42db-b2b2-b3ea5de125b9",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton1",
+                        "height": "100%",
+                        "id": "botonEnviarSolicitud",
+                        "ui": "action-round",
+                        "width": "100%",
+                        "iconCls": "action",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "ade485ee-d0bf-47ac-8043-4eaa0c451878",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "try{",
+                                    "    //Se extraen la latitud y longitud originales",
+                                    "    latitudeParaPeticion=markerPosActualDidiTaxi.getPosition().lat();",
+                                    "    longitudeParaPeticion=markerPosActualDidiTaxi.getPosition().lng();",
+                                    "    var variableSePudoObtenerUbicacionDelPedidor=1;",
+                                    "}",
+                                    "catch(e){",
+                                    "    var variableSePudoObtenerUbicacionDelPedidor=0;",
+                                    "    Ext.Msg.alert('Aviso', 'No se pudo obtener su ubicación.', Ext.emptyFn);",
+                                    "    latitudeParaPeticion=10.509417;",
+                                    "    longitudeParaPeticion=-84.421692;",
+                                    "}",
+                                    "",
+                                    "",
+                                    "",
+                                    "//if(variableSePudoObtenerUbicacionDelPedidor===1){",
+                                    "//Se extrae la fecha",
+                                    "var fecha2= new Date();",
+                                    "//Como se quiere pedir un taxi, se hace la solicitud enviando el pedido y toda",
+                                    "//su configuracion con extraparams",
+                                    "",
+                                    "//alert(latitudeParaPeticion);",
+                                    "//alert(longitudeParaPeticion);",
+                                    "",
+                                    "//Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('idPedido',66);",
+                                    "Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('idUsuario',idPerfilUsuarioDidi);",
+                                    "Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('latitud',latitudeParaPeticion);",
+                                    "Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('longitud',longitudeParaPeticion);",
+                                    "Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('tarjeta',Ext.getCmp(\"toggleTarjeta\").getValue());",
+                                    "try{",
+                                    "    Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('descripcion',Ext.getCmp(\"textAreaAjustesPedidoTaxi\").getValue());",
+                                    "}",
+                                    "catch(e){",
+                                    "    Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('descripcion',\"Nota vacía.\");",
+                                    "}",
+                                    "Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('estado',2);",
+                                    "Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('fecha',fecha2);",
+                                    "Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('silla',Ext.getCmp(\"toggleDiversidadFuncional\").getValue());",
+                                    "Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('mascota',Ext.getCmp(\"toggleMascotas\").getValue());",
+                                    "Ext.getStore(\"storeEnvioSolicitudTaxi\").getProxy().setExtraParam('pasajeros',Ext.getCmp(\"spinnerFieldCantidadPersonas\").getValue());",
+                                    "Ext.getStore(\"storeEnvioSolicitudTaxi\").load();",
+                                    "",
+                                    "//Se carga el store, para completar el pedido",
+                                    "//Ext.getStore(\"storeEnvioSolicitudTaxi\").load();",
+                                    "//Con estas tres lineas se ocultan los botones para configuracion del envio",
+                                    "//ya que ya se ha solicitado el taxi",
+                                    "Ext.getCmp(\"containerBotonVolverPosActual\").setHidden(1);",
+                                    "Ext.getCmp(\"containerBotonEnviarSolicitud\").setHidden(1);",
+                                    "Ext.getCmp(\"containerBotonAjustesPedidoTaxi\").setHidden(1);",
+                                    "//Con esta linea se hace aparecer el boton que da la opcion de cancelar",
+                                    "//el pedido del taxi",
+                                    "Ext.getCmp(\"containerBotonCancelarPedidoTaxi\").setHidden(0);    ",
+                                    "",
+                                    "//Se avisa que se ha pedido el taxi",
+                                    "Ext.Msg.alert('Taxi solicitado', 'Espere mientras se encuentra un taxi para usted.', Ext.emptyFn);",
+                                    "",
+                                    "//}"
+                                ]
+                            },
+                            "designerId": "b18262be-8f52-42a2-8a34-60b2d7b0d572"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer3",
+                "border": 0,
+                "bottom": "10%",
+                "height": "10%",
+                "id": "containerBotonAjustesPedidoTaxi",
+                "left": "10%",
+                "style": "background: transparent",
+                "width": "20%",
+                "layout": "fit"
+            },
+            "designerId": "a8a377d2-8a7e-4a8b-9d02-064052d24e69",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton2",
+                        "height": "100%",
+                        "id": "botonAjustesPedidoTaxi",
+                        "ui": "action-round",
+                        "width": "100%",
+                        "iconCls": "compose",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "850a8315-2a59-4308-b84b-00e197dd70d3",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Se despliega el panel, para configurar el pedido",
+                                    "Ext.getCmp(\"panelAjustesPedidoTaxi\").setHidden(0);"
+                                ]
+                            },
+                            "designerId": "9bc262fc-2828-4a55-b05b-2b7052250ee3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel",
+                "height": "80%",
+                "hidden": true,
+                "id": "panelAjustesPedidoTaxi",
+                "itemId": "panelAjustesPedidoTaxi",
+                "left": "20%",
+                "top": "10%",
+                "width": "60%",
+                "modal": true
+            },
+            "designerId": "d0f56952-df5e-4647-b5cc-1a9edf319c61",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMypanelInitialize",
+                        "fn": "onMypanelInitialize",
+                        "implHandler": [
+                            "//panelAjustesPedidoTaxi=this;"
+                        ],
+                        "name": "initialize"
+                    },
+                    "designerId": "23c206e8-bdf7-4e47-8154-8ada3c158ce9"
+                },
+                {
+                    "type": "spinnerfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpinnerField",
+                        "height": "10%",
+                        "id": "spinnerFieldCantidadPersonas",
+                        "itemId": "spinnerFieldCantidadPersonas",
+                        "right": "5%",
+                        "top": "52%",
+                        "width": "90%",
+                        "label": null,
+                        "maxValue": 14,
+                        "minValue": 1,
+                        "stepValue": 1,
+                        "cycle": true,
+                        "defaultValue": 4
+                    },
+                    "designerId": "574e54a1-0dc9-49cd-9dad-2a37e64ae446",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMyspinnerfieldInitialize",
+                                "fn": "onMyspinnerfieldInitialize",
+                                "implHandler": [
+                                    "//spinnerFieldCantidadPersonas=this;"
+                                ],
+                                "name": "initialize"
+                            },
+                            "designerId": "f646cb0e-e602-4a66-8cdc-63067e7ae9d4"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton3",
+                        "height": "8%",
+                        "id": "botonListoPanelAjustesPedidoTaxi",
+                        "itemId": null,
+                        "left": "20%",
+                        "top": "90%",
+                        "ui": "confirm",
+                        "width": "60%",
+                        "text": "Listo"
+                    },
+                    "designerId": "3257ea4e-2296-4d2a-9dfd-c7c220100cf9",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Se oculta el panel que contiene a este boton",
+                                    "Ext.getCmp(\"panelAjustesPedidoTaxi\").setHidden(1);",
+                                    "//Se avisa que se han guardado las especificaciones del pedido",
+                                    "Ext.Msg.alert('Aviso', 'Especificaciones guardadas.', Ext.emptyFn);"
+                                ]
+                            },
+                            "designerId": "cedf21ee-b8fe-4542-b559-8217dd06b6bd"
+                        }
+                    ]
+                },
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyContainer4",
+                        "height": "15%",
+                        "html": "<img src=\"http://www.castorin.com/img/metodo-pago-tarjeta-de-credito.jpg\" width=\"30%\" height=\"100%\">",
+                        "id": "containerImagenTarjeta",
+                        "top": "2%",
+                        "width": "100%"
+                    },
+                    "designerId": "ffcf6239-d384-4f2b-874f-e89034cf2731",
+                    "cn": [
+                        {
+                            "type": "togglefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyToggleField",
+                                "height": "100%",
+                                "id": "toggleTarjeta",
+                                "itemId": "toggleTarjeta",
+                                "right": "0%",
+                                "top": null,
+                                "width": "60%",
+                                "label": null
+                            },
+                            "designerId": "9a87c57b-ac3f-44b5-8f5b-456b6f964bdf"
+                        }
+                    ]
+                },
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyContainer5",
+                        "height": "15%",
+                        "html": "<img src=\"http://a0.twimg.com/profile_images/2261509965/Minusvalidos_normal.jpg\" height=\"100%\" width=\"30%\">",
+                        "id": "containerImagenDiversidadFuncional",
+                        "top": "20%",
+                        "width": "100%"
+                    },
+                    "designerId": "12346769-838c-4a7e-8075-7f493601c206",
+                    "cn": [
+                        {
+                            "type": "togglefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyToggleField1",
+                                "height": "100%",
+                                "id": "toggleDiversidadFuncional",
+                                "itemId": "toggleDiversidadFuncional",
+                                "right": "0%",
+                                "top": null,
+                                "width": "60%",
+                                "label": null
+                            },
+                            "designerId": "a68db8c2-dfa3-4c3c-95b7-206ce997c2f4"
+                        }
+                    ]
+                },
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyContainer6",
+                        "height": "15%",
+                        "html": "<img src=\"http://profile-a.xx.fbcdn.net/hprofile-prn1/174661_200191673361729_963545762_q.jpg\" height=\"100%\" width=\"30%\">",
+                        "id": "containerImagenMascota",
+                        "top": "36%",
+                        "width": "100%"
+                    },
+                    "designerId": "0ec811d6-2b57-48a7-b993-641f70c022c7",
+                    "cn": [
+                        {
+                            "type": "togglefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyToggleField2",
+                                "height": "100%",
+                                "id": "toggleMascotas",
+                                "itemId": "toggleMascotas",
+                                "right": "0%",
+                                "top": null,
+                                "width": "60%",
+                                "label": null
+                            },
+                            "designerId": "203634c2-0487-4a8d-bd4f-0997d6c8ec22"
+                        }
+                    ]
+                },
+                {
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea2",
+                        "height": "24%",
+                        "id": "textAreaAjustesPedidoTaxi",
+                        "top": "65%",
+                        "label": null,
+                        "placeHolder": "Nota"
+                    },
+                    "designerId": "2175ffca-6ef1-40a5-b9cc-0ed4b6905768"
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer9",
+                "height": "10%",
+                "hidden": true,
+                "id": "containerBotonCancelarPedidoTaxi",
+                "left": "15%",
+                "top": "90%",
+                "width": "70%",
+                "layout": "fit"
+            },
+            "designerId": "2081e38b-a9a3-463b-bc97-2d8c1deb95f6",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "id": "botonCancelarPedidoTaxi",
+                        "ui": "decline",
+                        "text": "Cancelar"
+                    },
+                    "designerId": "ab266d70-4f8a-43f5-b053-79ca965a63c5",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Con esta linea se hace que aparezca el panel, ya que se ha decidido",
+                                    "//no continuar con la solicitud de taxi",
+                                    "Ext.getCmp(\"panelPorQueCanceloPedidoTaxi\").setHidden(0);",
+                                    "//Con esta linea se oculta el boton de cancelado, que es el que se acaba de",
+                                    "//presionar",
+                                    "Ext.getCmp(\"containerBotonCancelarPedidoTaxi\").setHidden(1);",
+                                    "//Con estas dos lineas, se mandan los parametros necesarios para que en la base",
+                                    "//de datos quede registrado que ya no se esta pidiendo taxi por parte de este",
+                                    "//usuario",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('idPedido',Ext.getStore(\"storeEnvioSolicitudTaxi\").first().get(\"idPedido\"));",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('estado',6);",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").load();"
+                                ]
+                            },
+                            "designerId": "06aeddcb-8785-486d-97a0-d7c0d2d3e65a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer9",
+                "height": "10%",
+                "hidden": true,
+                "id": "containerBotonCancelarTaxiEnCamino",
+                "left": "15%",
+                "top": "90%",
+                "width": "70%",
+                "layout": "fit"
+            },
+            "designerId": "1d256173-9067-43a5-8f21-9be749bd639f",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "id": "botonCancelarTaxiEnCamino",
+                        "ui": "decline",
+                        "text": "Cancelar"
+                    },
+                    "designerId": "f0d6ffe5-ac63-4a01-87b0-7b3af3ff6250",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Con esta linea se hace que aparezca el panel, ya que se ha decidido",
+                                    "//no continuar con la solicitud de taxi",
+                                    "Ext.getCmp(\"panelPorQueCanceloTaxiEnCamino\").setHidden(0);",
+                                    "//Con esta linea se oculta el boton de cancelado, que es el que se acaba de",
+                                    "//presionar",
+                                    "Ext.getCmp(\"containerBotonCancelarPedidoTaxi\").setHidden(1);",
+                                    "//Con esta linea se oculta el boton de cancelado, que es el que se acaba de",
+                                    "//presionar",
+                                    "Ext.getCmp(\"containerBotonCancelarTaxiEnCamino\").setHidden(1);",
+                                    "Ext.getCmp(\"containerBotonYaRecogieronAlPasajero\").setHidden(1);",
+                                    "//Con estas dos lineas, se mandan los parametros necesarios para que en la base",
+                                    "//de datos quede registrado que ya no se esta pidiendo taxi por parte de este",
+                                    "//usuario",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('idPedido',Ext.getStore(\"storeEnvioSolicitudTaxi\").first().get(\"idPedido\"));",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('estado',6);",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").load();"
+                                ]
+                            },
+                            "designerId": "812146b6-c08f-4ff8-870b-19a7e5790af7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer9",
+                "height": "10%",
+                "hidden": true,
+                "id": "containerBotonYaRecogieronAlPasajero",
+                "left": "15%",
+                "top": "80%",
+                "width": "70%",
+                "layout": "fit"
+            },
+            "designerId": "461bfd2d-549c-4e74-981d-d0fea15b6e30",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "id": "botonYaMeRecogieronPedidoTaxi",
+                        "ui": "confirm",
+                        "text": "Ya pasó por mí"
+                    },
+                    "designerId": "20a2da77-f23c-4355-a1fa-2b43a4014172",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Con esta linea se oculta el boton de cancelado, que es el que se acaba de",
+                                    "//presionar",
+                                    "Ext.getCmp(\"containerBotonCancelarTaxiEnCamino\").setHidden(1);",
+                                    "Ext.getCmp(\"containerBotonYaRecogieronAlPasajero\").setHidden(1);",
+                                    "Ext.getCmp(\"containerBotonYaTerminoElViaje\").setHidden(0);",
+                                    "//Con estas dos lineas, se mandan los parametros necesarios para que en la base",
+                                    "//de datos quede registrado que ya no se esta pidiendo taxi por parte de este",
+                                    "//usuario",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('idPedido',Ext.getStore(\"storeEnvioSolicitudTaxi\").first().get(\"idPedido\"));",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('estado',4);",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").load();"
+                                ]
+                            },
+                            "designerId": "066acb7f-d181-4558-aadb-82587817bfd7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer9",
+                "height": "10%",
+                "hidden": true,
+                "id": "containerBotonYaTerminoElViaje",
+                "left": "15%",
+                "top": "90%",
+                "width": "70%",
+                "layout": "fit"
+            },
+            "designerId": "5fe517ba-bf05-4156-86e1-8ac0ffb119d6",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "id": "botonViajeTerminado",
+                        "ui": "confirm",
+                        "text": "Viaje terminado"
+                    },
+                    "designerId": "d49249d4-bb12-4930-96eb-9e4e90d009ed",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"containerBotonYaTerminoElViaje\").setHidden(1);",
+                                    "Ext.getCmp(\"containerBotonVolverPosActual\").setHidden(0);",
+                                    "Ext.getCmp(\"containerBotonEnviarSolicitud\").setHidden(0);",
+                                    "Ext.getCmp(\"containerBotonAjustesPedidoTaxi\").setHidden(0);",
+                                    "//Se pregunta para si se quiere aportar en retroalimentacion",
+                                    "extMessageBox=Ext.Msg.confirm('Aviso', 'Quiere contarnos cómo estuvo?.', Ext.emptyFn);",
+                                    "//Con estas dos lineas, se mandan los parametros necesarios para que en la base",
+                                    "//de datos quede registrado que ya no se esta pidiendo taxi por parte de este",
+                                    "//usuario",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('idPedido',Ext.getStore(\"storeEnvioSolicitudTaxi\").first().get(\"idPedido\"));",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").getProxy().setExtraParam('estado',5);",
+                                    "Ext.getStore(\"storeCambioEstadoSolicitudTaxi\").load();"
+                                ]
+                            },
+                            "designerId": "4ce82f30-c8fe-4408-8e99-3a71db9b9b34"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel1",
+                "height": "80%",
+                "hidden": true,
+                "id": "panelPorQueCanceloPedidoTaxi",
+                "left": "15%",
+                "top": "10%",
+                "width": "70%"
+            },
+            "designerId": "aad13815-4898-4baf-9055-34035e51fc68",
+            "cn": [
+                {
+                    "type": "titlebar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTitleBar",
+                        "docked": "top",
+                        "id": "titleBarPanelPorQueCanceloPedidoTaxi",
+                        "title": "Por que cancelo?"
+                    },
+                    "designerId": "1d8bb7fb-b338-4d64-afab-a1978beca1bf"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "id": "checkbox1PanelPorQueCanceloPedidoTaxi",
+                        "label": "Duraron mucho.",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "51167a76-7476-430e-a299-032aa8009b0a"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "id": "checkbox2PanelPorQueCanceloPedidoTaxi",
+                        "label": "Consegui otra forma.",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "bb696c32-c1db-4059-8aca-f10779116cc0"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "id": "checkbox3PanelPorQueCanceloPedidoTaxi",
+                        "label": "Otro.",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "7f6b29e5-a2f6-403f-8e43-cdd9f122b3a9"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton6",
+                        "docked": "bottom",
+                        "id": "botonListoPanelPorQueCanceloPedidoTaxi",
+                        "ui": "confirm",
+                        "text": "Listo"
+                    },
+                    "designerId": "b1950e8a-6804-4632-b4db-226a5a972ab2",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Con esta linea se oculta el panel en el que se esta, ya que ya se termino de",
+                                    "//elegir las razones por las que no quiso continuar con el pedido del taxi",
+                                    "Ext.getCmp(\"panelPorQueCanceloPedidoTaxi\").setHidden(1);",
+                                    "//Con estas tres lineas se hace que vuelvan a aparecer los tres botones",
+                                    "//para lograr el envio de la solicitud de taxi",
+                                    "Ext.getCmp(\"containerBotonVolverPosActual\").setHidden(0);",
+                                    "Ext.getCmp(\"containerBotonEnviarSolicitud\").setHidden(0);",
+                                    "Ext.getCmp(\"containerBotonAjustesPedidoTaxi\").setHidden(0);",
+                                    "",
+                                    "//AQUI FALTA CODIGO DE RETROALIMENTACION PARA EL CASO DE POR QUE CANCELA TAXI",
+                                    ""
+                                ]
+                            },
+                            "designerId": "3727b973-d62d-4f78-87bf-47c027e0c770"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel1",
+                "height": "80%",
+                "hidden": true,
+                "id": "panelPorQueCanceloAceptacionDeTaxi",
+                "left": "15%",
+                "top": "10%",
+                "width": "70%"
+            },
+            "designerId": "52c258a6-d87f-4493-863e-bed35dd7d218",
+            "cn": [
+                {
+                    "type": "titlebar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTitleBar",
+                        "docked": "top",
+                        "id": "titleBarPanelPorQueCanceloAceptacionDeTaxi",
+                        "title": "Por que no lo quiere?"
+                    },
+                    "designerId": "74cdb409-9aa2-40da-863d-32831ba8fb60"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "id": "checkbox1PanelPorQueCanceloAceptacionDeTaxi",
+                        "label": "Duraron mucho.",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "8e843f2a-64e7-404e-a94f-da48c82f31ef"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "id": "checkbox2PanelPorQueCanceloAceptacionDeTaxi",
+                        "label": "Consegui otra forma.",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "45ae32eb-158c-4fb0-8742-b4e87dacedc8"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "id": "checkbox3PanelPorQueCanceloAceptacionDeTaxi",
+                        "label": "Otro.",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "0a36c3c3-fe0c-4229-96b7-26cf01222c78"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton6",
+                        "docked": "bottom",
+                        "id": "botonListoPanelPorQueCanceloAceptacionDeTaxi",
+                        "ui": "confirm",
+                        "text": "Listo"
+                    },
+                    "designerId": "45e6b013-58c1-4395-bf14-3e6c4d6481bc",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Con esta linea se oculta el panel en el que se esta, ya que ya se termino de",
+                                    "//elegir las razones por las que no quiso continuar con el pedido del taxi",
+                                    "Ext.getCmp(\"panelPorQueCanceloAceptacionDeTaxi\").setHidden(1);",
+                                    "//Con estas tres lineas se hace que vuelvan a aparecer los tres botones",
+                                    "//para lograr el envio de la solicitud de taxi",
+                                    "Ext.getCmp(\"containerBotonVolverPosActual\").setHidden(0);",
+                                    "Ext.getCmp(\"containerBotonEnviarSolicitud\").setHidden(0);",
+                                    "Ext.getCmp(\"containerBotonAjustesPedidoTaxi\").setHidden(0);",
+                                    "",
+                                    "//AQUI FALTA CODIGO DE POR QUE SE RECHAZA TAXI DISPONIBLE",
+                                    ""
+                                ]
+                            },
+                            "designerId": "21594f16-e0a2-49a1-aab2-cacc1422cb23"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel1",
+                "height": "80%",
+                "hidden": true,
+                "id": "panelPorQueCanceloTaxiEnCamino",
+                "left": "15%",
+                "top": "10%",
+                "width": "70%"
+            },
+            "designerId": "4ad9b34b-6e31-46e6-9bc2-e4e0c609495a",
+            "cn": [
+                {
+                    "type": "titlebar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTitleBar",
+                        "docked": "top",
+                        "id": "titleBarPanelPorQueCanceloTaxiEnCamino",
+                        "title": "Por que cancelo?"
+                    },
+                    "designerId": "bce89ab3-1d63-407c-b806-84b8fd446f79"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "id": "checkbox1PanelPorQueCanceloTaxiEnCamino",
+                        "label": "Duraron mucho.",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "5997564a-4fd9-438f-a195-a82f1942c900"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "id": "checkbox2PanelPorQueCanceloTaxiEnCamino",
+                        "label": "Consegui otra forma.",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "8a0011f7-f6ee-4eb2-b03d-2aa52f46ed02"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "id": "checkbox3PanelPorQueCanceloTaxiEnCamino",
+                        "label": "Otro.",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "dd67f883-38ae-4b64-8438-3497dffd6f17"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton6",
+                        "docked": "bottom",
+                        "id": "botonListoPanelPorQueCanceloTaxiEnCamino",
+                        "ui": "confirm",
+                        "text": "Listo"
+                    },
+                    "designerId": "1babb01c-5080-40ef-af4c-8317a2cfdf35",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Con esta linea se oculta el panel en el que se esta, ya que ya se termino de",
+                                    "//elegir las razones por las que no quiso continuar con el pedido del taxi",
+                                    "Ext.getCmp(\"panelPorQueCanceloTaxiEnCamino\").setHidden(1);",
+                                    "//Con estas tres lineas se hace que vuelvan a aparecer los tres botones",
+                                    "//para lograr el envio de la solicitud de taxi",
+                                    "Ext.getCmp(\"containerBotonVolverPosActual\").setHidden(0);",
+                                    "Ext.getCmp(\"containerBotonEnviarSolicitud\").setHidden(0);",
+                                    "Ext.getCmp(\"containerBotonAjustesPedidoTaxi\").setHidden(0);"
+                                ]
+                            },
+                            "designerId": "85246dd5-7d4f-4db8-b994-8dcdd1fb950c"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

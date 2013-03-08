@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "./didi.css",
+        "id": "didiCss"
+    },
+    "id": "ExtBox1-ext-gen11519",
+    "designerId": "49dcdd10-e45b-4481-9540-b83ea08bbd4b"
+}

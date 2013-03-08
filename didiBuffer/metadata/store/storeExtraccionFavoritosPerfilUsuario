@@ -1,0 +1,110 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeExtraccionFavoritosPerfilUsuario",
+        "autoSync": true,
+        "clearOnPageLoad": false,
+        "model": "modelSubEventos",
+        "pageSize": 5,
+        "storeId": "storeExtraccionFavoritosPerfilUsuario"
+    },
+    "id": "ExtBox1-ext-gen77086",
+    "designerId": "25cc4a05-1edd-4fae-9425-28f6da67088f",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy19",
+                "url": "http://www.didicr.com/php/didiFavorito/eventoFavoritoPorUsuario.php"
+            },
+            "designerId": "450b578a-63d9-4df1-a0da-32cb88b2f4a2",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader19",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "09749166-01ea-4b21-9929-f4295556203c"
+                }
+            ]
+        },
+        {
+            "type": "grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGrouper2"
+            },
+            "designerId": "a9a73eac-d767-4853-b051-7e6097609090",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "groupFn",
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "record"
+                        ],
+                        "implHandler": [
+                            "var fechaParaGrouperListaCatEventos= new Date();",
+                            "mesParaGrouperListaCatEventos=fechaParaGrouperListaCatEventos.getMonth()+1;",
+                            "",
+                            "if(fechaParaGrouperListaCatEventos.getFullYear()==record.get(\"fecha\").slice(0,4) && mesParaGrouperListaCatEventos==record.get(\"fecha\").slice(5,7) && fechaParaGrouperListaCatEventos.getDate()==record.get(\"fecha\").slice(8)){",
+                            "    return \"Hoy\";",
+                            "}",
+                            "else if(fechaParaGrouperListaCatEventos.getFullYear()==record.get(\"fecha\").slice(0,4) && mesParaGrouperListaCatEventos==record.get(\"fecha\").slice(5,7) && (fechaParaGrouperListaCatEventos.getDate()+1)==record.get(\"fecha\").slice(8)){",
+                            "    return \"Mañana\";",
+                            "}",
+                            "else{",
+                            "    stringDevolucionFecha=record.get(\"fecha\").slice(8)+\"-\"+record.get(\"fecha\").slice(5,7)+\"-\"+record.get(\"fecha\").slice(0,4);",
+                            "    return stringDevolucionFecha;",
+                            "}"
+                        ]
+                    },
+                    "designerId": "3dc18541-88a0-4955-a722-63a3c927fc97"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "Ext.getCmp(\"containerFavoritosEventosPerfilUsuario\").setMasked(false);"
+                ],
+                "name": "load"
+            },
+            "designerId": "91b591a5-d467-4fe2-a33b-356f49123ebc"
+        }
+    ]
+}

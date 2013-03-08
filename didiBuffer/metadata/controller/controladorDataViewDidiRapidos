@@ -1,0 +1,103 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "controladorDataViewDidiRapidos"
+    },
+    "id": "ExtBox1-ext-gen13589",
+    "designerId": "b1adf3d9-7994-4a17-be91-21874ccb46ea",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDataviewItemTap",
+                "fn": "onDataviewItemTap",
+                "implHandler": [
+                    "//Con esta linea lo que se hace es que, al dar click en uno de los didiRapidos,",
+                    "//se pasa al view correspondiente",
+                    "if(record.get(\"nombre\")==\"Taxis\"){",
+                    "    Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerMapaSolicitudTaxi\"));",
+                    "}",
+                    "//Si no se clickeo taxis, se pasa a otro view para las otras apps... en este",
+                    "//caso hay algunos didiRapidos que funcionan igual que darle click en Categorias...",
+                    "//lo que pasa aqui es que, en la tabla de la base de datos, se tienen mas categorias",
+                    "//que las mostradas en el view de Categorias, pero no se muestra, y en cambio",
+                    "//se linkean con los didiRapidos",
+                    "else if(record.get(\"nombre\")==\"Comida Express\" || record.get(\"nombre\")==\"Restaurantes\" || record.get(\"nombre\")==\"Turismo\" || record.get(\"nombre\")==\"Bares\" || record.get(\"nombre\")==\"Profesionales\" || record.get(\"nombre\")==\"Servicios\" || record.get(\"nombre\")==\"Rent\" || record.get(\"nombre\")==\"Deportes\"){",
+                    "    //Primero se manda por extraparam la categoria",
+                    "",
+                    "",
+                    "    Ext.getStore(\"storeSubcategorias\").loadPage(1);",
+                    "",
+                    "",
+                    "    //alert(\"a;f4ej\");",
+                    "    //alert(record.get(\"idCategoria\"));",
+                    "    Ext.getStore(\"storeSubcategorias\").getProxy().setExtraParam('catParam',record.get(\"idCategoria\"));",
+                    "",
+                    "",
+                    "    //    Ext.getStore(\"storeSubcategorias\").getProxy().setExtraParam('cat',record.get(\"nombre\"));",
+                    "    //Luego se ve desde adonde se va hacia ese view de Subcategorias",
+                    "    viewDelQuePasoHaciaSubcategorias=\"containerInicio\";",
+                    "    //Finalmente se carga el store y se le setea a la imagen de subcategorias",
+                    "    //el html con la imagen del didiRapido",
+                    "    Ext.getStore(\"storeSubcategorias\").load();",
+                    "    Ext.getCmp(\"imagenBannerEmpresaPrincipalCategoria\").setHtml(\"<img src=\"+record.get(\"imagen\")+\" height='100%' width='100%'/>\");",
+                    "",
+                    "",
+                    "",
+                    "    /*",
+                    "    //Dependiendo de en donde este uno, si esta en Busqueda Avanzada, entonces al",
+                    "    //cargar el store Subcategorias lo unico que se hace es ocultar el panel de",
+                    "    //Categorias (ya que se le ha dado click a alguna de las categorias), y en caso",
+                    "    //contrario lo q se hace es abrir el container de Subcategorias",
+                    "    if(Ext.getCmp(\"panelCategoriaBusquedaAvanzada\").getHidden()===true){",
+                    "        Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerSubcategorias\"));",
+                    "    }",
+                    "    else{",
+                    "        Ext.getCmp(\"panelCategoriaBusquedaAvanzada\").setHidden(1);",
+                    "    }",
+                    "    */",
+                    "",
+                    "",
+                    "}",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "dataview"
+            },
+            "designerId": "50e77dc3-4b63-4847-b651-dbac85ca4084"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dataview",
+                "ref": "dataview",
+                "selector": "#dataViewDidiRapidos"
+            },
+            "designerId": "0089da67-203f-462c-8db6-86ee8e553011"
+        }
+    ]
+}

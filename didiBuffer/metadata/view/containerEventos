@@ -1,0 +1,550 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerEventos",
+        "designer|userAlias": "containereventos",
+        "id": "containerEventos",
+        "itemId": "containerEventos",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen4320",
+    "designerId": "96024e93-be84-4556-9eb7-ffccada68aef",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar",
+                "docked": "top",
+                "height": "10%",
+                "id": "toolbarContainerEventos",
+                "style": "background: #3E3737"
+            },
+            "designerId": "c97acd1f-a59d-493c-ba8a-f6f33a7efd35",
+            "cn": [
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyImage5",
+                        "centered": true,
+                        "height": "100%%",
+                        "html": "<img src=\"./resources/logo/Logo_DD.png\" width=\"100%\" height=\"100%\">",
+                        "id": "imagenToolbarContainerEventos",
+                        "itemId": "myimage9",
+                        "width": "40%"
+                    },
+                    "designerId": "f4a224e8-01f1-4664-a6d3-bd99a8b74e98",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onImagenToolbarContainerEventosTap",
+                                "fn": "onImagenToolbarContainerEventosTap",
+                                "implHandler": [
+                                    "//Todas las imagenes de DiDiLogo escucharan un evento para regresar al container",
+                                    "//inicio al ser presionadas",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerInicio\"));"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "d3828b82-1806-4863-aaec-33b90089b17b"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer4",
+                "id": "containerPrincipalEventos",
+                "itemId": "containerPrincipalEventos",
+                "layout": "fit"
+            },
+            "designerId": "e753b00b-7bf8-4569-bad0-539154897814",
+            "cn": [
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyContainer1",
+                        "height": "50%",
+                        "id": "containerCarousel",
+                        "itemId": "containerCarousel",
+                        "left": "2.5%",
+                        "top": "2.5%",
+                        "width": "95%",
+                        "layout": "fit"
+                    },
+                    "designerId": "4913cec2-6475-4db0-af81-51c27c2b2183",
+                    "cn": [
+                        {
+                            "type": "carousel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyCarousel1",
+                                "id": "carouselEventos",
+                                "itemId": "carouselEventos"
+                            },
+                            "designerId": "5bef1512-a53c-461d-9ff9-9bc8ca047828"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton124",
+                        "baseCls": "botonCercania",
+                        "height": "7%",
+                        "id": "botonCercaniaContainerEventos",
+                        "left": "27.5%",
+                        "top": "54%",
+                        "width": "45%",
+                        "text": null
+                    },
+                    "designerId": "7d1e0078-b721-4d32-81a7-32b650dfdb2b",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"containerPrincipalEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                    "",
+                                    "//Se quitar el tabBar",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").getTabBar().setHidden(1);",
+                                    "//Se esta pasando desde el containerEventos hacia el mapaEventos, por lo que",
+                                    "//hay que cargar el store de categorias para el dataView de la parte inferior",
+                                    "viewDelQuePasoHaciaMapaEventos=\"containerEventos\";",
+                                    "Ext.getStore(\"storeCategoriasEventos\").load();",
+                                    "//Se muestra dicho dataView",
+                                    "Ext.getCmp(\"dataViewDidiMapaEventos\").setHidden(0);",
+                                    "//Se borran los markers en ese mapaEventos, para poner los nuevos",
+                                    "while(markersMapaEventos[0]){",
+                                    "    markersMapaEventos.pop().setMap(null);",
+                                    "}",
+                                    "//Finalmente, se pasa a ese view que contiene al mapa de Eventos",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerMapaEventos\"));"
+                                ]
+                            },
+                            "designerId": "bc4195bb-9230-49e3-bf5c-161bea7d8591"
+                        }
+                    ]
+                },
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyContainer2",
+                        "height": "40%",
+                        "id": "containerClasificacionEventos",
+                        "itemId": "containerClasificacionEventos",
+                        "left": "0%",
+                        "top": "60%",
+                        "width": "100%"
+                    },
+                    "designerId": "9ea816eb-6090-4bb3-a54c-b768beeff18e",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton125",
+                                "baseCls": "botonMusica",
+                                "height": "45%",
+                                "id": "botonCatEventosMusica",
+                                "itemId": "a1",
+                                "left": "2.5%",
+                                "top": "5%",
+                                "width": "20%",
+                                "text": null
+                            },
+                            "designerId": "d4825560-a08d-46f8-94ca-e624da9e8c62",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "funcionDarTapImagenesEventos(1);"
+                                        ]
+                                    },
+                                    "designerId": "6331a2ae-ec28-4fae-a9bb-ab30c5320a6d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton126",
+                                "baseCls": "botonVidanoc",
+                                "height": "45%",
+                                "id": "botonCatEventosVidaNocturna",
+                                "left": "27.5%",
+                                "top": "5%",
+                                "width": "20%",
+                                "text": null
+                            },
+                            "designerId": "215a6285-d881-4727-9337-5d72f4489644",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "funcionDarTapImagenesEventos(2);"
+                                        ]
+                                    },
+                                    "designerId": "2387fa4b-d459-491b-b167-beb4ce556dbe"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton127",
+                                "baseCls": "botonGastronomia",
+                                "height": "45%",
+                                "id": "botonCatEventosGastronomia",
+                                "left": "52.5%",
+                                "top": "5%",
+                                "width": "20%",
+                                "text": null
+                            },
+                            "designerId": "aa436228-c53a-42ae-b29d-33270ac9b31e",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "funcionDarTapImagenesEventos(3);"
+                                        ]
+                                    },
+                                    "designerId": "fe64303b-8706-42cb-8a83-bfa8033bcb7c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton128",
+                                "baseCls": "botonEmpresarial",
+                                "height": "45%",
+                                "id": "botonCatEventosEmpresarial",
+                                "left": "77.5%",
+                                "top": "5%",
+                                "width": "20%",
+                                "text": null
+                            },
+                            "designerId": "0aa8d162-fda2-4ea4-9195-facad7b8f4d1",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "funcionDarTapImagenesEventos(4);"
+                                        ]
+                                    },
+                                    "designerId": "ba296372-38ac-452e-9ace-07c80880adf0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton129",
+                                "baseCls": "botonFundaciones",
+                                "height": "45%",
+                                "id": "botonCatEventosFundaciones",
+                                "left": "2.5%",
+                                "top": "52.5%",
+                                "width": "20%",
+                                "text": null
+                            },
+                            "designerId": "e565745e-a646-48e6-9fbe-d085a7dffd5f",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "funcionDarTapImagenesEventos(5);"
+                                        ]
+                                    },
+                                    "designerId": "bee861e3-6187-4897-bc5a-56d15cabb446"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton129",
+                                "baseCls": "botonArteycult",
+                                "height": "45%",
+                                "id": "botonCatEventosArteYCultura",
+                                "left": "27.5%",
+                                "top": "52.5%",
+                                "width": "20%",
+                                "text": null
+                            },
+                            "designerId": "bb4f45dc-5986-46f3-8014-44a93e7418b5",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "funcionDarTapImagenesEventos(6);"
+                                        ]
+                                    },
+                                    "designerId": "08919626-e66d-4315-ab2d-fb65bb8a6564"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton129",
+                                "baseCls": "botonDeportes",
+                                "height": "45%",
+                                "id": "botonCatEventosDeportes",
+                                "left": "52.5%",
+                                "top": "52.5%",
+                                "width": "20%",
+                                "text": null
+                            },
+                            "designerId": "c7482fac-5d77-41a0-8a83-a81b5501275a",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "funcionDarTapImagenesEventos(7);"
+                                        ]
+                                    },
+                                    "designerId": "48572279-c7df-4676-b2c3-aae79edc6a96"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton129",
+                                "baseCls": "botonActividadescant",
+                                "height": "45%",
+                                "id": "botonCatEventosActividadesCantonales",
+                                "left": "77.5%",
+                                "top": "52.5%",
+                                "width": "20%",
+                                "text": null
+                            },
+                            "designerId": "0c0f3ee8-b651-45fd-802e-c2a626e52263",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "funcionDarTapImagenesEventos(8);"
+                                        ]
+                                    },
+                                    "designerId": "e3fd2397-b779-4a6e-8566-6ee8e41695d6"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer3",
+                "hidden": true,
+                "html": "View categoria Musica Eventos...",
+                "id": "containerContenidoCategoriasEventos",
+                "itemId": "containerContenidoCategoriasEventos",
+                "layout": "fit"
+            },
+            "designerId": "19bd0d30-042e-49af-b38e-61bd6a7d2ff6"
+        }
+    ]
+}

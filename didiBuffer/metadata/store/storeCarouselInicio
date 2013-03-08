@@ -1,0 +1,116 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeCarouselInicio",
+        "autoSync": true,
+        "model": "modelCarouselInicio",
+        "storeId": "storeCarouselInicio"
+    },
+    "id": "ExtBox1-ext-gen7620",
+    "designerId": "d4fc699c-6a81-4f20-b7f0-df358bad9062",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy",
+                "url": "http://www.didicr.com/php/bannerPrincipal.php"
+            },
+            "designerId": "fbfe580d-a72c-48c3-ae72-9eeec6445271",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "idProperty": "id",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "d5f6d674-b905-4c82-aa35-425c03beec63"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "//Funcion que se ejecuta cuando se da click en elementos del Carousel",
+                    "funcionDarClickElementosCarouselInicio=function(img){",
+                    "",
+                    "    Ext.getCmp(\"containerInicio\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                    "",
+                    "    //Para el caso en que la imagen clickeada corresponda a pag web",
+                    "    if(records[img.getId()[20]].get(\"tipo\")==1){",
+                    "        funcionParaAbrirPaginaWeb(records[img.getId()[20]].get(\"link\"),img.getId());",
+                    "    }",
+                    "    //Para el caso de que corresponda a descripcion de empresa",
+                    "    if(records[img.getId()[20]].get(\"tipo\")==2){",
+                    "        //alert(records[img.getId()[20]].get(\"link\"));",
+                    "        funcionParaAbrirDescEmpresa(records[img.getId()[20]].get(\"link\"),\"containerInicio\");",
+                    "    }",
+                    "    //Para este caso corresponde con descripcion de evento",
+                    "    if(records[img.getId()[20]].get(\"tipo\")==3){",
+                    "        funcionParaAbrirDescripcionEventos(records[img.getId()[20]].get(\"link\"),\"containerInicio\");",
+                    "    }",
+                    "    //Para este caso corresponde a abrir cierto container",
+                    "    if(records[img.getId()[20]].get(\"tipo\")==4){",
+                    "        Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(records[img.getId()[20]].get(\"link\")));",
+                    "    }",
+                    "};",
+                    "",
+                    "",
+                    "//Con la llamada de este metodo lo que se hace es recorrer sobre todos los",
+                    "//elementos del store, y para cada uno de ellos, se hace un APPEND de imagenes",
+                    "//al carousel, cada imagen tiene un url presente en el store",
+                    "contadorParaAsignarIDimgs=0;",
+                    "this.each(function (record) {",
+                    "    Ext.getCmp(\"carouselBannerPrincipal\").add(Ext.create('Ext.Img', {html: \"<img src=\"+ record.get(\"imagen\") +\" height='100%' width='100%'>\", id: \"imagenCarouselInicio\"+contadorParaAsignarIDimgs}));",
+                    "    Ext.getCmp(\"imagenCarouselInicio\"+contadorParaAsignarIDimgs).addListener('tap',funcionDarClickElementosCarouselInicio);",
+                    "    contadorParaAsignarIDimgs=contadorParaAsignarIDimgs+1;",
+                    "});",
+                    "",
+                    "",
+                    "//Aqui se crea una funcion, y se hace un llamado a ella, es decir, a traves de ",
+                    "//recursividad se hace que los elementos en el carousel esten cambiando continuamente",
+                    "var funcionCambioEstadoCarouselInicio = function() {",
+                    "    var task = Ext.create('Ext.util.DelayedTask', function() {",
+                    "        console.log('hi');",
+                    "        Ext.getCmp(\"carouselBannerPrincipal\").next();",
+                    "        if(Ext.getCmp(\"carouselBannerPrincipal\").getActiveIndex()==Ext.getCmp(\"carouselBannerPrincipal\").getItems().length-2){Ext.getCmp(\"carouselBannerPrincipal\").setActiveItem(0);}",
+                    "        funcionCambioEstadoCarousel.call(this);",
+                    "    }, this);",
+                    "    task.delay(5000);",
+                    "};",
+                    "funcionCambioEstadoCarouselInicio();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Ext.getStore(\"storeDidiRapidos\").load();"
+                ],
+                "name": "load"
+            },
+            "designerId": "509b52de-0c35-444d-ac64-d6ddeedcbaee"
+        }
+    ]
+}

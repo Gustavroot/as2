@@ -1,0 +1,62 @@
+{
+    "xdsVersion": "2.1.0",
+    "frameworkVersion": "touch21",
+    "internals": {
+        "type": "map",
+        "reference": {
+            "name": "items",
+            "type": "array"
+        },
+        "codeClass": null,
+        "userConfig": {
+            "designer|userClassName": "mapaSolicitudTaxi",
+            "designer|userAlias": "mapaSolicitudTaxi",
+            "id": "mapaSolicitudTaxi",
+            "itemId": "mapaSolicitudTaxi",
+            "useCurrentLocation": true
+        },
+        "cn": [
+            {
+                "type": "basiceventbinding",
+                "reference": {
+                    "name": "listeners",
+                    "type": "array"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "designer|userClassName": "onMapMaprender",
+                    "fn": "onMapMaprender",
+                    "implHandler": [
+                        "//Codigo para renderizar el mapa",
+                        "if (navigator.geolocation) {",
+                        "    navigator.geolocation.getCurrentPosition(",
+                        "    function(position){",
+                        "        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);",
+                        "        // var pos = new google.maps.LatLng( latitude: 9.381592, longitude: -84.135672 );",
+                        "        marker=new google.maps.Marker({ //se quito el var del frente",
+                        "            position: pos,",
+                        "            map: gmap,",
+                        "            draggable: true,",
+                        "            animation: google.maps.Animation.DROP",
+                        "        });",
+                        "        markerLatLng=marker.getPosition();",
+                        "        latitude=markerLatLng.lat();",
+                        "        longitude=markerLatLng.lng();",
+                        "        var geocoder = new google.maps.Geocoder();",
+                        "        geocoder.geocode({location: pos}, function(results, status){ciudad=( results[0].address_components[0].long_name);});",
+                        "    }",
+                        "    );",
+                        "}",
+                        "",
+                        "//Se desactiva current Location",
+                        "this.setUseCurrentLocation(0);"
+                    ],
+                    "name": "maprender"
+                }
+            }
+        ]
+    },
+    "linkedNodes": {},
+    "boundStores": {},
+    "boundModels": {}
+}

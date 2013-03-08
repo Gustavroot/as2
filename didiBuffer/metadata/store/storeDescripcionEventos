@@ -1,0 +1,104 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeDescripcionEventos",
+        "model": "modelDescripcionEventos",
+        "storeId": "storeDescripcionEventos"
+    },
+    "id": "ExtBox1-ext-gen12761",
+    "designerId": "c925aee1-90fd-4f6e-a095-e6ec879949f3",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy9",
+                "url": "http://www.didicr.com/php/eventoDescripcion.php"
+            },
+            "designerId": "fce678c0-4fa6-4ddc-a7ad-9fe94543c1dc",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader9",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "3f5f3108-f69a-42d3-936e-cb1aa4f44b64"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "//Estas lineas se ejecutan cuando se ingresa en el container Descripcion Eventos,",
+                    "//a esto se llega desde varios lugares",
+                    "Ext.getCmp(\"containerTituloDescripcionEventos\").setHtml(\"<p> &nbsp </p><center><i><b><p style='color:black;font-size:25px;'>\"+records[0].get(\"nombre\")+\"</p></b></i></center>\");",
+                    "",
+                    "if(records[0].get(\"imagenGran\")===\"\"){",
+                    "    //records[0].get(\"imagenGran\")",
+                    "    Ext.getCmp(\"imagenPrincipalDescripcionEventos\").setWidth(\"50%\");",
+                    "    Ext.getCmp(\"imagenPrincipalDescripcionEventos\").setHeight(\"50%\");",
+                    "    Ext.getCmp(\"imagenPrincipalDescripcionEventos\").setTop(\"15%\");",
+                    "    Ext.getCmp(\"imagenPrincipalDescripcionEventos\").setLeft(\"15%\");",
+                    "    Ext.getCmp(\"imagenPrincipalDescripcionEventos\").setHtml(\"<img src=\"+\"http://www.didicr.com/imagenes/icno_logo.png\"+\" height='100%' width='100%'>\");    ",
+                    "}",
+                    "else{",
+                    "    Ext.getCmp(\"imagenPrincipalDescripcionEventos\").setWidth(\"75%\");",
+                    "    Ext.getCmp(\"imagenPrincipalDescripcionEventos\").setHeight(\"60%\");",
+                    "    Ext.getCmp(\"imagenPrincipalDescripcionEventos\").setTop(\"15%\");",
+                    "    Ext.getCmp(\"imagenPrincipalDescripcionEventos\").setLeft(\"0%\");",
+                    "",
+                    "    Ext.getCmp(\"imagenPrincipalDescripcionEventos\").setHtml(\"<img src=\"+records[0].get(\"imagenGran\")+\" height='100%' width='100%'>\");",
+                    "}",
+                    "",
+                    "Ext.getCmp(\"containerInfoDescripcionEventos\").setHtml(\"<p> &nbsp </p><center><p> </p><p style='color:black;'>Fecha: \"+records[0].get(\"fecha\")+\"</p><p style='color:black;'>Hora: \"+records[0].get(\"hora\")+\"</p><p style='color:black;'>Descripción: \"+records[0].get(\"descripcion\")+\"</p><p style='color:black;'>Lugar: \"+records[0].get(\"lugar\")+\"</p></center>\");",
+                    "",
+                    "",
+                    "",
+                    "//Este codigo permite verificar si el usuario ya tiene agregado este evento como",
+                    "//favorito o no",
+                    "Ext.getStore(\"storeVerificadoEventoFavoritosPerfilUsuario\").getProxy().setUrl(\"http://www.didicr.com/php/didiFavorito/verificaEventoFavoritoUsuario2.php\");",
+                    "Ext.getStore(\"storeVerificadoEventoFavoritosPerfilUsuario\").getProxy().setExtraParam('idUsuarioParam',idPerfilUsuarioDidi);",
+                    "Ext.getStore(\"storeVerificadoEventoFavoritosPerfilUsuario\").getProxy().setExtraParam('idEventoParam',records[0].get(\"idEvento\"));",
+                    "//alert(records[0].get(\"idEvento\"));",
+                    "Ext.getStore(\"storeVerificadoEventoFavoritosPerfilUsuario\").load();",
+                    "//Ext.getStore(\"storeDescripcionEventos\").removeAll();",
+                    "//La siguiente variable sirve para saber si hay que verificar o no el estado del evento en Favoritos, o lo",
+                    "//que es lo mismo, para saber si hay que correr o no el codigo en el Load del store ",
+                    "//storeEnvioAgregadoFavoritosPerfilUsuario",
+                    "//variableEjecutoCodigoEnStoreAgregadoEventosFavoritos=1;",
+                    "//    alert(\"fae;\");",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "6a03fe4b-f29a-46c4-972c-f93d91071278"
+        }
+    ]
+}

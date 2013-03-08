@@ -1,0 +1,337 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerPickersReservaRestaurante",
+        "designer|userAlias": "containerpickersreservarestaurante",
+        "id": "containerPickersReservaRestaurante",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen8792",
+    "designerId": "64a7c875-a39c-4668-9525-058680476981",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar",
+                "docked": "top",
+                "height": "10%",
+                "id": "toolbarContainerPickersReservaRestaurante",
+                "style": "background: #3E3737"
+            },
+            "designerId": "2482baa3-505e-4cb2-bdbe-8b39def18c78",
+            "cn": [
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyImage5",
+                        "centered": true,
+                        "height": "100%%",
+                        "html": "<img src=\"http://www.didicr.com/imagenes/Logo_DD.png\" width=\"100%\" height=\"100%\">",
+                        "id": "imagenToolbarContainerPickersReservaRestaurante",
+                        "itemId": "myimage18",
+                        "width": "40%"
+                    },
+                    "designerId": "754ce164-b3ae-4d88-b043-bb63066ab7bb",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onImagenToolbarContainerGeolocalizacionTap11",
+                                "fn": "onImagenToolbarContainerGeolocalizacionTap11",
+                                "implHandler": [
+                                    "//Todo logo de Didi redirige hacia containerInicio",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerInicio\"));"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "6a81f21d-b72a-4c61-8b5c-cf33fd28d4bd"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton1",
+                        "height": "40%",
+                        "id": "botonAtrasContainerPickersReservaRestaurante",
+                        "left": null,
+                        "right": "2%",
+                        "top": "10%",
+                        "ui": "action-round",
+                        "width": "20%",
+                        "text": "Atrás"
+                    },
+                    "designerId": "99963041-9749-431b-bdd1-e81e13d7ec5a",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Se devuleve hacia containerInicio, ya que se esta en busqueda",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(viewDelQuePasoHaciaContainerPickerReservaRestaurante));",
+                                    "",
+                                    "//alert(Ext.getCmp(\"picker1ReservaRestaurante\").getValue()['MyPickerSlot1']);",
+                                    "//picker2ReservaRestaurante",
+                                    "//alert(\"erf\");",
+                                    "Ext.getCmp(\"selectFieldHoraReservaRestaurante\").setPlaceHolder(Ext.getCmp(\"picker1ReservaRestaurante\").getValue()['MyPickerSlot1']+\":\"+Ext.getCmp(\"picker2ReservaRestaurante\").getValue()['MyPickerSlot2']+\" \"+Ext.getCmp(\"picker3ReservaRestaurante\").getValue()['MyPickerSlot3']);",
+                                    "",
+                                    "//{\"text\":\"feisimo\",\"value\":1}",
+                                    "//Ext.getCmp(\"selectFieldHoraReservaRestaurante\").setData({\"text\": \"fieo\",\"value\": 0});",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "designerId": "42821feb-1853-4eb3-a515-9641763c26c5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel11",
+                "height": "70%",
+                "id": "panelPickersReservaRestaurante",
+                "left": "5%",
+                "top": "10%",
+                "width": "90%"
+            },
+            "designerId": "99102f80-cd69-4597-a56c-6d1c881728b9",
+            "cn": [
+                {
+                    "type": "picker",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPicker2",
+                        "height": "100%",
+                        "id": "picker1ReservaRestaurante",
+                        "left": "0%",
+                        "top": "0%",
+                        "width": "33%",
+                        "modal": false
+                    },
+                    "designerId": "6d9c07f1-60c2-482a-b195-7e119febc044",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "doneButton",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton77",
+                                "hidden": true,
+                                "text": "Done"
+                            },
+                            "designerId": "e4103b36-bf3f-4d12-9957-4b539b2795b1"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "cancelButton",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton78",
+                                "hidden": true,
+                                "text": "Cancel"
+                            },
+                            "designerId": "4cb0c728-9047-4839-b577-98f5f9a543f1"
+                        },
+                        {
+                            "type": "pickerslot",
+                            "reference": {
+                                "name": "slots",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyPickerSlot2",
+                                "id": null,
+                                "itemId": "mypickerslot2",
+                                "data": "[{\"text\":\"1\",\"value\":1},{\"text\":\"2\",\"value\":2},{\"text\":\"3\",\"value\":3},{\"text\":\"4\",\"value\":4},{\"text\":\"5\",\"value\":5},{\"text\":\"6\",\"value\":6},{\"text\":\"7\",\"value\":7},{\"text\":\"8\",\"value\":8},{\"text\":\"9\",\"value\":9},{\"text\":\"10\",\"value\":10},{\"text\":\"11\",\"value\":11},{\"text\":\"12\",\"value\":12}]",
+                                "name": "MyPickerSlot1",
+                                "title": "MyPickerSlot1"
+                            },
+                            "designerId": "55479b85-e2ac-4c92-b07d-0b7845e94ead"
+                        }
+                    ]
+                },
+                {
+                    "type": "picker",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPicker2",
+                        "height": "100%",
+                        "id": "picker2ReservaRestaurante",
+                        "left": "33%",
+                        "top": "0%",
+                        "width": "34%",
+                        "modal": false
+                    },
+                    "designerId": "53918d5b-c212-4c89-9334-3ea9e639eae9",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "doneButton",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton77",
+                                "hidden": true,
+                                "text": "Done"
+                            },
+                            "designerId": "2a04d410-028c-43ae-8399-4627ce6bbf74"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "cancelButton",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton78",
+                                "hidden": true,
+                                "text": "Cancel"
+                            },
+                            "designerId": "724b5cf8-f036-4cab-9c99-7ad1d04687aa"
+                        },
+                        {
+                            "type": "pickerslot",
+                            "reference": {
+                                "name": "slots",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyPickerSlot2",
+                                "data": "[{\"text\":\"15\",\"value\":15},{\"text\":\"30\",\"value\":30},{\"text\":\"45\",\"value\":45},{\"text\":\"0\",\"value\":\"00\"}]",
+                                "name": "MyPickerSlot2",
+                                "title": "MyPickerSlot2"
+                            },
+                            "designerId": "310fd8df-175c-4609-a361-da49f1a26b2d"
+                        }
+                    ]
+                },
+                {
+                    "type": "picker",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPicker2",
+                        "height": "100%",
+                        "id": "picker3ReservaRestaurante",
+                        "left": "67%",
+                        "top": "0%",
+                        "width": "33%",
+                        "modal": false
+                    },
+                    "designerId": "33bf6790-d6ad-4623-9bc2-780b47a5be72",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "doneButton",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton77",
+                                "hidden": true,
+                                "text": "Done"
+                            },
+                            "designerId": "e34d0232-ab0b-40af-a8d4-3e43638f3022"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "cancelButton",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton78",
+                                "hidden": true,
+                                "text": "Cancel"
+                            },
+                            "designerId": "44270b1b-066f-4e64-9b53-a122c6193585"
+                        },
+                        {
+                            "type": "pickerslot",
+                            "reference": {
+                                "name": "slots",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyPickerSlot2",
+                                "data": "[{\"text\":\"a.m.\",\"value\":\"a.m\"},{\"text\":\"p.m.\",\"value\":\"p.m.\"}]",
+                                "name": "MyPickerSlot3",
+                                "title": "MyPickerSlot3"
+                            },
+                            "designerId": "2e05a862-0569-48b9-86d2-07628737f62f"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,643 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerDescripcionEventos",
+        "designer|userAlias": "containerdescripcioneventos",
+        "html": null,
+        "id": "containerDescripcionEventos",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen34772",
+    "designerId": "5ec584a3-a041-4168-a372-7ce72f5d8c33",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar",
+                "docked": "top",
+                "height": "10%",
+                "id": "toolbarContainerDescripcionEventos",
+                "style": "background: #3E3737"
+            },
+            "designerId": "4e2ff985-c885-4a12-951d-dd4b56561b41",
+            "cn": [
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyImage5",
+                        "centered": true,
+                        "height": "100%%",
+                        "html": "<img src=\"./resources/logo/Logo_DD.png\" width=\"100%\" height=\"100%\">",
+                        "id": "imagenToolbarContainerDescripcionEventos",
+                        "itemId": "myimage7",
+                        "width": "40%"
+                    },
+                    "designerId": "3c747b83-3f42-4eac-8621-807c39a3e38e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onImagenToolbarContainerDescripcionEventosTap",
+                                "fn": "onImagenToolbarContainerDescripcionEventosTap",
+                                "implHandler": [
+                                    "//Todo logo de Didi redirige hacia containerInicio",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerInicio\"));"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "8395bce0-bb8a-44a1-b837-a5c370f0aa94"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton1",
+                        "baseCls": "botonAtras",
+                        "height": "80%",
+                        "id": "botonAtrasContainerDescripcionEventos",
+                        "left": null,
+                        "right": "2%",
+                        "top": "10%",
+                        "ui": "action-round",
+                        "width": "15%",
+                        "text": null
+                    },
+                    "designerId": "5d231498-f621-4125-900b-8fe52d1ffb0e",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Esta linea es para cambiar al tab Inicio",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(viewDelQueSePasaHaciaDescripcionEventos));"
+                                ]
+                            },
+                            "designerId": "4d2eb9a4-88de-4723-b488-521957c822ba"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyImage26",
+                "height": "60%",
+                "id": "imagenPrincipalDescripcionEventos",
+                "top": "15%",
+                "width": "75%"
+            },
+            "designerId": "adbe8daf-8eac-4ede-af52-e6eb33cb6164"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer55",
+                "height": "100%",
+                "id": "containerBotonesDescripcionEventos",
+                "left": null,
+                "right": "2%",
+                "width": "20%",
+                "layout": "vbox",
+                "scrollable": "vertical"
+            },
+            "designerId": "caa5b289-2fb2-4c17-be2f-d0ed53f6984e",
+            "cn": [
+                {
+                    "type": "spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpacer5",
+                        "height": null,
+                        "maxHeight": 20,
+                        "minHeight": 20,
+                        "width": 10
+                    },
+                    "designerId": "ca1ac906-f5b2-4ca9-9f1f-a857629a0f0d"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton14",
+                        "baseCls": "botonTaxi",
+                        "height": 50,
+                        "id": "botonHaciaDidiTaxiDescEventos",
+                        "right": null,
+                        "top": null,
+                        "ui": "action-round",
+                        "width": "100%",
+                        "iconCls": null,
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "21d07486-fbda-4a8d-814b-db01ae97efce",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"containerDescripcionEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                    "",
+                                    "//En caso de que se este viendo un evento, y se quiera pedir un taxi, entonces",
+                                    "//no se borra la configuracion de Eventos, sino que se agrega un boton de atras",
+                                    "//para didiTaxis, en caso de querer volver hacia atras, y ",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerMapaSolicitudTaxi\"));",
+                                    "//Se especifica desde cual tab se esta pasando hacia didiTaxi",
+                                    "tabDelQueSePasaHaciaTabSolicitudTaxi=Ext.getCmp(\"containerDescripcionEventos\");"
+                                ]
+                            },
+                            "designerId": "0afe71f8-8c57-4e37-9559-cfd83bfbcc63"
+                        }
+                    ]
+                },
+                {
+                    "type": "spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpacer6",
+                        "maxHeight": 20,
+                        "minHeight": 20,
+                        "width": 10
+                    },
+                    "designerId": "b74fc2bc-5bff-4bd5-81a0-77e8eaba0992"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton14",
+                        "baseCls": "botonReserva",
+                        "height": 50,
+                        "id": "botonDidiReservaDescEventos",
+                        "right": null,
+                        "top": null,
+                        "ui": "round",
+                        "width": "100%",
+                        "iconCls": null,
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "024537db-b739-499a-8878-e7b4b29ca437",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"containerDescripcionEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                    "",
+                                    "//Se pasa al tab del modulo de reservaciones",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerModuloReservaciones\"));",
+                                    "",
+                                    "",
+                                    "//Se configura para que aparezca automaticamente la fecha del evento",
+                                    "var fechaParaDidiReserva= new Date();",
+                                    "var fechaParaDidiReservaString= Ext.getStore(\"storeDescripcionEventos\").first().get(\"fecha\");",
+                                    "fechaParaDidiReserva.setFullYear(parseFloat(fechaParaDidiReservaString.slice(0,4)),parseFloat(fechaParaDidiReservaString.slice(5,7))-1,parseFloat(fechaParaDidiReservaString.slice(8)));",
+                                    "Ext.getCmp(\"dateFieldReservacionRestaurante\").setValue(fechaParaDidiReserva);",
+                                    "Ext.getCmp(\"dateFieldReservacionRestaurante\").disable();",
+                                    "",
+                                    "",
+                                    "//alert(Ext.getStore(\"storeDescripcionEventos\").first().get(\"hora\"));",
+                                    "",
+                                    "if(parseFloat(Ext.getStore(\"storeDescripcionEventos\").first().get(\"hora\").slice(0,2))>12){",
+                                    "    horaReservaEvento=parseFloat(Ext.getStore(\"storeDescripcionEventos\").first().get(\"hora\").slice(0,2))-12;",
+                                    "    Ext.getCmp(\"selectFieldHoraReservaRestaurante\").setPlaceHolder(horaReservaEvento+\":\"+Ext.getStore(\"storeDescripcionEventos\").first().get(\"hora\").slice(3,5)+\" p.m.\");",
+                                    "    //alert();",
+                                    "}",
+                                    "else{",
+                                    "    Ext.getCmp(\"selectFieldHoraReservaRestaurante\").setPlaceHolder(Ext.getStore(\"storeDescripcionEventos\").first().get(\"hora\").slice(0,5)+\" a.m.\");",
+                                    "}",
+                                    "",
+                                    "Ext.getCmp(\"selectFieldHoraReservaRestaurante\").disable();",
+                                    "",
+                                    "//Ext.getCmp(\"selectFieldHoraReservaRestaurante\").setPlaceHolder(Ext.getCmp(\"picker1ReservaRestaurante\").getValue()['MyPickerSlot1']+\":\"+Ext.getCmp(\"picker2ReservaRestaurante\").getValue()['MyPickerSlot2']+\" \"+Ext.getCmp(\"picker3ReservaRestaurante\").getValue()['MyPickerSlot3']);",
+                                    "",
+                                    "viewDelQuePasoAlViewDeReserva=\"containerDescripcionEventos\";",
+                                    "",
+                                    "",
+                                    "//alert(fechaParaDidiReservaString.slice(0,4));",
+                                    "//alert(fechaParaDidiReservaString.slice(5,7));",
+                                    "//alert(fechaParaDidiReservaString.slice(8));",
+                                    "//Ext.getCmp(\"dateFieldReservacionRestaurante\").setValue(fechaParaDidiReserva);",
+                                    "",
+                                    "//Ext.getCmp(\"picker1ReservaRestaurante\").setValue();",
+                                    ""
+                                ]
+                            },
+                            "designerId": "d63b4fc3-d51d-45f3-b818-f981839f2acc"
+                        }
+                    ]
+                },
+                {
+                    "type": "spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpacer7",
+                        "height": null,
+                        "maxHeight": 20,
+                        "minHeight": 20,
+                        "width": 10
+                    },
+                    "designerId": "dc097dc4-9b7d-419d-b30d-265a0c313c88"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton14",
+                        "baseCls": "botonDescripcion",
+                        "height": 50,
+                        "id": "botonHaciaViewClienteDescEventos",
+                        "right": null,
+                        "top": null,
+                        "ui": "decline-round",
+                        "width": "100%",
+                        "iconCls": null,
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "603637af-33d5-4a2a-9cce-f58e5fadd9d9",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"containerDescripcionEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                    "",
+                                    "//Con este boton se pasa desde Desc Eventos hacia Desc Empresa, pasando idCliente",
+                                    "//como parametro",
+                                    "funcionParaAbrirDescEmpresa(Ext.getStore(\"storeDescripcionEventos\").first().get(\"idCliente\"),\"containerDescripcionEventos\");"
+                                ]
+                            },
+                            "designerId": "93aeec51-cc05-4656-9ef7-2225a5150460"
+                        }
+                    ]
+                },
+                {
+                    "type": "spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpacer8",
+                        "height": null,
+                        "maxHeight": 20,
+                        "minHeight": 20,
+                        "width": 10
+                    },
+                    "designerId": "554bddb7-c208-48ae-b562-ea327c7dc778"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton14",
+                        "baseCls": "botonMapa",
+                        "height": 50,
+                        "id": "botonHaciaMapaDescEventos",
+                        "right": null,
+                        "top": null,
+                        "ui": "confirm-round",
+                        "width": "100%",
+                        "iconCls": null,
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "a9e789b5-bfab-4a1b-b121-a176a79130cb",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"containerDescripcionEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                    "",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerMapaEventos\"));",
+                                    "",
+                                    "",
+                                    "//Aqui se hace un tratamiento practicamente igual que en el boton de Mapa",
+                                    "//en Descripcion Empresa",
+                                    "arregloParaRecordsEnStoreDescEventos=[];",
+                                    "arregloParaRecordsEnStoreDescEventos.push(Ext.getStore(\"storeDescripcionEventos\").first());",
+                                    "while(markersMapaEventos[0]){",
+                                    "    markersMapaEventos.pop().setMap(null);",
+                                    "}",
+                                    "",
+                                    "",
+                                    "",
+                                    "//Estas lineas son para que funcione el autoajuste del mapa para que se vean todos los pines",
+                                    "limitesMapaEventos = new google.maps.LatLngBounds();",
+                                    "limitesMapaEventos.extend(posActual);",
+                                    "//contadorParaExtraccionDuracionYDistanciaEmpresas=0;",
+                                    "distanciasHastaEvento=[];",
+                                    "duracionesHastaEventos=[];",
+                                    "",
+                                    "",
+                                    "",
+                                    "//Este retraso es necesario, ya que de las otras 2 maneras de accesar al mapa para poner el",
+                                    "//pin de una empresa, no son problematicas, ya que se hace un .load() y por lo tanto hay una",
+                                    "//espera que opaca la eliminacion del uso del currentLocation, pero en este caso de hacerlo",
+                                    "//desde descripcion empresa, el problema es que no hay un .load() y por lo tanto no hay tal",
+                                    "//espera que opaque esa eliminacion del uso del currentLocation",
+                                    "var funcionRetrasoEnLlamadoAlProcessStoreMapaEventos = function() {",
+                                    "    var taskPosActual = Ext.create('Ext.util.DelayedTask', function() {",
+                                    "        //Se llama al processStore para que coloque los pines y luego se oculta el dataView",
+                                    "        //en la parte inferior del mapaPrincipal",
+                                    "        Ext.getCmp(\"mapaCercaniaEventos\").processStoreEventos(arregloParaRecordsEnStoreDescEventos);",
+                                    "    }, this);",
+                                    "    taskPosActual.delay(500);",
+                                    "};",
+                                    "//Esta es la funcion que hace que se refresque la variable que almacena la posicion actual",
+                                    "funcionRetrasoEnLlamadoAlProcessStoreMapaEventos();",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "//Ext.getCmp(\"mapaCercaniaEventos\").setMapCenter({ latitude: Ext.getStore(\"storeDescripcionEventos\").first().get(\"latitud\"), longitude: Ext.getStore(\"storeDescripcionEventos\").first().get(\"longitud\") });",
+                                    "//Ext.getCmp(\"mapaCercaniaEventos\").processStoreEventos(arregloParaRecordsEnStoreDescEventos);",
+                                    "",
+                                    "Ext.getCmp(\"dataViewDidiMapaEventos\").setHidden(1);",
+                                    "viewDelQuePasoHaciaMapaEventos=\"containerDescripcionEventos\";",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "designerId": "04b31a83-0179-4f33-a6b0-3bcaf3577e8f"
+                        }
+                    ]
+                },
+                {
+                    "type": "spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpacer9",
+                        "maxHeight": 20,
+                        "minHeight": 20,
+                        "width": 10
+                    },
+                    "designerId": "11246894-9ef5-4144-a23e-fe2ced48a30e"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton14",
+                        "baseCls": "botonFacebook",
+                        "height": 50,
+                        "id": "botonHaciaFacebookDescEventos",
+                        "right": null,
+                        "top": null,
+                        "ui": "action-round",
+                        "width": "100%",
+                        "iconCls": null,
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "d03992fc-6a97-4537-8c30-fe1a6775633d",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Provisional",
+                                    "Ext.Msg.alert('Aviso', 'Hacia el facebook del evento.', Ext.emptyFn);"
+                                ]
+                            },
+                            "designerId": "bc0c58b4-20cf-4ca1-8327-a434817ab02b"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer32",
+                "height": "25%",
+                "id": "containerInfoDescripcionEventos",
+                "top": "75%",
+                "width": "80%",
+                "scrollable": "vertical"
+            },
+            "designerId": "4ee82f46-1987-41af-a707-d6499742497b"
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton1",
+                "height": "10%",
+                "id": "botonFavoritosContainerDescripcionEventos",
+                "left": "2%",
+                "right": null,
+                "top": "2%",
+                "ui": "confirm",
+                "width": "16%",
+                "iconCls": "favorites",
+                "iconMask": true,
+                "text": null
+            },
+            "designerId": "661dcbda-801e-4d8b-ba3b-3057005aafe0",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "handler",
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "",
+                            "var fechaDelDiaDeHoyParaAgregadoEventosFavoritos=new Date();",
+                            "Ext.getStore(\"storeEnvioAgregadoFavoritosPerfilUsuario\").getProxy().setUrl(\"http://www.didicr.com/php/didiFavorito/insertaEventoFavorito.php\");",
+                            "Ext.getStore(\"storeEnvioAgregadoFavoritosPerfilUsuario\").getProxy().setExtraParam('idEventoParam', Ext.getStore(\"storeDescripcionEventos\").first().get(\"idEvento\"));",
+                            "Ext.getStore(\"storeEnvioAgregadoFavoritosPerfilUsuario\").getProxy().setExtraParam('idUsuarioParam', idPerfilUsuarioDidi);",
+                            "Ext.getStore(\"storeEnvioAgregadoFavoritosPerfilUsuario\").getProxy().setExtraParam('fechaUsuarioEventoFavoritoParam', fechaDelDiaDeHoyParaAgregadoEventosFavoritos);",
+                            "Ext.getStore(\"storeEnvioAgregadoFavoritosPerfilUsuario\").load();",
+                            "",
+                            "//Ext.getStore(\"storeEnvioAgregadoFavoritosPerfilUsuario\").first().get(\"estado\")+",
+                            "Ext.Msg.alert('Aviso', 'Evento agregado.', Ext.emptyFn);",
+                            "",
+                            "this.disable();"
+                        ]
+                    },
+                    "designerId": "37c8f394-edbc-441b-be22-0264b4c272b9"
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer60",
+                "height": "10%",
+                "id": "containerTituloDescripcionEventos",
+                "left": "20%",
+                "width": "55%"
+            },
+            "designerId": "42dc59ae-c9d0-4399-999f-f6559e75c1b3"
+        }
+    ]
+}

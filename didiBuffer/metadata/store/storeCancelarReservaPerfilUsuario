@@ -1,0 +1,45 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeCancelarReservaPerfilUsuario",
+        "model": "modelCancelarReservaPerfilUsuario",
+        "storeId": "storeCancelarReservaPerfilUsuario"
+    },
+    "id": "ExtBox1-ext-gen43567",
+    "designerId": "da9d2b47-a6fd-4421-90e4-73f7fb0ae552",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy17",
+                "url": "http://www.didicr.com/php/didiReserva/cambiaEstadoReserva.php"
+            },
+            "designerId": "ede248d7-8b1a-461f-9998-dfead7e43a40",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader17",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "3e391242-847f-48a8-9f1c-1c4793766c74"
+                }
+            ]
+        }
+    ]
+}

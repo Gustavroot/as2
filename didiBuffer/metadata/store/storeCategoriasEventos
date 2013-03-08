@@ -1,0 +1,48 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeCategoriasEventos",
+        "autoLoad": true,
+        "autoSync": true,
+        "model": "modelCategoriasEventos",
+        "storeId": "storeCategoriasEventos"
+    },
+    "id": "ExtBox1-ext-gen16590",
+    "designerId": "dc6cf7f4-38f1-486e-aa17-bd612537de43",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy12",
+                "url": "http://www.didicr.com/php/eventoCategorias.php"
+            },
+            "designerId": "0cceca5b-53d9-4cef-ab75-93f4490282cc",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader12",
+                        "idProperty": "idEventoCategorias",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "ede0aa53-42d9-4cb2-9613-381825b457f0"
+                }
+            ]
+        }
+    ]
+}

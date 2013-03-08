@@ -1,0 +1,63 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "controladorDataViewDidiMapaEventos"
+    },
+    "id": "ExtBox1-ext-gen23459",
+    "designerId": "511a8161-7d36-4eb7-bdc3-4a0007ddef2e",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDataviewItemTap",
+                "fn": "onDataviewItemTap",
+                "implHandler": [
+                    "Ext.getCmp(\"mapaCercaniaEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                    "",
+                    "//alert(record.get(\"idEventoCategorias\"));",
+                    "",
+                    "//Se pasa por parametro la categoria de la cual se desea extraer el listado de las",
+                    "//empresas",
+                    "Ext.getStore(\"storeSubEventosMapa\").getProxy().setExtraParam('categoriaEventoParam',record.get(\"idEventoCategorias\"));",
+                    "",
+                    "//alert(\"afasd;\");",
+                    "",
+                    "",
+                    "//Se introducen markers en el mapa, para esto, se pasa el store del cual se extraeran",
+                    "//los campos correspondientes, y se pasa el mapa al cual se le agregaran esos markers",
+                    "funcionParaIntroducirMarkersEnMapa(\"storeSubEventosMapa\",Ext.getCmp(\"mapaCercaniaEventos\"));",
+                    "",
+                    ""
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "dataview"
+            },
+            "designerId": "7709b8d0-4d54-476f-9530-bab6ec2d40eb"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dataview",
+                "ref": "dataview",
+                "selector": "#dataViewDidiMapaEventos"
+            },
+            "designerId": "ecd0ead8-467b-418e-ad2c-acac5946fa5e"
+        }
+    ]
+}

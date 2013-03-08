@@ -1,0 +1,52 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "controladorListaCatEventos"
+    },
+    "id": "ExtBox1-ext-gen34065",
+    "designerId": "16c6a557-c57b-49ab-837d-0e7d208a02c4",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListItemTap",
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "Ext.getCmp(\"containerSubEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                    "",
+                    "//Con este codigo se llama, al darle click en uno de los Cat Eventos, a la funcion",
+                    "//que abre la descripcion de eventos",
+                    "funcionParaAbrirDescripcionEventos(record.get(\"idEvento\"),\"containerSubEventos\");"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list"
+            },
+            "designerId": "04b1e379-63fe-4b42-9fe1-02357aaefa43"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "list",
+                "ref": "list",
+                "selector": "#listaSubEventos"
+            },
+            "designerId": "198af48e-75ab-4a72-8763-2ca1297076cd"
+        }
+    ]
+}

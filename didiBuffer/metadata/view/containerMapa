@@ -1,0 +1,154 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerMapa",
+        "designer|userAlias": "containermapa",
+        "cls": [
+            "fondoMapa"
+        ],
+        "id": "containerMapa"
+    },
+    "id": "ExtBox1-ext-gen3739",
+    "designerId": "8233967b-6f81-4508-9027-9b56beff028b",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel6",
+                "height": "40%",
+                "id": "panelEscogenciaEntreMapaEventosOMapaEmpresas",
+                "left": "25%",
+                "top": "30%",
+                "width": "50%",
+                "layout": "fit",
+                "modal": true
+            },
+            "designerId": "031b1479-8900-45d2-8407-cdf5949b29f9",
+            "cn": [
+                {
+                    "type": "titlebar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTitleBar4",
+                        "docked": "top",
+                        "height": "25%",
+                        "title": "Mapa de:"
+                    },
+                    "designerId": "bc3f49ce-5a88-4814-9f4c-bde8722a53b1"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton62",
+                        "docked": "bottom",
+                        "height": "37.5%",
+                        "id": "botonEleccionMapaPorEmpresas",
+                        "ui": "confirm-round",
+                        "text": "empresas"
+                    },
+                    "designerId": "00ec5309-36bc-4651-b504-d9688280d783",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Se he elegido el view de mapa por Empresas, entonces se pasa a ese",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerMapaPrincipal\"));",
+                                    "//Se borran los pines de ese mapa si es que los tenia",
+                                    "while(markersMapaPrincipal[0]){",
+                                    "    markersMapaPrincipal.pop().setMap(null);",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "f6b6b8dc-7400-4da0-9bba-98cf2b3683dd"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton63",
+                        "docked": "bottom",
+                        "height": "37.5%",
+                        "id": "botonEleccionMapaPorEventos",
+                        "ui": "confirm-round",
+                        "text": "eventos"
+                    },
+                    "designerId": "4c32f961-e0b1-4f38-9489-b571f1b93cd3",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Se oculta el tabBar del mapa Eventos",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").getTabBar().setHidden(1);",
+                                    "//Se especifica el view del que se pasa a dicho mapa, asi como se hace el ",
+                                    "//cargado del store necesario para el dataView con las categorias de eventos",
+                                    "viewDelQuePasoHaciaMapaEventos=\"containerInicio\";",
+                                    "Ext.getStore(\"storeCategoriasEventos\").load();",
+                                    "//Se hace visible el dataView con las categorias de eventos",
+                                    "Ext.getCmp(\"dataViewDidiMapaEventos\").setHidden(0);",
+                                    "//Se borran los marker en el mapa si es que los tenia",
+                                    "while(markersMapaEventos[0]){",
+                                    "    markersMapaEventos.pop().setMap(null);",
+                                    "}",
+                                    "//Se pasa al view de ese mapa de Eventos",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerMapaEventos\"));",
+                                    "//Se setea el zoom del mapa, por si el usuario lo ha modificado",
+                                    "Ext.getCmp(\"mapaCercaniaEventos\").setMapOptions({zoom: 13});"
+                                ]
+                            },
+                            "designerId": "c50d8e42-a6b6-44ec-bfa3-ff4587e940e8"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

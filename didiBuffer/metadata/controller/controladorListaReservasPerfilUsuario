@@ -1,0 +1,65 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "controladorListaReservasPerfilUsuario"
+    },
+    "id": "ExtBox1-ext-gen28240",
+    "designerId": "b5f70155-4915-4203-a383-9edadbcc6442",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListItemTap",
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "",
+                    "if(e.target.id==\"botonVerDetallesReservaPerfilUsuario\"){",
+                    "    Ext.getCmp(\"panelResumenInfoPerfilUsuario\").setHidden(0);",
+                    "    Ext.getCmp(\"panelResumenInfoPerfilUsuario\").setHtml(\"<p> Número de reserva: \"+record.get(\"idReserva\")+\"</p>\"+\"<p> Organizador del evento: \"+record.get(\"idCliente\")+\"</p>\"+\"<p> Nombre del evento: \"+record.get(\"nombreEvento\")+\"</p>\"+\"<p> Fecha: \"+record.get(\"fechaReserva\")+\"</p>\"+\"<p> Hora: \"+record.get(\"horaReserva\")+\"</p>\"+\"<p> Cantidad de personas: \"+record.get(\"cantidadPersonas\")+\"</p>\"+\"<p> Nota adicional: \"+record.get(\"notaReserva\")+\"</p>\"+\"<p> Mesa: \"+record.get(\"locacionReserva\")+\"</p>\"+\"<p> Ocasión de la reserva: \"+record.get(\"ocasionReserva\")+\"</p>\");",
+                    "//    Ext.getStore(\"storeReservaEvento\").getProxy().get(\"\")",
+                    "    ",
+                    "}",
+                    "",
+                    "",
+                    "if(e.target.id==\"botonVerCancelarReservaPerfilUsuario\"){",
+                    "    Ext.getStore(\"storeCancelarReservaPerfilUsuario\").getProxy().setExtraParam('idReservaParam', record.get(\"idReserva\"));",
+                    "    Ext.getStore(\"storeCancelarReservaPerfilUsuario\").getProxy().setExtraParam('estadoReservaParam', 2);",
+                    "    Ext.Msg.alert('Aviso', 'Usted ha cancelado la reserva número '+record.get(\"idReserva\"), Ext.emptyFn);",
+                    "    Ext.getStore(\"storeCancelarReservaPerfilUsuario\").load();",
+                    "    Ext.getStore(\"storeReservaEvento\").load();",
+                    "",
+                    "}",
+                    ""
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list"
+            },
+            "designerId": "909a531c-e14d-43d6-b366-718388a22551"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "list",
+                "ref": "list",
+                "selector": "#listaREservasPerfilUsuario"
+            },
+            "designerId": "7dffc0b6-08fb-4db1-bfba-90b4780b2021"
+        }
+    ]
+}

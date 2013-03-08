@@ -1,0 +1,67 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelCantonBusquedaAvanzada"
+    },
+    "id": "ExtBox1-ext-gen32236",
+    "designerId": "18e340b7-f0df-4357-98be-c77dc34b61e5",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field117",
+                "name": "idCanton"
+            },
+            "designerId": "716838b5-709b-4791-bac4-edfc63f3f4dd"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field118",
+                "name": "idProvincia"
+            },
+            "designerId": "0cd95c90-34fa-446a-9ffe-1ba26aaf1b37"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field119",
+                "name": "nombreCanton"
+            },
+            "designerId": "27ff25f4-a386-415d-93c4-e4934a094eb2"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field120",
+                "name": "cantidadNegociosCanton"
+            },
+            "designerId": "679b837f-882e-4756-a349-cfaa9f783402"
+        }
+    ]
+}

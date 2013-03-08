@@ -1,0 +1,130 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeExtraccionFavoritasEmpresasPerfilUsuario",
+        "autoSync": true,
+        "clearOnPageLoad": false,
+        "model": "modelListaEmpresasEnSubcategoria",
+        "pageSize": 5,
+        "storeId": "storeExtraccionFavoritasEmpresasPerfilUsuario",
+        "totalCount": null
+    },
+    "id": "ExtBox1-ext-gen21055",
+    "designerId": "7001b775-a016-4f47-9642-749eae7dc9e1",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy21",
+                "limitParam": null,
+                "startParam": null,
+                "url": "http://www.didicr.com/php/didiFavorito/empresaFavoritaPorUsuario2.php"
+            },
+            "designerId": "43b0ca1e-a73f-4da5-a4f1-97efe5ac513d",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader21",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "eb814769-9475-4316-81cc-af0a55fd1563"
+                }
+            ]
+        },
+        {
+            "type": "grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGrouper3"
+            },
+            "designerId": "de445cc8-9fb7-4440-a40d-c13d58b7cde0",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "groupFn",
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "record"
+                        ],
+                        "implHandler": [
+                            "return record.get(\"nombre\")[0];"
+                        ]
+                    },
+                    "designerId": "f4924a39-8882-46bf-aaea-9396fa9bb546"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "//indexBarEmpresasFavoritasPerfilUsuario",
+                    "",
+                    "",
+                    "//Con este codigo se filtran las letras en el indexBar",
+                    "contadorSeteadoDeLetrasIndexBarEmpresasFavoritas=0;",
+                    "var letrasParaSetearIndexBarEmpresasFavoritas = [];",
+                    "Ext.getStore(\"storeExtraccionFavoritasEmpresasPerfilUsuario\").each(function (record) {",
+                    "    if(letrasParaSetearIndexBarEmpresasFavoritas.indexOf(record.get(\"nombre\")[0])==-1){",
+                    "        letrasParaSetearIndexBarEmpresasFavoritas[contadorSeteadoDeLetrasIndexBarEmpresasFavoritas]=record.get(\"nombre\")[0];",
+                    "        contadorSeteadoDeLetrasIndexBarEmpresasFavoritas++;",
+                    "    }",
+                    "});",
+                    "//Luego de crear el array, se asigna al indexBar ese array",
+                    "Ext.getCmp(\"indexBarEmpresasFavoritasPerfilUsuario\").setLetters(letrasParaSetearIndexBarEmpresasFavoritas);",
+                    "",
+                    "",
+                    "//alert(Ext.getStore(\"storeExtraccionFavoritasEmpresasPerfilUsuario\").getProxy().getStartParam());",
+                    "//alert(Ext.getStore(\"storeExtraccionFavoritasEmpresasPerfilUsuario\").getProxy().getLimittParam());",
+                    "//alert(\"fawe4;f\");",
+                    "",
+                    "/*",
+                    "alert(this.getCount());",
+                    "alert(this.getProxy().getStartParam());",
+                    "*/",
+                    "",
+                    "//alert(this.);",
+                    "",
+                    "",
+                    "Ext.getCmp(\"containerFavoritosEmpresasPerfilUsuario\").setMasked(false);",
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "8fab5f16-df80-4523-afaa-643c4bc097b8"
+        }
+    ]
+}

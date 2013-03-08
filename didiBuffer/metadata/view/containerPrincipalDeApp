@@ -1,0 +1,523 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerPrincipalDeApp",
+        "designer|initialView": true,
+        "id": "containerPrincipalDeApp",
+        "layout": "hbox"
+    },
+    "id": "ExtBox1-ext-gen52549",
+    "designerId": "33412f94-7df9-4566-aefb-badd33663000",
+    "cn": [
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer1",
+                "height": "100%",
+                "id": "containerDelPerfilUsuario",
+                "style": null,
+                "width": "85%",
+                "layout": "card",
+                "modal": false
+            },
+            "designerId": "c42d1d98-aa6c-436f-9ea2-ac614ef90634",
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToolbar",
+                        "docked": "top",
+                        "height": "9.4%",
+                        "id": "toolbarDelContainerPerfilDeUsuario",
+                        "style": "background: #3E3737",
+                        "title": "PERFIL"
+                    },
+                    "designerId": "ca7a91ed-e5ff-4335-a6bb-127f5b5791ff"
+                },
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyContainer3",
+                        "docked": null,
+                        "height": null,
+                        "html": null,
+                        "id": "containerContenidoDeContainerDePerfilDeUsuario",
+                        "itemId": "mycontainer84",
+                        "padding": "0.5em",
+                        "style": null,
+                        "top": null,
+                        "scrollable": "vertical"
+                    },
+                    "designerId": "e6a8367c-2b6e-42e8-9339-7ba02f12981d",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton90",
+                                "baseCls": "botonNot",
+                                "height": 40,
+                                "id": "botonNotificacionesDePerfilUsuario",
+                                "ui": null,
+                                "width": "100%",
+                                "text": null
+                            },
+                            "designerId": "562ad848-099e-4a55-8f55-04f340dcc294",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = Ext.get('containerParaTabPanelPrincipal');",
+                                            "",
+                                            "",
+                                            "if (main.hasCls('out')) {",
+                                            "    main.removeCls('out');",
+                                            "    main.addCls('in'); ",
+                                            "    //button.setText('Usuario');",
+                                            "} else {",
+                                            "    main.removeCls('in');    ",
+                                            "    main.addCls('out');    ",
+                                            "    //button.setText('Usuario');         ",
+                                            "}",
+                                            "",
+                                            "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerNotificacionesPerfilUsuario\"));",
+                                            "",
+                                            "",
+                                            "",
+                                            "//Ext.getStore(\"storeExtraccionFavoritasEmpresasPerfilUsuario\").load();",
+                                            "",
+                                            "//Se esconde el menu de usuario",
+                                            "Ext.getCmp('containerDelPerfilUsuario').setHidden(1);",
+                                            ""
+                                        ]
+                                    },
+                                    "designerId": "1b90f64f-3ced-435e-bba6-2b53763d48f8"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton91",
+                                "baseCls": "botonPerfil",
+                                "height": 40,
+                                "id": "botonPerfilDePerfilUsuario",
+                                "ui": null,
+                                "width": "100%",
+                                "text": null
+                            },
+                            "designerId": "122a25da-7abb-4ea2-bf0d-1c09d330e5d9",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = Ext.get('containerParaTabPanelPrincipal');",
+                                            "",
+                                            "",
+                                            "if (main.hasCls('out')) {",
+                                            "    main.removeCls('out');",
+                                            "    main.addCls('in'); ",
+                                            "    //button.setText('Usuario');",
+                                            "} else {",
+                                            "    main.removeCls('in');    ",
+                                            "    main.addCls('out');    ",
+                                            "    //button.setText('Usuario');         ",
+                                            "}",
+                                            "",
+                                            "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerPerfilPerfilUsuario\"));",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            "//Se esconde el menu de usuario",
+                                            "Ext.getCmp('containerDelPerfilUsuario').setHidden(1);",
+                                            "",
+                                            "",
+                                            ""
+                                        ]
+                                    },
+                                    "designerId": "b99b85e5-aeee-4f19-a9b7-a53eff6b95a2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton92",
+                                "baseCls": "botonReserva",
+                                "height": 40,
+                                "id": "botonReservasDePerfilUsuario",
+                                "ui": null,
+                                "width": "100%",
+                                "text": null
+                            },
+                            "designerId": "3523088b-5ac2-4505-87ca-1327f5e2010f",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "Ext.getCmp(\"containerReservasPerfilUsuario\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
+                                            "var main = Ext.get('containerParaTabPanelPrincipal');",
+                                            "",
+                                            "",
+                                            "if (main.hasCls('out')) {",
+                                            "    main.removeCls('out');",
+                                            "    main.addCls('in'); ",
+                                            "    //button.setText('Usuario');",
+                                            "} else {",
+                                            "    main.removeCls('in');    ",
+                                            "    main.addCls('out');    ",
+                                            "    //button.setText('Usuario');         ",
+                                            "}",
+                                            "",
+                                            "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerReservasPerfilUsuario\"));",
+                                            "",
+                                            "",
+                                            "Ext.getStore(\"storeReservaEvento\").loadPage(1);",
+                                            "",
+                                            "",
+                                            "Ext.getStore(\"storeReservaEvento\").getProxy().setExtraParam('idUsuarioParam',idPerfilUsuarioDidi);",
+                                            "Ext.getStore(\"storeReservaEvento\").getProxy().setExtraParam('estadoReservaParam',0);",
+                                            "Ext.getStore(\"storeReservaEvento\").load();",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            "//Se esconde el menu de usuario",
+                                            "Ext.getCmp('containerDelPerfilUsuario').setHidden(1);",
+                                            "",
+                                            "",
+                                            "",
+                                            ""
+                                        ]
+                                    },
+                                    "designerId": "09b3891d-7945-4d6b-9152-c0df07b8f533"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton118",
+                                "baseCls": "botonFav",
+                                "height": 40,
+                                "id": "botonImagenDivisionFavoritos",
+                                "width": "100%",
+                                "text": null
+                            },
+                            "designerId": "6028f010-b828-4515-bf49-b6a7ceeda1b2"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton97",
+                                "baseCls": "botonEmpresa",
+                                "height": 40,
+                                "id": "botonFavoritosEmpresasDePerfilUsuario",
+                                "ui": null,
+                                "width": "100%",
+                                "text": null
+                            },
+                            "designerId": "4788e760-e101-40d1-bf79-b2d2573e98ae",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "Ext.getCmp(\"containerFavoritosEmpresasPerfilUsuario\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
+                                            "var main = Ext.get('containerParaTabPanelPrincipal');",
+                                            "",
+                                            "",
+                                            "if (main.hasCls('out')) {",
+                                            "    main.removeCls('out');",
+                                            "    main.addCls('in'); ",
+                                            "    //button.setText('Usuario');",
+                                            "} else {",
+                                            "    main.removeCls('in');    ",
+                                            "    main.addCls('out');    ",
+                                            "    //button.setText('Usuario');         ",
+                                            "}",
+                                            "",
+                                            "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerFavoritosEmpresasPerfilUsuario\"));",
+                                            "",
+                                            "",
+                                            "",
+                                            "/*",
+                                            "Ext.getStore(\"storeReservaEvento\").getProxy().setExtraParam('idUsuarioParam',3);",
+                                            "Ext.getStore(\"storeReservaEvento\").getProxy().setExtraParam('estadoReservaParam',0);",
+                                            "Ext.getStore(\"storeReservaEvento\").load();",
+                                            "*/",
+                                            "",
+                                            "",
+                                            "",
+                                            "//Se refrescan los parametros para paging del store",
+                                            "Ext.getStore(\"storeExtraccionFavoritasEmpresasPerfilUsuario\").loadPage(1);",
+                                            "",
+                                            "",
+                                            "",
+                                            "Ext.getStore(\"storeExtraccionFavoritasEmpresasPerfilUsuario\").getProxy().setExtraParam('idUsuarioParam',idPerfilUsuarioDidi);",
+                                            "Ext.getStore(\"storeExtraccionFavoritasEmpresasPerfilUsuario\").load();",
+                                            "",
+                                            "//alert(\"f;alsdfh\");",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            "//Se esconde el menu de usuario",
+                                            "Ext.getCmp('containerDelPerfilUsuario').setHidden(1);",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            ""
+                                        ]
+                                    },
+                                    "designerId": "a84500b1-2e84-4e99-97e9-e7f3e670de77"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton98",
+                                "baseCls": "botonEvento",
+                                "height": 40,
+                                "id": "botonFavoritosEventosDePerfilUsuario",
+                                "ui": null,
+                                "width": "100%",
+                                "text": null
+                            },
+                            "designerId": "e9ba2cfe-6be6-40bf-8ce1-0e32418736bc",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "Ext.getCmp(\"containerFavoritosEventosPerfilUsuario\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
+                                            "var main = Ext.get('containerParaTabPanelPrincipal');",
+                                            "",
+                                            "",
+                                            "if (main.hasCls('out')) {",
+                                            "    main.removeCls('out');",
+                                            "    main.addCls('in'); ",
+                                            "    //button.setText('Usuario');",
+                                            "} else {",
+                                            "    main.removeCls('in');    ",
+                                            "    main.addCls('out');    ",
+                                            "    //button.setText('Usuario');         ",
+                                            "}",
+                                            "",
+                                            "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerFavoritosEventosPerfilUsuario\"));",
+                                            "",
+                                            "",
+                                            "Ext.getStore(\"storeExtraccionFavoritosPerfilUsuario\").loadPage(1);",
+                                            "",
+                                            "",
+                                            "Ext.getStore(\"storeExtraccionFavoritosPerfilUsuario\").getProxy().setExtraParam('idUsuarioParam',idPerfilUsuarioDidi);",
+                                            "Ext.getStore(\"storeExtraccionFavoritosPerfilUsuario\").load();",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            "//Se esconde el menu de usuario",
+                                            "Ext.getCmp('containerDelPerfilUsuario').setHidden(1);",
+                                            "",
+                                            "",
+                                            "",
+                                            "",
+                                            ""
+                                        ]
+                                    },
+                                    "designerId": "5bb632c8-c1d0-42f2-9fc3-25534039c1fa"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onContainerContenidoDeContainerDePerfilDeUsuarioInitialize",
+                                "fn": "onContainerContenidoDeContainerDePerfilDeUsuarioInitialize",
+                                "implHandler": [
+                                    "/*",
+                                    "swipeFn=function(cosa){",
+                                    "alert(\"fafvw5g\");",
+                                    "};",
+                                    "",
+                                    "this.element.on('swipe', swipeFn, scope);",
+                                    "*/",
+                                    "",
+                                    "Ext.getCmp(\"containerContenidoDeContainerDePerfilDeUsuario\").element.on('swipe', function(event, node, options, eOpts) {",
+                                    "    ",
+                                    "    Ext.getCmp('containerDelPerfilUsuario').setHidden(0);",
+                                    "    var main = Ext.get('containerParaTabPanelPrincipal');",
+                                    "    if (main.hasCls('out')) {",
+                                    "        main.removeCls('out');",
+                                    "        main.addCls('in'); ",
+                                    "        //button.setText('Usuario');",
+                                    "    } else {",
+                                    "        main.removeCls('in');    ",
+                                    "        main.addCls('out');    ",
+                                    "    }",
+                                    "}, Ext.getCmp(\"containerContenidoDeContainerDePerfilDeUsuario\"));",
+                                    ""
+                                ],
+                                "name": "initialize"
+                            },
+                            "designerId": "f9ba7ff8-effe-49b4-99f2-162766c5ba82"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "designer|userClassName": "MyContainer2",
+                "cls": [
+                    "slide"
+                ],
+                "height": "100%",
+                "id": "containerParaTabPanelPrincipal",
+                "left": "0%",
+                "width": "100%",
+                "layout": "card"
+            },
+            "designerId": "94d20488-dffd-448b-bc08-d8acfc352fc6",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "429d85d3-ff49-477b-8940-15633a0d2aa3",
+                    "masterInstanceId": "ExtBox1-ext-gen2359"
+                }
+            ]
+        }
+    ]
+}

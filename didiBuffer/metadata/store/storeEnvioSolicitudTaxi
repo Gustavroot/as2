@@ -1,0 +1,104 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeEnvioSolicitudTaxi",
+        "model": "modelEstadoEnvio",
+        "storeId": "storeEnvioSolicitudTaxi"
+    },
+    "id": "ExtBox1-ext-gen11897",
+    "designerId": "05fc98aa-2fc7-4bd0-8f39-92c145256756",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy",
+                "url": "http://www.didicr.com/php/diditaxi/recibeSolicitud.php"
+            },
+            "designerId": "99228edb-183f-407f-9b44-2c7858864804",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "37ca55e8-fe93-42df-8c03-966644fd5059"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "",
+                    "",
+                    "//AQUI VA, UNA VEZ QUE SE CARGUE ESTE STORE, ES DECIR, UNA VEZ QUE SE ASIGNE",
+                    "//UN TAXI A ESTE USUARIO, EL CODIGO PARA EL MAPA",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "//Se oculta el boton de cancelar pedido taxi, puesto que ya hay un taxi para la persona",
+                    "//y no puede cancelar el pedido, pero si puede cancelar el taxi en camino",
+                    "Ext.getCmp(\"containerBotonCancelarPedidoTaxi\").setHidden(1);",
+                    "//Se le da la opcion de aceptar el taxi",
+                    "extMessageBox=Ext.Msg.confirm('Hay un taxi para usted.', 'Desea aceptarlo?', funcionLadoPasajeroTaxiAsociado);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "//alert(Ext.getStore(\"storeEnvioSolicitudTaxi\").first().get(\"idPedido\"));",
+                    "",
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "cdac31c1-1afe-48f7-ab22-a7c871a190cc"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeSubEventosMapa",
+        "model": "modelSubEventos",
+        "storeId": "storeSubEventosMapa"
+    },
+    "id": "ExtBox1-ext-gen13857",
+    "designerId": "93863c25-af59-4d0a-a9d4-d79ac7b68c80",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy26",
+                "url": "http://www.didicr.com/php/evento/eventoCategoriaMapa.php"
+            },
+            "designerId": "22d59b56-d173-41e6-aa10-34a4b037f063",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader26",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "89c8216a-6fbc-45be-9967-45120cbb3f87"
+                }
+            ]
+        }
+    ]
+}

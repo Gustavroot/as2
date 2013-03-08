@@ -1,0 +1,83 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "controladorDataViewCategorias"
+    },
+    "id": "ExtBox1-ext-gen5148",
+    "designerId": "1da1d939-470d-4a85-9f92-4882308b8e2a",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDataviewItemTap",
+                "fn": "onDataviewItemTap",
+                "implHandler": [
+                    "Ext.getCmp(\"containerCategorias\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                    "",
+                    "",
+                    "",
+                    "//Se resetea el parametro start para el listPaging plugin",
+                    "Ext.getStore(\"storeSubcategorias\").loadPage(1);",
+                    "",
+                    "",
+                    "//Con estas lineas, al pasar a Subcategorias, se pasa un parametro a el store que",
+                    "//corresponde con el listado de subcategorias, y ademas se carga el store",
+                    "Ext.getStore(\"storeSubcategorias\").getProxy().setExtraParam('catParam',record.get(\"idCategoria\"));",
+                    "viewDelQuePasoHaciaSubcategorias=\"containerCategorias\";",
+                    "Ext.getStore(\"storeSubcategorias\").load();",
+                    "//Cuando se da click en categorias, y se pasa al listado de las subcategorias,",
+                    "//se tiene una imagen, un banner para la empresa principal de esta categoria",
+                    "Ext.getCmp(\"imagenBannerEmpresaPrincipalCategoria\").setHtml(\"<img src=\"+record.get(\"bannerUrl\")+\" height='100%' width='100%'/>\");",
+                    "",
+                    "",
+                    "/*",
+                    "//Dependiendo de en donde este uno, si esta en Busqueda Avanzada, entonces al",
+                    "//cargar el store Subcategorias lo unico que se hace es ocultar el panel de",
+                    "//Categorias (ya que se le ha dado click a alguna de las categorias), y en caso",
+                    "//contrario lo q se hace es abrir el container de Subcategorias",
+                    "if(Ext.getCmp(\"panelCategoriaBusquedaAvanzada\").getHidden()===true){",
+                    "    Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerSubcategorias\"));",
+                    "}",
+                    "else{",
+                    "    Ext.getCmp(\"panelCategoriaBusquedaAvanzada\").setHidden(1);",
+                    "}",
+                    "*/",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "dataview"
+            },
+            "designerId": "5fe8de17-862f-43d0-b2c2-438f065ed56c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dataview",
+                "ref": "dataview",
+                "selector": "#dataViewCategorias"
+            },
+            "designerId": "70021c7a-bbd6-464f-83ab-0daa1e80e4c8"
+        }
+    ]
+}

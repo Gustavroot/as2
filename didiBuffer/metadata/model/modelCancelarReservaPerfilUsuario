@@ -1,0 +1,28 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelCancelarReservaPerfilUsuario"
+    },
+    "id": "ExtBox1-ext-gen43077",
+    "designerId": "7103e281-4d01-4e2c-9985-5d578f9bcc0d",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field133",
+                "name": "enviado"
+            },
+            "designerId": "a3e7693c-7c74-4a94-8d86-8ab682ea08bb"
+        }
+    ]
+}

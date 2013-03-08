@@ -1,0 +1,474 @@
+{
+    "type": "map",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "mapaCercaniaEventos",
+        "designer|userAlias": "mapacercaniaeventos",
+        "id": "mapaCercaniaEventos",
+        "itemId": "mapaCercaniaEventos",
+        "mapOptions": [
+            "{",
+            "    zoom: 14,",
+            "    streetViewControl: false,",
+            "    mapTypeControl: false,",
+            "    zoomControl: true",
+            "}"
+        ],
+        "useCurrentLocation": true
+    },
+    "id": "ExtBox1-ext-gen29228",
+    "designerId": "0ca9deae-9411-4400-8733-0643303784ba",
+    "cn": [
+        {
+            "type": "image",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyImage28",
+                "height": "13%",
+                "html": "<img src=\"./resources/logo/Logo_DD.png\" width=\"100%\" height=\"100%\">",
+                "id": "imagenLogoDidiMapaEventos",
+                "itemId": "myimage26",
+                "left": "30%",
+                "width": "40%"
+            },
+            "designerId": "f3cb201a-54ec-42c2-97a3-7558c67a224e",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onImagenLogoDidiMapaEventosTap",
+                        "fn": "onImagenLogoDidiMapaEventosTap",
+                        "implHandler": [
+                            "//Todo logo de Didi redirige hacia el containerInicio",
+                            "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerInicio\"));",
+                            "//Al salir del mapa, hay que hacer visible el tabBar nuevamente",
+                            "Ext.getCmp(\"tabPanelPrincipal\").getTabBar().setHidden(0);"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "8fd3d143-aa7b-4df6-91d2-82891d4f879e"
+                }
+            ]
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton57",
+                "baseCls": "botonAtras",
+                "height": "5%",
+                "id": "botonAtrasDidiMapaEventos",
+                "right": "2%",
+                "top": "1.5%",
+                "ui": "action-round",
+                "width": "10%",
+                "text": null
+            },
+            "designerId": "cacec7a8-e524-416d-a739-31cf7afe0150",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "handler",
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "//Al salir del mapa, hay que hacer visible el tabBar nuevamente",
+                            "Ext.getCmp(\"tabPanelPrincipal\").getTabBar().setHidden(0);",
+                            "//Se retorna hacia el view desde el cual se ingreso a este mapa",
+                            "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(viewDelQuePasoHaciaMapaEventos));",
+                            "",
+                            "",
+                            "directionsDisplay.setMap(null);",
+                            "",
+                            ""
+                        ]
+                    },
+                    "designerId": "e885b373-cc9b-46fd-80a6-1d0eb1579603"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onMapaCercaniaEventosMaprender",
+                "fn": "onMapaCercaniaEventosMaprender",
+                "implHandler": [
+                    "//Con estas lineas, se coloca un pin para referencia de la ubicacion del usuario,",
+                    "//es decir, se indica la ubicacion propia",
+                    "if (navigator.geolocation) {",
+                    "    navigator.geolocation.getCurrentPosition(",
+                    "    function(position){",
+                    "        //Se borra el pin anterior... inicialmente esta bien hacer esto porque se ha",
+                    "        //creado este pin en el launch",
+                    "        markerPosActualEventos.setMap(null);",
+                    "        //Se crea un objeto de posicion con la ubicacion actual propia",
+                    "        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);",
+                    "        //Se crea el pin y se asigna al mapa Eventos",
+                    "        markerPosActualEventos=new google.maps.Marker({ //se quito el var del frente",
+                    "            position: pos,",
+                    "            map: gmap,",
+                    "            draggable: false",
+                    "        });",
+                    "        var geocoder = new google.maps.Geocoder();",
+                    "        geocoder.geocode({location: pos}, function(results, status){ciudad=( results[0].address_components[0].long_name);});",
+                    "    }",
+                    "    );",
+                    "}"
+                ],
+                "name": "maprender"
+            },
+            "designerId": "769a6fd5-3370-483c-a711-8093975e2c31"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "processStoreEventos",
+                "fn": "processStoreEventos",
+                "designer|params": [
+                    "listaStoreEventos"
+                ],
+                "implHandler": [
+                    "",
+                    "directionsDisplay.setMap(null);",
+                    "",
+                    "//alert(listaStoreEventos.length);",
+                    "",
+                    "//Ciclo para separar cada elemento del store.",
+                    "for (var iEventos = 0, lnEventos = listaStoreEventos.length; iEventos < lnEventos; iEventos++){",
+                    "    //Esta variable consiste en los datos del paquete de informacion del store",
+                    "    var datoEventos = listaStoreEventos[iEventos].data;",
+                    "    //Este es un llamado a addMarker para que haga el agregado del pin",
+                    "    this.addMarkerEventos(datoEventos);  // Se llama a la función que muestra el marcador.",
+                    "}",
+                    "",
+                    "",
+                    "Ext.getCmp(\"mapaCercaniaEventos\").setMasked(false);",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "eafe6933-afbd-4026-b5f3-3cf4c3d425ff"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "addMarkerEventos",
+                "fn": "addMarkerEventos",
+                "designer|params": [
+                    "datoEventos"
+                ],
+                "implHandler": [
+                    "funcionTrazadoDeLineaEntrePuntos=function(latPointEventos, lngPointEventos){",
+                    "",
+                    "    pointEventosIntermediario = new google.maps.LatLng(parseFloat(latPointEventos),parseFloat(lngPointEventos));",
+                    "    ",
+                    "    rendererOptions = {",
+                    "        draggable: false,",
+                    "        suppressMarkers: true,",
+                    "        polylineOptions: {strokeColor: 'black'}",
+                    "",
+                    "    };",
+                    "",
+                    "    directionsDisplay.setMap(null);",
+                    "    ",
+                    "    directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);",
+                    "    directionsService = new google.maps.DirectionsService();",
+                    "",
+                    "    directionsDisplay.setMap(Ext.getCmp(\"mapaCercaniaEventos\").getMap());",
+                    "    ",
+                    "    request = {",
+                    "        origin: posActual,",
+                    "        destination: pointEventosIntermediario,",
+                    "        travelMode: google.maps.DirectionsTravelMode.DRIVING",
+                    "    };",
+                    "",
+                    "    directionsService.route(request, function(response, status) {",
+                    "        if (status == google.maps.DirectionsStatus.OK) {",
+                    "            directionsDisplay.setDirections(response);",
+                    "        }",
+                    "    });",
+                    "};",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "//Se crea el objeto de Icon para el icono del pin",
+                    "var iconParaMarkerCategoriaEventos=new google.maps.MarkerImage(Ext.getStore(\"storeCategoriasEventos\").getAt(Ext.getStore(\"storeCategoriasEventos\").find(\"idEventoCategorias\",datoEventos.categoriaEvento,false,true,true)).get(\"imagen\"),null,null,null,new google.maps.Size(45,45));",
+                    "//Se crea el infowindow",
+                    "var infoWindowEventos = new google.maps.InfoWindow(),  //Se crea casilla de información del marcador.",
+                    "pointEventos = new google.maps.LatLng(",
+                    "datoEventos.latitud,",
+                    "datoEventos.longitud",
+                    "),",
+                    "//Se crea el marker",
+                    "markerEventos = new google.maps.Marker({",
+                    "    map: this.getMap(),",
+                    "    position: pointEventos,",
+                    "    icon: iconParaMarkerCategoriaEventos",
+                    "});",
+                    "//Despues de crear el marker, se ingresa en el arreglo de los markers para este",
+                    "//mapa",
+                    "markersMapaEventos.push(markerEventos);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "//Este metodo permite obtener la distancia entre varios puntos origen y varios",
+                    "//puntos destino... esto da una matriz de todas las distancias de las combinaciones",
+                    "//posibles",
+                    "serviceCalculoDistanciasMapaEventos.getDistanceMatrix(",
+                    "{",
+                    "    //Este es el punto inicial",
+                    "    origins: [pointEventos],",
+                    "    //Este es el otro punto para sacar la distancia entre ambos",
+                    "    destinations: [posActual],",
+                    "    //Este es el modo de viaje entre ambos puntos",
+                    "    travelMode: google.maps.TravelMode.DRIVING,",
+                    "    avoidHighways: false,",
+                    "    avoidTolls: false",
+                    "    //Esta funcion lo que hace es que, en el arreglo duracionesHastaEmpresas se van",
+                    "    //guardando los tiempos que se dura hasta cada empresa, y en distanciasHastaEmpresa",
+                    "    //se van guardando las distancias hasta cada empresa",
+                    "}, function(response,status){if(status==google.maps.DistanceMatrixStatus.OK){var origins=response.originAddresses;var destinations=response.destinationAddresses;for(var i=0;i<origins.length;i++){var results=response.rows[i].elements;for(var j=0;j<results.length;j++){duracionesHastaEventos[datoEventos.idEvento]=(results[j].duration.text); distanciasHastaEvento[datoEventos.idEvento]=(results[j].distance.text);}}}});",
+                    "",
+                    "",
+                    "",
+                    "    arrayPointEventos[datoEventos.idEvento]=pointEventos;",
+                    "",
+                    "",
+                    "",
+                    "    //Se agrega un controlador a los markers",
+                    "    google.maps.event.addListener(markerEventos, \"click\", function() {",
+                    "        //Primero se creo un string con el nombre del view del cual se pasa hacia descr",
+                    "        //empresa",
+                    "        stringContainerDelQueSePasaEventos='\"containerMapaEventos\"';",
+                    "/*",
+                    "        alert(arrayPointEventos[datoEventos.idEvento].lat());",
+                    "        alert(arrayPointEventos[datoEventos.idEvento].lng());",
+                    "        alert(posActual.lat());",
+                    "        alert(posActual.lng());",
+                    "*/        ",
+                    "        ",
+                    "        //Otro string, para el texto de lo que se hara al dar click a uno de los botones",
+                    "        //que aparecen en el infowindow",
+                    "        stringParaAgregarFuncionPrimerBotonEventos=\"onclick='funcionParaAbrirDescripcionEventos(\"+datoEventos.idEvento+\",\"+stringContainerDelQueSePasaEventos+\");'\";",
+                    "//        stringParaAgregarFuncionBotonIr=\"onclick='funcionTrazadoDeLineaEntrePuntos(\"+posActual+\",\"+pointEventos+\");'\";",
+                    "        stringParaAgregarFuncionBotonIr=\"onclick='funcionTrazadoDeLineaEntrePuntos(\"+arrayPointEventos[datoEventos.idEvento].lat()+\",\"+arrayPointEventos[datoEventos.idEvento].lng()+\");'\";",
+                    "        //Otro string, para el texto de lo que se hara al dar click a uno de los botones",
+                    "        //que aparecen en el infowindow",
+                    "        //Se agrega el contenido al infowindow",
+                    "        infoWindowEventos.setContent(\"<center><p>\"+datoEventos.nombre+\"</p></center><p><input \"+stringParaAgregarFuncionPrimerBotonEventos+\" type='button' id='botonParaInfoWindowEventos' value='Ir a descripción' style='font-family: texgyrechorus; background-color:#A9F5BC; padding:3px; color:green; height:10%; width: 90%;'></p>\"+\"<p><input \"+stringParaAgregarFuncionBotonIr+\" type='button' id='botonParaIr' value='Ir' style='background-color:#A9F5BC; padding:3px; color:green; height:10%; width: 90%;'></p>\"+\"<p> Distancia: \"+distanciasHastaEvento[datoEventos.idEvento]+\"</p>\"+\"<p> Duracion: \"+duracionesHastaEventos[datoEventos.idEvento]+\"</p>\");",
+                    "        //Finalmente, se abre la infowindow",
+                    "        infoWindowEventos.open(this.getMap(), markerEventos);",
+                    "    });",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "    //---------------------------------------------------------------------------------",
+                    "    //Esta variable es de tipo LatLngBounds, y se le aplica .extend(LatLng) para",
+                    "    //ir autoajustando el mapa y que quepan todos los pines en el",
+                    "    limitesMapaEventos.extend(pointEventos);",
+                    "    //Se aplica fitBounds al mapa con el objeto limitesMapaPrincipal, el cual",
+                    "    //autoajusta el mapa con los limites adecuados",
+                    "    Ext.getCmp(\"mapaCercaniaEventos\").getMap().fitBounds(limitesMapaEventos);",
+                    "",
+                    "    //Con este codigo se permite que el mapa se vuelva a centrar en la posicion",
+                    "    //actual propia",
+                    "    if (navigator.geolocation) {",
+                    "        navigator.geolocation.getCurrentPosition(",
+                    "        function(position){",
+                    "            //Se crea un objeto de posicion, con latitud y longitud actuales",
+                    "            posActual = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);",
+                    "            //Ext.getCmp(\"mapaContainerMapa\").setMapCenter({latitude: posActual.lat(), longitude: posActual.lng()});",
+                    "        }",
+                    "        );",
+                    "    }",
+                    "",
+                    "",
+                    "",
+                    "    map_centerEventos = limitesMapaEventos.getCenter();",
+                    "    Ext.getCmp(\"mapaCercaniaEventos\").setMapCenter(map_centerEventos);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "    //funcionTrazadoDeLineaEntrePuntos(posActual,pointEventos);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "    /*",
+                    "    var puntosEntreViaje=[pointEventos,posActual];",
+                    "    var lineaTrayectoUnion=new google.maps.Polyline({",
+                    "    path:puntosEntreViaje,",
+                    "    geodesic: true,",
+                    "    strokeColor:\"#0000FF\",",
+                    "    strokeOpacity:0.9,",
+                    "    strokeWeight:2",
+                    "    });",
+                    "",
+                    "    lineaTrayectoUnion.setMap(this.getMap());",
+                    "    */",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "13b62483-f95e-45b6-a17b-e9aa6162ba8e"
+        },
+        {
+            "type": "dataview",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyDataView5",
+                "height": "20%",
+                "id": "dataViewDidiMapaEventos",
+                "top": "80%",
+                "width": "100%",
+                "layout": "hbox",
+                "scrollable": [
+                    "horizontal"
+                ],
+                "inline": [
+                    "{wrap: false}"
+                ],
+                "loadingText": "Cargando...",
+                "store": "storeCategoriasEventos"
+            },
+            "designerId": "a03ab8a6-3ef0-4941-ba30-d893cbe1d199",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div style=\"margin-right: 0%; margin-left: 0%;\">",
+                            "    <img src=\"{imagen}\" width=\"80%\" height=\"80%\" />",
+                            "</div>",
+                            ""
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "041eb560-09ab-4ab3-8884-ba3d23fd3794"
+                }
+            ]
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton67",
+                "height": "5%",
+                "id": "botonVolverPosActualMapaEventos",
+                "left": "38%",
+                "top": "13%",
+                "ui": "confirm-round",
+                "width": "18%",
+                "text": "<p style=\"font-size: 40%;\"> Ir a pos </p> <p style=\"font-size: 40%;\"> actual </p>"
+            },
+            "designerId": "80534d7d-9d43-4e55-872f-084694b5389c",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "handler",
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "//Con este codigo se puede devolver hacia la current Location, es decir,",
+                            "//se puede centrar el mapa en la posicion de uno",
+                            "if (navigator.geolocation) {",
+                            "    navigator.geolocation.getCurrentPosition(",
+                            "    function(position){",
+                            "        //Se crea un objeto de posicion, con latitud y longitud actuales",
+                            "        posActual = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);",
+                            "        Ext.getCmp(\"mapaCercaniaEventos\").setMapCenter({latitude: posActual.lat(), longitude: posActual.lng()});",
+                            "    }",
+                            "    );",
+                            "}"
+                        ]
+                    },
+                    "designerId": "a4a03ced-5ee0-4c11-85c2-06fc7fd2a8b0"
+                }
+            ]
+        }
+    ]
+}
