@@ -1,0 +1,29 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "modelPrueba"
+        ],
+        "stores": [
+            "storePrueba"
+        ],
+        "views": [
+            "tabPanelPrincipal",
+            "containerHome",
+            "containerMain",
+            "containerHeader",
+            "containerProfile",
+            "containerMyVideos",
+            "containerPopular",
+            "BASURERO"
+        ],
+        "name": "MyApp"
+    },
+    "id": "ExtBox1-ext-gen1783",
+    "designerId": "application"
+}

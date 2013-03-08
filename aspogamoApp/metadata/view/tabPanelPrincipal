@@ -1,0 +1,257 @@
+{
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "fade",
+        "activeItem": 3,
+        "designer|userClassName": "tabPanelPrincipal",
+        "designer|userAlias": "tabpanelprincipal",
+        "height": "80%",
+        "id": "tabPanelMain",
+        "top": "20%",
+        "width": "100%"
+    },
+    "id": "ExtBox1-ext-gen2472",
+    "designerId": "113c8804-658a-4d7b-a54f-bab8647c7e3d",
+    "cn": [
+        {
+            "type": "tabbar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "designer|userClassName": "MyTabBar",
+                "docked": "top",
+                "scrollable": "horizontal",
+                "activeTab": null
+            },
+            "designerId": "ff638b17-bfc4-488f-9f61-a70780af79c4"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Home"
+            },
+            "designerId": "7fd3e507-3af1-472e-a055-c3583e6edbb2",
+            "masterInstanceId": "ExtBox1-ext-gen4943"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "My Profile"
+            },
+            "designerId": "8a654eaa-f785-4b64-b0a7-ad22177633e0",
+            "masterInstanceId": "ExtBox1-ext-gen11248"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "My Videos"
+            },
+            "designerId": "ab976b25-ec06-4907-8670-f39df56952dd",
+            "masterInstanceId": "ExtBox1-ext-gen20413"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Popular"
+            },
+            "designerId": "f7825311-fcfa-429a-9699-e0f9206c0257",
+            "masterInstanceId": "ExtBox1-ext-gen21752"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabPanelMainActiveItemChange",
+                "fn": "onTabPanelMainActiveItemChange",
+                "implHandler": [
+                    "/*",
+                    "if(value.getId()==\"containerPopular\"){",
+                    "//--------------------------------------------------------------",
+                    "//    canvas=new Ext.draw.Canvas();",
+                    "//    value.add(canvas);",
+                    "",
+                    "//    canvas=document.getElementById(\"mycanvas\");",
+                    "//    context=canvas.getContext('2d');",
+                    "//    cw=canvas.width;",
+                    "//    ch=canvas.height;",
+                    "//    context.strokeStyle='black';",
+                    "//    context.moveTo(0,0);",
+                    "//    context.lineTo(cw.ch);",
+                    "//    context.stroke();",
+                    "//    alert(canvas.height);",
+                    "",
+                    "",
+                    "",
+                    "value.element.on({",
+                    "    touchstart: function(e,node){",
+                    "",
+                    "        //    alert(e.target);",
+                    "        //        alert(e.target.id);",
+                    "",
+                    "",
+                    "        canvasContext=e.target.getContext(\"2d\");",
+                    "        //    alert(\"fwe;lwej\");",
+                    "",
+                    "        canvasContext.moveTo(e.target.layerX,e.target.layerY);",
+                    "",
+                    "        puntoTocadoAnteriorX=e.event.layerX;",
+                    "        puntoTocadoAnteriorY=e.event.layerY;",
+                    "",
+                    "",
+                    "",
+                    "        //            canvasContext=e.target.getContext(\"2d\");",
+                    "        //",
+                    "        //            canvasContext.fillText(\"X\",10,75);",
+                    "        //",
+                    "        //",
+                    "        //            canvasContext.moveTo(0,75);",
+                    "        //            canvasContext.lineTo(500,75);",
+                    "        //",
+                    "        //            canvasContext.stroke();",
+                    "",
+                    "    }",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    "value.element.on({",
+                    "    touchmove: function(e,node){",
+                    "        //        alert(\"gato lococo\");",
+                    "",
+                    "        //    alert(\"fwef;j\");",
+                    "        //alert(e.target.id);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "        canvasContext=e.target.getContext(\"2d\");",
+                    "        //    alert(\"fwe;lwej\");",
+                    "",
+                    "        //canvasContext.fillStyle='rgb(180,33,33)';",
+                    "",
+                    "        canvasContext.strokeStyle='rgb(55,55,255)';",
+                    "",
+                    "        canvasContext.beginPath();",
+                    "",
+                    "        canvasContext.moveTo(puntoTocadoAnteriorX,puntoTocadoAnteriorY);",
+                    "",
+                    "        canvasContext.lineTo(e.event.layerX,e.event.layerY);",
+                    "        canvasContext.stroke();",
+                    "",
+                    "        canvasContext.closePath();",
+                    "",
+                    "        puntoTocadoAnteriorX=e.event.layerX;",
+                    "        puntoTocadoAnteriorY=e.event.layerY;",
+                    "",
+                    "",
+                    "",
+                    "        //Ext.getCmp(\"containerPopular\").add(drawPixelPunto);",
+                    "",
+                    "    }",
+                    "});",
+                    "*/",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "/*",
+                    "value.element.on({",
+                    "touchstart: function(e,self){",
+                    "//        alert(\"gato lococo\");",
+                    "//canvas=value.getCanvasObject();",
+                    "",
+                    "context = value.getContext('2d');",
+                    "",
+                    "var drawPixelPunto=new Ext.draw.Component({",
+                    "    items:[{",
+                    "        type: 'circle',",
+                    "        fill: '#79BB3F',",
+                    "        radius: 3,",
+                    "        x:e.event.layerX,",
+                    "        y:e.event.layerY",
+                    "    }]",
+                    "});",
+                    "Ext.getCmp(\"containerPopular\").setItems([drawPixelPunto]);",
+                    "",
+                    "}",
+                    "});",
+                    "*/",
+                    "//--------------------------------------------------------------",
+                    "//}"
+                ],
+                "name": "activeitemchange"
+            },
+            "designerId": "19cddf83-30a3-4167-93b0-523dc459b974"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabPanelMainInitialize",
+                "fn": "onTabPanelMainInitialize",
+                "implHandler": [
+                    "//this.setActiveItem(3);"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "287b75e6-d787-4011-9004-83a2ca9e5377"
+        }
+    ]
+}
