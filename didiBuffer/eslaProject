@@ -1,0 +1,170 @@
+{
+    "xdsVersion": "2.1.0",
+    "frameworkVersion": "touch21",
+    "internals": {
+        "type": "container",
+        "reference": {
+            "name": "items",
+            "type": "array"
+        },
+        "codeClass": null,
+        "userConfig": {
+            "designer|userClassName": "containerPrincipalDeApp",
+            "designer|initialView": true,
+            "id": "containerPrincipalDeApp",
+            "layout": "hbox"
+        },
+        "cn": [
+            {
+                "type": "container",
+                "reference": {
+                    "name": "items",
+                    "type": "array"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "designer|userClassName": "MyContainer1",
+                    "hidden": true,
+                    "id": "containerDelPerfilUsuario",
+                    "width": "250px",
+                    "layout": "card"
+                },
+                "cn": [
+                    {
+                        "type": "toolbar",
+                        "reference": {
+                            "name": "items",
+                            "type": "array"
+                        },
+                        "codeClass": null,
+                        "userConfig": {
+                            "designer|userClassName": "MyToolbar1",
+                            "docked": "top",
+                            "id": "toolbarDelContainerPerfilDeUsuario",
+                            "title": "PERFIL"
+                        }
+                    },
+                    {
+                        "type": "container",
+                        "reference": {
+                            "name": "items",
+                            "type": "array"
+                        },
+                        "codeClass": null,
+                        "userConfig": {
+                            "designer|userClassName": "MyContainer3",
+                            "html": "<p> Información de usuario. </p>",
+                            "id": "containerContenidoDeContainerDePerfilDeUsuario",
+                            "padding": "0.5em",
+                            "scrollable": "vertical"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "container",
+                "reference": {
+                    "name": "items",
+                    "type": "array"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "layout|flex": 1,
+                    "designer|userClassName": "MyContainer2",
+                    "cls": [
+                        "slide"
+                    ],
+                    "height": "100%",
+                    "id": "inicio",
+                    "left": 0,
+                    "width": "100%",
+                    "layout": "card"
+                },
+                "cn": [
+                    {
+                        "type": "toolbar",
+                        "reference": {
+                            "name": "items",
+                            "type": "array"
+                        },
+                        "codeClass": null,
+                        "userConfig": {
+                            "designer|userClassName": "MyToolbar",
+                            "docked": "top",
+                            "title": "Principal"
+                        },
+                        "cn": [
+                            {
+                                "type": "button",
+                                "reference": {
+                                    "name": "items",
+                                    "type": "array"
+                                },
+                                "codeClass": null,
+                                "userConfig": {
+                                    "designer|userClassName": "MyButton1",
+                                    "text": "Open"
+                                },
+                                "cn": [
+                                    {
+                                        "type": "fixedfunction",
+                                        "reference": {
+                                            "name": "items",
+                                            "type": "array"
+                                        },
+                                        "codeClass": null,
+                                        "userConfig": {
+                                            "designer|userClassName": "handler",
+                                            "fn": "handler",
+                                            "designer|params": [
+                                                "button",
+                                                "event"
+                                            ],
+                                            "implHandler": [
+                                                "if (Ext.getCmp('containerDelPerfilUsuario').isHidden()) {",
+                                                "    Ext.getCmp('containerDelPerfilUsuario').show();   ",
+                                                "}",
+                                                "",
+                                                "",
+                                                "var main = Ext.get('inicio');",
+                                                "",
+                                                "",
+                                                "if (main.hasCls('out')) {",
+                                                "    main.removeCls('out');",
+                                                "    main.addCls('in'); ",
+                                                "    button.setText('Open');",
+                                                "} else {",
+                                                "    main.removeCls('in');    ",
+                                                "    main.addCls('out');    ",
+                                                "    button.setText('Close');         ",
+                                                "}"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "container",
+                        "reference": {
+                            "name": "items",
+                            "type": "array"
+                        },
+                        "codeClass": null,
+                        "userConfig": {
+                            "designer|userClassName": "MyContainer4",
+                            "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae sagittis ipsum. Nam eros orci, iaculis a cursus eget, eleifend id sapien. In hac habitasse platea dictumst. Aliquam sagittis adipiscing aliquet. Etiam nec mi nisi, vel convallis nisi. Nunc congue ultrices risus, at rutrum est aliquet in. Pellentesque purus eros, scelerisque vehicula porttitor vel, facilisis at mi. Quisque vestibulum, neque vitae mattis dignissim, dui nisi lacinia quam, et faucibus elit lacus eu massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porttitor, elit ac luctus dignissim, justo massa eleifend metus, id consequat est diam a lorem. Maecenas et viverra dolor. Proin sed eros id arcu vehicula tincidunt eu a diam. Donec eu quam ut velit iaculis aliquam sed a neque. Sed vel sapien dui, vel tristique nulla. Maecenas a lectus urna.  Quisque porta rutrum posuere. Vestibulum fermentum convallis erat, vel eleifend nisl viverra sed. Duis orci nulla, vestibulum vitae euismod vitae, sodales id turpis. In lobortis scelerisque lacinia. Quisque ac nulla ultricies diam accumsan tempus. Morbi non odio mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur pellentesque accumsan sem, non porttitor ipsum rutrum eu. Vivamus vel metus metus. Mauris mollis ullamcorper porttitor. Vestibulum egestas eleifend augue posuere adipiscing. Aenean tempor tempus eros, mollis feugiat est cursus mattis.</p>',                         id: 'item-example",
+                            "id": "container1",
+                            "padding": "0.5em",
+                            "scrollable": true
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "linkedNodes": {},
+    "boundStores": {},
+    "boundModels": {}
+}

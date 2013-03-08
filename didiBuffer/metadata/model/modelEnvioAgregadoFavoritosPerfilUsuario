@@ -1,0 +1,28 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelEnvioAgregadoFavoritosPerfilUsuario"
+    },
+    "id": "ExtBox1-ext-gen68669",
+    "designerId": "74ec5711-9569-41e9-b42e-edde9b0b0af9",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field136",
+                "name": "estado"
+            },
+            "designerId": "d74abce8-6244-4524-b4ea-896855beed9e"
+        }
+    ]
+}

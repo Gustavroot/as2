@@ -1,0 +1,137 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerPerfilPerfilUsuario",
+        "designer|userAlias": "containerperfilperfilusuario",
+        "id": "containerPerfilPerfilUsuario",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen127603",
+    "designerId": "a8f244f9-37e5-40d7-be26-c57de7f83eee",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar",
+                "docked": "top",
+                "height": "10%",
+                "id": "toolbarContainerPerfilPerfilUsuario",
+                "style": "background: #3E3737"
+            },
+            "designerId": "cad401a7-b638-4875-b88c-03d6af17474a",
+            "cn": [
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyImage5",
+                        "centered": true,
+                        "height": "100%%",
+                        "html": "<img src=\"./resources/logo/Logo_DD.png\" width=\"100%\" height=\"100%\">",
+                        "id": "imagenToolbarContainerPerfilPerfilUsuario",
+                        "itemId": "myimage30",
+                        "width": "40%"
+                    },
+                    "designerId": "276967dc-07f5-48b8-b544-d43a2af537a1",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onImagenToolbarContainerSubcategoriasTap11",
+                                "fn": "onImagenToolbarContainerSubcategoriasTap11",
+                                "implHandler": [
+                                    "//Para devolverse hacia container Inicio dando click en el Logo Didi",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerInicio\"));"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "1f74d9e6-8b33-4398-9a07-9715eba19a67"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton1",
+                        "baseCls": "botonUsuario",
+                        "height": "60%",
+                        "id": "botonAtrasContainerPerfilPerfilUsuario",
+                        "left": "1%",
+                        "top": "20%",
+                        "ui": "action-round",
+                        "width": "13%",
+                        "text": null
+                    },
+                    "designerId": "86f7d5d1-2dbf-44bb-ba0f-502d44a11e02",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Esta linea es para cambiar al tab anterior",
+                                    "//Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(viewDelQuePasoHaciaContainerPerfilPerfilUsuario);",
+                                    "",
+                                    "",
+                                    "",
+                                    "Ext.getCmp('containerDelPerfilUsuario').setHidden(0);",
+                                    "",
+                                    "",
+                                    "var main = Ext.get('containerParaTabPanelPrincipal');",
+                                    "",
+                                    "",
+                                    "if (main.hasCls('out')) {",
+                                    "    main.removeCls('out');",
+                                    "    main.addCls('in'); ",
+                                    "    //button.setText('Usuario');",
+                                    "} else {",
+                                    "    main.removeCls('in');    ",
+                                    "    main.addCls('out');    ",
+                                    "    //button.setText('Usuario');         ",
+                                    "}",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "designerId": "1534c468-0efb-437b-ad73-c772042bfcde"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

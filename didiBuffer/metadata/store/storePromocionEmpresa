@@ -1,0 +1,80 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storePromocionEmpresa",
+        "autoSync": true,
+        "model": "modelPromocionEmpresa",
+        "storeId": "storePromocionEmpresa"
+    },
+    "id": "ExtBox1-ext-gen12892",
+    "designerId": "6e8d60bd-821b-4d16-9da5-5fcd7e43cc87",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy25",
+                "url": "http://www.didicr.com/php/didiRapidos.php"
+            },
+            "designerId": "077d025b-848e-4f8f-a845-7da66f90b76c",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader25",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "b0f11334-15d2-4aca-be61-81e63f30c8d4"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "//Con la llamada de este metodo lo que se hace es recorrer sobre todos los",
+                    "//elementos del store, y para cada uno de ellos, se hace un APPEND de imagenes",
+                    "//al carousel, cada imagen tiene un url presente en el store",
+                    "contadorParaAsignarIDimgsCarouselPromocionEmpresa=0;",
+                    "this.each(function (record) {",
+                    "    Ext.getCmp(\"carouselPromocionEmpresa\").add(Ext.create('Ext.Img', {html: \"<p><img src=\"+ record.get(\"imagen\") +\" height='80%' width='100%'></p>\"+\"<p>&nbsp</p><center><p>\"+record.get(\"nombre\")+\"</p></center>\", id: \"imagenCarouselPromocionEmpresa\"+contadorParaAsignarIDimgsCarouselPromocionEmpresa}));",
+                    "    //Ext.getCmp(\"imagenCarouselInicio\"+contadorParaAsignarIDimgsCarouselPromocionEmpresa).addListener('tap',funcionDarClickElementosCarouselInicio);",
+                    "    contadorParaAsignarIDimgsCarouselPromocionEmpresa=contadorParaAsignarIDimgsCarouselPromocionEmpresa+1;",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "f5739081-2564-4639-aca9-fb87c5bbce75"
+        }
+    ]
+}

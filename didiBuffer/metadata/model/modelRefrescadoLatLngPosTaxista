@@ -1,0 +1,41 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelRefrescadoLatLngPosTaxista"
+    },
+    "id": "ExtBox1-ext-gen57745",
+    "designerId": "20ca63f2-9528-4af2-9991-185a95886844",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field166",
+                "name": "latitudTaxista"
+            },
+            "designerId": "55f7c11f-02c8-4966-b9d5-57da9230dd0e"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field167",
+                "name": "longitudTaxista"
+            },
+            "designerId": "c2e91f37-436e-423f-a9c9-acfd6fea7175"
+        }
+    ]
+}

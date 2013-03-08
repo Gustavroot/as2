@@ -1,0 +1,413 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerInicio",
+        "designer|userAlias": "containerinicio",
+        "id": "containerInicio",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen5480",
+    "designerId": "4ef37034-bc8a-4264-9d05-fadfeb2a74ba",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar",
+                "border": 0,
+                "docked": "top",
+                "height": "10%",
+                "id": "toolbarContainerInicio",
+                "style": "background: #3E3737"
+            },
+            "designerId": "66b1a5fb-d848-4e1f-8c6d-e13aba477801",
+            "cn": [
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyImage5",
+                        "centered": true,
+                        "height": "100%%",
+                        "html": "<img src=\"./resources/logo/Logo_DD.png\" width=\"100%\" height=\"100%\">",
+                        "id": "imagenToolbarContainerInicio",
+                        "width": "40%"
+                    },
+                    "designerId": "91337f36-5b38-452a-ae96-0ba90dc155cb"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton1",
+                        "baseCls": "botonUsuario",
+                        "height": "60%",
+                        "id": "botonDespliegueInfoPerfilUsuario",
+                        "left": "1%",
+                        "top": "20%",
+                        "ui": "action-round",
+                        "width": "13%",
+                        "text": null
+                    },
+                    "designerId": "2ff75eac-74be-47df-94df-1f7f979bc252",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "if (Ext.getCmp('containerDelPerfilUsuario').isHidden()) {",
+                                    "    //Ext.getCmp('containerDelPerfilUsuario').show();   ",
+                                    "    //    Ext.getCmp(\"carouselBannerPrincipal\").setDisabled(1);",
+                                    "    //    alert(\"fa\");",
+                                    "}",
+                                    "else{",
+                                    "    //    Ext.getCmp(\"carouselBannerPrincipal\").enable();",
+                                    "}",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "Ext.getCmp('containerDelPerfilUsuario').setHidden(0);",
+                                    "",
+                                    "",
+                                    "var main = Ext.get('containerParaTabPanelPrincipal');",
+                                    "",
+                                    "",
+                                    "if (main.hasCls('out')) {",
+                                    "    main.removeCls('out');",
+                                    "    main.addCls('in'); ",
+                                    "    //button.setText('Usuario');",
+                                    "} else {",
+                                    "    main.removeCls('in');    ",
+                                    "    main.addCls('out');    ",
+                                    "    //button.setText('Usuario');         ",
+                                    "}",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "designerId": "09a0c6da-1087-4245-8ac7-a53f2b9e916f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "carousel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyCarousel",
+                "docked": "top",
+                "height": "25%",
+                "id": "carouselBannerPrincipal",
+                "itemId": "carouselBannerPrincipal",
+                "top": null,
+                "width": "100%"
+            },
+            "designerId": "0bb5c522-4d42-4540-a475-6cafb895443e"
+        },
+        {
+            "type": "image",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyImage43",
+                "docked": "top",
+                "height": "7%",
+                "html": "<img src=\"http://www.didicr.com/imagenes/rapidos/tituloDidiRapidos.png\" height=\"100%\" width=\"100%\">",
+                "id": "imagenTituloDidiRapidos",
+                "itemId": "myimage43",
+                "width": "100%"
+            },
+            "designerId": "55523f64-469f-471a-9cd1-914cd8245b76"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer12",
+                "docked": "top",
+                "height": "30%",
+                "id": "containerDataViewDidiRapidos",
+                "itemId": "containerDataViewDidiRapidos",
+                "layout": "fit"
+            },
+            "designerId": "f829c9db-0d98-4aa2-8159-0c2c2ae29bbc",
+            "cn": [
+                {
+                    "type": "dataview",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyDataView",
+                        "centered": true,
+                        "docked": "top",
+                        "height": "100%",
+                        "id": "dataViewDidiRapidos",
+                        "itemId": "dataViewDidiRapidos",
+                        "top": "10%",
+                        "width": "100%",
+                        "layout": "hbox",
+                        "scrollable": [
+                            "horizontal"
+                        ],
+                        "emptyText": "Error en la base de datos...",
+                        "inline": [
+                            "{wrap: false}"
+                        ],
+                        "loadingText": "Cargando...",
+                        "store": null
+                    },
+                    "designerId": "7b112065-4415-4c30-b216-531627b6a8f6",
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div style=\"margin-right: 0%; margin-left: 0%;\">",
+                                    "    <img src=\"{imagen}\" width=\"80%\" height=\"80%\" />",
+                                    "",
+                                    "</div>",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "5d942614-3385-4bf7-a1ad-2f6291ce7ccb"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer4",
+                "docked": "top",
+                "height": "7%",
+                "html": "<img src=\"http://www.didicr.com/imagenes/directorio/barraDirectorio.png\" height=\"100%\" width=\"100%\">",
+                "id": "containerTituloDirectorio",
+                "itemId": "containerTituloDirectorio",
+                "top": null,
+                "width": "100%",
+                "layout": "fit"
+            },
+            "designerId": "180689e2-476f-40c7-adec-0efd9cb0f4c5"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer11",
+                "docked": "top",
+                "height": "21%",
+                "html": null,
+                "id": "containerImagenesDirectorio",
+                "itemId": "containerImagenesDirectorio",
+                "layout": "fit"
+            },
+            "designerId": "d03ac8c9-d709-40e5-ace4-0311a6afdab1",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton115",
+                        "baseCls": "botonCategoria",
+                        "docked": "left",
+                        "height": "92%",
+                        "id": "botonDirectorioCategorias",
+                        "left": "3%",
+                        "maxHeight": 196,
+                        "maxWidth": 196,
+                        "top": "4%",
+                        "width": "29%",
+                        "text": null
+                    },
+                    "designerId": "3e867855-a79f-4c61-9e19-0e56d3edfb26",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Con este if se carga el store que contiene a las existentes Categorias",
+                                    "if(Ext.getStore(\"storeCategorias\").isLoaded()===false){",
+                                    "    Ext.getStore(\"storeCategorias\").load();",
+                                    "}",
+                                    "//Ademas, hay que pasar al view donde estan todas las categorias",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerCategorias\"));"
+                                ]
+                            },
+                            "designerId": "83a19f94-fd92-43fa-acc9-dc364623b637"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton116",
+                        "baseCls": "botonLugar",
+                        "height": "92%",
+                        "itemId": "botonDirectorioMiLugar",
+                        "left": "34.5%",
+                        "maxHeight": 196,
+                        "maxWidth": 196,
+                        "top": "4%",
+                        "width": "32%",
+                        "text": null
+                    },
+                    "designerId": "ea0b87ff-a439-4c4b-bff9-abb28f9b8cb2",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Hay que pasar al view correspondiente de Geolocalizacion, que dara una",
+                                    "//busqueda por Listado y por Mapa",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerFormularioGeolocalizacion\"));"
+                                ]
+                            },
+                            "designerId": "eba90894-623e-4295-8025-252bd31eb19a"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton117",
+                        "baseCls": "botonAvanzado",
+                        "height": "92%",
+                        "id": "botonDirectorioAvanzado",
+                        "maxHeight": 196,
+                        "maxWidth": 196,
+                        "right": "3%",
+                        "top": "4%",
+                        "width": "29%",
+                        "text": null
+                    },
+                    "designerId": "b3796299-af5a-46f8-95f4-a2e3647990ac",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Se pasa al view de directorio Avanzado para hacer una busqueda por subcat, ",
+                                    "//cat, canton, provincia y palabra clave",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerBusquedaAvanzada\"));"
+                                ]
+                            },
+                            "designerId": "ec0c73f2-a501-44fe-8b46-7fdc66bb3b6c"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

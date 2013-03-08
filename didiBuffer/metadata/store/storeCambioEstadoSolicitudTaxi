@@ -1,0 +1,45 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeCambioEstadoSolicitudTaxi",
+        "model": "modelCambioEstadoSolicitudTaxi",
+        "storeId": "storeCambioEstadoSolicitudTaxi"
+    },
+    "id": "ExtBox1-ext-gen15383",
+    "designerId": "45c20472-c0f4-4f1e-9642-c786b484c512",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy30",
+                "url": "http://www.didicr.com/php/diditaxi/refrescadoEstadoSolicitudTaxi.php"
+            },
+            "designerId": "64afc48a-1d3e-43a5-8220-24ab78048cfa",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader30",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "a79557eb-a201-4942-a564-d33a429ef262"
+                }
+            ]
+        }
+    ]
+}

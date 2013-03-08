@@ -1,0 +1,140 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeSubcategorias",
+        "autoSync": true,
+        "clearOnPageLoad": false,
+        "model": "modelSubcategorias",
+        "pageSize": 15,
+        "storeId": "storeSubcategorias",
+        "totalCount": 20
+    },
+    "id": "ExtBox1-ext-gen64372",
+    "designerId": "ffe3229e-ae41-46cd-b5ee-791964bdf317",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy6",
+                "extraParams": null,
+                "url": "http://www.didicr.com/php/subcategoria/subcategoriaPorCategoria.php"
+            },
+            "designerId": "24c858b1-a623-45d0-9e29-28a6aa8381e7",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader6",
+                        "idProperty": "idSubcategoria",
+                        "rootProperty": "ptm",
+                        "totalProperty": null
+                    },
+                    "designerId": "92d13fc1-30e4-4af1-9e8b-d081ca8e68b4"
+                }
+            ]
+        },
+        {
+            "type": "grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGrouper"
+            },
+            "designerId": "13d9b753-abcc-4028-8203-0b41265f1300",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "groupFn",
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "record"
+                        ],
+                        "implHandler": [
+                            "return record.get(\"nombre\")[0];"
+                        ]
+                    },
+                    "designerId": "474c7872-96fb-4af8-a7f9-4f98c45730c2"
+                }
+            ]
+        },
+        {
+            "type": "sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySorter",
+                "property": "subcategoria"
+            },
+            "designerId": "e70c2940-4dc1-497a-8b4e-a20583a17988"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "//Con este codigo se filtran las letras en el indexBar",
+                    "contadorSeteadoDeLetrasIndexBarSubcategorias=0;",
+                    "var letrasParaSetearIndexBar = [];",
+                    "Ext.getStore(\"storeSubcategorias\").each(function (record) {",
+                    "    if(letrasParaSetearIndexBar.indexOf(record.get(\"nombre\")[0])==-1){",
+                    "        letrasParaSetearIndexBar[contadorSeteadoDeLetrasIndexBarSubcategorias]=record.get(\"nombre\")[0];",
+                    "        contadorSeteadoDeLetrasIndexBarSubcategorias++;",
+                    "    }",
+                    "});",
+                    "//Luego de crear el array, se asigna al indexBar ese array",
+                    "Ext.getCmp(\"indexBarSubcategorias\").setLetters(letrasParaSetearIndexBar);",
+                    "",
+                    "",
+                    "//Dependiendo de en donde este uno, si esta en Busqueda Avanzada, entonces al",
+                    "//cargar el store Subcategorias lo unico que se hace es ocultar el panel de",
+                    "//Categorias (ya que se le ha dado click a alguna de las categorias), y en caso",
+                    "//contrario lo q se hace es abrir el container de Subcategorias",
+                    "if(Ext.getCmp(\"panelCategoriaBusquedaAvanzada\").getHidden()===true){",
+                    "    Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerSubcategorias\"));",
+                    "}",
+                    "else{",
+                    "    Ext.getCmp(\"panelCategoriaBusquedaAvanzada\").setHidden(1);",
+                    "}",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "4a9d7ca1-7002-423d-9b9c-84957e24271d"
+        }
+    ]
+}

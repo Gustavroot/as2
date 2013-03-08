@@ -1,0 +1,132 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelConfigDidiReserva"
+    },
+    "id": "ExtBox1-ext-gen9947",
+    "designerId": "5c7f2707-e9d3-41aa-a603-9274f670070c",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field164",
+                "name": "idModuloReserva"
+            },
+            "designerId": "ffef309d-b105-4e8c-b469-7829386012b2"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field165",
+                "name": "idCliente"
+            },
+            "designerId": "b325257f-e128-46be-98ff-f70c2beb0c99"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field166",
+                "name": "horaInicio"
+            },
+            "designerId": "6fcc6970-dfdd-4a46-9342-afd34b620986"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field167",
+                "name": "horaFinal"
+            },
+            "designerId": "125b7221-e448-4ac5-9553-56880b6f0343"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field168",
+                "name": "cantidadPersonasMinimo"
+            },
+            "designerId": "2b5a67ca-8021-45fd-8d68-c8357bf452f1"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field169",
+                "name": "cantidadPersonasMaximo"
+            },
+            "designerId": "c97990af-9037-4c65-8378-52dcbd8e175a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field170",
+                "name": "locacionModuloReserva"
+            },
+            "designerId": "fe0ea9bb-2cc4-4360-adf9-c21163cb62c6"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field171",
+                "name": "imagenLocacionModuloReserva"
+            },
+            "designerId": "db90b58c-933c-49d3-9a8b-b43358015827"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field172",
+                "name": "notaAdicionalModuloReserva"
+            },
+            "designerId": "fc7d5959-7257-4169-8a4a-edc52d1dbff7"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelCambioEstadoSolicitudTaxi"
+    },
+    "id": "ExtBox1-ext-gen16264",
+    "designerId": "5360c44a-fc1b-4e4e-8c3d-cf2e2a5fb023",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field168",
+                "name": "estado"
+            },
+            "designerId": "84aa7fe5-2d2e-4962-b597-64931ce3db9d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field169",
+                "name": "idPedido"
+            },
+            "designerId": "47d8ec1b-1dbc-46ba-962e-f223038a8383"
+        }
+    ]
+}

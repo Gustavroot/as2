@@ -1,0 +1,41 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelEstadoEnvio"
+    },
+    "id": "ExtBox1-ext-gen15162",
+    "designerId": "c786c6f7-ff10-4d1d-9764-4ec2a76e2adc",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "estado"
+            },
+            "designerId": "9f50d7c0-8166-4b06-9c7c-e18c650f7528"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field165",
+                "name": "idPedido"
+            },
+            "designerId": "466f2662-c4bc-4210-a78f-dfdc7d5a31e5"
+        }
+    ]
+}

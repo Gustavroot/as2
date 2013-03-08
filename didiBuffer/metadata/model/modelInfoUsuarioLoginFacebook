@@ -1,0 +1,28 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelInfoUsuarioLoginFacebook"
+    },
+    "id": "ExtBox1-ext-gen36711",
+    "designerId": "9f1db438-ad66-4672-826d-8160599088e0",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field164",
+                "name": "idUsuario"
+            },
+            "designerId": "e1af9188-e120-4790-ab6a-4080c0230363"
+        }
+    ]
+}

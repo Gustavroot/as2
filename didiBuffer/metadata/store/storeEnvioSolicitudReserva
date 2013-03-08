@@ -1,0 +1,144 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeEnvioSolicitudReserva",
+        "model": "modelEnvioSolicitudReserva",
+        "storeId": "storeEnvioSolicitudReserva"
+    },
+    "id": "ExtBox1-ext-gen76645",
+    "designerId": "b2ecd52b-93d4-4a6c-906a-31a85b274093",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy15",
+                "url": "http://www.didicr.com/php/insertaReserva2.php"
+            },
+            "designerId": "7f1dbf21-b4d5-4f5d-9298-87ea5235cb10",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader15",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "3204f212-0b95-41cc-98fe-d351b29790ec"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "",
+                    "funcionDespliegaOpcionesReservaEvento=function(){",
+                    "    //    alert(\"fed\");",
+                    "    Ext.getCmp(\"panelResumenOpcionesReservaEvento\").setHidden(0);",
+                    "    if(viewDelQuePasoAlViewDeReserva==\"containerDescripcionEventos\"){",
+                    "        try{",
+                    "            cantidadDePersonasReserva=Ext.getCmp(\"spinnerFieldModuloReservaciones\").getValue();",
+                    "        }",
+                    "        catch(e){",
+                    "            cantidadDePersonasReserva=1;",
+                    "        }",
+                    "    ",
+                    "        try{",
+                    "            mesaReserva=Ext.getCmp(\"datePickerReservacionRestaurante\").getValue()['MyPickerSlotPanelElegirMesa'];",
+                    "        }",
+                    "        catch(e){",
+                    "            mesaReserva=0;",
+                    "        }",
+                    "    ",
+                    "        try{",
+                    "            ocasionReserva=Ext.getCmp(\"pickerElegirOcasion\").getValue()['MyPickerSlotElegirOcasion'];",
+                    "        }",
+                    "        catch(e){",
+                    "            ocasionReserva=\"Vacío\";",
+                    "        }",
+                    "    ",
+                    "        try{",
+                    "            notaAdicionalReserva=Ext.getCmp(\"textAreaNotaAdicionalModuloReservaciones\").getValue();",
+                    "        }",
+                    "        catch(e){",
+                    "            notaAdicionalReserva=\"Vacío\";",
+                    "        }",
+                    "        ",
+                    "        ",
+                    "        ",
+                    "        ",
+                    "        Ext.getCmp(\"containerEnPanelResumenOpcionesReservaEvento\").setHtml(\"<center><b> Confirmación de reserva </b></center>\"+\"<p> &nbsp </p>\"+\"<b><p style='font-size:125%;'>Número de reserva:\"+Ext.getStore('storeEnvioSolicitudReserva').first().get(\"idReserva\")+\"</p></b>\"+\"<p> &nbsp </p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Organizador del evento: \"+Ext.getStore('storeEnvioSolicitudReserva').first().get(\"nombre\")+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Nombre del evento:\"+Ext.getStore('storeDescripcionEventos').first().get(\"nombre\")+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Fecha: \"+Ext.getCmp('dateFieldReservacionRestaurante').getValue()+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Hora: \"+Ext.getCmp('selectFieldHoraReservaRestaurante').getPlaceHolder()+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Cantidad de personas: \"+cantidadDePersonasReserva+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Nota adicional: \"+notaAdicionalReserva+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Mesa: \"+mesaReserva+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Ocasión: \"+ocasionReserva+\"</p>\"+\"<p> &nbsp </p>\");",
+                    "    }",
+                    "    else{",
+                    "        ",
+                    "        try{",
+                    "            cantidadDePersonasReserva=Ext.getCmp(\"spinnerFieldModuloReservaciones\").getValue();",
+                    "        }",
+                    "        catch(e){",
+                    "            cantidadDePersonasReserva=1;",
+                    "        }",
+                    "    ",
+                    "        try{",
+                    "            mesaReserva=Ext.getCmp(\"datePickerReservacionRestaurante\").getValue()['MyPickerSlotPanelElegirMesa'];",
+                    "        }",
+                    "        catch(e){",
+                    "            mesaReserva=0;",
+                    "        }",
+                    "    ",
+                    "        try{",
+                    "            ocasionReserva=Ext.getCmp(\"pickerElegirOcasion\").getValue()['MyPickerSlotElegirOcasion'];",
+                    "        }",
+                    "        catch(e){",
+                    "            ocasionReserva=\"Vacío\";",
+                    "        }",
+                    "    ",
+                    "        try{",
+                    "            notaAdicionalReserva=Ext.getCmp(\"textAreaNotaAdicionalModuloReservaciones\").getValue();",
+                    "        }",
+                    "        catch(e){",
+                    "            notaAdicionalReserva=\"Vacío\";",
+                    "        }",
+                    "        ",
+                    "        ",
+                    "        ",
+                    "        //        Ext.getCmp(\"containerEnPanelResumenOpcionesReservaEvento\").setHtml(\"bla\");",
+                    "        Ext.getCmp(\"containerEnPanelResumenOpcionesReservaEvento\").setHtml(\"<center><b> Confirmación de reserva </b></center>\"+\"<p> &nbsp </p>\"+\"<b><p style='font-size:125%;'>Número de reserva:\"+Ext.getStore('storeEnvioSolicitudReserva').first().get(\"idReserva\")+\"</p></b>\"+\"<p> &nbsp </p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Fecha: \"+Ext.getCmp('dateFieldReservacionRestaurante').getValue()+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Hora: \"+Ext.getCmp('selectFieldHoraReservaRestaurante').getPlaceHolder()+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Cantidad de personas: \"+cantidadDePersonasReserva+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Nota adicional: \"+notaAdicionalReserva+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Mesa: \"+mesaReserva+\"</p>\"+\"<p style='font-family:texgyrechorus;color:black;'>Ocasión: \"+ocasionReserva+\"</p>\"+\"<p> &nbsp </p>\");",
+                    "    }",
+                    "    //alert(Ext.getStore('storeDescripcionEventos').get(\"nombre\"));",
+                    "    //alert(Ext.getCmp('dateFieldReservacionRestaurante').getValue());",
+                    "    //alert(Ext.getCmp('selectFieldHoraReservaRestaurante').getPlaceHolder());",
+                    "};",
+                    "",
+                    "Ext.Msg.alert('Aviso', 'Su reservación ha sido pedida satisfactoriamente.', funcionDespliegaOpcionesReservaEvento);",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "fc0c72b4-278b-4599-b3ff-ef46c43dd999"
+        }
+    ]
+}

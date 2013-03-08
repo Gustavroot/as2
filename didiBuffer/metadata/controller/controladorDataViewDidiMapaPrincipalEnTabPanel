@@ -1,0 +1,67 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "controladorDataViewDidiMapaPrincipalEnTabPanel"
+    },
+    "id": "ExtBox1-ext-gen40265",
+    "designerId": "d5e60839-750b-47f0-a1b3-d4d37c3da77d",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDataviewItemTap",
+                "fn": "onDataviewItemTap",
+                "implHandler": [
+                    "",
+                    "",
+                    "Ext.getCmp(\"mapaContainerMapa\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                    "",
+                    "//Esta linea sirve para modificar el PHP que hace el trabajo de devolucion de",
+                    "//entradas al store",
+                    "Ext.getStore(\"storeListadoTotalDeLasEmpresas\").getProxy().setUrl(\"http://www.didicr.com/php/cliente/clienteEnMapa.php\");",
+                    "//Se pasa por parametro la categoria de la cual se desea extraer el listado de las",
+                    "//empresas",
+                    "",
+                    "//alert(record.get(\"idCategoria\"));",
+                    "",
+                    "Ext.getStore(\"storeListadoTotalDeLasEmpresas\").getProxy().setExtraParam('catParam',record.get(\"idCategoria\"));",
+                    "//Se introducen markers en el mapa, para esto, se pasa el store del cual se extraeran",
+                    "//los campos correspondientes, y se pasa el mapa al cual se le agregaran esos markers",
+                    "funcionParaIntroducirMarkersEnMapa(\"storeListadoTotalDeLasEmpresas\",Ext.getCmp(\"mapaContainerMapa\"));",
+                    "",
+                    "//Ext.getCmp(\"containerInfoCategoriaEnMapaPrincipal\").setHtml(\"<center><p style='font-size: 100%;'> Categoría: </p> <p style='font-size: 100%;'> \"+record.get(\"nombre\")+\" </p></center>\");",
+                    "",
+                    ""
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "dataview"
+            },
+            "designerId": "662594c8-c336-4242-be81-c979923e282b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dataview",
+                "ref": "dataview",
+                "selector": "#dataViewDidiMapaPrincipalEnTabPanel"
+            },
+            "designerId": "12c87f27-d93c-4397-8ab1-94d621d24d19"
+        }
+    ]
+}

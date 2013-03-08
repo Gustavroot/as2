@@ -1,0 +1,62 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeRefrescadoLatLngPosTaxista",
+        "model": "modelRefrescadoLatLngPosTaxista",
+        "storeId": "storeRefrescadoLatLngPosTaxista"
+    },
+    "id": "ExtBox1-ext-gen57374",
+    "designerId": "785c6249-7d29-4a8f-90f9-0784a2c80490",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy29",
+                "url": "http://www.didicr.com/php/diditaxi/refrescadoPosTaxista.php"
+            },
+            "designerId": "91f35dd8-37f9-4a52-a338-ecb2e8a9463b",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader29",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "bcbcff4e-dfee-4e06-8cf3-58a84e6d9fce"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "6d2ef764-cf8d-4ad4-833e-b1a9169b7df4"
+        }
+    ]
+}

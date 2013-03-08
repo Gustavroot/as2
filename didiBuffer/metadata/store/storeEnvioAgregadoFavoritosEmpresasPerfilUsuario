@@ -1,0 +1,45 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeEnvioAgregadoFavoritosEmpresasPerfilUsuario",
+        "model": "modelEnvioAgregadoFavoritosEmpresasPerfilUsuario",
+        "storeId": "storeEnvioAgregadoFavoritosEmpresasPerfilUsuario"
+    },
+    "id": "ExtBox1-ext-gen5910",
+    "designerId": "7c494875-220c-4a63-87a6-ab96041b2953",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy20",
+                "url": "http://www.didicr.com/php/didiFavorito/insertaEmpresaFavorita.php"
+            },
+            "designerId": "eac029c1-e682-4279-87d2-c6db893cb909",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader20",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "d1a50fb4-0ada-4bf1-a274-069601037337"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1555 @@
+@font-face {
+    font-family: "sansation";
+    src: url("http://www.didicr.com/imagenes/css/Sansation_Regular.ttf") format("truetype");
+}
+p.customfont { 
+    font-family: "sansation", Verdana, Tahoma;
+}
+
+html, body, header, paragraph, p, div {
+    font-family : "sansation", Verdana, Tahoma;
+}
+
+
+.botonCancelarReserva {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #d4b4d4) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #d4b4d4 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#d4b4d4');
+	background-color:#ededed;
+	-moz-border-radius:31px;
+	-webkit-border-radius:31px;
+	border-radius:31px;
+	border:4px solid #dcdcdc;
+	display:inline-block;
+	color:#7a7964;
+	font-family:Impact;
+	font-size:15px;
+	font-weight:normal;
+	padding:9px 14px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.botonCancelarReserva:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d4b4d4), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #d4b4d4 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d4b4d4', endColorstr='#ededed');
+	background-color:#d4b4d4;
+}
+.botonCancelarReserva:active {
+	position:relative;
+	top:1px;
+}
+
+.botonConfirmarReserva {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-moz-border-radius:31px;
+	-webkit-border-radius:31px;
+	border-radius:31px;
+	border:4px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:Impact;
+	font-size:15px;
+	font-weight:normal;
+	padding:9px 14px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.botonConfirmarReservaReserva:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}
+.botonConfirmarReserva:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+/*BOTONOS TAB PANEL */
+.botonInicioTabpanel{
+-webkit-mask-box-image: url('http://www.didicr.com/imagenes/didiApp/tabPanel/DD_tab_bar-1.png');
+}
+
+.botonEventoTabpanel{
+-webkit-mask-box-image: url('http://www.didicr.com/imagenes/didiApp/tabPanel/DD_tab_bar-2.png');
+}
+
+.botonMapaTabpanel{
+-webkit-mask-box-image: url('http://www.didicr.com/imagenes/didiApp/tabPanel/DD_tab_bar-3.png');
+}
+
+.botonAyudaTabpanel{
+-webkit-mask-box-image: url('http://www.didicr.com/imagenes/didiApp/tabPanel/DD_tab_bar-4.png');
+}
+
+.botonDidiTaxiTabpanel{
+-webkit-mask-box-image: url('http://www.didicr.com/imagenes/didiApp/tabPanel/DD_tab_bar-5.png');
+}
+/*FIN BOTONES TAB PANEL */
+
+.fondoMapa{
+-webkit-mask-box-image: url('http://www.didicr.com/imagenes/mapaFondo.png');
+}
+
+
+/* Botones Descripcion*/
+.botonLlamar {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_01.png);
+	background-repeat:no-repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonLlamar:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_01a.png)
+}
+
+.botonMapa {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_05.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonMapa:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_05a.png)
+}
+.botonWeb {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_08.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonWeb:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_08a.png)
+}
+
+.botonFacebook {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_06.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonFacebook:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_06a.png)
+}
+
+.botonPromocion {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_04.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonPromocion:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_04a.png)
+}
+
+.botonDescReserva {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_03.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonDescReserva:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_03a.png)
+}
+
+.botonCorreo {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_10.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonCorreo:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_10a.png)
+}
+
+.botonDescripcion {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_11.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonDescripcion:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_11a.png)
+}
+
+.botonCreador {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_07.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonCreador:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_07a.png)
+}
+
+.botonTaxi{
+	background-image:url(./resources/css/esp/botones/DD_descripcion_02.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonTaxi:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_02a.png)
+}
+
+.botonSucursal {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_09.png);
+	background-repeat:no-repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonSucursal:active {
+	background-image:url(./resources/css/esp/botones/DD_descripcion_09a.png)
+}
+.botonBorrar {
+	background-image:url(./resources/css/esp/botones/DD_icono_borrar.png);
+	background-repeat:no-repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonBorrar:active {
+	background-image:url(./resources/css/esp/botones/DD_icono_borrar_a.png)
+}
+
+/* FIN Botones Descripcion*/
+
+
+/*BOtones Busqueda*/
+.botonCategoria{
+	background-image:url(./resources/css/esp/botones/DD_busqueda_1.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonCategoria:active {
+	background-image:url(./resources/css/esp/botones/DD_busqueda_1a.png)
+}
+
+.botonLugar{
+	background-image:url(./resources/css/esp/botones/DD_busqueda_2.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonLugar:active {
+	background-image:url(./resources/css/esp/botones/DD_busqueda_2a.png)
+}
+
+.botonAvanzado{
+	background-image:url(./resources/css/esp/botones/DD_busqueda_3.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonAvanzado:active {
+	background-image:url(./resources/css/esp/botones/DD_busqueda_3a.png)
+}
+/*FIN BOtones Busqueda*/
+
+/*Didi BOTON Usuario*/
+.botonUsuario{
+	background-image:url(./resources/css/esp/botones/DD_usuario.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonUsuario:active {
+	background-image:url(./resources/css/esp/botones/DD_usuario_a.png)
+}
+/*Fin BOTON Usuario*/
+
+/*Didi ATRAs*/
+.botonAtras{
+	background-image:url(./resources/css/esp/botones/DD_atras.png);
+	background-repeat:no-repeat;
+        background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonAtras:active {
+	background-image:url(./resources/css/esp/botones/DD_atras_a.png)
+}
+
+
+/* FIN Didi ATRAs*/
+
+/* Categorias DIDI */
+
+.botonAgri{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_1.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonAgri:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_1a.png)
+}
+
+.botonAlimentos{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_2.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonAlimentos:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_2a.png)
+}
+
+
+.botonAnimales{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_3.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonAnimales:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_3a.png)
+}
+
+.botonAuto{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_4.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonAuto:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_4a.png)
+}
+
+.botonBanco{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_5.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonBanco:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_5a.png)
+}
+
+.botonBares{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_6.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonBares:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_6a.png)
+}
+
+.botonBelleza{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_7.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonBelleza:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_7a.png)
+}
+
+.botonBienes{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_8.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonBienes:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_8a.png)
+}
+
+.botonCarga{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_9.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonCarga:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_9a.png)
+}
+
+.botonCine{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_10.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonCine:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_10a.png)
+}
+
+
+.botonComercio{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_11.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonComercio:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_11a.png)
+}
+
+.botonComidar{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_12.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonComidar:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_12a.png)
+}
+
+.botonConstructoras{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_13.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonConstructoras:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_13a.png)
+}
+
+.botonEducacion{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_14.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonEducacion:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_14a.png)
+}
+
+.botonFarmacia{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_15.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonFarmacia:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_15a.png)
+}
+
+.botonFerreteria{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_16.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonFerreteria:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_16a.png)
+}
+
+.botonFinanciero{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_17.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonFinanciero:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_17a.png)
+}
+
+.botonGimnasio{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_18.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonGimnasio:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_18a.png)
+}
+
+.botonHogar{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_19.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonHogar:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_19a.png)
+}
+
+.botonHospital{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_20.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonHospital:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_20a.png)
+}
+
+.botonHotel{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_21.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonHotel:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_21a.png)
+}
+
+.botonIndustria{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_22.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonIndustria:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_22a.png)
+}
+
+.botonMusica{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_23.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonMusica:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_23a.png)
+}
+
+.botonProfesional{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_24.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonProfesional:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_24a.png)
+}
+
+.botonRestaurante{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_25.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonRestaurante:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_25a.png)
+}
+
+.botonSeguridad{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_26.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonSeguridad:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_26a.png)
+}
+
+.botonSupermercado{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_27.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonSupermercado:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_27a.png)
+}
+
+.botonTaller{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_28.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonTaller:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_28a.png)
+}
+
+.botonTecnologia{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_29.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonTecnologia:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_29a.png)
+}
+
+.botonTurismo{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_30.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonTurismo:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_30a.png)
+}
+
+.botonVarios{
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_31.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonVarios:active {
+	background-image:url(./resources/css/esp/botones/categoria/DD_categoria_31a.png)
+}
+/* fin categorias */
+
+/* Panel Usuario */
+
+.botonFav{
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario_fav.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+
+.botonNot{
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario-1.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonNot:active {
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario-1a.png)
+}
+.botonPerfil{
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario-2.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonPerfil:active {
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario-2a.png)
+}
+
+.botonReserva{
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario-3.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonReserva:active {
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario-3a.png)
+}
+
+.botonEmpresa{
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario-4.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonEmpresa:active {
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario-4a.png)
+}
+
+.botonEvento{
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario-5.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonEvento:active {
+	background-image:url(./resources/css/esp/botones/usuario/DD_barra_usuario-5a.png)
+}
+/* fin panel usuario*/
+
+/* Botones EVENTOS */
+
+.botonCercania{
+	background-image:url(./resources/css/esp/botones/eventos/DD_cercania.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonCercania:active {
+	background-image:url(./resources/css/esp/botones/eventos/DD_cercania_a.png)
+}
+.botonMusica{
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_1.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonMusica:active {
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_1a.png)
+}
+
+.botonVidanoc{
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_2.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonVidanoc:active {
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_2a.png)
+}
+
+.botonGastronomia{
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_3.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonGastronomia:active {
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_3a.png)
+}
+
+.botonEmpresarial{
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_4.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonEmpresarial:active {
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_4a.png)
+}
+
+.botonFundaciones{
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_5.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonFundaciones:active {
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_5a.png)
+}
+
+.botonArteycult{
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_6.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonArteycult:active {
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_6a.png)
+}
+
+.botonDeportes{
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_7.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonDeportes:active {
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_7a.png)
+}
+
+.botonActividadescant{
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_8.png);
+	background-repeat:repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;a
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}.botonActividadescant:active {
+	background-image:url(./resources/css/esp/botones/eventos/DD_eventos_8a.png)
+}
+/* fin botones eventos */
+
+/* DidiUSuario*/
+
+.slide.out {
+  -webkit-animation-duration: .300s;
+  -webkit-animation-name: slideOut;
+  -webkit-transition-timing-function: cubic-bezier(0.275, 0.080, 0.425, 0.855); 
+  -webkit-transform: translateX(85%);
+}
+.slide.in {
+  -webkit-animation-duration: .200s;
+  -webkit-animation-name: slideIn;
+  -webkit-transition-timing-function: cubic-bezier(0.275, 0.080, 0.425, 0.855); 
+  -webkit-transform: translateX(0%);
+}
+
+@-webkit-keyframes slideOut {
+  from { -webkit-transform: translateX(0%); }
+  to { -webkit-transform: translateX(85%); }
+}
+@-webkit-keyframes slideIn {
+  from { -webkit-transform: translateX(85%); }
+  to { -webkit-transform: translateX(0%); }
+}

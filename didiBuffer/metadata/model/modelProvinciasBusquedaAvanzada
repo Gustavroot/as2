@@ -1,0 +1,54 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelProvinciasBusquedaAvanzada"
+    },
+    "id": "ExtBox1-ext-gen22227",
+    "designerId": "8d07aef3-b6df-44eb-854b-f6b557b2de91",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field114",
+                "name": "idProvincia"
+            },
+            "designerId": "dd16866a-3754-4402-a71e-61a5a7b78c56"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field115",
+                "name": "nombreProvincia"
+            },
+            "designerId": "61a2b453-00c2-46b0-8fa3-53ffec8f9398"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field116",
+                "name": "cantidadNegociosProvincia"
+            },
+            "designerId": "0e0b0deb-796d-47ee-bc4d-f917532c7706"
+        }
+    ]
+}

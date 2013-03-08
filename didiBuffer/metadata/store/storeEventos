@@ -1,0 +1,88 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeEventos",
+        "autoSync": true,
+        "model": "modelEventos",
+        "storeId": "storeEventos"
+    },
+    "id": "ExtBox1-ext-gen6987",
+    "designerId": "623343ea-c997-4d7d-a131-21c92573f6ea",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy",
+                "url": "http://www.didicr.com/php/eventos.php"
+            },
+            "designerId": "f8d98314-b0a5-40fa-8344-ce15fa09d21d",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "idProperty": "id",
+                        "rootProperty": "ptm",
+                        "record": null
+                    },
+                    "designerId": "607e5cbe-372a-446b-9d95-5fc143cf5240"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "//Funcion que se ejecuta cuando se le da click en los elementos del carousel",
+                    "//de Eventos",
+                    "funcionDarClickElementosCarouselEventos=function(img){",
+                    "",
+                    "    Ext.getCmp(\"containerPrincipalEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                    "    //    alert(\"fert\");",
+                    "    funcionParaAbrirDescripcionEventos(records[img.getId()[21]].get(\"id\"),\"containerEventos\");",
+                    "};",
+                    "",
+                    "",
+                    "//Agregar imagenes a carousel eventos, y sus controladores",
+                    "contadorParaAsignarIDimgsEventos=0;",
+                    "this.each(function (record) {",
+                    "    Ext.getCmp(\"carouselEventos\").add(Ext.create('Ext.Img', {html: \"<img src=\"+ record.get(\"imagenGran\") +\" height='100%' width='100%'>\", id: \"imagenCarouselEventos\"+contadorParaAsignarIDimgsEventos}));",
+                    "    Ext.getCmp(\"imagenCarouselEventos\"+contadorParaAsignarIDimgsEventos).addListener('tap',funcionDarClickElementosCarouselEventos);",
+                    "    contadorParaAsignarIDimgsEventos=contadorParaAsignarIDimgsEventos+1;",
+                    "});",
+                    "",
+                    "",
+                    "//Luego, se ajusta el carousel Eventos para que tenga a su primera imagen activa",
+                    "Ext.getCmp(\"carouselEventos\").setActiveItem(0);",
+                    "Ext.getCmp(\"carouselEventos\").getActiveItem().setHtml(\"<img src=\"+ record[0].get(\"imagenGran\") +\" height='100%' width='100%'>\");",
+                    "Ext.getCmp(\"carouselEventos\").next();",
+                    "//Ext.getCmp(\"carouselEventos\").getActiveItem().setHtml(\"<img src=\"+ record[1].get(\"imagenGran\") +\" height='100%' width='100%'>\");"
+                ],
+                "name": "load"
+            },
+            "designerId": "def445f7-bd21-4f2c-9aab-6e869fb49095"
+        }
+    ]
+}

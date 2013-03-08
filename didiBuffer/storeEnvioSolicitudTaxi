@@ -1,0 +1,73 @@
+{
+    "xdsVersion": "2.1.0",
+    "frameworkVersion": "touch21",
+    "internals": {
+        "type": "jsonpstore",
+        "reference": {
+            "name": "items",
+            "type": "array"
+        },
+        "codeClass": null,
+        "userConfig": {
+            "designer|userClassName": "storeEnvioSolicitudTaxi",
+            "model": "modelEstadoEnvio",
+            "storeId": "storeEnvioSolicitudTaxi"
+        },
+        "cn": [
+            {
+                "type": "jsonpproxy",
+                "reference": {
+                    "name": "proxy",
+                    "type": "object"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "designer|userClassName": "MyJsonPProxy",
+                    "url": "http://www.didicr.com/php/diditaxi/recibeSolicitud.php"
+                },
+                "cn": [
+                    {
+                        "type": "jsonreader",
+                        "reference": {
+                            "name": "reader",
+                            "type": "object"
+                        },
+                        "codeClass": null,
+                        "userConfig": {
+                            "designer|userClassName": "MyJsonReader"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "linkedNodes": {},
+    "boundStores": {},
+    "boundModels": {
+        "cad3c69c-57cd-45c1-8913-a786f0ef1918": {
+            "type": "datamodel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "modelEstadoEnvio"
+            },
+            "cn": [
+                {
+                    "type": "datafield",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "field",
+                        "name": "estado"
+                    }
+                }
+            ]
+        }
+    }
+}

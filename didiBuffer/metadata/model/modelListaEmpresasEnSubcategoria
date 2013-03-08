@@ -1,0 +1,210 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelListaEmpresasEnSubcategoria"
+    },
+    "id": "ExtBox1-ext-gen74026",
+    "designerId": "1e9747dc-e232-4b25-b30e-8b66786830e7",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field44",
+                "name": "idCliente"
+            },
+            "designerId": "3807eda9-cfea-4ec0-8581-96370ac87619"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field45",
+                "name": "nombre"
+            },
+            "designerId": "29b4da4a-7e17-46c0-a26e-b9e2742f56d9"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field46",
+                "name": "descripcion"
+            },
+            "designerId": "593e1c22-ce16-4363-9444-4fd14120cb9b"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field47",
+                "name": "telefono"
+            },
+            "designerId": "0c3d0f54-07ce-4456-b63f-5ab16ad919a6"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field48",
+                "name": "subcategoria"
+            },
+            "designerId": "d2c061d3-8e9b-4e1d-b0a5-78b85f9234bb"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field49",
+                "name": "provincia"
+            },
+            "designerId": "4b137da6-6d03-4853-ac66-e413ed7ce191"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field50",
+                "name": "canton"
+            },
+            "designerId": "c568ff4d-5501-4ffa-9947-8c001e447853"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field51",
+                "name": "distrito"
+            },
+            "designerId": "8f9c0817-bbe6-44b4-aafb-4ccf1df0a7af"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field52",
+                "name": "tipoPlan"
+            },
+            "designerId": "a869a715-ed0f-439d-b34d-44e27db8ceed"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field53",
+                "name": "latitud"
+            },
+            "designerId": "f64c7592-a469-462b-9730-a72da48a585b"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field54",
+                "name": "longitud"
+            },
+            "designerId": "15978d55-4383-45bd-9e09-429f16f5c8f1"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field55",
+                "name": "logo"
+            },
+            "designerId": "254df373-e6d9-4fa6-afb8-54d7db3794c7"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field56",
+                "name": "banner"
+            },
+            "designerId": "67a35d99-1324-4463-9536-90d8fbdbd541"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field57",
+                "name": "categoria"
+            },
+            "designerId": "011e7fac-b407-4fd5-aea5-0a60a4a6d2eb"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field62",
+                "name": "idUsuarioEmpresaFavorita"
+            },
+            "designerId": "570ae412-d182-4b95-8c34-1dcbc3099c44"
+        }
+    ]
+}
