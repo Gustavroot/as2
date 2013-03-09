@@ -134,6 +134,7 @@ Ext.define('MyApp.view.mapaCercaniaEventos', {
 
             directionsService.route(request, function(response, status) {
                 if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setOptions({ preserveViewport: true });
                     directionsDisplay.setDirections(response);
                 }
             });
