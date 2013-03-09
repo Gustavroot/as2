@@ -147,7 +147,7 @@ Ext.define('MyApp.view.containerDescripcionEventos', {
                             //Ext.getCmp("picker1ReservaRestaurante").setValue();
 
                         },
-                        baseCls: 'botonReserva',
+                        baseCls: 'botonDescReserva',
                         height: 50,
                         id: 'botonDidiReservaDescEventos',
                         ui: 'round',

@@ -241,7 +241,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyButton14",
-                        "baseCls": "botonReserva",
+                        "baseCls": "botonDescReserva",
                         "height": 50,
                         "id": "botonDidiReservaDescEventos",
                         "right": null,
