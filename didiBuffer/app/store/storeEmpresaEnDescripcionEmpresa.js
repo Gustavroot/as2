@@ -100,7 +100,7 @@ Ext.define('MyApp.store.storeEmpresaEnDescripcionEmpresa', {
             //Ext.getCmp("containerTituloDescripcionEmpresa").setHtml("<center><i><b><p style='font-family:serif;color:black;font-size:25px;'>"+records[0].get("nombre")+"</p></b></i><p style='font-family:texgyrechorus;color:black;'>Teléfono: "+records[0].get("telefono")+"</p></center>");
             Ext.getCmp("containerTituloDescripcionEmpresa").setHtml("<p>&nbsp</p><center><i><b><p style='color:black;font-size:25px;'>"+records[0].get("nombre")+"</p></b></i><p style='color:black;'>Teléfono: "+records[0].get("telefono")+"</p></center>");
             Ext.getCmp("imagenPrincipalDescripcionEmpresa").setHtml("<img src="+records[0].get("banner")+" height='100%' width='100%'>");
-            Ext.getCmp("containerInfoDescripcionEmpresa").setHtml("<center><p> </p><p> </p><p style='color:black;'>Descripción: "+records[0].get("descripcion")+"</p><p style='color:black;'>Provincia: "+records[0].get("provincia")+"</p><p style='color:black;'>Cantón: "+records[0].get("canton")+"</p></center>");
+            Ext.getCmp("containerInfoDescripcionEmpresa").setHtml("<center><p> &nbsp </p><p> </p><p style='color:black;'>Descripción: "+records[0].get("descripcion")+"</p><p style='color:black;'>Provincia: "+records[0].get("provincia")+"</p><p style='color:black;'>Cantón: "+records[0].get("canton")+"</p></center>");
             //Ext.getCmp("containerInfoDescripcionEmpresa").setHtml("<center><p> </p><p> </p><p style='font-family:texgyrechorus;color:black;'>Descripción: "+records[0].get("descripcion")+"</p><p style='font-family:texgyrechorus;color:black;'>Provincia: "+records[0].get("provincia")+"</p><p style='font-family:texgyrechorus;color:black;'>Cantón: "+records[0].get("canton")+"</p></center>");
 
             //Este codigo permite verificar si el usuario ya tiene agregado este evento como
@@ -122,22 +122,21 @@ Ext.define('MyApp.store.storeEmpresaEnDescripcionEmpresa', {
         }
 
 
-
         //Estas lineas se ejecutan cuando se ingresa en el container Descripcion Empresa,
         //a esto se llega desde varios lugares
         //Ext.getCmp("containerTituloDescripcionEmpresa").setHtml("<center><i><b><p style='font-family:serif;color:black;font-size:25px;'>"+records[0].get("nombre")+"</p></b></i><p style='font-family:texgyrechorus;color:black;'>Teléfono: "+records[0].get("telefono")+"</p></center>");
-        Ext.getCmp("containerTituloDescripcionEmpresa").setHtml("<p>&nbsp</p><center><i><b><p style='color:black;font-size:25px;'>"+records[0].get("nombre")+"</p></b></i><p style='color:black;'>Teléfono: "+records[0].get("telefono")+"</p></center>");
-        Ext.getCmp("imagenPrincipalDescripcionEmpresa").setHtml("<img src="+records[0].get("banner")+" height='100%' width='100%'>");
-        Ext.getCmp("containerInfoDescripcionEmpresa").setHtml("<center><p> </p><p> </p><p style='color:black;'>Descripción: "+records[0].get("descripcion")+"</p><p style='color:black;'>Provincia: "+records[0].get("provincia")+"</p><p style='color:black;'>Cantón: "+records[0].get("canton")+"</p></center>");
+        ///Ext.getCmp("containerTituloDescripcionEmpresa").setHtml("<p>&nbsp</p><center><i><b><p style='color:black;font-size:25px;'>"+records[0].get("nombre")+"</p></b></i><p style='color:black;'>Teléfono: "+records[0].get("telefono")+"</p></center>");
+        ///Ext.getCmp("imagenPrincipalDescripcionEmpresa").setHtml("<img src="+records[0].get("banner")+" height='100%' width='100%'>");
+        ///Ext.getCmp("containerInfoDescripcionEmpresa").setHtml("<center><p> </p><p> </p><p style='color:black;'>Descripción: "+records[0].get("descripcion")+"</p><p style='color:black;'>Provincia: "+records[0].get("provincia")+"</p><p style='color:black;'>Cantón: "+records[0].get("canton")+"</p></center>");
         //Ext.getCmp("containerInfoDescripcionEmpresa").setHtml("<center><p> </p><p> </p><p style='font-family:texgyrechorus;color:black;'>Descripción: "+records[0].get("descripcion")+"</p><p style='font-family:texgyrechorus;color:black;'>Provincia: "+records[0].get("provincia")+"</p><p style='font-family:texgyrechorus;color:black;'>Cantón: "+records[0].get("canton")+"</p></center>");
 
         //Este codigo permite verificar si el usuario ya tiene agregado este evento como
         //favorito o no
-        Ext.getStore("storeVerificadoEmpresaFavoritaPerfilUsuario").getProxy().setUrl("http://www.didicr.com/php/didiFavorito/verificaEmpresaFavoritaUsuario.php");
-        Ext.getStore("storeVerificadoEmpresaFavoritaPerfilUsuario").getProxy().setExtraParam('idUsuarioParam',idPerfilUsuarioDidi);
-        Ext.getStore("storeVerificadoEmpresaFavoritaPerfilUsuario").getProxy().setExtraParam('idClienteParam',records[0].get("idCliente"));
+        ///Ext.getStore("storeVerificadoEmpresaFavoritaPerfilUsuario").getProxy().setUrl("http://www.didicr.com/php/didiFavorito/verificaEmpresaFavoritaUsuario.php");
+        ///Ext.getStore("storeVerificadoEmpresaFavoritaPerfilUsuario").getProxy().setExtraParam('idUsuarioParam',idPerfilUsuarioDidi);
+        ///Ext.getStore("storeVerificadoEmpresaFavoritaPerfilUsuario").getProxy().setExtraParam('idClienteParam',records[0].get("idCliente"));
         //alert(records[0].get("idEvento"));
-        Ext.getStore("storeVerificadoEmpresaFavoritaPerfilUsuario").load();
+        ///Ext.getStore("storeVerificadoEmpresaFavoritaPerfilUsuario").load();
         //Ext.getStore("storeDescripcionEventos").removeAll();
         //La siguiente variable sirve para saber si hay que verificar o no el estado del evento en Favoritos, o lo
         //que es lo mismo, para saber si hay que correr o no el codigo en el Load del store 
@@ -145,8 +144,9 @@ Ext.define('MyApp.store.storeEmpresaEnDescripcionEmpresa', {
         //variableEjecutoCodigoEnStoreAgregadoEventosFavoritos=1;
         //    alert("fae;");
 
-        Ext.getStore("storeModuloDetalleDescripcionEmpresa").getProxy().setExtraParam('idClienteParam',records[0].get('idCliente'));
-        Ext.getStore("storeModuloDetalleDescripcionEmpresa").load();
+
+        ///Ext.getStore("storeModuloDetalleDescripcionEmpresa").getProxy().setExtraParam('idClienteParam',records[0].get('idCliente'));
+        ///Ext.getStore("storeModuloDetalleDescripcionEmpresa").load();
 
 
 

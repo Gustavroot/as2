@@ -54,47 +54,47 @@ Ext.define('MyApp.view.containerDescripcionEmpresa', {
                         top: '10%',
                         ui: 'action-round',
                         width: '15%'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            /*
+                            var fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas=new Date();
+                            Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setUrl("http://www.didicr.com/php/didiFavorito/insertaEmpresaFavorita.php");
+                            Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('idEmpresaParam', Ext.getStore("storeDescripcionEventos").first().get("idCliente"));
+                            Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('idUsuarioParam', 3);
+                            Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('fechaUsuarioEmpresaFavoritaParam', fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas);
+                            Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").load();
+
+                            Ext.Msg.alert('Aviso', 'Este es su empresa número '+Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").first().get("estado")+' agregada', Ext.emptyFn);
+                            */
+
+
+                            var fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas=new Date();
+                            Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setUrl("http://www.didicr.com/php/didiFavorito/insertaEmpresaFavorita.php");
+                            Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('idClienteParam', Ext.getStore("storeEmpresaEnDescripcionEmpresa").first().get("idCliente"));
+                            Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('idUsuarioParam', idPerfilUsuarioDidi);
+                            Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('fechaUsuarioEmpresaFavoritaParam', fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas);
+                            Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").load();
+
+                            //Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").first().get("estado")+
+                            Ext.Msg.alert('Aviso', 'Empresa agregada.', Ext.emptyFn);
+
+                            this.disable();
+
+
+
+                        },
+                        height: '80%',
+                        id: 'botonFavoritosContainerDescripcionEmpresa',
+                        left: '2%',
+                        top: '10%',
+                        ui: 'confirm',
+                        width: '15%',
+                        iconCls: 'favorites',
+                        iconMask: true
                     }
                 ]
-            },
-            {
-                xtype: 'button',
-                handler: function(button, event) {
-                    /*
-                    var fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas=new Date();
-                    Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setUrl("http://www.didicr.com/php/didiFavorito/insertaEmpresaFavorita.php");
-                    Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('idEmpresaParam', Ext.getStore("storeDescripcionEventos").first().get("idCliente"));
-                    Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('idUsuarioParam', 3);
-                    Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('fechaUsuarioEmpresaFavoritaParam', fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas);
-                    Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").load();
-
-                    Ext.Msg.alert('Aviso', 'Este es su empresa número '+Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").first().get("estado")+' agregada', Ext.emptyFn);
-                    */
-
-
-                    var fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas=new Date();
-                    Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setUrl("http://www.didicr.com/php/didiFavorito/insertaEmpresaFavorita.php");
-                    Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('idClienteParam', Ext.getStore("storeEmpresaEnDescripcionEmpresa").first().get("idCliente"));
-                    Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('idUsuarioParam', idPerfilUsuarioDidi);
-                    Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").getProxy().setExtraParam('fechaUsuarioEmpresaFavoritaParam', fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas);
-                    Ext.getStore("storeEnvioAgregadoFavoritosEmpresasPerfilUsuario").load();
-
-                    //Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").first().get("estado")+
-                    Ext.Msg.alert('Aviso', 'Empresa agregada.', Ext.emptyFn);
-
-                    this.disable();
-
-
-
-                },
-                height: '10%',
-                id: 'botonFavoritosContainerDescripcionEmpresa',
-                left: '2%',
-                top: '2%',
-                ui: 'confirm',
-                width: '16%',
-                iconCls: 'favorites',
-                iconMask: true
             },
             {
                 xtype: 'container',
@@ -102,29 +102,29 @@ Ext.define('MyApp.view.containerDescripcionEmpresa', {
                 id: 'containerTituloDescripcionEmpresa',
                 left: '20%',
                 top: '0%',
-                width: '55%'
+                width: '60%'
             },
             {
                 xtype: 'image',
-                height: '40%',
+                height: '50%',
                 id: 'imagenPrincipalDescripcionEmpresa',
-                left: '6.25%',
                 top: '20%',
-                width: '65%'
+                width: '70%'
             },
             {
                 xtype: 'container',
                 height: '35%',
                 id: 'containerInfoDescripcionEmpresa',
-                top: '65%',
-                width: '75%'
+                top: '70.5%',
+                width: '100%'
             },
             {
                 xtype: 'container',
-                height: '100%',
+                height: '50%',
                 id: 'containerBotonesDescripcionEmpresa',
                 itemId: 'containerBotonesDescripcionEmpresa',
                 right: '2%',
+                top: '20%',
                 width: '20%',
                 layout: {
                     type: 'vbox'
@@ -443,6 +443,20 @@ Ext.define('MyApp.view.containerDescripcionEmpresa', {
                         width: 10
                     }
                 ]
+            },
+            {
+                xtype: 'container',
+                height: '0.3%',
+                style: 'background-color: black',
+                top: '70%',
+                width: '100%'
+            },
+            {
+                xtype: 'container',
+                height: '0.5%',
+                style: 'background-color: black',
+                top: '19.5%',
+                width: '100%'
             }
         ],
         listeners: [

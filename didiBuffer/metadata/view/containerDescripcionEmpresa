@@ -114,75 +114,75 @@
                             "designerId": "eb90c82a-c5fe-4f96-904c-3d7ae6249d20"
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "type": "button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyButton1",
-                "height": "10%",
-                "id": "botonFavoritosContainerDescripcionEmpresa",
-                "left": "2%",
-                "right": null,
-                "top": "2%",
-                "ui": "confirm",
-                "width": "16%",
-                "iconCls": "favorites",
-                "iconMask": true,
-                "text": null
-            },
-            "designerId": "e9f94114-fcd6-469f-86f1-7f6c7c7622cb",
-            "cn": [
+                },
                 {
-                    "type": "fixedfunction",
+                    "type": "button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "handler",
-                        "fn": "handler",
-                        "designer|params": [
-                            "button",
-                            "event"
-                        ],
-                        "implHandler": [
-                            "/*",
-                            "var fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas=new Date();",
-                            "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setUrl(\"http://www.didicr.com/php/didiFavorito/insertaEmpresaFavorita.php\");",
-                            "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('idEmpresaParam', Ext.getStore(\"storeDescripcionEventos\").first().get(\"idCliente\"));",
-                            "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('idUsuarioParam', 3);",
-                            "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('fechaUsuarioEmpresaFavoritaParam', fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas);",
-                            "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").load();",
-                            "",
-                            "Ext.Msg.alert('Aviso', 'Este es su empresa número '+Ext.getStore(\"storeEnvioAgregadoFavoritosPerfilUsuario\").first().get(\"estado\")+' agregada', Ext.emptyFn);",
-                            "*/",
-                            "",
-                            "",
-                            "var fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas=new Date();",
-                            "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setUrl(\"http://www.didicr.com/php/didiFavorito/insertaEmpresaFavorita.php\");",
-                            "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('idClienteParam', Ext.getStore(\"storeEmpresaEnDescripcionEmpresa\").first().get(\"idCliente\"));",
-                            "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('idUsuarioParam', idPerfilUsuarioDidi);",
-                            "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('fechaUsuarioEmpresaFavoritaParam', fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas);",
-                            "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").load();",
-                            "",
-                            "//Ext.getStore(\"storeEnvioAgregadoFavoritosPerfilUsuario\").first().get(\"estado\")+",
-                            "Ext.Msg.alert('Aviso', 'Empresa agregada.', Ext.emptyFn);",
-                            "",
-                            "this.disable();",
-                            "",
-                            "",
-                            ""
-                        ]
+                        "designer|userClassName": "MyButton1",
+                        "height": "80%",
+                        "id": "botonFavoritosContainerDescripcionEmpresa",
+                        "left": "2%",
+                        "right": null,
+                        "top": "10%",
+                        "ui": "confirm",
+                        "width": "15%",
+                        "iconCls": "favorites",
+                        "iconMask": true,
+                        "text": null
                     },
-                    "designerId": "158a7123-ab93-43b7-ad25-efa43c50aae4"
+                    "designerId": "e9f94114-fcd6-469f-86f1-7f6c7c7622cb",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "/*",
+                                    "var fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas=new Date();",
+                                    "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setUrl(\"http://www.didicr.com/php/didiFavorito/insertaEmpresaFavorita.php\");",
+                                    "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('idEmpresaParam', Ext.getStore(\"storeDescripcionEventos\").first().get(\"idCliente\"));",
+                                    "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('idUsuarioParam', 3);",
+                                    "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('fechaUsuarioEmpresaFavoritaParam', fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas);",
+                                    "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").load();",
+                                    "",
+                                    "Ext.Msg.alert('Aviso', 'Este es su empresa número '+Ext.getStore(\"storeEnvioAgregadoFavoritosPerfilUsuario\").first().get(\"estado\")+' agregada', Ext.emptyFn);",
+                                    "*/",
+                                    "",
+                                    "",
+                                    "var fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas=new Date();",
+                                    "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setUrl(\"http://www.didicr.com/php/didiFavorito/insertaEmpresaFavorita.php\");",
+                                    "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('idClienteParam', Ext.getStore(\"storeEmpresaEnDescripcionEmpresa\").first().get(\"idCliente\"));",
+                                    "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('idUsuarioParam', idPerfilUsuarioDidi);",
+                                    "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").getProxy().setExtraParam('fechaUsuarioEmpresaFavoritaParam', fechaDelDiaDeHoyParaAgregadoEmpresasFavoritas);",
+                                    "Ext.getStore(\"storeEnvioAgregadoFavoritosEmpresasPerfilUsuario\").load();",
+                                    "",
+                                    "//Ext.getStore(\"storeEnvioAgregadoFavoritosPerfilUsuario\").first().get(\"estado\")+",
+                                    "Ext.Msg.alert('Aviso', 'Empresa agregada.', Ext.emptyFn);",
+                                    "",
+                                    "this.disable();",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "designerId": "158a7123-ab93-43b7-ad25-efa43c50aae4"
+                        }
+                    ]
                 }
             ]
         },
@@ -200,7 +200,7 @@
                 "id": "containerTituloDescripcionEmpresa",
                 "left": "20%",
                 "top": "0%",
-                "width": "55%"
+                "width": "60%"
             },
             "designerId": "2210a6a3-c664-4e43-ba06-b57a49b16850"
         },
@@ -213,11 +213,11 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyImage26",
-                "height": "40%",
+                "height": "50%",
                 "id": "imagenPrincipalDescripcionEmpresa",
-                "left": "6.25%",
+                "left": null,
                 "top": "20%",
-                "width": "65%"
+                "width": "70%"
             },
             "designerId": "fe0c4a07-c526-43b7-a277-bb41c0064ef0"
         },
@@ -232,8 +232,8 @@
                 "designer|userClassName": "MyContainer32",
                 "height": "35%",
                 "id": "containerInfoDescripcionEmpresa",
-                "top": "65%",
-                "width": "75%"
+                "top": "70.5%",
+                "width": "100%"
             },
             "designerId": "f87dc363-f960-4d10-898d-0fbbc95b4d8d"
         },
@@ -246,11 +246,12 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyContainer54",
-                "height": "100%",
+                "height": "50%",
                 "id": "containerBotonesDescripcionEmpresa",
                 "itemId": "containerBotonesDescripcionEmpresa",
                 "left": null,
                 "right": "2%",
+                "top": "20%",
                 "width": "20%",
                 "layout": "vbox",
                 "scrollable": "vertical"
@@ -894,6 +895,38 @@
                     "designerId": "54dd9759-02ad-41b6-b447-af1a25c7eee9"
                 }
             ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer89",
+                "height": "0.3%",
+                "style": "background-color: black",
+                "top": "70%",
+                "width": "100%"
+            },
+            "designerId": "6b12817e-6333-46b5-96d6-cb7a80894612"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer89",
+                "height": "0.5%",
+                "style": "background-color: black",
+                "top": "19.5%",
+                "width": "100%"
+            },
+            "designerId": "61726520-4099-4d8e-bf96-0b6e16f6f09b"
         }
     ]
 }
