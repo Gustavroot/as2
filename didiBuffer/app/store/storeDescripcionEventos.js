@@ -42,7 +42,7 @@ Ext.define('MyApp.store.storeDescripcionEventos', {
     onJsonpstoreLoad: function(store, records, successful, operation, eOpts) {
         //Estas lineas se ejecutan cuando se ingresa en el container Descripcion Eventos,
         //a esto se llega desde varios lugares
-        Ext.getCmp("containerTituloDescripcionEventos").setHtml("<p> &nbsp </p><center><i><b><p style='color:black;font-size:25px;'>"+records[0].get("nombre")+"</p></b></i></center>");
+        Ext.getCmp("containerTituloDescripcionEventos").setHtml("<p> &nbsp </p><center><i><b><p>"+records[0].get("nombre")+"</p></b></i></center>");
 
         if(records[0].get("imagenGran")===""){
             //records[0].get("imagenGran")
@@ -78,8 +78,6 @@ Ext.define('MyApp.store.storeDescripcionEventos', {
         //storeEnvioAgregadoFavoritosPerfilUsuario
         //variableEjecutoCodigoEnStoreAgregadoEventosFavoritos=1;
         //    alert("fae;");
-
-
 
 
 

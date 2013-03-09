@@ -52,6 +52,31 @@ Ext.define('MyApp.view.containerDescripcionEventos', {
                         top: '10%',
                         ui: 'action-round',
                         width: '15%'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+
+                            var fechaDelDiaDeHoyParaAgregadoEventosFavoritos=new Date();
+                            Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").getProxy().setUrl("http://www.didicr.com/php/didiFavorito/insertaEventoFavorito.php");
+                            Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").getProxy().setExtraParam('idEventoParam', Ext.getStore("storeDescripcionEventos").first().get("idEvento"));
+                            Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").getProxy().setExtraParam('idUsuarioParam', idPerfilUsuarioDidi);
+                            Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").getProxy().setExtraParam('fechaUsuarioEventoFavoritoParam', fechaDelDiaDeHoyParaAgregadoEventosFavoritos);
+                            Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").load();
+
+                            //Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").first().get("estado")+
+                            Ext.Msg.alert('Aviso', 'Evento agregado.', Ext.emptyFn);
+
+                            this.disable();
+                        },
+                        height: '80%',
+                        id: 'botonFavoritosContainerDescripcionEventos',
+                        left: '2%',
+                        top: '10%',
+                        ui: 'confirm',
+                        width: '15%',
+                        iconCls: 'favorites',
+                        iconMask: true
                     }
                 ]
             },
@@ -64,9 +89,10 @@ Ext.define('MyApp.view.containerDescripcionEventos', {
             },
             {
                 xtype: 'container',
-                height: '100%',
+                height: '60%',
                 id: 'containerBotonesDescripcionEventos',
                 right: '2%',
+                top: '15%',
                 width: '20%',
                 layout: {
                     type: 'vbox'
@@ -270,41 +296,30 @@ Ext.define('MyApp.view.containerDescripcionEventos', {
                 xtype: 'container',
                 height: '25%',
                 id: 'containerInfoDescripcionEventos',
-                top: '75%',
-                width: '80%',
+                top: '75.5%',
+                width: '100%',
                 scrollable: 'vertical'
-            },
-            {
-                xtype: 'button',
-                handler: function(button, event) {
-
-                    var fechaDelDiaDeHoyParaAgregadoEventosFavoritos=new Date();
-                    Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").getProxy().setUrl("http://www.didicr.com/php/didiFavorito/insertaEventoFavorito.php");
-                    Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").getProxy().setExtraParam('idEventoParam', Ext.getStore("storeDescripcionEventos").first().get("idEvento"));
-                    Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").getProxy().setExtraParam('idUsuarioParam', idPerfilUsuarioDidi);
-                    Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").getProxy().setExtraParam('fechaUsuarioEventoFavoritoParam', fechaDelDiaDeHoyParaAgregadoEventosFavoritos);
-                    Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").load();
-
-                    //Ext.getStore("storeEnvioAgregadoFavoritosPerfilUsuario").first().get("estado")+
-                    Ext.Msg.alert('Aviso', 'Evento agregado.', Ext.emptyFn);
-
-                    this.disable();
-                },
-                height: '10%',
-                id: 'botonFavoritosContainerDescripcionEventos',
-                left: '2%',
-                top: '2%',
-                ui: 'confirm',
-                width: '16%',
-                iconCls: 'favorites',
-                iconMask: true
             },
             {
                 xtype: 'container',
                 height: '10%',
                 id: 'containerTituloDescripcionEventos',
                 left: '20%',
-                width: '55%'
+                width: '60%'
+            },
+            {
+                xtype: 'container',
+                height: '0.5%',
+                style: 'background-color: black',
+                top: '14.5%',
+                width: '100%'
+            },
+            {
+                xtype: 'container',
+                height: '0.3%',
+                style: 'background-color: black',
+                top: '75%',
+                width: '100%'
             }
         ],
         listeners: [
