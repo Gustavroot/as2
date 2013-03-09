@@ -31,37 +31,13 @@ Ext.define('MyApp.view.mapaCercaniaEventos', {
             mapTypeControl: false,
             zoomControl: true
         },
+        listeners: [
+            {
+                fn: 'onMapaCercaniaEventosMaprender',
+                event: 'maprender'
+            }
+        ],
         items: [
-            {
-                xtype: 'image',
-                height: '13%',
-                html: '<img src="./resources/logo/Logo_DD.png" width="100%" height="100%">',
-                id: 'imagenLogoDidiMapaEventos',
-                itemId: 'myimage26',
-                left: '30%',
-                width: '40%'
-            },
-            {
-                xtype: 'button',
-                handler: function(button, event) {
-                    //Al salir del mapa, hay que hacer visible el tabBar nuevamente
-                    Ext.getCmp("tabPanelPrincipal").getTabBar().setHidden(0);
-                    //Se retorna hacia el view desde el cual se ingreso a este mapa
-                    Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp(viewDelQuePasoHaciaMapaEventos));
-
-
-                    directionsDisplay.setMap(null);
-
-
-                },
-                baseCls: 'botonAtras',
-                height: '5%',
-                id: 'botonAtrasDidiMapaEventos',
-                right: '2%',
-                top: '1.5%',
-                ui: 'action-round',
-                width: '10%'
-            },
             {
                 xtype: 'dataview',
                 height: '20%',
@@ -83,49 +59,8 @@ Ext.define('MyApp.view.mapaCercaniaEventos', {
                 ],
                 loadingText: 'Cargando...',
                 store: 'storeCategoriasEventos'
-            },
-            {
-                xtype: 'button',
-                handler: function(button, event) {
-                    //Con este codigo se puede devolver hacia la current Location, es decir,
-                    //se puede centrar el mapa en la posicion de uno
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(
-                        function(position){
-                            //Se crea un objeto de posicion, con latitud y longitud actuales
-                            posActual = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-                            Ext.getCmp("mapaCercaniaEventos").setMapCenter({latitude: posActual.lat(), longitude: posActual.lng()});
-                        }
-                        );
-                    }
-                },
-                height: '5%',
-                id: 'botonVolverPosActualMapaEventos',
-                left: '38%',
-                top: '13%',
-                ui: 'confirm-round',
-                width: '18%',
-                text: '<p style="font-size: 40%;"> Ir a pos </p> <p style="font-size: 40%;"> actual </p>'
-            }
-        ],
-        listeners: [
-            {
-                fn: 'onImagenLogoDidiMapaEventosTap',
-                event: 'tap',
-                delegate: '#imagenLogoDidiMapaEventos'
-            },
-            {
-                fn: 'onMapaCercaniaEventosMaprender',
-                event: 'maprender'
             }
         ]
-    },
-
-    onImagenLogoDidiMapaEventosTap: function(img, e, options) {
-        //Todo logo de Didi redirige hacia el containerInicio
-        Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerInicio"));
-        //Al salir del mapa, hay que hacer visible el tabBar nuevamente
-        Ext.getCmp("tabPanelPrincipal").getTabBar().setHidden(0);
     },
 
     onMapaCercaniaEventosMaprender: function(map, gmap, options) {

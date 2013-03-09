@@ -35,76 +35,9 @@ Ext.define('MyApp.view.mapaContainerMapa', {
             {
                 fn: 'onMapaContainerMapaMaprender',
                 event: 'maprender'
-            },
-            {
-                fn: 'onImagenLogoDidiMapaPrincipalEnTabPanelTap',
-                event: 'tap',
-                delegate: '#imagenLogoDidiMapaPrincipalEnTabPanel'
             }
         ],
         items: [
-            {
-                xtype: 'image',
-                height: '13%',
-                html: '<img src="./resources/logo/Logo_DD.png" width="100%" height="100%">',
-                id: 'imagenLogoDidiMapaPrincipalEnTabPanel',
-                itemId: 'myimage27',
-                left: '30%',
-                width: '40%'
-            },
-            {
-                xtype: 'button',
-                handler: function(button, event) {
-                    //Con este codigo se permite que el mapa se vuelva a centrar en la posicion
-                    //actual propia
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(
-                        function(position){
-                            //Se crea un objeto de posicion, con latitud y longitud actuales
-                            posActual = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-                            Ext.getCmp("mapaContainerMapa").setMapCenter({latitude: posActual.lat(), longitude: posActual.lng()});
-                        }
-                        );
-                    }
-
-
-                },
-                height: '5%',
-                id: 'botonVolverPosActualMapaPrincipal',
-                left: '38%',
-                top: '13%',
-                ui: 'confirm-round',
-                width: '18%',
-                text: '<p style="font-size: 40%;"> Ir a pos </p> <p style="font-size: 40%;"> actual </p>'
-            },
-            {
-                xtype: 'button',
-                handler: function(button, event) {
-                    //Primero se hace visible el tabBar nuevamente
-                    Ext.getCmp("tabPanelPrincipal").getTabBar().setHidden(0);
-                    //Luego, si se viene del tab de containerMapa, entonces quiere decir que ahi
-                    //se tomo la decision de cual mapa se queria ver, y se prefiere retornar al
-                    //containerInicio que a ahi
-                    if(tabDelQueSePasaHaciaTabMapa==Ext.getCmp("containerMapa")){
-                        Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerInicio"));
-                    }
-                    else{
-                        Ext.getCmp("tabPanelPrincipal").setActiveItem(tabDelQueSePasaHaciaTabMapa);
-                    }
-
-
-                    directionsDisplay.setMap(null);
-
-
-                },
-                baseCls: 'botonAtras',
-                height: '5%',
-                id: 'botonAtrasDidiMapaPrincipalEnTabPanel',
-                right: '2%',
-                top: '1.5%',
-                ui: 'action-round',
-                width: '10%'
-            },
             {
                 xtype: 'dataview',
                 height: '20%',
@@ -167,13 +100,6 @@ Ext.define('MyApp.view.mapaContainerMapa', {
 
 
 
-    },
-
-    onImagenLogoDidiMapaPrincipalEnTabPanelTap: function(img, e, options) {
-        //TOdo logo de DIdi redirige hacia containerInicio
-        Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerInicio"));
-        //Al salir del mapa, hay que hacer visible el tabBar nuevamente
-        Ext.getCmp("tabPanelPrincipal").getTabBar().setHidden(0);
     },
 
     processStore: function(listaStore) {
