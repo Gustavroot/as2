@@ -45,7 +45,7 @@
                         "height": "9.4%",
                         "id": "toolbarDelContainerPerfilDeUsuario",
                         "style": "background: #3E3737",
-                        "title": "PERFIL"
+                        "title": null
                     },
                     "designerId": "ca7a91ed-e5ff-4335-a6bb-127f5b5791ff"
                 },

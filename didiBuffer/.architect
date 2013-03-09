@@ -324,7 +324,6 @@
         },
         "ee5181cd-7e45-4088-9bf8-9aae1f3e23fd": {
             "id": "ee5181cd-7e45-4088-9bf8-9aae1f3e23fd",
-            "expanded": false,
             "cn": [
                 {
                     "id": "00ba5f56-e953-4982-86b8-6f4f7418b8ef",
@@ -547,6 +546,7 @@
         },
         "4690be3a-cde1-4a7a-8d6c-4bd6fbf4a774": {
             "id": "4690be3a-cde1-4a7a-8d6c-4bd6fbf4a774",
+            "expanded": false,
             "cn": [
                 {
                     "id": "9898d001-f7f9-468b-97ab-17bed88d8ef0"
@@ -2504,6 +2504,7 @@
         },
         "0ca9deae-9411-4400-8733-0643303784ba": {
             "id": "0ca9deae-9411-4400-8733-0643303784ba",
+            "expanded": false,
             "cn": [
                 {
                     "id": "769a6fd5-3370-483c-a711-8093975e2c31"

@@ -211,7 +211,7 @@ Ext.define('MyApp.view.containerDescripcionEmpresa', {
                             };
 
 
-                            setTimeout(funcionRetrasoEnLlamadoAlProcessStoreMapaPrincipal,1500);
+                            setTimeout(funcionRetrasoEnLlamadoAlProcessStoreMapaPrincipal,500);
 
 
 

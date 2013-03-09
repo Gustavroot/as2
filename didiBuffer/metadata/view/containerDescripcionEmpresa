@@ -423,7 +423,7 @@
                                     "};",
                                     "",
                                     "",
-                                    "setTimeout(funcionRetrasoEnLlamadoAlProcessStoreMapaPrincipal,1500);",
+                                    "setTimeout(funcionRetrasoEnLlamadoAlProcessStoreMapaPrincipal,500);",
                                     "",
                                     "",
                                     "",

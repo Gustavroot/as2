@@ -41,8 +41,7 @@ Ext.define('MyApp.view.containerPrincipalDeApp', {
                         docked: 'top',
                         height: '9.4%',
                         id: 'toolbarDelContainerPerfilDeUsuario',
-                        style: 'background: #3E3737',
-                        title: 'PERFIL'
+                        style: 'background: #3E3737'
                     },
                     {
                         xtype: 'container',

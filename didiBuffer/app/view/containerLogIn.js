@@ -98,6 +98,12 @@ Ext.define('MyApp.view.containerLogIn', {
                     });
                     */
 
+                    nombreDelUsuarioPerfil="NOMBRE";
+                    Ext.getCmp("toolbarDelContainerPerfilDeUsuario").setTitle(nombreDelUsuarioPerfil);
+
+                    //alert("gferh");
+
+
                     //Funcion para ir cambiando las imagenes en eventos
                     var funcionCambioEstadoCarousel = function() {
                         var task = Ext.create('Ext.util.DelayedTask', function() {
@@ -132,6 +138,8 @@ Ext.define('MyApp.view.containerLogIn', {
                     };
                     //Esta es la funcion que hace que se refresque la variable que almacena la posicion actual
                     funcionGuardadoPosActual();
+
+
                 },
                 height: '10%',
                 id: 'botonLoginSinFacebook',
@@ -159,6 +167,8 @@ Ext.define('MyApp.view.containerLogIn', {
                     FB.api(url, function(response) {
                         //se envia por extraParams la info del usuario de FB
 
+                        nombreDelUsuarioPerfil=response.name;
+
                         /*
                         Ext.getStore("storeInfoUsuarioLoginFacebook").getProxy().setExtraParam('nombreCompletoFbParam',response.name);
                         Ext.getStore("storeInfoUsuarioLoginFacebook").getProxy().setExtraParam('idUserFbParam',response.id);
@@ -182,7 +192,8 @@ Ext.define('MyApp.view.containerLogIn', {
                         //urlProfilePicUsuarioFacebook=response.picture;
 
                         //se modifica el boton de Usuario
-                        Ext.getCmp("botonDespliegueInfoPerfilUsuario").setText(response.name);
+                        //Ext.getCmp("botonDespliegueInfoPerfilUsuario").setText(nombreDelUsuarioPerfil);
+                        Ext.getCmp("toolbarDelContainerPerfilDeUsuario").setTitle(nombreDelUsuarioPerfil);
                     });
 
                     Ext.Msg.alert('Aviso', 'Su sesión ya está iniciada y autorizada.', Ext.emptyFn);

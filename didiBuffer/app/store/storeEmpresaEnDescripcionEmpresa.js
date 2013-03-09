@@ -73,15 +73,10 @@ Ext.define('MyApp.store.storeEmpresaEnDescripcionEmpresa', {
             //desde descripcion empresa, el problema es que no hay un .load() y por lo tanto no hay tal
             //espera que opaque esa eliminacion del uso del currentLocation
             var funcionRetrasoEnLlamadoAlProcessStoreMapaPrincipal = function() {
-                var taskPosActual = Ext.create('Ext.util.DelayedTask', function() {
-                    //Se llama al processStore para que coloque los pines y luego se oculta el dataView
-                    //en la parte inferior del mapaPrincipal
-                    Ext.getCmp("mapaContainerMapa").processStore(arregloParaRecordsEnStoreDescEmpresa);
-                }, this);
-                taskPosActual.delay(500);
+                Ext.getCmp("mapaContainerMapa").processStore(arregloParaRecordsEnStoreDescEmpresa);
             };
-            //Esta es la funcion que hace que se refresque la variable que almacena la posicion actual
-            funcionRetrasoEnLlamadoAlProcessStoreMapaPrincipal();
+            setTimeout(funcionRetrasoEnLlamadoAlProcessStoreMapaPrincipal,500);
+
 
 
 

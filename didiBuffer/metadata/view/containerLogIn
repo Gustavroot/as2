@@ -119,6 +119,8 @@
                                     "            FB.api(url, function(response) {",
                                     "                //se envia por extraParams la info del usuario de FB",
                                     "",
+                                    "                nombreDelUsuarioPerfil=response.name;",
+                                    "                ",
                                     "                /*",
                                     "                Ext.getStore(\"storeInfoUsuarioLoginFacebook\").getProxy().setExtraParam('nombreCompletoFbParam',response.name);",
                                     "                Ext.getStore(\"storeInfoUsuarioLoginFacebook\").getProxy().setExtraParam('idUserFbParam',response.id);",
@@ -142,7 +144,8 @@
                                     "                //urlProfilePicUsuarioFacebook=response.picture;",
                                     "",
                                     "                //se modifica el boton de Usuario",
-                                    "                Ext.getCmp(\"botonDespliegueInfoPerfilUsuario\").setText(response.name);",
+                                    "                //Ext.getCmp(\"botonDespliegueInfoPerfilUsuario\").setText(nombreDelUsuarioPerfil);",
+                                    "                Ext.getCmp(\"toolbarDelContainerPerfilDeUsuario\").setTitle(nombreDelUsuarioPerfil);",
                                     "            });",
                                     "",
                                     "            Ext.Msg.alert('Aviso', 'Su sesión ya está iniciada y autorizada.', Ext.emptyFn);",
@@ -342,6 +345,12 @@
                             "});",
                             "*/",
                             "",
+                            "nombreDelUsuarioPerfil=\"NOMBRE\";",
+                            "Ext.getCmp(\"toolbarDelContainerPerfilDeUsuario\").setTitle(nombreDelUsuarioPerfil);",
+                            "",
+                            "//alert(\"gferh\");",
+                            "",
+                            "",
                             "//Funcion para ir cambiando las imagenes en eventos",
                             "var funcionCambioEstadoCarousel = function() {",
                             "    var task = Ext.create('Ext.util.DelayedTask', function() {",
@@ -375,7 +384,9 @@
                             "    taskPosActual.delay(500);",
                             "};",
                             "//Esta es la funcion que hace que se refresque la variable que almacena la posicion actual",
-                            "funcionGuardadoPosActual();"
+                            "funcionGuardadoPosActual();",
+                            "",
+                            ""
                         ]
                     },
                     "designerId": "4c7f2803-fa47-4b97-bffe-f58f9e7eebfd"

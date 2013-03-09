@@ -29,6 +29,8 @@ Ext.define('MyApp.controller.controladorDataViewListaEmpresasEnSubcategoria', {
     },
 
     onDataviewItemTap: function(dataview, index, target, record, e, options) {
+
+        //    
         Ext.getCmp("mapaContainerMapa").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
 
         //Estos if sirven para elegir entre los diferentes botones en el listado de las 
@@ -84,6 +86,10 @@ Ext.define('MyApp.controller.controladorDataViewListaEmpresasEnSubcategoria', {
                 funcionParaAbrirDescEmpresa(record.get("idCliente"),"containerListaEmpresasEnSubcategoria");
             }
         }
+
+
+
+
 
 
 
