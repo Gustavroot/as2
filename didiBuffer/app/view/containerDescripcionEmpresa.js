@@ -191,7 +191,7 @@ Ext.define('MyApp.view.containerDescripcionEmpresa', {
 
 
 
-
+                            /*
                             //Este retraso es necesario, ya que de las otras 2 maneras de accesar al mapa para poner el
                             //pin de una empresa, no son problematicas, ya que se hace un .load() y por lo tanto hay una
                             //espera que opaca la eliminacion del uso del currentLocation, pero en este caso de hacerlo
@@ -201,11 +201,17 @@ Ext.define('MyApp.view.containerDescripcionEmpresa', {
                                 var taskPosActual = Ext.create('Ext.util.DelayedTask', function() {
                                     Ext.getCmp("mapaContainerMapa").processStore(arregloParaRecordsEnStoreDescEmpresa);
                                 }, this);
-                                taskPosActual.delay(500);
+                                taskPosActual.delay(1500);
                             };
                             //Esta es la funcion que hace que se refresque la variable que almacena la posicion actual
                             funcionRetrasoEnLlamadoAlProcessStoreMapaPrincipal();
+                            */
+                            var funcionRetrasoEnLlamadoAlProcessStoreMapaPrincipal = function() {
+                                Ext.getCmp("mapaContainerMapa").processStore(arregloParaRecordsEnStoreDescEmpresa);
+                            };
 
+
+                            setTimeout(funcionRetrasoEnLlamadoAlProcessStoreMapaPrincipal,1500);
 
 
 
@@ -446,7 +452,7 @@ Ext.define('MyApp.view.containerDescripcionEmpresa', {
             },
             {
                 xtype: 'container',
-                height: '0.3%',
+                height: '0.5%',
                 style: 'background-color: black',
                 top: '70%',
                 width: '100%'

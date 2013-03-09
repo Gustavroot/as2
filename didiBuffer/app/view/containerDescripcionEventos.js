@@ -316,7 +316,7 @@ Ext.define('MyApp.view.containerDescripcionEventos', {
             },
             {
                 xtype: 'container',
-                height: '0.3%',
+                height: '0.5%',
                 style: 'background-color: black',
                 top: '75%',
                 width: '100%'

@@ -665,7 +665,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyContainer87",
-                "height": "0.3%",
+                "height": "0.5%",
                 "style": "background-color: black",
                 "top": "75%",
                 "width": "100%"
