@@ -54,6 +54,19 @@ Ext.define('MyApp.store.storeSubEventos', {
                 }
             },
             sortProperty: 'fecha'
-        }
+        },
+        listeners: [
+            {
+                fn: 'onJsonpstoreLoad',
+                event: 'load'
+            }
+        ]
+    },
+
+    onJsonpstoreLoad: function(store, records, successful, operation, eOpts) {
+        Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerSubEventos"));
+
+        Ext.getCmp("containerPrincipalEventos").setMasked(false);
     }
+
 });

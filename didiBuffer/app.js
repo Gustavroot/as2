@@ -316,7 +316,7 @@ Ext.application({
 
         //Cargo el store de categorias Eventos para poder utilizarlo en la parte in-
         //ferior del view de Eventos en donde van las 8 imagenes correspondientes
-        Ext.getStore("storeCategoriasEventos").load();
+        //Ext.getStore("storeCategoriasEventos").load();
 
         //Esta iniciacion es para que no haya problema en el load de
         //storeEmpresaEnDescripcionEmpresa
@@ -343,7 +343,6 @@ Ext.application({
         //-------------------------------------------------------------------------------------
         //Funcion para abrir view descripcion empresa
         funcionParaAbrirSubEventos=function(viewPrevioASubEventos){
-            Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerSubEventos"));
             viewDelQueSePasaHaciaSubEventos=viewPrevioASubEventos;
         };
 
@@ -351,7 +350,7 @@ Ext.application({
         funcionDarTapImagenesEventos=function(idCatEvent){
 
             //    alert("feg");
-            Ext.getCmp("containerEventos").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+            //Ext.getCmp("containerEventos").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
 
             //alert("fio");
             funcionParaAbrirSubEventos("containerEventos");
@@ -367,7 +366,7 @@ Ext.application({
         //Funcion para abrir view descripcion empresa
         funcionParaAbrirDescripcionEventos=function(nombreDescripcionEvento,viewPrevioADescripcionEventos){
             //    Ext.getCmp("containerInicio").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
-            Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerDescripcionEventos"));
+
             viewDelQueSePasaHaciaDescripcionEventos=viewPrevioADescripcionEventos;
             Ext.getStore("storeDescripcionEventos").getProxy().setExtraParam('idEventoSolicitado',nombreDescripcionEvento);
             Ext.getStore("storeDescripcionEventos").load();

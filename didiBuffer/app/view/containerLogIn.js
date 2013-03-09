@@ -89,13 +89,14 @@ Ext.define('MyApp.view.containerLogIn', {
                     Ext.getStore("storeCarouselInicio").load();
                     //Con el siguiente codigo se agregan controladores a las imagenes inferiores en Eventos,
                     //asi como las correspondientes url/html de ellas
+                    /*
                     contadorParaConfigurarImagenesCatEventos=1;
                     Ext.getStore("storeCategoriasEventos").each(function (record) {
-                        Ext.getCmp("imagenCatEventos"+contadorParaConfigurarImagenesCatEventos).addListener('tap',funcionDarTapImagenesEventos);
-                        Ext.getCmp("imagenCatEventos"+contadorParaConfigurarImagenesCatEventos).setHtml("<img src='"+record.get("imagen")+"' height='100%' width='100%'>");
-                        contadorParaConfigurarImagenesCatEventos=contadorParaConfigurarImagenesCatEventos+1;
+                    Ext.getCmp("imagenCatEventos"+contadorParaConfigurarImagenesCatEventos).addListener('tap',funcionDarTapImagenesEventos);
+                    Ext.getCmp("imagenCatEventos"+contadorParaConfigurarImagenesCatEventos).setHtml("<img src='"+record.get("imagen")+"' height='100%' width='100%'>");
+                    contadorParaConfigurarImagenesCatEventos=contadorParaConfigurarImagenesCatEventos+1;
                     });
-
+                    */
 
                     //Funcion para ir cambiando las imagenes en eventos
                     var funcionCambioEstadoCarousel = function() {

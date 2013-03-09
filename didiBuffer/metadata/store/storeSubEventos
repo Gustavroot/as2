@@ -92,6 +92,25 @@
                     "designerId": "a59c78d8-f298-4086-ba08-2c814784c928"
                 }
             ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerSubEventos\"));",
+                    "",
+                    "Ext.getCmp(\"containerPrincipalEventos\").setMasked(false);"
+                ],
+                "name": "load"
+            },
+            "designerId": "fb38cd5b-fc20-40a9-a85a-facf1a3ab252"
         }
     ]
 }

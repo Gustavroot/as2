@@ -60,6 +60,8 @@ Ext.define('MyApp.store.storeVerificadoEventoFavoritosPerfilUsuario', {
         }
         //variableEjecutoCodigoEnStoreAgregadoEventosFavoritos=0;
 
+        Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerDescripcionEventos"));
+
     }
 
 });

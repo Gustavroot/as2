@@ -70,6 +70,8 @@
                     "    Ext.getCmp(\"botonFavoritosContainerDescripcionEventos\").enable();",
                     "}",
                     "//variableEjecutoCodigoEnStoreAgregadoEventosFavoritos=0;",
+                    "",
+                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerDescripcionEventos\"));",
                     ""
                 ],
                 "name": "load"

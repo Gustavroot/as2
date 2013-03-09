@@ -255,6 +255,7 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
         //desde la primera vez que se ve no tenga curent location Activado... para
         //evitar que se este devolviendo a la posicion actual
         if(value==Ext.getCmp("containerMapaEventos")){
+
             Ext.getCmp("mapaCercaniaEventos").setUseCurrentLocation(0);
         }
 
@@ -309,6 +310,8 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
         //que tiene la informacion de eventos, y ademas se deja Eventos para que la pro-
         //xima vez que se ingrese, este normal
         if(oldValue==Ext.getCmp("containerEventos")){
+            Ext.getCmp("containerPrincipalEventos").setMasked(false);
+
             Ext.getStore("storeEventos").removeAll();
             Ext.getCmp("carouselEventos").removeAll();
         }
@@ -386,7 +389,7 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
 
         //alert("fetp");
         oldValue.setMasked(false);
-        Ext.getCmp("containerPrincipalEventos").setMasked(false);
+        //Ext.getCmp("containerPrincipalEventos").setMasked(false);
 
 
     }

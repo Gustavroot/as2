@@ -21,7 +21,6 @@ Ext.define('MyApp.store.storeCategoriasEventos', {
     ],
 
     config: {
-        autoLoad: true,
         autoSync: true,
         model: 'MyApp.model.modelCategoriasEventos',
         storeId: 'storeCategoriasEventos',
@@ -33,6 +32,18 @@ Ext.define('MyApp.store.storeCategoriasEventos', {
                 idProperty: 'idEventoCategorias',
                 rootProperty: 'ptm'
             }
-        }
+        },
+        listeners: [
+            {
+                fn: 'onJsonpstoreLoad',
+                event: 'load'
+            }
+        ]
+    },
+
+    onJsonpstoreLoad: function(store, records, successful, operation, eOpts) {
+        //Finalmente, se pasa a ese view que contiene al mapa de Eventos
+        Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerMapaEventos"));
     }
+
 });

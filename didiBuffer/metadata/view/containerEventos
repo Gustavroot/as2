@@ -170,8 +170,7 @@
                                     "while(markersMapaEventos[0]){",
                                     "    markersMapaEventos.pop().setMap(null);",
                                     "}",
-                                    "//Finalmente, se pasa a ese view que contiene al mapa de Eventos",
-                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerMapaEventos\"));"
+                                    ""
                                 ]
                             },
                             "designerId": "bc4195bb-9230-49e3-bf5c-161bea7d8591"
@@ -231,6 +230,8 @@
                                             "event"
                                         ],
                                         "implHandler": [
+                                            "Ext.getCmp(\"containerPrincipalEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
                                             "funcionDarTapImagenesEventos(1);"
                                         ]
                                     },
@@ -272,6 +273,8 @@
                                             "event"
                                         ],
                                         "implHandler": [
+                                            "Ext.getCmp(\"containerPrincipalEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
                                             "funcionDarTapImagenesEventos(2);"
                                         ]
                                     },
@@ -313,6 +316,8 @@
                                             "event"
                                         ],
                                         "implHandler": [
+                                            "Ext.getCmp(\"containerPrincipalEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
                                             "funcionDarTapImagenesEventos(3);"
                                         ]
                                     },
@@ -354,6 +359,8 @@
                                             "event"
                                         ],
                                         "implHandler": [
+                                            "Ext.getCmp(\"containerPrincipalEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
                                             "funcionDarTapImagenesEventos(4);"
                                         ]
                                     },
@@ -395,6 +402,8 @@
                                             "event"
                                         ],
                                         "implHandler": [
+                                            "Ext.getCmp(\"containerPrincipalEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
                                             "funcionDarTapImagenesEventos(5);"
                                         ]
                                     },
@@ -436,6 +445,8 @@
                                             "event"
                                         ],
                                         "implHandler": [
+                                            "Ext.getCmp(\"containerPrincipalEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
                                             "funcionDarTapImagenesEventos(6);"
                                         ]
                                     },
@@ -477,6 +488,8 @@
                                             "event"
                                         ],
                                         "implHandler": [
+                                            "Ext.getCmp(\"containerPrincipalEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
                                             "funcionDarTapImagenesEventos(7);"
                                         ]
                                     },
@@ -518,6 +531,8 @@
                                             "event"
                                         ],
                                         "implHandler": [
+                                            "Ext.getCmp(\"containerPrincipalEventos\").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});",
+                                            "",
                                             "funcionDarTapImagenesEventos(8);"
                                         ]
                                     },

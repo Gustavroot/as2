@@ -86,8 +86,7 @@ Ext.define('MyApp.view.containerEventos', {
                             while(markersMapaEventos[0]){
                                 markersMapaEventos.pop().setMap(null);
                             }
-                            //Finalmente, se pasa a ese view que contiene al mapa de Eventos
-                            Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerMapaEventos"));
+
                         },
                         baseCls: 'botonCercania',
                         height: '7%',
@@ -108,6 +107,8 @@ Ext.define('MyApp.view.containerEventos', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
+                                    Ext.getCmp("containerPrincipalEventos").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+
                                     funcionDarTapImagenesEventos(1);
                                 },
                                 baseCls: 'botonMusica',
@@ -121,6 +122,8 @@ Ext.define('MyApp.view.containerEventos', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
+                                    Ext.getCmp("containerPrincipalEventos").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+
                                     funcionDarTapImagenesEventos(2);
                                 },
                                 baseCls: 'botonVidanoc',
@@ -133,6 +136,8 @@ Ext.define('MyApp.view.containerEventos', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
+                                    Ext.getCmp("containerPrincipalEventos").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+
                                     funcionDarTapImagenesEventos(3);
                                 },
                                 baseCls: 'botonGastronomia',
@@ -145,6 +150,8 @@ Ext.define('MyApp.view.containerEventos', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
+                                    Ext.getCmp("containerPrincipalEventos").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+
                                     funcionDarTapImagenesEventos(4);
                                 },
                                 baseCls: 'botonEmpresarial',
@@ -157,6 +164,8 @@ Ext.define('MyApp.view.containerEventos', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
+                                    Ext.getCmp("containerPrincipalEventos").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+
                                     funcionDarTapImagenesEventos(5);
                                 },
                                 baseCls: 'botonFundaciones',
@@ -169,6 +178,8 @@ Ext.define('MyApp.view.containerEventos', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
+                                    Ext.getCmp("containerPrincipalEventos").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+
                                     funcionDarTapImagenesEventos(6);
                                 },
                                 baseCls: 'botonArteycult',
@@ -181,6 +192,8 @@ Ext.define('MyApp.view.containerEventos', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
+                                    Ext.getCmp("containerPrincipalEventos").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+
                                     funcionDarTapImagenesEventos(7);
                                 },
                                 baseCls: 'botonDeportes',
@@ -193,6 +206,8 @@ Ext.define('MyApp.view.containerEventos', {
                             {
                                 xtype: 'button',
                                 handler: function(button, event) {
+                                    Ext.getCmp("containerPrincipalEventos").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+
                                     funcionDarTapImagenesEventos(8);
                                 },
                                 baseCls: 'botonActividadescant',
