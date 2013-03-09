@@ -134,6 +134,7 @@ Ext.define('MyApp.view.mapaCercaniaEventos', {
 
             directionsService.route(request, function(response, status) {
                 if (status == google.maps.DirectionsStatus.OK) {
+                    //modificar esta linea para que se refresque cuando se esta viajando hacia el destino
                     directionsDisplay.setOptions({ preserveViewport: true });
                     directionsDisplay.setDirections(response);
                 }
