@@ -39,6 +39,47 @@ Ext.define('MyApp.view.containerEventos', {
                         id: 'imagenToolbarContainerEventos',
                         itemId: 'myimage9',
                         width: '40%'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            if (Ext.getCmp('containerDelPerfilUsuario').isHidden()) {
+                                //Ext.getCmp('containerDelPerfilUsuario').show();   
+                                //    Ext.getCmp("carouselBannerPrincipal").setDisabled(1);
+                                //    alert("fa");
+                            }
+                            else{
+                                //    Ext.getCmp("carouselBannerPrincipal").enable();
+                            }
+
+
+
+
+                            Ext.getCmp('containerDelPerfilUsuario').setHidden(0);
+
+
+                            var main = Ext.get('containerParaTabPanelPrincipal');
+
+
+                            if (main.hasCls('out')) {
+                                main.removeCls('out');
+                                main.addCls('in'); 
+                                //button.setText('Usuario');
+                            } else {
+                                main.removeCls('in');    
+                                main.addCls('out');    
+                                //button.setText('Usuario');         
+                            }
+
+
+                        },
+                        baseCls: 'botonUsuario',
+                        height: '60%',
+                        id: 'botonDespliegueInfoPerfilUsuarioEventos',
+                        left: '1%',
+                        top: '20%',
+                        ui: 'action-round',
+                        width: '13%'
                     }
                 ]
             },

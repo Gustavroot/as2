@@ -485,9 +485,9 @@
         },
         "49dcdd10-e45b-4481-9540-b83ea08bbd4b": {
             "paths": [
-                "metadata/resource/css1"
+                "metadata/resource/css"
             ],
-            "className": "css1"
+            "className": "css"
         },
         "a797fcd6-955a-4a2a-9ab7-c0a4d4bac17a": {
             "paths": [
@@ -982,7 +982,6 @@
             "4660893e-6043-4677-9817-7dfe724af706",
             "c5d258a7-4d35-4466-964c-9d7e2be3ff76",
             "41e5da4b-a94a-42cc-af69-3350b58a0ac9",
-            "49dcdd10-e45b-4481-9540-b83ea08bbd4b",
             "49dcdd10-e45b-4481-9540-b83ea08bbd4b"
         ],
         "app": [

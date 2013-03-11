@@ -69,6 +69,76 @@
                             "designerId": "ceed9f3d-40f0-4442-86ad-0b924242b0df"
                         }
                     ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton1",
+                        "baseCls": "botonUsuario",
+                        "height": "60%",
+                        "id": "botonDespliegueInfoPerfilUsuarioEventosAyuda",
+                        "left": "1%",
+                        "top": "20%",
+                        "ui": "action-round",
+                        "width": "13%",
+                        "text": null
+                    },
+                    "designerId": "b81c55f0-ed9f-44e6-af90-f78c73458c3c",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "if (Ext.getCmp('containerDelPerfilUsuario').isHidden()) {",
+                                    "    //Ext.getCmp('containerDelPerfilUsuario').show();   ",
+                                    "    //    Ext.getCmp(\"carouselBannerPrincipal\").setDisabled(1);",
+                                    "    //    alert(\"fa\");",
+                                    "}",
+                                    "else{",
+                                    "    //    Ext.getCmp(\"carouselBannerPrincipal\").enable();",
+                                    "}",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "Ext.getCmp('containerDelPerfilUsuario').setHidden(0);",
+                                    "",
+                                    "",
+                                    "var main = Ext.get('containerParaTabPanelPrincipal');",
+                                    "",
+                                    "",
+                                    "if (main.hasCls('out')) {",
+                                    "    main.removeCls('out');",
+                                    "    main.addCls('in'); ",
+                                    "    //button.setText('Usuario');",
+                                    "} else {",
+                                    "    main.removeCls('in');    ",
+                                    "    main.addCls('out');    ",
+                                    "    //button.setText('Usuario');         ",
+                                    "}",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "designerId": "e4a7481c-e933-4e04-bd69-d904a74aa7d5"
+                        }
+                    ]
                 }
             ]
         }
