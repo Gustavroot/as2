@@ -395,7 +395,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyButton14",
-                        "baseCls": "botonDescripcion",
+                        "baseCls": "botonCreador",
                         "height": 50,
                         "id": "botonHaciaViewClienteDescEventos",
                         "right": null,

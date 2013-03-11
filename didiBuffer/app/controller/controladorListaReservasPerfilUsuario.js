@@ -41,12 +41,10 @@ Ext.define('MyApp.controller.controladorListaReservasPerfilUsuario', {
         if(e.target.id=="botonVerCancelarReservaPerfilUsuario"){
             Ext.getStore("storeCancelarReservaPerfilUsuario").getProxy().setExtraParam('idReservaParam', record.get("idReserva"));
             Ext.getStore("storeCancelarReservaPerfilUsuario").getProxy().setExtraParam('estadoReservaParam', 2);
-            Ext.Msg.alert('Aviso', 'Usted ha cancelado la reserva número '+record.get("idReserva"), Ext.emptyFn);
             Ext.getStore("storeCancelarReservaPerfilUsuario").load();
+            Ext.Msg.alert('Aviso', 'Usted ha cancelado la reserva número '+record.get("idReserva"), Ext.emptyFn);
             Ext.getStore("storeReservaEvento").load();
-
         }
-
     }
 
 });

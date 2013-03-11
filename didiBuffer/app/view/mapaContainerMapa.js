@@ -67,6 +67,35 @@ Ext.define('MyApp.view.mapaContainerMapa', {
                 right: '2%',
                 top: '12%',
                 width: '30%'
+            },
+            {
+                xtype: 'panel',
+                height: '80%',
+                hidden: true,
+                html: '<div id="directionsPanelEmpresas"></div>',
+                id: 'panelDireccionesDeRecorridoMapaEmpresas',
+                left: '15%',
+                style: 'background-color: white',
+                top: '10%',
+                width: '70%',
+                modal: true,
+                scrollable: 'vertical',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        docked: 'top',
+                        title: 'Recorrido'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            Ext.getCmp("panelDireccionesDeRecorridoMapaEmpresas").setHidden(1);
+                        },
+                        docked: 'bottom',
+                        ui: 'confirm-round',
+                        text: 'Listo'
+                    }
+                ]
             }
         ]
     },
@@ -166,6 +195,9 @@ Ext.define('MyApp.view.mapaContainerMapa', {
                     //showSteps(response);
                 }
             });
+
+            directionsDisplay.setPanel(document.getElementById("directionsPanelEmpresas"));
+            Ext.getCmp("panelDireccionesDeRecorridoMapaEmpresas").setHidden(0);
         };
 
 

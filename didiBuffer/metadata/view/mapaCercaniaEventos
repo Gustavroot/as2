@@ -140,6 +140,10 @@
                     "            directionsDisplay.setDirections(response);",
                     "        }",
                     "    });",
+                    "    ",
+                    "    directionsDisplay.setPanel(document.getElementById(\"directionsPanelEventos\"));",
+                    "    Ext.getCmp(\"panelDireccionesDeRecorridoMapaEventos\").setHidden(0);",
+                    "    ",
                     "};",
                     "",
                     "",
@@ -328,6 +332,82 @@
                         "designer|displayName": "itemTpl"
                     },
                     "designerId": "041eb560-09ab-4ab3-8884-ba3d23fd3794"
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel15",
+                "height": "80%",
+                "hidden": true,
+                "html": "<div id=\"directionsPanelEventos\"></div>",
+                "id": "panelDireccionesDeRecorridoMapaEventos",
+                "left": "15%",
+                "right": 0,
+                "style": "background-color: white",
+                "top": "10%",
+                "width": "70%",
+                "modal": true,
+                "scrollable": "vertical"
+            },
+            "designerId": "e131613d-ebd2-477f-9fdd-a5c8ad387b77",
+            "cn": [
+                {
+                    "type": "titlebar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTitleBar10",
+                        "docked": "top",
+                        "title": "Recorrido"
+                    },
+                    "designerId": "a1295565-b9c6-4cf5-9564-a29e3020e338"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton133",
+                        "docked": "bottom",
+                        "ui": "confirm-round",
+                        "text": "Listo"
+                    },
+                    "designerId": "b1f88d94-4ee9-42c6-9d8b-26435927809a",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"panelDireccionesDeRecorridoMapaEventos\").setHidden(1);"
+                                ]
+                            },
+                            "designerId": "b1815f49-e6cc-4f21-afd6-c26ed032a97e"
+                        }
+                    ]
                 }
             ]
         }

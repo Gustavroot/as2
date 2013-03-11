@@ -135,6 +135,7 @@ Ext.define('MyApp.view.containerReservasPerfilUsuario', {
                 hidden: true,
                 id: 'panelResumenInfoPerfilUsuario',
                 left: '10%',
+                style: 'background-color: white',
                 top: '10%',
                 width: '80%',
                 hideOnMaskTap: false,

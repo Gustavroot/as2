@@ -195,7 +195,7 @@ Ext.define('MyApp.view.containerDescripcionEventos', {
                             //como parametro
                             funcionParaAbrirDescEmpresa(Ext.getStore("storeDescripcionEventos").first().get("idCliente"),"containerDescripcionEventos");
                         },
-                        baseCls: 'botonDescripcion',
+                        baseCls: 'botonCreador',
                         height: 50,
                         id: 'botonHaciaViewClienteDescEventos',
                         ui: 'decline-round',

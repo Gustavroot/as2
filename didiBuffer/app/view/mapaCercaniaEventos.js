@@ -59,6 +59,36 @@ Ext.define('MyApp.view.mapaCercaniaEventos', {
                 ],
                 loadingText: 'Cargando...',
                 store: 'storeCategoriasEventos'
+            },
+            {
+                xtype: 'panel',
+                height: '80%',
+                hidden: true,
+                html: '<div id="directionsPanelEventos"></div>',
+                id: 'panelDireccionesDeRecorridoMapaEventos',
+                left: '15%',
+                right: 0,
+                style: 'background-color: white',
+                top: '10%',
+                width: '70%',
+                modal: true,
+                scrollable: 'vertical',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        docked: 'top',
+                        title: 'Recorrido'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            Ext.getCmp("panelDireccionesDeRecorridoMapaEventos").setHidden(1);
+                        },
+                        docked: 'bottom',
+                        ui: 'confirm-round',
+                        text: 'Listo'
+                    }
+                ]
             }
         ]
     },
@@ -139,6 +169,10 @@ Ext.define('MyApp.view.mapaCercaniaEventos', {
                     directionsDisplay.setDirections(response);
                 }
             });
+
+            directionsDisplay.setPanel(document.getElementById("directionsPanelEventos"));
+            Ext.getCmp("panelDireccionesDeRecorridoMapaEventos").setHidden(0);
+
         };
 
 
