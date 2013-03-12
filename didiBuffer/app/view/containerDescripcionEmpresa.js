@@ -42,10 +42,25 @@ Ext.define('MyApp.view.containerDescripcionEmpresa', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
+                            //alert(viewDelQueSePasaHaciaDescripcionEmpresa);
+                            if(viewDelQueSePasaHaciaDescripcionEmpresa=="containerFavoritosEmpresasPerfilUsuario"){
+                                //Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerFavoritosEmpresasPerfilUsuario"));
+
+                                //Se refrescan los parametros para paging del store
+                                Ext.getStore("storeExtraccionFavoritasEmpresasPerfilUsuario").loadPage(1);
+
+                                Ext.getStore("storeExtraccionFavoritasEmpresasPerfilUsuario").getProxy().setExtraParam('idUsuarioParam',idPerfilUsuarioDidi);
+                                Ext.getStore("storeExtraccionFavoritasEmpresasPerfilUsuario").load();
+                            }
+
                             //Esta linea es para cambiar al tab Inicio
                             Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp(viewDelQueSePasaHaciaDescripcionEmpresa));
                             //Con esta linea se remueve lo q haya en subcategorias, para evitar sobrecarga
                             Ext.getStore("storeEmpresaEnDescripcionEmpresa").removeAll();
+
+
+
+
                         },
                         baseCls: 'botonAtras',
                         height: '80%',
@@ -431,21 +446,134 @@ Ext.define('MyApp.view.containerDescripcionEmpresa', {
                             Ext.getStore("storeListaEmpresasEnSubcategoria").load();
 
 
-
                         },
-                        baseCls: 'botonPresupuesto',
                         height: 50,
                         id: 'botonPresupuestoContainerBotonesDescEmpresa',
                         itemId: 'botonPresupuestoContainerBotonesDescEmpresa',
                         ui: 'decline-round',
                         width: '100%',
-                        iconMask: true
+                        iconMask: true,
+                        text: 'Pr'
                     },
                     {
                         xtype: 'spacer',
                         id: 'spacerPresupuestoDescEmpresa',
                         maxHeight: 20,
                         minHeight: 20,
+                        width: 10
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            //alert(Ext.getCmp("tabPanelPrincipal").requires[0]);
+
+
+                            /*
+                            var containerModuloProductosDescEmpresa = Ext.create('Ext.Container', {
+                            html: 'En construcción...',
+                            id: 'containerAyuda',
+                            itemId: 'containerAyuda',
+                            layout: {
+                            type: 'fit'
+                            },
+                            items: [
+                            {
+                            xtype: 'toolbar',
+                            docked: 'top',
+                            height: '10%',
+                            id: 'toolbarContainerAyuda',
+                            style: 'background: #3E3737',
+                            items: [
+                            {
+                            xtype: 'image',
+                            centered: true,
+                            height: '100%%',
+                            html: '<img src="./resources/logo/Logo_DD.png" width="100%" height="100%">',
+                            id: 'imagenToolbarContainerAyuda',
+                            itemId: 'myimage2',
+                            width: '40%'
+                            },
+                            {
+                            xtype: 'button',
+                            handler: function(button, event) {
+                            if (Ext.getCmp('containerDelPerfilUsuario').isHidden()) {
+                            //Ext.getCmp('containerDelPerfilUsuario').show();   
+                            //    Ext.getCmp("carouselBannerPrincipal").setDisabled(1);
+                            //    alert("fa");
+                        }
+                        else{
+                            //    Ext.getCmp("carouselBannerPrincipal").enable();
+                        }
+
+
+
+
+                        Ext.getCmp('containerDelPerfilUsuario').setHidden(0);
+
+
+                        var main = Ext.get('containerParaTabPanelPrincipal');
+
+
+                        if (main.hasCls('out')) {
+                            main.removeCls('out');
+                            main.addCls('in'); 
+                            //button.setText('Usuario');
+                        } else {
+                            main.removeCls('in');    
+                            main.addCls('out');    
+                            //button.setText('Usuario');         
+                        }
+
+
+                    },
+                    baseCls: 'botonUsuario',
+                    height: '60%',
+                    id: 'botonDespliegueInfoPerfilUsuarioEventosAyuda',
+                    left: '1%',
+                    top: '20%',
+                    ui: 'action-round',
+                    width: '13%'
+                }
+                ]
+            }
+            ]
+        });
+        */
+
+
+
+
+
+
+        /*
+        onImagenToolbarContainerAyudaTap: function(img, e, options) {
+        //Para devolverse hacia el container Inicio desde Ayuda
+        Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerInicio"));
+    }
+    */
+                        },
+                        id: 'botonProductosContainerBotonesDescEmpresa',
+                        ui: 'decline-round',
+                        text: 'P'
+                    },
+                    {
+                        xtype: 'spacer',
+                        id: 'spacerProductosDescEmpresa',
+                        maxHeight: 20,
+                        minHeight: 20,
+                        width: 10
+                    },
+                    {
+                        xtype: 'button',
+                        id: 'botonExpressContainerBotonesDescEmpresa',
+                        ui: 'decline-round',
+                        text: 'E'
+                    },
+                    {
+                        xtype: 'spacer',
+                        id: 'spacerExpressDescEmpresa',
+                        maxWidth: 20,
+                        minWidth: 20,
                         width: 10
                     }
                 ]

@@ -35,6 +35,12 @@ Ext.define('MyApp.model.modelModuloDetalleDescripcionEmpresa', {
             },
             {
                 name: 'moduloPresupuesto'
+            },
+            {
+                name: 'moduloProducto'
+            },
+            {
+                name: 'moduloExpress'
             }
         ]
     }

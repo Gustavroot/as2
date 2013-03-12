@@ -11,6 +11,7 @@
         "cls": [
             "fondoMapa"
         ],
+        "html": "<img src=\"./resources/css/esp/botones/mapa/DD_fondo_mapa.png\" height=\"100%\" width=\"100%\"/>",
         "id": "containerMapa"
     },
     "id": "ExtBox1-ext-gen3739",
@@ -25,7 +26,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyPanel6",
-                "height": "40%",
+                "height": "45%",
                 "id": "panelEscogenciaEntreMapaEventosOMapaEmpresas",
                 "left": "25%",
                 "top": "30%",
@@ -36,19 +37,21 @@
             "designerId": "031b1479-8900-45d2-8407-cdf5949b29f9",
             "cn": [
                 {
-                    "type": "titlebar",
+                    "type": "button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTitleBar4",
+                        "designer|userClassName": "MyButton139",
+                        "baseCls": "botonMapaDe",
                         "docked": "top",
                         "height": "25%",
-                        "title": "Mapa de:"
+                        "width": "100%",
+                        "text": null
                     },
-                    "designerId": "bc3f49ce-5a88-4814-9f4c-bde8722a53b1"
+                    "designerId": "af40e225-648e-4b51-b97c-47d4d3a901b2"
                 },
                 {
                     "type": "button",
@@ -59,11 +62,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyButton62",
-                        "docked": "bottom",
-                        "height": "37.5%",
+                        "baseCls": "botonMapaEmpresas",
+                        "docked": "top",
+                        "height": "35.5%",
                         "id": "botonEleccionMapaPorEmpresas",
                         "ui": "confirm-round",
-                        "text": "empresas"
+                        "width": "100%",
+                        "text": null
                     },
                     "designerId": "00ec5309-36bc-4651-b504-d9688280d783",
                     "cn": [
@@ -103,11 +108,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyButton63",
-                        "docked": "bottom",
-                        "height": "37.5%",
+                        "baseCls": "botonMapaEvento",
+                        "docked": "top",
+                        "height": "35.5%",
                         "id": "botonEleccionMapaPorEventos",
                         "ui": "confirm-round",
-                        "text": "eventos"
+                        "width": "100%",
+                        "text": null
                     },
                     "designerId": "4c32f961-e0b1-4f38-9489-b571f1b93cd3",
                     "cn": [

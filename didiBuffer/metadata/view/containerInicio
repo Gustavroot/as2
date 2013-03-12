@@ -139,22 +139,22 @@
             "designerId": "0bb5c522-4d42-4540-a475-6cafb895443e"
         },
         {
-            "type": "image",
+            "type": "button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyImage43",
+                "designer|userClassName": "MyButton137",
+                "baseCls": "botonBarraDdrapido",
                 "docked": "top",
                 "height": "7%",
-                "html": "<img src=\"http://www.didicr.com/imagenes/rapidos/tituloDidiRapidos.png\" height=\"100%\" width=\"100%\">",
-                "id": "imagenTituloDidiRapidos",
-                "itemId": "myimage43",
-                "width": "100%"
+                "id": "botonTituloDidiRapidos",
+                "width": "100%",
+                "text": null
             },
-            "designerId": "55523f64-469f-471a-9cd1-914cd8245b76"
+            "designerId": "ac79eb8a-8b74-4faa-8d84-c0df0a5776af"
         },
         {
             "type": "container",
@@ -231,24 +231,22 @@
             ]
         },
         {
-            "type": "container",
+            "type": "button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer4",
+                "designer|userClassName": "MyButton138",
+                "baseCls": "botonBarraDdpor",
                 "docked": "top",
                 "height": "7%",
-                "html": "<img src=\"http://www.didicr.com/imagenes/directorio/barraDirectorio.png\" height=\"100%\" width=\"100%\">",
-                "id": "containerTituloDirectorio",
-                "itemId": "containerTituloDirectorio",
-                "top": null,
+                "id": "botonTituloDirectorio",
                 "width": "100%",
-                "layout": "fit"
+                "text": null
             },
-            "designerId": "180689e2-476f-40c7-adec-0efd9cb0f4c5"
+            "designerId": "777ae32e-98d7-4e16-89b4-db64428626d3"
         },
         {
             "type": "container",
@@ -279,7 +277,7 @@
                         "designer|userClassName": "MyButton115",
                         "baseCls": "botonCategoria",
                         "docked": "left",
-                        "height": "92%",
+                        "height": "85%",
                         "id": "botonDirectorioCategorias",
                         "left": "3%",
                         "maxHeight": 196,
@@ -327,7 +325,7 @@
                     "userConfig": {
                         "designer|userClassName": "MyButton116",
                         "baseCls": "botonLugar",
-                        "height": "92%",
+                        "height": "85%",
                         "itemId": "botonDirectorioMiLugar",
                         "left": "34.5%",
                         "maxHeight": 196,
@@ -372,7 +370,7 @@
                     "userConfig": {
                         "designer|userClassName": "MyButton117",
                         "baseCls": "botonAvanzado",
-                        "height": "92%",
+                        "height": "85%",
                         "id": "botonDirectorioAvanzado",
                         "maxHeight": 196,
                         "maxWidth": 196,

@@ -18,6 +18,7 @@ Ext.define('MyApp.view.containerMapa', {
     alias: 'widget.containermapa',
 
     config: {
+        html: '<img src="./resources/css/esp/botones/mapa/DD_fondo_mapa.png" height="100%" width="100%"/>',
         id: 'containerMapa',
         cls: [
             'fondoMapa'
@@ -25,7 +26,7 @@ Ext.define('MyApp.view.containerMapa', {
         items: [
             {
                 xtype: 'panel',
-                height: '40%',
+                height: '45%',
                 id: 'panelEscogenciaEntreMapaEventosOMapaEmpresas',
                 left: '25%',
                 top: '30%',
@@ -36,10 +37,11 @@ Ext.define('MyApp.view.containerMapa', {
                 modal: true,
                 items: [
                     {
-                        xtype: 'titlebar',
+                        xtype: 'button',
+                        baseCls: 'botonMapaDe',
                         docked: 'top',
                         height: '25%',
-                        title: 'Mapa de:'
+                        width: '100%'
                     },
                     {
                         xtype: 'button',
@@ -51,11 +53,12 @@ Ext.define('MyApp.view.containerMapa', {
                                 markersMapaPrincipal.pop().setMap(null);
                             }
                         },
-                        docked: 'bottom',
-                        height: '37.5%',
+                        baseCls: 'botonMapaEmpresas',
+                        docked: 'top',
+                        height: '35.5%',
                         id: 'botonEleccionMapaPorEmpresas',
                         ui: 'confirm-round',
-                        text: 'empresas'
+                        width: '100%'
                     },
                     {
                         xtype: 'button',
@@ -77,11 +80,12 @@ Ext.define('MyApp.view.containerMapa', {
                             //Se setea el zoom del mapa, por si el usuario lo ha modificado
                             Ext.getCmp("mapaCercaniaEventos").setMapOptions({zoom: 13});
                         },
-                        docked: 'bottom',
-                        height: '37.5%',
+                        baseCls: 'botonMapaEvento',
+                        docked: 'top',
+                        height: '35.5%',
                         id: 'botonEleccionMapaPorEventos',
                         ui: 'confirm-round',
-                        text: 'eventos'
+                        width: '100%'
                     }
                 ]
             }

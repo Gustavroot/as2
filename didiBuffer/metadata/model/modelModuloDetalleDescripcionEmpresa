@@ -88,6 +88,32 @@
                 "name": "moduloPresupuesto"
             },
             "designerId": "098b1cf2-1ef0-482c-ba1e-90bad0120919"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field170",
+                "name": "moduloProducto"
+            },
+            "designerId": "76273502-0d0d-4603-b9ea-410fd9deb0e1"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field171",
+                "name": "moduloExpress"
+            },
+            "designerId": "e7eaf65f-d4de-48c9-acf7-20c27c3b19d2"
         }
     ]
 }

@@ -539,7 +539,7 @@ html, body, header, paragraph, p, div {
 	text-shadow:1px 1px 0px #b23e35;
 	background-color: transparent;
 }
-.botonMapaEmpresa:active {
+.botonMapaEmpresas:active {
 	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_02a.png)
 }
 

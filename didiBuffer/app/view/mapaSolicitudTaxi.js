@@ -78,7 +78,7 @@ Ext.define('MyApp.view.mapaSolicitudTaxi', {
                 right: '2%',
                 top: '2.5%',
                 ui: 'action-round',
-                width: '10%'
+                width: '4%'
             }
         ]
     },

@@ -58,8 +58,25 @@ Ext.define('MyApp.controller.controladorListaFavoritosEmpresasPerfilUsuario', {
 
             extMessageBox=Ext.Msg.confirm("Aviso", "Desea eliminar esta empresa de sus favoritas?", funcionEliminadoEmpresasFavoritasPerfilUsuario);
         }
+        if(e.target.id=="botonVerDescEmpresaFavoritaPerfilUsuario"){
+
+            Ext.getCmp("containerFavoritosEmpresasPerfilUsuario").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+            //alert(record.get("tipoPlan"));
+            if(record.get("tipoPlan")<4){
+                botonClickeadoEnListadoTotalEmpresas="";
+                funcionParaAbrirDescEmpresa(record.get("idCliente"),"containerFavoritosEmpresasPerfilUsuario");
+            }
+
+        }
         else{
-            funcionParaAbrirDescEmpresa(record.get("idCliente"),"containerFavoritosEmpresasPerfilUsuario");
+
+            Ext.getCmp("containerFavoritosEmpresasPerfilUsuario").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
+            //alert(record.get("tipoPlan"));
+            if(record.get("tipoPlan")<4){
+                botonClickeadoEnListadoTotalEmpresas="";
+                funcionParaAbrirDescEmpresa(record.get("idCliente"),"containerFavoritosEmpresasPerfilUsuario");
+            }
+
         }
 
 

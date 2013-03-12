@@ -91,12 +91,11 @@ Ext.define('MyApp.view.containerInicio', {
                 width: '100%'
             },
             {
-                xtype: 'image',
+                xtype: 'button',
+                baseCls: 'botonBarraDdrapido',
                 docked: 'top',
                 height: '7%',
-                html: '<img src="http://www.didicr.com/imagenes/rapidos/tituloDidiRapidos.png" height="100%" width="100%">',
-                id: 'imagenTituloDidiRapidos',
-                itemId: 'myimage43',
+                id: 'botonTituloDidiRapidos',
                 width: '100%'
             },
             {
@@ -142,16 +141,12 @@ Ext.define('MyApp.view.containerInicio', {
                 ]
             },
             {
-                xtype: 'container',
+                xtype: 'button',
+                baseCls: 'botonBarraDdpor',
                 docked: 'top',
                 height: '7%',
-                html: '<img src="http://www.didicr.com/imagenes/directorio/barraDirectorio.png" height="100%" width="100%">',
-                id: 'containerTituloDirectorio',
-                itemId: 'containerTituloDirectorio',
-                width: '100%',
-                layout: {
-                    type: 'fit'
-                }
+                id: 'botonTituloDirectorio',
+                width: '100%'
             },
             {
                 xtype: 'container',
@@ -175,7 +170,7 @@ Ext.define('MyApp.view.containerInicio', {
                         },
                         baseCls: 'botonCategoria',
                         docked: 'left',
-                        height: '92%',
+                        height: '85%',
                         id: 'botonDirectorioCategorias',
                         left: '3%',
                         maxHeight: 196,
@@ -191,7 +186,7 @@ Ext.define('MyApp.view.containerInicio', {
                             Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerFormularioGeolocalizacion"));
                         },
                         baseCls: 'botonLugar',
-                        height: '92%',
+                        height: '85%',
                         itemId: 'botonDirectorioMiLugar',
                         left: '34.5%',
                         maxHeight: 196,
@@ -207,7 +202,7 @@ Ext.define('MyApp.view.containerInicio', {
                             Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerBusquedaAvanzada"));
                         },
                         baseCls: 'botonAvanzado',
-                        height: '92%',
+                        height: '85%',
                         id: 'botonDirectorioAvanzado',
                         maxHeight: 196,
                         maxWidth: 196,

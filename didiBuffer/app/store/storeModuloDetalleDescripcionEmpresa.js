@@ -40,6 +40,11 @@ Ext.define('MyApp.store.storeModuloDetalleDescripcionEmpresa', {
     },
 
     onJsonpstoreLoad: function(store, records, successful, operation, eOpts) {
+        //A este store se llega cuando se le da al elemento de la lista en el
+        //listado total de las empresas o al boton que esta ahi de Ir a Descripcion,
+        //y luego se pasa al storeEmpresaEnDescripcionEmpresa, y despues se pasa a
+        //este store
+
 
 
         if(records[0].get("moduloReserva")==0){
@@ -93,6 +98,35 @@ Ext.define('MyApp.store.storeModuloDetalleDescripcionEmpresa', {
             Ext.getCmp("botonPresupuestoContainerBotonesDescEmpresa").setHidden(0);
             Ext.getCmp("spacerPresupuestoDescEmpresa").setHidden(0);
         }
+
+
+
+        //------------------------------------------------------------------------------------------
+
+
+        if(records[0].get("moduloProducto")==0){
+            Ext.getCmp("botonProductosContainerBotonesDescEmpresa").setHidden(1);
+            Ext.getCmp("spacerProductosDescEmpresa").setHidden(1);
+
+        }
+        else{
+            Ext.getCmp("botonProductosContainerBotonesDescEmpresa").setHidden(0);
+            Ext.getCmp("spacerProductosDescEmpresa").setHidden(0);
+        }
+
+        //------------------------------------------------------------------------------------------
+
+        if(records[0].get("moduloExpress")==0){
+            Ext.getCmp("botonExpressContainerBotonesDescEmpresa").setHidden(1);
+            Ext.getCmp("spacerExpressDescEmpresa").setHidden(1);
+
+        }
+        else{
+            Ext.getCmp("botonExpressContainerBotonesDescEmpresa").setHidden(0);
+            Ext.getCmp("spacerExpressDescEmpresa").setHidden(0);
+        }
+
+
 
 
 

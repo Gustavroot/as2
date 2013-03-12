@@ -1176,6 +1176,33 @@ Ext.define('MyApp.view.BASURERO', {
                 ui: 'decline-round',
                 width: '20%',
                 text: 'Acc'
+            },
+            {
+                xtype: 'image',
+                docked: 'top',
+                height: '7%',
+                html: '<img src="http://www.didicr.com/imagenes/rapidos/tituloDidiRapidos.png" height="100%" width="100%">',
+                id: 'imagenTituloDidiRapidos',
+                itemId: 'myimage43',
+                width: '100%'
+            },
+            {
+                xtype: 'container',
+                docked: 'top',
+                height: '7%',
+                html: '<img src="http://www.didicr.com/imagenes/directorio/barraDirectorio.png" height="100%" width="100%">',
+                id: 'containerTituloDirectorio',
+                itemId: 'containerTituloDirectorio',
+                width: '100%',
+                layout: {
+                    type: 'fit'
+                }
+            },
+            {
+                xtype: 'titlebar',
+                docked: 'top',
+                height: '25%',
+                title: 'Mapa de:'
             }
         ],
         listeners: [

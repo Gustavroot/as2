@@ -788,10 +788,10 @@
                                             "Ext.getCmp(\"panelElegirMesaReservacionRestaurante\").setHidden(1);",
                                             "",
                                             "if(Ext.getCmp(\"datePickerReservacionRestaurante\").getValue()['MyPickerSlotPanelElegirMesa']===null){",
-                                            "    Ext.getCmp(\"botonSeleccionarMesaModuloReservaciones\").setText(\"<p>Mesa</p><p>(1)</p>\");",
+                                            "    Ext.getCmp(\"botonSeleccionarMesaModuloReservaciones\").setText(\"<p>Locación</p><p>(1)</p>\");",
                                             "}",
                                             "else{",
-                                            "    Ext.getCmp(\"botonSeleccionarMesaModuloReservaciones\").setText(\"<p>Mesa</p> <p>(\"+Ext.getCmp(\"datePickerReservacionRestaurante\").getValue()['MyPickerSlotPanelElegirMesa']+\")</p>\");",
+                                            "    Ext.getCmp(\"botonSeleccionarMesaModuloReservaciones\").setText(\"<p>Locación</p> <p>(\"+Ext.getCmp(\"datePickerReservacionRestaurante\").getValue()['MyPickerSlotPanelElegirMesa']+\")</p>\");",
                                             "}",
                                             "",
                                             ""

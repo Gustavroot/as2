@@ -42,6 +42,15 @@ Ext.define('MyApp.view.containerDescripcionEventos', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
+                            if(viewDelQueSePasaHaciaDescripcionEventos=="containerFavoritosEventosPerfilUsuario"){
+
+                                Ext.getStore("storeExtraccionFavoritosPerfilUsuario").loadPage(1);
+
+                                Ext.getStore("storeExtraccionFavoritosPerfilUsuario").getProxy().setExtraParam('idUsuarioParam',idPerfilUsuarioDidi);
+                                Ext.getStore("storeExtraccionFavoritosPerfilUsuario").load();
+
+                            }
+
                             //Esta linea es para cambiar al tab Inicio
                             Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp(viewDelQueSePasaHaciaDescripcionEventos));
                         },
