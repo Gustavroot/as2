@@ -46,23 +46,6 @@ Ext.define('MyApp.view.containerMapa', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
-                            //Se he elegido el view de mapa por Empresas, entonces se pasa a ese
-                            Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerMapaPrincipal"));
-                            //Se borran los pines de ese mapa si es que los tenia
-                            while(markersMapaPrincipal[0]){
-                                markersMapaPrincipal.pop().setMap(null);
-                            }
-                        },
-                        baseCls: 'botonMapaEmpresas',
-                        docked: 'top',
-                        height: '35.5%',
-                        id: 'botonEleccionMapaPorEmpresas',
-                        ui: 'confirm-round',
-                        width: '100%'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, event) {
                             //Se oculta el tabBar del mapa Eventos
                             Ext.getCmp("tabPanelPrincipal").getTabBar().setHidden(1);
                             //Se especifica el view del que se pasa a dicho mapa, asi como se hace el 
@@ -84,6 +67,23 @@ Ext.define('MyApp.view.containerMapa', {
                         docked: 'top',
                         height: '35.5%',
                         id: 'botonEleccionMapaPorEventos',
+                        ui: 'confirm-round',
+                        width: '100%'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            //Se he elegido el view de mapa por Empresas, entonces se pasa a ese
+                            Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerMapaPrincipal"));
+                            //Se borran los pines de ese mapa si es que los tenia
+                            while(markersMapaPrincipal[0]){
+                                markersMapaPrincipal.pop().setMap(null);
+                            }
+                        },
+                        baseCls: 'botonMapaEmpresas',
+                        docked: 'top',
+                        height: '35.5%',
+                        id: 'botonEleccionMapaPorEmpresas',
                         ui: 'confirm-round',
                         width: '100%'
                     }

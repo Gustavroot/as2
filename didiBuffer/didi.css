@@ -518,32 +518,6 @@ html, body, header, paragraph, p, div {
 }
 
 .botonMapaEmpresas{
-	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_02.png);
-	background-repeat:no-repeat;
-	background-size: 100%;
-	-moz-background-size: 100%;
-	-o-background-size: 100% auto;
-	-webkit-background-size: 100%;
-	-khtml-background-size: 100%;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:0px none transparent;
-	display:inline-block;
-	color:#ffffff;
-	font-family:arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:1px 1px 0px #b23e35;
-	background-color: transparent;
-}
-.botonMapaEmpresas:active {
-	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_02a.png)
-}
-
-.botonMapaEvento {
 	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_03.png);
 	background-repeat:no-repeat;
 	background-size: 100%;
@@ -565,8 +539,34 @@ html, body, header, paragraph, p, div {
 	text-shadow:1px 1px 0px #b23e35;
 	background-color: transparent;
 }
-.botonMapaEvento:active {
+.botonMapaEmpresas:active {
 	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_03a.png)
+}
+
+.botonMapaEvento {
+	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_02.png);
+	background-repeat:no-repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonMapaEvento:active {
+	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_02a.png)
 }
 
 

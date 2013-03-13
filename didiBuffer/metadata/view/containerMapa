@@ -61,52 +61,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton62",
-                        "baseCls": "botonMapaEmpresas",
-                        "docked": "top",
-                        "height": "35.5%",
-                        "id": "botonEleccionMapaPorEmpresas",
-                        "ui": "confirm-round",
-                        "width": "100%",
-                        "text": null
-                    },
-                    "designerId": "00ec5309-36bc-4651-b504-d9688280d783",
-                    "cn": [
-                        {
-                            "type": "fixedfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "handler",
-                                "fn": "handler",
-                                "designer|params": [
-                                    "button",
-                                    "event"
-                                ],
-                                "implHandler": [
-                                    "//Se he elegido el view de mapa por Empresas, entonces se pasa a ese",
-                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerMapaPrincipal\"));",
-                                    "//Se borran los pines de ese mapa si es que los tenia",
-                                    "while(markersMapaPrincipal[0]){",
-                                    "    markersMapaPrincipal.pop().setMap(null);",
-                                    "}"
-                                ]
-                            },
-                            "designerId": "f6b6b8dc-7400-4da0-9bba-98cf2b3683dd"
-                        }
-                    ]
-                },
-                {
-                    "type": "button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
                         "designer|userClassName": "MyButton63",
                         "baseCls": "botonMapaEvento",
                         "docked": "top",
@@ -152,6 +106,52 @@
                                 ]
                             },
                             "designerId": "c50d8e42-a6b6-44ec-bfa3-ff4587e940e8"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton62",
+                        "baseCls": "botonMapaEmpresas",
+                        "docked": "top",
+                        "height": "35.5%",
+                        "id": "botonEleccionMapaPorEmpresas",
+                        "ui": "confirm-round",
+                        "width": "100%",
+                        "text": null
+                    },
+                    "designerId": "00ec5309-36bc-4651-b504-d9688280d783",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Se he elegido el view de mapa por Empresas, entonces se pasa a ese",
+                                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerMapaPrincipal\"));",
+                                    "//Se borran los pines de ese mapa si es que los tenia",
+                                    "while(markersMapaPrincipal[0]){",
+                                    "    markersMapaPrincipal.pop().setMap(null);",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "f6b6b8dc-7400-4da0-9bba-98cf2b3683dd"
                         }
                     ]
                 }
