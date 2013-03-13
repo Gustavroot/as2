@@ -270,6 +270,10 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
 
 
 
+        if(oldValue==Ext.getCmp("containerProductosDescEmpresa")){
+            //Ext.getCmp("tabPanelPrincipal").remove(Ext.getCmp("containerProductosDescEmpresa"));
+        }
+
 
 
 

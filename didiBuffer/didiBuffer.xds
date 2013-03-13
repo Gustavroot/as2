@@ -864,6 +864,22 @@
                 "app/model/modelCambioEstadoSolicitudTaxi.js"
             ],
             "className": "modelCambioEstadoSolicitudTaxi"
+        },
+        "3aca172c-b9e3-4990-9de6-8df7e1c85637": {
+            "paths": [
+                "metadata/model/modelModuloProducto",
+                "app/model/override/modelModuloProducto.js",
+                "app/model/modelModuloProducto.js"
+            ],
+            "className": "modelModuloProducto"
+        },
+        "cb9392d1-1874-4df4-bb70-268cd6e74330": {
+            "paths": [
+                "metadata/store/storeModuloProducto",
+                "app/store/override/storeModuloProducto.js",
+                "app/store/storeModuloProducto.js"
+            ],
+            "className": "storeModuloProducto"
         }
     },
     "viewOrderMap": {
@@ -933,7 +949,8 @@
             "203a1f63-de12-45a4-afe8-5f81129d60e9",
             "91702c1a-f7a1-466d-bef2-609c7514ae06",
             "785c6249-7d29-4a8f-90f9-0784a2c80490",
-            "45c20472-c0f4-4f1e-9642-c786b484c512"
+            "45c20472-c0f4-4f1e-9642-c786b484c512",
+            "cb9392d1-1874-4df4-bb70-268cd6e74330"
         ],
         "controller": [
             "b1adf3d9-7994-4a17-be91-21874ccb46ea",
@@ -976,7 +993,8 @@
             "5c7f2707-e9d3-41aa-a603-9274f670070c",
             "9f1db438-ad66-4672-826d-8160599088e0",
             "20ca63f2-9528-4af2-9991-185a95886844",
-            "5360c44a-fc1b-4e4e-8c3d-cf2e2a5fb023"
+            "5360c44a-fc1b-4e4e-8c3d-cf2e2a5fb023",
+            "3aca172c-b9e3-4990-9de6-8df7e1c85637"
         ],
         "resource": [
             "4660893e-6043-4677-9817-7dfe724af706",

@@ -1,0 +1,134 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeModuloProducto",
+        "autoSync": true,
+        "clearOnPageLoad": false,
+        "model": "modelModuloProducto",
+        "storeId": "storeModuloProducto"
+    },
+    "id": "ExtBox1-ext-gen26061",
+    "designerId": "cb9392d1-1874-4df4-bb70-268cd6e74330",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy31",
+                "url": "http://www.didicr.com/php/producto/productoPorCliente.php"
+            },
+            "designerId": "517d1f7a-3f6c-43c4-928b-3b6b79eb4d2f",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader31",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "10fac45b-0803-4d03-976d-8441601943f5"
+                }
+            ]
+        },
+        {
+            "type": "grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGrouper4"
+            },
+            "designerId": "cc3a0b8a-a2e8-4df4-be37-823cdc254a14",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "groupFn",
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "record"
+                        ],
+                        "implHandler": [
+                            "return record.get(\"tipoProducto\");"
+                        ]
+                    },
+                    "designerId": "5cde054f-8e59-4f5c-8e0a-7f008ef39934"
+                }
+            ]
+        },
+        {
+            "type": "sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySorter1",
+                "property": "tipoProducto"
+            },
+            "designerId": "d04befd7-4eac-4d8b-a3af-b0ae818b9476"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonpstoreLoad",
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    "//Con este codigo se filtran las letras en el indexBar",
+                    "contadorSeteadoDeLetrasIndexBarModuloProducto=0;",
+                    "var letrasParaSetearIndexBar = [];",
+                    "Ext.getStore(\"storeModuloProducto\").each(function (record) {",
+                    "    if(letrasParaSetearIndexBar.indexOf(record.get(\"tipoProducto\")[0])==-1){",
+                    "        letrasParaSetearIndexBar[contadorSeteadoDeLetrasIndexBarModuloProducto]=record.get(\"tipoProducto\")[0];",
+                    "        contadorSeteadoDeLetrasIndexBarModuloProducto++;",
+                    "    }",
+                    "});",
+                    "//Luego de crear el array, se asigna al indexBar ese array",
+                    "Ext.getCmp(\"indexBarModuloProducto\").setLetters(letrasParaSetearIndexBar);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Ext.getCmp(\"tabPanelPrincipal\").add(containerModuloProductosDescEmpresa);",
+                    "",
+                    "Ext.getCmp(\"tabPanelPrincipal\").setActiveItem(Ext.getCmp(\"containerProductosDescEmpresa\"));",
+                    ""
+                ],
+                "name": "load"
+            },
+            "designerId": "cfb521f9-7355-44a6-9030-e22555cc6f16"
+        }
+    ]
+}

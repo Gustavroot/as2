@@ -1,0 +1,106 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelModuloProducto"
+    },
+    "id": "ExtBox1-ext-gen24547",
+    "designerId": "3aca172c-b9e3-4990-9de6-8df7e1c85637",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field172",
+                "name": "idProducto"
+            },
+            "designerId": "ce1fa6c9-c594-4ac1-9581-3d1591e921a6"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field173",
+                "name": "idCliente"
+            },
+            "designerId": "7e0484e0-8596-4aa6-b10b-7b0bcaea7c21"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field174",
+                "name": "nombreProducto"
+            },
+            "designerId": "b2813914-dd46-4fa6-9b81-73f6bc102f8f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field175",
+                "name": "descripcionProducto"
+            },
+            "designerId": "8c0d2d30-da5a-429e-adc3-09b5fda6f3d1"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field176",
+                "name": "tipoProducto"
+            },
+            "designerId": "3988a641-5fe2-4521-9045-cbf760de8b78"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field177",
+                "name": "precioProducto"
+            },
+            "designerId": "8c2a1cad-d499-4de7-a48e-4a6248546b6d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field178",
+                "name": "imagenProducto"
+            },
+            "designerId": "5379e207-8daa-462e-86cb-f74834b0ced1"
+        }
+    ]
+}

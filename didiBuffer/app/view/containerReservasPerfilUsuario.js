@@ -84,6 +84,7 @@ Ext.define('MyApp.view.containerReservasPerfilUsuario', {
             },
             {
                 xtype: 'list',
+                border: 20,
                 id: 'listaREservasPerfilUsuario',
                 emptyText: 'No tiene reservas.',
                 itemTpl: [

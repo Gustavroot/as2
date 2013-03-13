@@ -158,6 +158,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyList9",
+                "border": 20,
                 "id": "listaREservasPerfilUsuario",
                 "emptyText": "No tiene reservas.",
                 "loadingText": "Cargando...",

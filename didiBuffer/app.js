@@ -44,7 +44,8 @@ Ext.application({
         'modelConfigDidiReserva',
         'modelInfoUsuarioLoginFacebook',
         'modelRefrescadoLatLngPosTaxista',
-        'modelCambioEstadoSolicitudTaxi'
+        'modelCambioEstadoSolicitudTaxi',
+        'modelModuloProducto'
     ],
     stores: [
         'storeCarouselInicio',
@@ -77,7 +78,8 @@ Ext.application({
         'storeConfigDidiReserva',
         'storeInfoUsuarioLoginFacebook',
         'storeRefrescadoLatLngPosTaxista',
-        'storeCambioEstadoSolicitudTaxi'
+        'storeCambioEstadoSolicitudTaxi',
+        'storeModuloProducto'
     ],
     views: [
         'tabPanelPrincipal',
@@ -448,6 +450,122 @@ Ext.application({
         markerPosActualDidiTaxi=new google.maps.Marker({
             draggable: false
         });
+
+
+
+
+
+
+        //MODULO DE PRODUCTOS
+        containerModuloProductosDescEmpresa = Ext.create('Ext.Container', {
+            id: 'containerProductosDescEmpresa',
+            itemId: 'containerProductosDescEmpresa',
+            layout: {
+                type: 'fit'
+            },
+            items: [
+            {
+                xtype: 'toolbar',
+                docked: 'top',
+                height: '10%',
+                id: 'toolbarContainerProductosDescEmpresa',
+                style: 'background: #3E3737',
+                items: [
+                {
+                    xtype: 'image',
+                    centered: true,
+                    height: '100%',
+                    html: '<img src="./resources/logo/Logo_DD.png" width="100%" height="100%">',
+                    id: 'imagenToolbarContainerProductosDescEmpresa',
+                    itemId: 'myimage3',
+                    width: '40%'
+                },
+                {
+                    xtype: 'button',
+                    handler: function(button, event) 
+                    {
+                        if (Ext.getCmp('containerDelPerfilUsuario').isHidden()) {
+                            //
+                        }
+                        else{
+                            //    Ext.getCmp("carouselBannerPrincipal").enable();
+                        }
+
+                        Ext.getCmp('containerDelPerfilUsuario').setHidden(0);
+
+                        var main = Ext.get('containerParaTabPanelPrincipal');
+
+                        if (main.hasCls('out')) {
+                            main.removeCls('out');
+                            main.addCls('in'); 
+                            //button.setText('Usuario');
+                        } else {
+                            main.removeCls('in');    
+                            main.addCls('out');    
+                            //button.setText('Usuario');         
+                        }
+                    },
+                    baseCls: 'botonUsuario',
+                    height: '60%',
+                    id: 'botonDespliegueInfoPerfilUsuarioModuloProductos',
+                    left: '1%',
+                    top: '20%',
+                    ui: 'action-round',
+                    width: '13%'
+                },
+                {
+                    xtype: 'button',
+                    handler: function(button, event) {
+                        //Esta linea es para cambiar al tab Inicio
+                        Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerDescripcionEmpresa"));
+                        //Con esta linea se remueve lo q haya en subcategorias, para evitar sobrecarga
+
+                    },
+                    baseCls: 'botonAtras',
+                    height: '80%',
+                    id: 'botonAtrasContainerModuloProductos',
+                    right: '2%',
+                    top: '10%',
+                    ui: 'action-round',
+                    width: '15%'
+                }
+                ]
+            },
+            {
+                xtype: 'list',
+                height: '100%',
+                id: 'listaViewModuloProducto',
+                itemId: 'listaViewModuloProducto',
+                width: '100%',
+                layout: {
+                    type: 'fit'
+                },
+                itemTpl: [
+                '<div>{nombreProducto}',
+                '</div>'
+                ],
+                loadingText: 'Cargando...',
+                store: 'storeModuloProducto',
+                grouped: true,
+                indexBar: {
+                    id: 'indexBarModuloProducto',
+                    width: '5%'
+                },
+                plugins: [
+                {
+                    autoPaging: true,
+                    loadMoreText: 'Cargar más...',
+                    noMoreRecordsText: 'Final',
+                    type: 'listpaging'
+                }
+                ]
+            }
+            ]
+        });
+
+        //Ext.getCmp("tabPanelPrincipal").add(containerModuloProductosDescEmpresa);
+
+
 
 
 
