@@ -44,21 +44,6 @@ Ext.define('MyApp.store.storePromocionEmpresa', {
 
 
 
-
-        //Con la llamada de este metodo lo que se hace es recorrer sobre todos los
-        //elementos del store, y para cada uno de ellos, se hace un APPEND de imagenes
-        //al carousel, cada imagen tiene un url presente en el store
-        contadorParaAsignarIDimgsCarouselPromocionEmpresa=0;
-        this.each(function (record) {
-            Ext.getCmp("carouselPromocionEmpresa").add(Ext.create('Ext.Img', {html: "<p><img src="+ record.get("imagen") +" height='80%' width='100%'></p>"+"<p>&nbsp</p><center><p>"+record.get("nombre")+"</p></center>", id: "imagenCarouselPromocionEmpresa"+contadorParaAsignarIDimgsCarouselPromocionEmpresa}));
-            //Ext.getCmp("imagenCarouselInicio"+contadorParaAsignarIDimgsCarouselPromocionEmpresa).addListener('tap',funcionDarClickElementosCarouselInicio);
-            contadorParaAsignarIDimgsCarouselPromocionEmpresa=contadorParaAsignarIDimgsCarouselPromocionEmpresa+1;
-        });
-
-
-
-
-
     }
 
 });

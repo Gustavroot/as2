@@ -880,6 +880,22 @@
                 "app/store/storeModuloProducto.js"
             ],
             "className": "storeModuloProducto"
+        },
+        "f2e4f5da-65df-426f-9dcc-a70507017dcd": {
+            "paths": [
+                "metadata/store/storeModuloPromocion",
+                "app/store/override/storeModuloPromocion.js",
+                "app/store/storeModuloPromocion.js"
+            ],
+            "className": "storeModuloPromocion"
+        },
+        "07c0f80b-8815-4adb-bc08-ed963555e3d7": {
+            "paths": [
+                "metadata/model/modelModuloPromocion",
+                "app/model/override/modelModuloPromocion.js",
+                "app/model/modelModuloPromocion.js"
+            ],
+            "className": "modelModuloPromocion"
         }
     },
     "viewOrderMap": {
@@ -950,7 +966,8 @@
             "91702c1a-f7a1-466d-bef2-609c7514ae06",
             "785c6249-7d29-4a8f-90f9-0784a2c80490",
             "45c20472-c0f4-4f1e-9642-c786b484c512",
-            "cb9392d1-1874-4df4-bb70-268cd6e74330"
+            "cb9392d1-1874-4df4-bb70-268cd6e74330",
+            "f2e4f5da-65df-426f-9dcc-a70507017dcd"
         ],
         "controller": [
             "b1adf3d9-7994-4a17-be91-21874ccb46ea",
@@ -994,7 +1011,8 @@
             "9f1db438-ad66-4672-826d-8160599088e0",
             "20ca63f2-9528-4af2-9991-185a95886844",
             "5360c44a-fc1b-4e4e-8c3d-cf2e2a5fb023",
-            "3aca172c-b9e3-4990-9de6-8df7e1c85637"
+            "3aca172c-b9e3-4990-9de6-8df7e1c85637",
+            "07c0f80b-8815-4adb-bc08-ed963555e3d7"
         ],
         "resource": [
             "4660893e-6043-4677-9817-7dfe724af706",

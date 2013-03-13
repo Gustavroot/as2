@@ -33,7 +33,8 @@
             "modelInfoUsuarioLoginFacebook",
             "modelRefrescadoLatLngPosTaxista",
             "modelCambioEstadoSolicitudTaxi",
-            "modelModuloProducto"
+            "modelModuloProducto",
+            "modelModuloPromocion"
         ],
         "stores": [
             "storeCarouselInicio",
@@ -67,7 +68,8 @@
             "storeInfoUsuarioLoginFacebook",
             "storeRefrescadoLatLngPosTaxista",
             "storeCambioEstadoSolicitudTaxi",
-            "storeModuloProducto"
+            "storeModuloProducto",
+            "storeModuloPromocion"
         ],
         "views": [
             "tabPanelPrincipal",

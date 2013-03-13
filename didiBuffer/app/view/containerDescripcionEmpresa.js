@@ -309,11 +309,13 @@ Ext.define('MyApp.view.containerDescripcionEmpresa', {
                             Ext.getCmp("containerDescripcionEmpresa").setMasked({xtype: 'loadmask', message: 'Espere por favor...'});
 
                             //Hacia el view con los productos de la empresa
-                            Ext.getCmp("tabPanelPrincipal").setActiveItem(Ext.getCmp("containerPromocionEmpresa"));
+
                             viewDelQuePasoHaciaContainerProductosEmpresa="containerDescripcionEmpresa";
 
                             Ext.getCmp("carouselPromocionEmpresa").removeAll();
-                            Ext.getStore("storePromocionEmpresa").load();
+                            //alert(Ext.getStore("storeEmpresaEnDescripcionEmpresa").first().get("idCliente"));
+                            Ext.getStore("storeModuloPromocion").getProxy().setExtraParam('idClienteParam',Ext.getStore("storeEmpresaEnDescripcionEmpresa").first().get("idCliente"));
+                            Ext.getStore("storeModuloPromocion").load();
                         },
                         baseCls: 'botonPromocion',
                         height: 50,

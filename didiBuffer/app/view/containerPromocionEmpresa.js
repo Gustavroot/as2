@@ -81,6 +81,96 @@ Ext.define('MyApp.view.containerPromocionEmpresa', {
                 left: '0%',
                 top: '40%',
                 width: '8%'
+            },
+            {
+                xtype: 'button',
+                handler: function(button, event) {
+                    Ext.getCmp("panelOpcionesCompartirModuloPromocion").setHidden(0);
+                },
+                bottom: 0,
+                height: '10%',
+                id: 'botonCompartirModuloPromocion',
+                left: '20%',
+                ui: 'action-round',
+                width: '60%',
+                text: 'Compartir'
+            },
+            {
+                xtype: 'panel',
+                height: '70%',
+                hidden: true,
+                id: 'panelOpcionesCompartirModuloPromocion',
+                left: '20%',
+                top: '15%',
+                width: '60%',
+                modal: true,
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        docked: 'top',
+                        id: 'titleBarPanelCompartirModuloPromocion',
+                        title: 'Compartir en...'
+                    },
+                    {
+                        xtype: 'checkboxfield',
+                        id: 'checkBox1PanelCompartirModuloPromocion',
+                        label: 'Facebook',
+                        labelWidth: '70%'
+                    },
+                    {
+                        xtype: 'checkboxfield',
+                        id: 'checkBox2PanelCompartirModuloPromocion',
+                        label: 'Twitter',
+                        labelWidth: '70%'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            //alert(Ext.getCmp("carouselPromocionEmpresa").getActiveIndex());
+
+                            Ext.getCmp("panelOpcionesCompartirModuloPromocion").setHidden(1);
+
+                            //alert(Ext.getStore("storeModuloPromocion").getAt(Ext.getCmp("carouselPromocionEmpresa").getActiveIndex()).get("nombrePromocion"));
+                            //alert("cosa");
+
+                            //alert(Ext.getCmp("checkBox1PanelCompartirModuloPromocion").getChecked());
+
+
+                            if(Ext.getCmp("checkBox1PanelCompartirModuloPromocion").getChecked()===true){
+                                try{
+                                    FB.ui(
+                                    {
+                                        method: 'feed',
+                                        name: Ext.getStore("storeModuloPromocion").getAt(Ext.getCmp("carouselPromocionEmpresa").getActiveIndex()).get("nombrePromocion"),
+                                        link: 'http://www.didicr.com',
+                                        picture: Ext.getStore("storeModuloPromocion").getAt(Ext.getCmp("carouselPromocionEmpresa").getActiveIndex()).get("imagenPromocion"),
+                                        //caption: 'Reference Documentation',
+                                        description: 'Promoción en: '+Ext.getStore("storeEmpresaEnDescripcionEmpresa").first().get("nombre")
+                                    },
+                                    function(response) {
+                                        if (response && response.post_id) {
+                                            Ext.Msg.alert('', 'Post publicado correctamente.', Ext.emptyFn);
+                                            //alert('Post was published.');
+                                        } else {
+                                            Ext.Msg.alert('', 'Post no publicado.', Ext.emptyFn);
+                                            //alert('Post was not published.');
+                                        }
+                                    }
+                                    );
+                                }
+                                catch(e){
+                                    //
+                                    Ext.Msg.alert('Aviso', 'No se pudo conectar con Facebook.', Ext.emptyFn);
+                                }
+                            }
+
+
+                        },
+                        docked: 'bottom',
+                        ui: 'confirm-round',
+                        text: 'Listo'
+                    }
+                ]
             }
         ],
         listeners: [

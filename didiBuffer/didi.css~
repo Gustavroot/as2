@@ -103,8 +103,97 @@ html, body, header, paragraph, p, div {
 .fondoMapa{
 -webkit-mask-box-image: url('http://www.didicr.com/imagenes/mapaFondo.png');
 }
+/
+/* SLIDER */
+.sliderLugar {
+	width: 100%;
+	height: 100%;
+	/* set the wrapper as the anchor element for positioning */  
+    position: relative;
+	background-image: none;
+}  
+  
+.sliderLugar {
+	-webkit-appearance: none;
+	width: 100%;
+	padding: 3px;
+	border: 1px solid #525252;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	background-image: url(./resources/css/esp/header/bg_header.png);
+	background-color: #ddd;
+}  
+  
+.sliderLugar::-webkit-slider-thumb {  
+    -webkit-appearance: none;  
+      
+    /* position the button on top of everything */  
+    z-index: 100;  
+    position: relative;  
+      
+    width: 68px;  
+    height: 44px;  
+    -webkit-border-radius: 100%;  
+    border-radius: 10px;  
+      
+    /* arrow and button gradient */  
+    background-image:url(./resources/css/esp/botones/DD_usuario.png);
+	background-size: 100%;-webkit-background-size: 100%;
+	
+    -webkit-gradient(  
+        linear,  
+        left top,  
+        left bottombottom,  
+        color-stop(0, #fefefe),  
+        color-stop(0.49, #dddddd),  
+        color-stop(0.51, #d1d1d1),  
+        color-stop(1, #a1a1a1)  
+    );  
+    background-repeat: no-repeat;  
+    background-position: 50%;  
+}  
+  
+.sliderLugar span {
+	/* position the text just under the button in the stacking order */  
+    position: absolute;
+	z-index: 99;
+	top: 30%;
+	left: 37%;
+	font-family: "Helvetica Neue", Helvetica, sans;
+	font-size: 24px;
+	color: white;
+	cursor: default;
+	-webkit-user-select: none;
+	/* semitransparent gradient mask to animate over the text */  
+    -webkit-mask-image: -webkit-gradient(  
+        linear,  
+        left top,  
+        rightright top,  
+        color-stop(0, rgba(0,0,0,0.3)),  
+        color-stop(0.45, rgba(0,0,0,0.3)),  
+        color-stop(0.5, rgba(0,0,0,1)),  
+        color-stop(0.55, rgba(0,0,0,0.3)),  
+        color-stop(1, rgba(0,0,0,0.3))  
+    );
+	-webkit-mask-size: 1000px;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation: text-spotlight 4s infinite;
+	background-image: none;
+}  
+  
+/* animate the webkit-mark over the text */  
+@-webkit-keyframes text-spotlight {  
+  0% {  
+    -webkit-mask-position: -800px;  
+  }  
+    
+  100% {  
+    -webkit-mask-position: 0px;  
+  }  
 
-
+/* FIN SLIDER */  
+  
 /* Botones Descripcion*/
 .botonLlamar {
 	background-image:url(./resources/css/esp/botones/DD_descripcion_01.png);
@@ -518,32 +607,6 @@ html, body, header, paragraph, p, div {
 }
 
 .botonMapaEmpresas{
-	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_02.png);
-	background-repeat:no-repeat;
-	background-size: 100%;
-	-moz-background-size: 100%;
-	-o-background-size: 100% auto;
-	-webkit-background-size: 100%;
-	-khtml-background-size: 100%;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:0px none transparent;
-	display:inline-block;
-	color:#ffffff;
-	font-family:arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:1px 1px 0px #b23e35;
-	background-color: transparent;
-}
-.botonMapaEmpresas:active {
-	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_02a.png)
-}
-
-.botonMapaEvento {
 	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_03.png);
 	background-repeat:no-repeat;
 	background-size: 100%;
@@ -565,8 +628,34 @@ html, body, header, paragraph, p, div {
 	text-shadow:1px 1px 0px #b23e35;
 	background-color: transparent;
 }
-.botonMapaEvento:active {
+.botonMapaEmpresas:active {
 	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_03a.png)
+}
+
+.botonMapaEvento {
+	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_02.png);
+	background-repeat:no-repeat;
+	background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:0px none transparent;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #b23e35;
+	background-color: transparent;
+}
+.botonMapaEvento:active {
+	background-image:url(./resources/css/esp/botones/mapa/DD_botones-mapas_02a.png)
 }
 
 

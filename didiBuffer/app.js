@@ -45,7 +45,8 @@ Ext.application({
         'modelInfoUsuarioLoginFacebook',
         'modelRefrescadoLatLngPosTaxista',
         'modelCambioEstadoSolicitudTaxi',
-        'modelModuloProducto'
+        'modelModuloProducto',
+        'modelModuloPromocion'
     ],
     stores: [
         'storeCarouselInicio',
@@ -79,7 +80,8 @@ Ext.application({
         'storeInfoUsuarioLoginFacebook',
         'storeRefrescadoLatLngPosTaxista',
         'storeCambioEstadoSolicitudTaxi',
-        'storeModuloProducto'
+        'storeModuloProducto',
+        'storeModuloPromocion'
     ],
     views: [
         'tabPanelPrincipal',

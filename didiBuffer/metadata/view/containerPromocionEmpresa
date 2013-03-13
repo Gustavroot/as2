@@ -216,6 +216,189 @@
                     "designerId": "dc17fdbd-8053-4399-84e6-ea106fb2d69b"
                 }
             ]
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton142",
+                "bottom": 0,
+                "docked": null,
+                "height": "10%",
+                "id": "botonCompartirModuloPromocion",
+                "left": "20%",
+                "ui": "action-round",
+                "width": "60%",
+                "text": "Compartir"
+            },
+            "designerId": "d387a63d-9bb3-4e49-b96a-263f976eebd1",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "handler",
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "Ext.getCmp(\"panelOpcionesCompartirModuloPromocion\").setHidden(0);"
+                        ]
+                    },
+                    "designerId": "ed5ef25f-4df9-43eb-ac5e-75578682a9aa"
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel17",
+                "height": "70%",
+                "hidden": true,
+                "id": "panelOpcionesCompartirModuloPromocion",
+                "left": "20%",
+                "top": "15%",
+                "width": "60%",
+                "modal": true
+            },
+            "designerId": "fe2d032b-f93e-4ca8-8293-6e80fb54bf80",
+            "cn": [
+                {
+                    "type": "titlebar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTitleBar12",
+                        "docked": "top",
+                        "id": "titleBarPanelCompartirModuloPromocion",
+                        "title": "Compartir en..."
+                    },
+                    "designerId": "386e718c-d096-4a0e-a4b1-8d3589479d0f"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox11",
+                        "id": "checkBox1PanelCompartirModuloPromocion",
+                        "label": "Facebook",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "64f56d6a-0686-459e-8b0c-439d9e82f2e4"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox11",
+                        "id": "checkBox2PanelCompartirModuloPromocion",
+                        "label": "Twitter",
+                        "labelWidth": "70%"
+                    },
+                    "designerId": "b782e892-94a9-46f0-9ef1-ba5ca3a6f827"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton143",
+                        "docked": "bottom",
+                        "ui": "confirm-round",
+                        "text": "Listo"
+                    },
+                    "designerId": "46e4fb56-281e-4507-a880-6192325938a5",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//alert(Ext.getCmp(\"carouselPromocionEmpresa\").getActiveIndex());",
+                                    "",
+                                    "Ext.getCmp(\"panelOpcionesCompartirModuloPromocion\").setHidden(1);",
+                                    "",
+                                    "//alert(Ext.getStore(\"storeModuloPromocion\").getAt(Ext.getCmp(\"carouselPromocionEmpresa\").getActiveIndex()).get(\"nombrePromocion\"));",
+                                    "//alert(\"cosa\");",
+                                    "",
+                                    "//alert(Ext.getCmp(\"checkBox1PanelCompartirModuloPromocion\").getChecked());",
+                                    "",
+                                    "",
+                                    "if(Ext.getCmp(\"checkBox1PanelCompartirModuloPromocion\").getChecked()===true){",
+                                    "    try{",
+                                    "        FB.ui(",
+                                    "          {",
+                                    "            method: 'feed',",
+                                    "            name: Ext.getStore(\"storeModuloPromocion\").getAt(Ext.getCmp(\"carouselPromocionEmpresa\").getActiveIndex()).get(\"nombrePromocion\"),",
+                                    "            link: 'http://www.didicr.com',",
+                                    "            picture: Ext.getStore(\"storeModuloPromocion\").getAt(Ext.getCmp(\"carouselPromocionEmpresa\").getActiveIndex()).get(\"imagenPromocion\"),",
+                                    "            //caption: 'Reference Documentation',",
+                                    "            description: 'Promoción en: '+Ext.getStore(\"storeEmpresaEnDescripcionEmpresa\").first().get(\"nombre\")",
+                                    "          },",
+                                    "          function(response) {",
+                                    "            if (response && response.post_id) {",
+                                    "                Ext.Msg.alert('', 'Post publicado correctamente.', Ext.emptyFn);",
+                                    "              //alert('Post was published.');",
+                                    "            } else {",
+                                    "                Ext.Msg.alert('', 'Post no publicado.', Ext.emptyFn);",
+                                    "              //alert('Post was not published.');",
+                                    "            }",
+                                    "          }",
+                                    "       );",
+                                    "    }",
+                                    "    catch(e){",
+                                    "        //",
+                                    "        Ext.Msg.alert('Aviso', 'No se pudo conectar con Facebook.', Ext.emptyFn);",
+                                    "    }",
+                                    "}",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "designerId": "f548712d-45f2-4412-a684-af15d022db1a"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

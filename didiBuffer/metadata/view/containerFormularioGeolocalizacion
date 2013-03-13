@@ -383,11 +383,17 @@
             "userConfig": {
                 "designer|userClassName": "MySliderField",
                 "baseCls": "sliderLugar",
+                "cls": null,
+                "disabledCls": null,
+                "floatingCls": null,
+                "hiddenCls": null,
                 "id": "sliderFieldKmFormularioGeoilocalizacion",
                 "itemId": "mysliderfield",
+                "styleHtmlCls": null,
                 "top": "42%",
                 "width": "100%",
                 "label": null,
+                "requiredCls": null,
                 "value": [
                     0
                 ],
