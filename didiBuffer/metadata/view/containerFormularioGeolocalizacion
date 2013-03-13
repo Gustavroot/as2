@@ -382,6 +382,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MySliderField",
+                "baseCls": "sliderLugar",
                 "id": "sliderFieldKmFormularioGeoilocalizacion",
                 "itemId": "mysliderfield",
                 "top": "42%",

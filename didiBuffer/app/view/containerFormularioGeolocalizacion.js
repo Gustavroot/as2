@@ -209,6 +209,7 @@ Ext.define('MyApp.view.containerFormularioGeolocalizacion', {
             },
             {
                 xtype: 'sliderfield',
+                baseCls: 'sliderLugar',
                 id: 'sliderFieldKmFormularioGeoilocalizacion',
                 itemId: 'mysliderfield',
                 top: '42%',
