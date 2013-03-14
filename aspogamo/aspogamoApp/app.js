@@ -38,6 +38,31 @@ Ext.application({
 
     launch: function() {
 
+        variableParaDetenerDibujado=0;
+
+        funcionDibujadoEnCanvas=function(){
+            //alert("gwerhg");
+            if(variableParaDetenerDibujado===1){
+                //
+                for(var i=0; i<arregloDePuntosDibujoX.length; i++){
+                    //
+                    canvasContext=document.getElementById("canvas").getContext("2d");
+                    canvasContext.strokeStyle='rgb(55,55,255)';
+                    canvasContext.beginPath();
+                    if(arregloDePuntosDibujoBool[i]!==1){
+                        canvasContext.moveTo(arregloDePuntosDibujoX[i-1],arregloDePuntosDibujoY[i-1]);
+                    }
+                    canvasContext.lineTo(arregloDePuntosDibujoX[i],arregloDePuntosDibujoY[i]);
+                    canvasContext.stroke();
+                    canvasContext.closePath();
+                }
+            }
+            funcionDibujadoEnCanvas();
+        };
+
+
+        //setTimeout(funcionDibujadoEnCanvas,2000);
+
         Ext.create('MyApp.view.containerMain', {fullscreen: true});
     }
 

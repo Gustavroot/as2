@@ -80,6 +80,7 @@ Ext.define('MyApp.view.containerPopular', {
                                     //alert("felgj");
                                     //se escucha al Play del video, para poner a correr el otro "video"
                                     e.target.addEventListener('play', function(){
+                                        e.target.playbackRate=0.2;
                                         variableBoolParaDetencionDraw=0;
                                         //alert("fwe");
                                         //alert(e.target.clientWidth);
@@ -140,6 +141,7 @@ Ext.define('MyApp.view.containerPopular', {
                         fn: function(component, options) {
                             arregloDePuntosDibujoX=[];
                             arregloDePuntosDibujoY=[];
+                            arregloDePuntosDibujoBool=[];
 
                             Ext.getCmp("containerVideoPopularCanvas").element.on({
                                 touchstart: function(e,node){
@@ -155,6 +157,10 @@ Ext.define('MyApp.view.containerPopular', {
 
                                     arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);
                                     arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);
+                                    arregloDePuntosDibujoBool.push(1);
+                                    //alert("a;lsfjds");
+
+
                                 }
                             });
 
@@ -181,7 +187,26 @@ Ext.define('MyApp.view.containerPopular', {
 
                                     arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);
                                     arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);
+                                    arregloDePuntosDibujoBool.push(0);
                                     //----------------------------------------------------------------
+
+                                    for(var i=0; i<arregloDePuntosDibujoX.length; i++){
+                                        //
+                                        canvasContext=e.target.getContext("2d");
+
+                                        canvasContext.strokeStyle='rgb(55,55,255)';
+
+                                        canvasContext.beginPath();
+                                        if(arregloDePuntosDibujoBool[i]!==1){
+                                            canvasContext.moveTo(arregloDePuntosDibujoX[i-1],arregloDePuntosDibujoY[i-1]);
+                                        }
+
+                                        canvasContext.lineTo(arregloDePuntosDibujoX[i],arregloDePuntosDibujoY[i]);
+                                        canvasContext.stroke();
+
+                                        canvasContext.closePath();
+                                    }
+
                                 }
                             });
 

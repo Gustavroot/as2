@@ -25,5 +25,48 @@
         "name": "MyApp"
     },
     "id": "ExtBox1-ext-gen1783",
-    "designerId": "application"
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "",
+                    "variableParaDetenerDibujado=0;",
+                    "",
+                    "funcionDibujadoEnCanvas=function(){",
+                    "    //alert(\"gwerhg\");",
+                    "    if(variableParaDetenerDibujado===1){",
+                    "        //",
+                    "        for(var i=0; i<arregloDePuntosDibujoX.length; i++){",
+                    "            //",
+                    "            canvasContext=document.getElementById(\"canvas\").getContext(\"2d\");",
+                    "            canvasContext.strokeStyle='rgb(55,55,255)';",
+                    "            canvasContext.beginPath();",
+                    "            if(arregloDePuntosDibujoBool[i]!==1){",
+                    "                canvasContext.moveTo(arregloDePuntosDibujoX[i-1],arregloDePuntosDibujoY[i-1]);",
+                    "            }",
+                    "            canvasContext.lineTo(arregloDePuntosDibujoX[i],arregloDePuntosDibujoY[i]);",
+                    "            canvasContext.stroke();",
+                    "            canvasContext.closePath();",
+                    "        }",
+                    "    }",
+                    "    funcionDibujadoEnCanvas();",
+                    "};",
+                    "",
+                    "",
+                    "//setTimeout(funcionDibujadoEnCanvas,2000);",
+                    ""
+                ]
+            },
+            "designerId": "f1e2a64e-9639-4821-a81e-c9657b2e4a49"
+        }
+    ]
 }

@@ -80,10 +80,13 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
         if(value==Ext.getCmp("containerPopular")){
             //alert(document.getElementById("divDelCanvas").id);
             variableContainerVideoPopularCanvas=document.getElementById("canvas");
+            variableParaDetenerDibujado=1;
         }
 
 
-
+        if(oldValue==Ext.getCmp("containerPopular")){
+            variableParaDetenerDibujado=0;
+        }
 
 
 
