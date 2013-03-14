@@ -45,7 +45,29 @@
                 "iconMask": true,
                 "text": null
             },
-            "designerId": "3f17da79-8fb5-4dd0-ab1f-63b53999b70f"
+            "designerId": "3f17da79-8fb5-4dd0-ab1f-63b53999b70f",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "handler",
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "Ext.Msg.alert('Title', 'The quick brown fox jumped over the lazy dog.', Ext.emptyFn);"
+                        ]
+                    },
+                    "designerId": "9efcf8ab-ec89-4532-af20-b6637cc0b1c6"
+                }
+            ]
         }
     ]
 }

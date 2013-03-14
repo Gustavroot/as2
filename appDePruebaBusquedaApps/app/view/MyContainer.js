@@ -28,6 +28,9 @@ Ext.define('MyApp.view.MyContainer', {
             },
             {
                 xtype: 'button',
+                handler: function(button, event) {
+                    Ext.Msg.alert('Title', 'The quick brown fox jumped over the lazy dog.', Ext.emptyFn);
+                },
                 height: '10%',
                 left: '40%',
                 top: '45%',
