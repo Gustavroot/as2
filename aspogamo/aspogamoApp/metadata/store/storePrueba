@@ -1,0 +1,46 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storePrueba",
+        "autoSync": false,
+        "model": "modelPrueba",
+        "storeId": "storePrueba"
+    },
+    "id": "ExtBox1-ext-gen37128",
+    "designerId": "41d1ff9a-baf0-48da-ba85-a417cccbd8db",
+    "cn": [
+        {
+            "type": "jsonpproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy",
+                "url": "http://www.didicr.com/php/bannerPrincipal.php"
+            },
+            "designerId": "24368bbf-deb7-4ea7-b1ce-e735c2a2f5ea",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "48e355cb-3407-4544-935a-5fd534969295"
+                }
+            ]
+        }
+    ]
+}

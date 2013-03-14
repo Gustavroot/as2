@@ -1,0 +1,71 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerMyVideos",
+        "designer|userAlias": "containermyvideos",
+        "html": "<canvas id=\"cosa\" width=500px height=500px></canvas> ",
+        "id": "containerMyVideos",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen20413",
+    "designerId": "94888bc9-1a06-45b1-8b2a-c7650c826fe0",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onContainerMyVideosInitialize",
+                "fn": "onContainerMyVideosInitialize",
+                "implHandler": [
+                    "Ext.getCmp(\"containerMyVideos\").element.on({",
+                    "    touchstart: function(e,node){",
+                    "",
+                    "",
+                    "        //        variableContainerVideoPopularCanvas2=e.target;",
+                    "        //        alert(\"feg\");",
+                    "        canvasContext2=e.target.getContext(\"2d\");",
+                    "        canvasContext2.moveTo(e.target.layerX,e.target.layerY);",
+                    "",
+                    "        puntoTocadoAnteriorX2=e.event.layerX;",
+                    "        puntoTocadoAnteriorY2=e.event.layerY;",
+                    "",
+                    "    }",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    "Ext.getCmp(\"containerMyVideos\").element.on({",
+                    "    touchmove: function(e,node){",
+                    "        canvasContext2=e.target.getContext(\"2d\");",
+                    "",
+                    "        canvasContext2.strokeStyle='rgb(55,55,255)';",
+                    "",
+                    "        canvasContext2.beginPath();",
+                    "",
+                    "        canvasContext2.moveTo(puntoTocadoAnteriorX2,puntoTocadoAnteriorY2);",
+                    "",
+                    "        canvasContext2.lineTo(e.event.layerX,e.event.layerY);",
+                    "        canvasContext2.stroke();",
+                    "",
+                    "        canvasContext2.closePath();",
+                    "",
+                    "        puntoTocadoAnteriorX2=e.event.layerX;",
+                    "        puntoTocadoAnteriorY2=e.event.layerY;",
+                    "    }",
+                    "});"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "a8b9ed1d-56d8-4f13-bead-be89c517de44"
+        }
+    ]
+}
