@@ -1,0 +1,47 @@
+{
+    "name": "appDePruebaBusquedaApps",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 678,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "e4bb101c-f5e7-4946-9309-f40c7d8443ff": {
+            "paths": [
+                "metadata/view/MyContainer",
+                "app/view/override/MyContainer.js",
+                "app/view/MyContainer.js"
+            ],
+            "className": "MyContainer"
+        },
+        "b38a6d34-22d1-4980-b192-0ab0d7d5cd2f": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "e4bb101c-f5e7-4946-9309-f40c7d8443ff"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "b38a6d34-22d1-4980-b192-0ab0d7d5cd2f"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyContainer",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen5909",
+    "designerId": "e4bb101c-f5e7-4946-9309-f40c7d8443ff",
+    "cn": [
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar",
+                "docked": "top",
+                "title": "App prueba"
+            },
+            "designerId": "b03829f5-644b-4f69-8814-e3a4ad5e76cc"
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton",
+                "height": "10%",
+                "left": "40%",
+                "top": "45%",
+                "ui": "confirm-round",
+                "width": "20%",
+                "iconCls": "info",
+                "iconMask": true,
+                "text": null
+            },
+            "designerId": "3f17da79-8fb5-4dd0-ab1f-63b53999b70f"
+        }
+    ]
+}
