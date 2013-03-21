@@ -43,10 +43,11 @@ Ext.application({
         funcionDibujadoEnCanvas=function(){
             //alert("gwerhg");
             if(variableParaDetenerDibujado===1){
+                //alert("gwerg;j");
                 //
                 for(var i=0; i<arregloDePuntosDibujoX.length; i++){
                     //
-                    canvasContext=document.getElementById("canvas").getContext("2d");
+                    canvasContext=variableContainerVideoPopularCanvas.getContext("2d");
                     canvasContext.strokeStyle='rgb(55,55,255)';
                     canvasContext.beginPath();
                     if(arregloDePuntosDibujoBool[i]!==1){
@@ -57,11 +58,11 @@ Ext.application({
                     canvasContext.closePath();
                 }
             }
-            funcionDibujadoEnCanvas();
+            setTimeout(funcionDibujadoEnCanvas, 10);
         };
 
 
-        //setTimeout(funcionDibujadoEnCanvas,2000);
+        setTimeout(funcionDibujadoEnCanvas,2000);
 
         Ext.create('MyApp.view.containerMain', {fullscreen: true});
     }
