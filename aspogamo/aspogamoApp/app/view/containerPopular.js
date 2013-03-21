@@ -26,8 +26,8 @@ Ext.define('MyApp.view.containerPopular', {
         items: [
             {
                 xtype: 'container',
-                height: '95%',
-                html: '<video id="v" width="100%" height="100%" controls loop> <source src="./resources/videos/1.mp4" type=video/mp4> </video>',
+                height: '85%',
+                html: '<video id="videoContainerPopular" width="100%" height="100%" controls loop> <source src="./resources/videos/1.mp4" type=video/mp4> </video>',
                 id: 'containerVideoPopularOriginal',
                 itemId: 'mycontainer15',
                 left: '2.5%',
@@ -79,8 +79,9 @@ Ext.define('MyApp.view.containerPopular', {
                                 touchstart: function(e,node){
                                     //alert("felgj");
                                     //se escucha al Play del video, para poner a correr el otro "video"
+
                                     e.target.addEventListener('play', function(){
-                                        e.target.playbackRate=0.2;
+                                        e.target.playbackRate=1;
                                         variableBoolParaDetencionDraw=0;
                                         //alert("fwe");
                                         //alert(e.target.clientWidth);
@@ -94,9 +95,12 @@ Ext.define('MyApp.view.containerPopular', {
                                         draw(e.target,canvasContext,canvasContext,cw,ch);
                                     },false);
 
+
+
                                     e.target.addEventListener('stop', function(){
                                         variableBoolParaDetencionDraw=1;
                                     },false);
+
 
                                 }
                             });
@@ -129,7 +133,7 @@ Ext.define('MyApp.view.containerPopular', {
             },
             {
                 xtype: 'container',
-                height: '95%',
+                height: '85%',
                 html: '<div id="divDelCanvas"> <canvas id="canvas" width=500px height=500px></canvas> </div>',
                 id: 'containerVideoPopularCanvas',
                 itemId: 'mycontainer16',
@@ -238,6 +242,26 @@ Ext.define('MyApp.view.containerPopular', {
 
                         },
                         event: 'initialize'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                height: '10%',
+                id: 'containerMenuVideo',
+                top: '89%',
+                width: '100%',
+                items: [
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+
+                        },
+                        height: '100%',
+                        ui: 'action',
+                        width: '20%',
+                        iconCls: 'arrow_right',
+                        iconMask: true
                     }
                 ]
             }

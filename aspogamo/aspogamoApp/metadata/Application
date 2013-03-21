@@ -68,6 +68,19 @@
                 ]
             },
             "designerId": "f1e2a64e-9639-4821-a81e-c9657b2e4a49"
+        },
+        {
+            "type": "viewport",
+            "reference": {
+                "name": "viewport",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "Viewport",
+                "id": "viewportAspogamo"
+            },
+            "designerId": "c4791fd0-ae69-407f-86e5-084fc41fb049"
         }
     ]
 }

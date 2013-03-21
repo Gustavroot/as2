@@ -27,8 +27,8 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyContainer15",
-                "height": "95%",
-                "html": "<video id=\"v\" width=\"100%\" height=\"100%\" controls loop> <source src=\"./resources/videos/1.mp4\" type=video/mp4> </video>",
+                "height": "85%",
+                "html": "<video id=\"videoContainerPopular\" width=\"100%\" height=\"100%\" controls loop> <source src=\"./resources/videos/1.mp4\" type=video/mp4> </video>",
                 "id": "containerVideoPopularOriginal",
                 "itemId": "mycontainer15",
                 "left": "2.5%",
@@ -91,8 +91,9 @@
                             "    touchstart: function(e,node){",
                             "        //alert(\"felgj\");",
                             "        //se escucha al Play del video, para poner a correr el otro \"video\"",
+                            "        ",
                             "        e.target.addEventListener('play', function(){",
-                            "            e.target.playbackRate=0.2;",
+                            "            e.target.playbackRate=1;",
                             "            variableBoolParaDetencionDraw=0;",
                             "            //alert(\"fwe\");",
                             "            //alert(e.target.clientWidth);",
@@ -105,10 +106,13 @@
                             "            //back.height = ch;",
                             "            draw(e.target,canvasContext,canvasContext,cw,ch);",
                             "        },false);",
+                            "        ",
                             "",
+                            "        ",
                             "        e.target.addEventListener('stop', function(){",
                             "            variableBoolParaDetencionDraw=1;",
                             "        },false);",
+                            "        ",
                             "",
                             "    }",
                             "});",
@@ -150,10 +154,11 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyContainer17",
-                "height": "95%",
+                "height": "85%",
                 "html": "<div id=\"divDelCanvas\"> <canvas id=\"canvas\" width=500px height=500px></canvas> </div>",
                 "id": "containerVideoPopularCanvas",
                 "itemId": "mycontainer16",
+                "left": null,
                 "right": "2.5%",
                 "top": "2.5%",
                 "width": "45%"
@@ -191,7 +196,7 @@
                             "        arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);",
                             "        arregloDePuntosDibujoBool.push(1);",
                             "        //alert(\"a;lsfjds\");",
-                            "        ",
+                            "",
                             "",
                             "    }",
                             "});",
@@ -200,28 +205,28 @@
                             "",
                             "Ext.getCmp(\"containerVideoPopularCanvas\").element.on({",
                             "    touchmove: function(e,node){",
-                            "            //----------------------------------------------------------------",
-                            "            canvasContext=e.target.getContext(\"2d\");",
+                            "        //----------------------------------------------------------------",
+                            "        canvasContext=e.target.getContext(\"2d\");",
                             "",
-                            "            canvasContext.strokeStyle='rgb(55,55,255)';",
+                            "        canvasContext.strokeStyle='rgb(55,55,255)';",
                             "",
-                            "            canvasContext.beginPath();",
+                            "        canvasContext.beginPath();",
                             "",
-                            "            canvasContext.moveTo(puntoTocadoAnteriorX,puntoTocadoAnteriorY);",
+                            "        canvasContext.moveTo(puntoTocadoAnteriorX,puntoTocadoAnteriorY);",
                             "",
-                            "            canvasContext.lineTo(e.event.layerX,e.event.layerY);",
-                            "            canvasContext.stroke();",
+                            "        canvasContext.lineTo(e.event.layerX,e.event.layerY);",
+                            "        canvasContext.stroke();",
                             "",
-                            "            canvasContext.closePath();",
+                            "        canvasContext.closePath();",
                             "",
-                            "            puntoTocadoAnteriorX=e.event.layerX;",
-                            "            puntoTocadoAnteriorY=e.event.layerY;",
+                            "        puntoTocadoAnteriorX=e.event.layerX;",
+                            "        puntoTocadoAnteriorY=e.event.layerY;",
                             "",
-                            "            arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);",
-                            "            arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);",
-                            "            arregloDePuntosDibujoBool.push(0);",
-                            "            //----------------------------------------------------------------",
-                            "        ",
+                            "        arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);",
+                            "        arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);",
+                            "        arregloDePuntosDibujoBool.push(0);",
+                            "        //----------------------------------------------------------------",
+                            "",
                             "        for(var i=0; i<arregloDePuntosDibujoX.length; i++){",
                             "            //",
                             "            canvasContext=e.target.getContext(\"2d\");",
@@ -238,7 +243,7 @@
                             "",
                             "            canvasContext.closePath();",
                             "        }",
-                            "        ",
+                            "",
                             "    }",
                             "});",
                             "",
@@ -272,6 +277,64 @@
                         "name": "initialize"
                     },
                     "designerId": "8a66b5fc-197b-44ad-a008-b65160182d25"
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer18",
+                "height": "10%",
+                "id": "containerMenuVideo",
+                "top": "89%",
+                "width": "100%"
+            },
+            "designerId": "2d0e153a-57b6-4cf7-8916-d8039277a78c",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton7",
+                        "height": "100%",
+                        "ui": "action",
+                        "width": "20%",
+                        "iconCls": "arrow_right",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "c4e5f5b3-18f8-44ed-947d-e8457c441c92",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    ""
+                                ]
+                            },
+                            "designerId": "6edadba6-2ef2-4204-acff-68d01f31c4d4"
+                        }
+                    ]
                 }
             ]
         }
