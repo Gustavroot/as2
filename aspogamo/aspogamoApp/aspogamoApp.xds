@@ -100,12 +100,6 @@
                 "app/model/modelPrueba.js"
             ],
             "className": "modelPrueba"
-        },
-        "4e3e7abc-29d3-4339-981a-a0f35f5f34e2": {
-            "paths": [
-                "metadata/resource/css"
-            ],
-            "className": "css"
         }
     },
     "viewOrderMap": {
@@ -127,8 +121,7 @@
             "bcf5cd33-4008-4485-ad60-d409898c0513"
         ],
         "resource": [
-            "c0e70d3c-ea81-4464-9007-2376fe53ccae",
-            "4e3e7abc-29d3-4339-981a-a0f35f5f34e2"
+            "c0e70d3c-ea81-4464-9007-2376fe53ccae"
         ],
         "app": [
             "application"

@@ -67,23 +67,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "My Videos"
-            },
-            "designerId": "ab976b25-ec06-4907-8670-f39df56952dd",
-            "masterInstanceId": "ExtBox1-ext-gen20413"
-        },
-        {
-            "type": "linkedinstance",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "title": "Popular"
             },
-            "designerId": "f7825311-fcfa-429a-9699-e0f9206c0257",
-            "masterInstanceId": "ExtBox1-ext-gen21752"
+            "designerId": "5f1fe9b4-c40f-4081-a5a8-3155219f40f2",
+            "masterInstanceId": "ExtBox1-ext-gen20413"
         },
         {
             "type": "basiceventbinding",
@@ -96,6 +83,8 @@
                 "designer|userClassName": "onTabPanelMainActiveItemChange",
                 "fn": "onTabPanelMainActiveItemChange",
                 "implHandler": [
+                    "//Se setea el html del canvas para que tengas las dimensiones adecuadas",
+                    "Ext.getCmp(\"containerMyVideosCanvas\").setHtml(\"<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width=\"+Ext.getCmp(\"viewportAspogamo\").getWindowWidth()*0.9+\"px height=\"+Ext.getCmp(\"viewportAspogamo\").getWindowHeight()*0.8*0.85+\"px></canvas> </div>\");",
                     "//En caso de que se  pase hacia el containerMyVideos, entonces se obtiene",
                     "//el objeto canvas del container para dibujar el video, y ademas se",
                     "//pone un 1 para que se siga dibujando sobre el canvas las lineas que",
@@ -106,14 +95,27 @@
                     "}",
                     "//Si se sale del containerMyVideos, se deshabilita el REdibujado",
                     "if(oldValue==Ext.getCmp(\"containerMyVideos\")){",
-                    "    variableParaDetenerDibujado=0;",
+                    "    //variableParaDetenerDibujado=0;",
                     "}",
-                    "",
-                    "variableBoolParaDetencionDraw=1;"
+                    "//Se habilita el REdibujado",
+                    "//variableBoolParaDetencionDraw=1;"
                 ],
                 "name": "activeitemchange"
             },
             "designerId": "19cddf83-30a3-4167-93b0-523dc459b974"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "My Videos"
+            },
+            "designerId": "bc9353e6-03f6-4582-80cb-5aeac07dcae1",
+            "masterInstanceId": "ExtBox1-ext-gen21752"
         }
     ]
 }

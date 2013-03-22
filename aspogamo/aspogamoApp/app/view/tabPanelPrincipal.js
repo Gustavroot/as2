@@ -52,11 +52,11 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
             },
             {
                 xtype: 'containerPopular',
-                title: 'My Videos'
+                title: 'Popular'
             },
             {
                 xtype: 'containermyvideos',
-                title: 'Popular'
+                title: 'My Videos'
             }
         ],
         listeners: [
@@ -68,6 +68,8 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
     },
 
     onTabPanelMainActiveItemChange: function(container, value, oldValue, options) {
+        //Se setea el html del canvas para que tengas las dimensiones adecuadas
+        Ext.getCmp("containerMyVideosCanvas").setHtml("<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width="+Ext.getCmp("viewportAspogamo").getWindowWidth()*0.9+"px height="+Ext.getCmp("viewportAspogamo").getWindowHeight()*0.8*0.85+"px></canvas> </div>");
         //En caso de que se  pase hacia el containerMyVideos, entonces se obtiene
         //el objeto canvas del container para dibujar el video, y ademas se
         //pone un 1 para que se siga dibujando sobre el canvas las lineas que
@@ -78,10 +80,10 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
         }
         //Si se sale del containerMyVideos, se deshabilita el REdibujado
         if(oldValue==Ext.getCmp("containerMyVideos")){
-            variableParaDetenerDibujado=0;
+            //variableParaDetenerDibujado=0;
         }
-
-        variableBoolParaDetencionDraw=1;
+        //Se habilita el REdibujado
+        //variableBoolParaDetencionDraw=1;
     }
 
 });

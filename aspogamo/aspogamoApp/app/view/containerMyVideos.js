@@ -25,53 +25,27 @@ Ext.define('MyApp.view.containerMyVideos', {
         items: [
             {
                 xtype: 'container',
-                height: '85%',
+                height: '10%',
+                hidden: true,
                 html: '<video id="videoContainerMyVideos" width="100%" height="100%" controls loop> <source src="./resources/videos/1.mp4" type=video/mp4> </video>',
                 id: 'containerMyVideosOriginal',
                 itemId: 'mycontainer15',
-                left: '2.5%',
-                top: '2.5%',
-                width: '45%',
+                left: 0,
+                top: 0,
+                width: '10%',
                 listeners: [
                     {
                         fn: function(component, options) {
                             //La variable que habilita el REdibujado se configura inicialmente
                             //para que no haya dibujado
                             variableBoolParaDetencionDraw=0;
-                            //Funcion de dibujado del video en el canvas
-                            function draw(v,c,bc,w,h) {
-                                if(v.paused || v.ended)	return false;
-                                // First, draw it into the backing canvas
-                                bc.drawImage(v,0,0,w,h);
-                                // Grab the pixel data from the backing canvas
-                                if(variableBoolParaDetencionDraw===0){
-                                    setTimeout(draw,20,v,c,bc,w,h);
-                                }
-                                else{
-                                }
-                            }
-
                             //Se pone a escuchar el containerMyVideosOriginal tal que
                             //si se da un click en el canvas, entonces se ejecuta el
                             //codigo de inicializado de un punto para una linea curva
                             Ext.getCmp("containerMyVideosOriginal").element.on({
                                 touchstart: function(e,node){
                                     //Se escucha al Play del video, para poner a correr el otro "video"
-                                    e.target.addEventListener('play', function(){
-                                        e.target.playbackRate=1;
-                                        variableBoolParaDetencionDraw=0;
-                                        cw = e.target.clientWidth;
-                                        ch = e.target.clientHeight;
-                                        variableContainerVideoPopularCanvas.width = cw;
-                                        variableContainerVideoPopularCanvas.height = ch;
-                                        canvasContext=variableContainerVideoPopularCanvas.getContext('2d');
-                                        draw(e.target,canvasContext,canvasContext,cw,ch);
-                                    },false);
-                                    //En caso de que se detenga el video, se detiene el dibujado del
-                                    //video sobre el canvas
-                                    e.target.addEventListener('stop', function(){
-                                        variableBoolParaDetencionDraw=1;
-                                    },false);
+                                    funcionIniciadoPlayMyVideos(e.target);
                                 }
                             });
                         },
@@ -82,12 +56,11 @@ Ext.define('MyApp.view.containerMyVideos', {
             {
                 xtype: 'container',
                 height: '85%',
-                html: '<div id="divDelCanvasContainerMyVideos"> <canvas id="canvasContainerMyVideos" width=500px height=500px></canvas> </div>',
                 id: 'containerMyVideosCanvas',
                 itemId: 'mycontainer16',
-                right: '2.5%',
+                left: '5%',
                 top: '2.5%',
-                width: '45%',
+                width: '90%',
                 listeners: [
                     {
                         fn: function(component, options) {
@@ -100,6 +73,7 @@ Ext.define('MyApp.view.containerMyVideos', {
                             //Se pone a escuchar al containerMyVideosCanvas ante el toque inicial
                             Ext.getCmp("containerMyVideosCanvas").element.on({
                                 touchstart: function(e,node){
+                                    //document.getElementById("videoContainerMyVideos").webkitEnterFullscreen();
                                     canvasContext=e.target.getContext("2d");
                                     canvasContext.moveTo(e.target.layerX,e.target.layerY);
                                     //
@@ -167,7 +141,14 @@ Ext.define('MyApp.view.containerMyVideos', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
+                            funcionIniciadoPlayMyVideos(document.getElementById("videoContainerMyVideos"));
 
+                            if(document.getElementById("videoContainerMyVideos").paused){
+                                document.getElementById("videoContainerMyVideos").play();
+                            }
+                            else{
+                                document.getElementById("videoContainerMyVideos").pause();
+                            }
                         },
                         height: '100%',
                         ui: 'action',
