@@ -34,8 +34,8 @@ Ext.application({
         'containerMain',
         'containerHeader',
         'containerProfile',
-        'containerMyVideos',
         'containerPopular',
+        'containerMyVideos',
         'BASURERO'
     ],
     name: 'MyApp',
@@ -44,31 +44,35 @@ Ext.application({
         //Cuando esta variable esta en 0, no se puede dibujar, mientras que cuando
         //esta en 1, se puede dibujar
         variableParaDetenerDibujado=0;
-        //Esta es la funcion que permite dibujar, con un if adentro, 
+        //Esta es la funcion que permite dibujar, con un if adentro
+        //Se corre el for solamente cuando la variable esta en 1... esto significa que
+        //se esta dibujando el video en el canvas
         funcionDibujadoEnCanvas=function(){
-            //alert("gwerhg");
             if(variableParaDetenerDibujado===1){
-                //alert("gwerg;j");
-                //
                 for(var i=0; i<arregloDePuntosDibujoX.length; i++){
-                    //
+                    //Se crean algunas variables para el canvas que son necesarias
                     canvasContext=variableContainerVideoPopularCanvas.getContext("2d");
                     canvasContext.strokeStyle='rgb(55,55,255)';
                     canvasContext.beginPath();
+                    //En el caso de que el punto en el plano del canvas sea tal que corres-
+                    //ponga a un caso de que se haya despegado el dibujado, entonces
+                    //no se le da continuidad al REdibujado en el canvas, esto a traves
+                    //del arreglo arregloDePuntosDibujoBool
                     if(arregloDePuntosDibujoBool[i]!==1){
                         canvasContext.moveTo(arregloDePuntosDibujoX[i-1],arregloDePuntosDibujoY[i-1]);
                     }
+                    //Para cada punto, se enlaza con el anterior
                     canvasContext.lineTo(arregloDePuntosDibujoX[i],arregloDePuntosDibujoY[i]);
                     canvasContext.stroke();
                     canvasContext.closePath();
                 }
             }
+            //El REdibujado de las lineas en el canvas se hace cada 10 milisegundos
             setTimeout(funcionDibujadoEnCanvas, 10);
         };
-
-
+        //Se esperan dos segundos antes de comenzar con este proceso de dibujado,
+        //para que ya los objetos existan
         setTimeout(funcionDibujadoEnCanvas,2000);
-
         Ext.create('MyApp.view.containerMain', {fullscreen: true});
     }
 

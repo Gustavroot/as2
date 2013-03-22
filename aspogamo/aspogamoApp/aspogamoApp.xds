@@ -63,19 +63,19 @@
         },
         "94888bc9-1a06-45b1-8b2a-c7650c826fe0": {
             "paths": [
-                "metadata/view/containerMyVideos",
-                "app/view/override/containerMyVideos.js",
-                "app/view/containerMyVideos.js"
-            ],
-            "className": "containerMyVideos"
-        },
-        "641c912f-fb15-4894-8b29-3727a45c3197": {
-            "paths": [
                 "metadata/view/containerPopular",
                 "app/view/override/containerPopular.js",
                 "app/view/containerPopular.js"
             ],
             "className": "containerPopular"
+        },
+        "641c912f-fb15-4894-8b29-3727a45c3197": {
+            "paths": [
+                "metadata/view/containerMyVideos",
+                "app/view/override/containerMyVideos.js",
+                "app/view/containerMyVideos.js"
+            ],
+            "className": "containerMyVideos"
         },
         "87cb13c2-ed10-436f-905f-df9d97e01f3e": {
             "paths": [

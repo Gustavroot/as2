@@ -20,8 +20,8 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
     requires: [
         'MyApp.view.containerHome',
         'MyApp.view.containerProfile',
-        'MyApp.view.containerMyVideos',
-        'MyApp.view.containerPopular'
+        'MyApp.view.containerPopular',
+        'MyApp.view.containerMyVideos'
     ],
 
     config: {
@@ -51,11 +51,11 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
                 title: 'My Profile'
             },
             {
-                xtype: 'containermyvideos',
+                xtype: 'containerPopular',
                 title: 'My Videos'
             },
             {
-                xtype: 'containerpopular',
+                xtype: 'containermyvideos',
                 title: 'Popular'
             }
         ],
@@ -63,183 +63,25 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
             {
                 fn: 'onTabPanelMainActiveItemChange',
                 event: 'activeitemchange'
-            },
-            {
-                fn: 'onTabPanelMainInitialize',
-                event: 'initialize'
             }
         ]
     },
 
     onTabPanelMainActiveItemChange: function(container, value, oldValue, options) {
-
-
-
-
-
-        if(value==Ext.getCmp("containerPopular")){
-            //alert(document.getElementById("divDelCanvas").id);
-            variableContainerVideoPopularCanvas=document.getElementById("canvas");
+        //En caso de que se  pase hacia el containerMyVideos, entonces se obtiene
+        //el objeto canvas del container para dibujar el video, y ademas se
+        //pone un 1 para que se siga dibujando sobre el canvas las lineas que
+        //se han trazado
+        if(value==Ext.getCmp("containerMyVideos")){
+            variableContainerVideoPopularCanvas=document.getElementById("canvasContainerMyVideos");
             variableParaDetenerDibujado=1;
-            //Ext.getCmp("containerVideoPopularCanvas").setHtml("<div id='divDelCanvas'> <canvas id='canvas' width="+Ext.getCmp("viewportAspogamo").getWindowHeight()*0.8*0.85+"px height="+Ext.getCmp("viewportAspogamo").getWindowWidth()*0.9+"px></canvas> </div>");
-
-            //Ext.getCmp("viewportAspogamo")*0.8*0.85
-            //Ext.getCmp("viewportAspogamo")*0.9
-            //viewportAspogamo
         }
-
-
-        if(oldValue==Ext.getCmp("containerPopular")){
+        //Si se sale del containerMyVideos, se deshabilita el REdibujado
+        if(oldValue==Ext.getCmp("containerMyVideos")){
             variableParaDetenerDibujado=0;
         }
 
-
-
-
-
-
-
-
-
-
-        /*
-        if(value.getId()=="containerPopular"){
-        //--------------------------------------------------------------
-        //    canvas=new Ext.draw.Canvas();
-        //    value.add(canvas);
-
-        //    canvas=document.getElementById("mycanvas");
-        //    context=canvas.getContext('2d');
-        //    cw=canvas.width;
-        //    ch=canvas.height;
-        //    context.strokeStyle='black';
-        //    context.moveTo(0,0);
-        //    context.lineTo(cw.ch);
-        //    context.stroke();
-        //    alert(canvas.height);
-
-
-
-        value.element.on({
-            touchstart: function(e,node){
-
-                //    alert(e.target);
-                //        alert(e.target.id);
-
-
-                canvasContext=e.target.getContext("2d");
-                //    alert("fwe;lwej");
-
-                canvasContext.moveTo(e.target.layerX,e.target.layerY);
-
-                puntoTocadoAnteriorX=e.event.layerX;
-                puntoTocadoAnteriorY=e.event.layerY;
-
-
-
-                //            canvasContext=e.target.getContext("2d");
-                //
-                //            canvasContext.fillText("X",10,75);
-                //
-                //
-                //            canvasContext.moveTo(0,75);
-                //            canvasContext.lineTo(500,75);
-                //
-                //            canvasContext.stroke();
-
-            }
-        });
-
-
-
-        value.element.on({
-            touchmove: function(e,node){
-                //        alert("gato lococo");
-
-                //    alert("fwef;j");
-                //alert(e.target.id);
-
-
-
-
-
-                canvasContext=e.target.getContext("2d");
-                //    alert("fwe;lwej");
-
-                //canvasContext.fillStyle='rgb(180,33,33)';
-
-                canvasContext.strokeStyle='rgb(55,55,255)';
-
-                canvasContext.beginPath();
-
-                canvasContext.moveTo(puntoTocadoAnteriorX,puntoTocadoAnteriorY);
-
-                canvasContext.lineTo(e.event.layerX,e.event.layerY);
-                canvasContext.stroke();
-
-                canvasContext.closePath();
-
-                puntoTocadoAnteriorX=e.event.layerX;
-                puntoTocadoAnteriorY=e.event.layerY;
-
-
-
-                //Ext.getCmp("containerPopular").add(drawPixelPunto);
-
-            }
-        });
-        */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*
-        value.element.on({
-        touchstart: function(e,self){
-        //        alert("gato lococo");
-        //canvas=value.getCanvasObject();
-
-        context = value.getContext('2d');
-
-        var drawPixelPunto=new Ext.draw.Component({
-            items:[{
-                type: 'circle',
-                fill: '#79BB3F',
-                radius: 3,
-                x:e.event.layerX,
-                y:e.event.layerY
-            }]
-        });
-        Ext.getCmp("containerPopular").setItems([drawPixelPunto]);
-
-    }
-        });
-        */
-        //--------------------------------------------------------------
-        //}
-    },
-
-    onTabPanelMainInitialize: function(component, options) {
-        //this.setActiveItem(3);
+        variableBoolParaDetencionDraw=1;
     }
 
 });

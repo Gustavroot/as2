@@ -8,64 +8,248 @@
     "userConfig": {
         "designer|userClassName": "containerMyVideos",
         "designer|userAlias": "containermyvideos",
-        "html": "<canvas id=\"cosa\" width=500px height=500px></canvas> ",
+        "height": null,
+        "html": null,
         "id": "containerMyVideos",
+        "width": null,
+        "defaultType": null,
         "layout": "fit"
     },
-    "id": "ExtBox1-ext-gen20413",
-    "designerId": "94888bc9-1a06-45b1-8b2a-c7650c826fe0",
+    "id": "ExtBox1-ext-gen21752",
+    "designerId": "641c912f-fb15-4894-8b29-3727a45c3197",
     "cn": [
         {
-            "type": "basiceventbinding",
+            "type": "container",
             "reference": {
-                "name": "listeners",
+                "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onContainerMyVideosInitialize",
-                "fn": "onContainerMyVideosInitialize",
-                "implHandler": [
-                    "Ext.getCmp(\"containerMyVideos\").element.on({",
-                    "    touchstart: function(e,node){",
-                    "",
-                    "",
-                    "        //        variableContainerVideoPopularCanvas2=e.target;",
-                    "        //        alert(\"feg\");",
-                    "        canvasContext2=e.target.getContext(\"2d\");",
-                    "        canvasContext2.moveTo(e.target.layerX,e.target.layerY);",
-                    "",
-                    "        puntoTocadoAnteriorX2=e.event.layerX;",
-                    "        puntoTocadoAnteriorY2=e.event.layerY;",
-                    "",
-                    "    }",
-                    "});",
-                    "",
-                    "",
-                    "",
-                    "Ext.getCmp(\"containerMyVideos\").element.on({",
-                    "    touchmove: function(e,node){",
-                    "        canvasContext2=e.target.getContext(\"2d\");",
-                    "",
-                    "        canvasContext2.strokeStyle='rgb(55,55,255)';",
-                    "",
-                    "        canvasContext2.beginPath();",
-                    "",
-                    "        canvasContext2.moveTo(puntoTocadoAnteriorX2,puntoTocadoAnteriorY2);",
-                    "",
-                    "        canvasContext2.lineTo(e.event.layerX,e.event.layerY);",
-                    "        canvasContext2.stroke();",
-                    "",
-                    "        canvasContext2.closePath();",
-                    "",
-                    "        puntoTocadoAnteriorX2=e.event.layerX;",
-                    "        puntoTocadoAnteriorY2=e.event.layerY;",
-                    "    }",
-                    "});"
-                ],
-                "name": "initialize"
+                "designer|userClassName": "MyContainer15",
+                "height": "85%",
+                "html": "<video id=\"videoContainerMyVideos\" width=\"100%\" height=\"100%\" controls loop> <source src=\"./resources/videos/1.mp4\" type=video/mp4> </video>",
+                "id": "containerMyVideosOriginal",
+                "itemId": "mycontainer15",
+                "left": "2.5%",
+                "top": "2.5%",
+                "width": "45%"
             },
-            "designerId": "a8b9ed1d-56d8-4f13-bead-be89c517de44"
+            "designerId": "798cd887-3fb1-4715-aeb9-f798648d93e9",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onContainerVideoPopularOriginalInitialize",
+                        "fn": "onContainerVideoPopularOriginalInitialize",
+                        "implHandler": [
+                            "//La variable que habilita el REdibujado se configura inicialmente",
+                            "//para que no haya dibujado",
+                            "variableBoolParaDetencionDraw=0;",
+                            "//Funcion de dibujado del video en el canvas",
+                            "function draw(v,c,bc,w,h) {",
+                            "    if(v.paused || v.ended)\treturn false;",
+                            "    // First, draw it into the backing canvas",
+                            "    bc.drawImage(v,0,0,w,h);",
+                            "    // Grab the pixel data from the backing canvas",
+                            "    if(variableBoolParaDetencionDraw===0){",
+                            "        setTimeout(draw,20,v,c,bc,w,h);",
+                            "    }",
+                            "    else{",
+                            "    }",
+                            "}",
+                            "",
+                            "//Se pone a escuchar el containerMyVideosOriginal tal que",
+                            "//si se da un click en el canvas, entonces se ejecuta el",
+                            "//codigo de inicializado de un punto para una linea curva",
+                            "Ext.getCmp(\"containerMyVideosOriginal\").element.on({",
+                            "    touchstart: function(e,node){",
+                            "        //Se escucha al Play del video, para poner a correr el otro \"video\"",
+                            "        e.target.addEventListener('play', function(){",
+                            "            e.target.playbackRate=1;",
+                            "            variableBoolParaDetencionDraw=0;",
+                            "            cw = e.target.clientWidth;",
+                            "            ch = e.target.clientHeight;",
+                            "            variableContainerVideoPopularCanvas.width = cw;",
+                            "            variableContainerVideoPopularCanvas.height = ch;",
+                            "            canvasContext=variableContainerVideoPopularCanvas.getContext('2d');",
+                            "            draw(e.target,canvasContext,canvasContext,cw,ch);",
+                            "        },false);",
+                            "        //En caso de que se detenga el video, se detiene el dibujado del",
+                            "        //video sobre el canvas",
+                            "        e.target.addEventListener('stop', function(){",
+                            "            variableBoolParaDetencionDraw=1;",
+                            "        },false);",
+                            "    }",
+                            "});"
+                        ],
+                        "name": "initialize"
+                    },
+                    "designerId": "2db990f4-bf3c-42ec-97b8-0746d123ffed"
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer17",
+                "height": "85%",
+                "html": "<div id=\"divDelCanvasContainerMyVideos\"> <canvas id=\"canvasContainerMyVideos\" width=500px height=500px></canvas> </div>",
+                "id": "containerMyVideosCanvas",
+                "itemId": "mycontainer16",
+                "left": null,
+                "right": "2.5%",
+                "top": "2.5%",
+                "width": "45%"
+            },
+            "designerId": "4dc47544-2974-4931-a7f5-35fbaef97e02",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onContainerVideoPopularCanvasInitialize",
+                        "fn": "onContainerVideoPopularCanvasInitialize",
+                        "implHandler": [
+                            "//Esto 3 arreglos permite hacer el REdibujado, y el tercero",
+                            "//de estos arreglos es el que permite hacer la identificacion",
+                            "//de cuando se despego del dibujado el dedo o el mouse",
+                            "arregloDePuntosDibujoX=[];",
+                            "arregloDePuntosDibujoY=[];",
+                            "arregloDePuntosDibujoBool=[];",
+                            "//Se pone a escuchar al containerMyVideosCanvas ante el toque inicial",
+                            "Ext.getCmp(\"containerMyVideosCanvas\").element.on({",
+                            "    touchstart: function(e,node){",
+                            "        canvasContext=e.target.getContext(\"2d\");",
+                            "        canvasContext.moveTo(e.target.layerX,e.target.layerY);",
+                            "        //",
+                            "        puntoTocadoAnteriorX=e.event.layerX;",
+                            "        puntoTocadoAnteriorY=e.event.layerY;",
+                            "        //",
+                            "        arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);",
+                            "        arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);",
+                            "        arregloDePuntosDibujoBool.push(1);",
+                            "    }",
+                            "});",
+                            "//Se hace que el containerMyVideosCanvas quede escuchando el evento",
+                            "//de continuar tocando despues del toque inicial",
+                            "Ext.getCmp(\"containerMyVideosCanvas\").element.on({",
+                            "    touchmove: function(e,node){",
+                            "        //----------------------------------------------------------------",
+                            "        canvasContext=e.target.getContext(\"2d\");",
+                            "        canvasContext.strokeStyle='rgb(55,55,255)';",
+                            "        canvasContext.beginPath();",
+                            "        canvasContext.moveTo(puntoTocadoAnteriorX,puntoTocadoAnteriorY);",
+                            "        //",
+                            "        canvasContext.lineTo(e.event.layerX,e.event.layerY);",
+                            "        canvasContext.stroke();",
+                            "        canvasContext.closePath();",
+                            "        //",
+                            "        puntoTocadoAnteriorX=e.event.layerX;",
+                            "        puntoTocadoAnteriorY=e.event.layerY;",
+                            "        //",
+                            "        arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);",
+                            "        arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);",
+                            "        arregloDePuntosDibujoBool.push(0);",
+                            "        //----------------------------------------------------------------",
+                            "        /*",
+                            "        for(var i=0; i<arregloDePuntosDibujoX.length; i++){",
+                            "            //",
+                            "            canvasContext=e.target.getContext(\"2d\");",
+                            "",
+                            "            canvasContext.strokeStyle='rgb(55,55,255)';",
+                            "",
+                            "            canvasContext.beginPath();",
+                            "            if(arregloDePuntosDibujoBool[i]!==1){",
+                            "                canvasContext.moveTo(arregloDePuntosDibujoX[i-1],arregloDePuntosDibujoY[i-1]);",
+                            "            }",
+                            "",
+                            "            canvasContext.lineTo(arregloDePuntosDibujoX[i],arregloDePuntosDibujoY[i]);",
+                            "            canvasContext.stroke();",
+                            "",
+                            "            canvasContext.closePath();",
+                            "        }",
+                            "        */",
+                            "    }",
+                            "});"
+                        ],
+                        "name": "initialize"
+                    },
+                    "designerId": "8a66b5fc-197b-44ad-a008-b65160182d25"
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer18",
+                "height": "10%",
+                "id": "containerMyVideosMenu",
+                "top": "89%",
+                "width": "100%"
+            },
+            "designerId": "2d0e153a-57b6-4cf7-8916-d8039277a78c",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton7",
+                        "height": "100%",
+                        "ui": "action",
+                        "width": "20%",
+                        "iconCls": "arrow_right",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "c4e5f5b3-18f8-44ed-947d-e8457c441c92",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    ""
+                                ]
+                            },
+                            "designerId": "6edadba6-2ef2-4204-acff-68d01f31c4d4"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

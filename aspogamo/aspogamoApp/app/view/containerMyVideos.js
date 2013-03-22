@@ -18,56 +18,166 @@ Ext.define('MyApp.view.containerMyVideos', {
     alias: 'widget.containermyvideos',
 
     config: {
-        html: '<canvas id="cosa" width=500px height=500px></canvas> ',
         id: 'containerMyVideos',
         layout: {
             type: 'fit'
         },
-        listeners: [
+        items: [
             {
-                fn: 'onContainerMyVideosInitialize',
-                event: 'initialize'
+                xtype: 'container',
+                height: '85%',
+                html: '<video id="videoContainerMyVideos" width="100%" height="100%" controls loop> <source src="./resources/videos/1.mp4" type=video/mp4> </video>',
+                id: 'containerMyVideosOriginal',
+                itemId: 'mycontainer15',
+                left: '2.5%',
+                top: '2.5%',
+                width: '45%',
+                listeners: [
+                    {
+                        fn: function(component, options) {
+                            //La variable que habilita el REdibujado se configura inicialmente
+                            //para que no haya dibujado
+                            variableBoolParaDetencionDraw=0;
+                            //Funcion de dibujado del video en el canvas
+                            function draw(v,c,bc,w,h) {
+                                if(v.paused || v.ended)	return false;
+                                // First, draw it into the backing canvas
+                                bc.drawImage(v,0,0,w,h);
+                                // Grab the pixel data from the backing canvas
+                                if(variableBoolParaDetencionDraw===0){
+                                    setTimeout(draw,20,v,c,bc,w,h);
+                                }
+                                else{
+                                }
+                            }
+
+                            //Se pone a escuchar el containerMyVideosOriginal tal que
+                            //si se da un click en el canvas, entonces se ejecuta el
+                            //codigo de inicializado de un punto para una linea curva
+                            Ext.getCmp("containerMyVideosOriginal").element.on({
+                                touchstart: function(e,node){
+                                    //Se escucha al Play del video, para poner a correr el otro "video"
+                                    e.target.addEventListener('play', function(){
+                                        e.target.playbackRate=1;
+                                        variableBoolParaDetencionDraw=0;
+                                        cw = e.target.clientWidth;
+                                        ch = e.target.clientHeight;
+                                        variableContainerVideoPopularCanvas.width = cw;
+                                        variableContainerVideoPopularCanvas.height = ch;
+                                        canvasContext=variableContainerVideoPopularCanvas.getContext('2d');
+                                        draw(e.target,canvasContext,canvasContext,cw,ch);
+                                    },false);
+                                    //En caso de que se detenga el video, se detiene el dibujado del
+                                    //video sobre el canvas
+                                    e.target.addEventListener('stop', function(){
+                                        variableBoolParaDetencionDraw=1;
+                                    },false);
+                                }
+                            });
+                        },
+                        event: 'initialize'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                height: '85%',
+                html: '<div id="divDelCanvasContainerMyVideos"> <canvas id="canvasContainerMyVideos" width=500px height=500px></canvas> </div>',
+                id: 'containerMyVideosCanvas',
+                itemId: 'mycontainer16',
+                right: '2.5%',
+                top: '2.5%',
+                width: '45%',
+                listeners: [
+                    {
+                        fn: function(component, options) {
+                            //Esto 3 arreglos permite hacer el REdibujado, y el tercero
+                            //de estos arreglos es el que permite hacer la identificacion
+                            //de cuando se despego del dibujado el dedo o el mouse
+                            arregloDePuntosDibujoX=[];
+                            arregloDePuntosDibujoY=[];
+                            arregloDePuntosDibujoBool=[];
+                            //Se pone a escuchar al containerMyVideosCanvas ante el toque inicial
+                            Ext.getCmp("containerMyVideosCanvas").element.on({
+                                touchstart: function(e,node){
+                                    canvasContext=e.target.getContext("2d");
+                                    canvasContext.moveTo(e.target.layerX,e.target.layerY);
+                                    //
+                                    puntoTocadoAnteriorX=e.event.layerX;
+                                    puntoTocadoAnteriorY=e.event.layerY;
+                                    //
+                                    arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);
+                                    arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);
+                                    arregloDePuntosDibujoBool.push(1);
+                                }
+                            });
+                            //Se hace que el containerMyVideosCanvas quede escuchando el evento
+                            //de continuar tocando despues del toque inicial
+                            Ext.getCmp("containerMyVideosCanvas").element.on({
+                                touchmove: function(e,node){
+                                    //----------------------------------------------------------------
+                                    canvasContext=e.target.getContext("2d");
+                                    canvasContext.strokeStyle='rgb(55,55,255)';
+                                    canvasContext.beginPath();
+                                    canvasContext.moveTo(puntoTocadoAnteriorX,puntoTocadoAnteriorY);
+                                    //
+                                    canvasContext.lineTo(e.event.layerX,e.event.layerY);
+                                    canvasContext.stroke();
+                                    canvasContext.closePath();
+                                    //
+                                    puntoTocadoAnteriorX=e.event.layerX;
+                                    puntoTocadoAnteriorY=e.event.layerY;
+                                    //
+                                    arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);
+                                    arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);
+                                    arregloDePuntosDibujoBool.push(0);
+                                    //----------------------------------------------------------------
+                                    /*
+                                    for(var i=0; i<arregloDePuntosDibujoX.length; i++){
+                                    //
+                                    canvasContext=e.target.getContext("2d");
+
+                                    canvasContext.strokeStyle='rgb(55,55,255)';
+
+                                    canvasContext.beginPath();
+                                    if(arregloDePuntosDibujoBool[i]!==1){
+                                        canvasContext.moveTo(arregloDePuntosDibujoX[i-1],arregloDePuntosDibujoY[i-1]);
+                                    }
+
+                                    canvasContext.lineTo(arregloDePuntosDibujoX[i],arregloDePuntosDibujoY[i]);
+                                    canvasContext.stroke();
+
+                                    canvasContext.closePath();
+                                }
+                                */
+                            }
+                        });
+                    },
+                        event: 'initialize'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                height: '10%',
+                id: 'containerMyVideosMenu',
+                top: '89%',
+                width: '100%',
+                items: [
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+
+                        },
+                        height: '100%',
+                        ui: 'action',
+                        width: '20%',
+                        iconCls: 'arrow_right',
+                        iconMask: true
+                    }
+                ]
             }
         ]
-    },
-
-    onContainerMyVideosInitialize: function(component, options) {
-        Ext.getCmp("containerMyVideos").element.on({
-            touchstart: function(e,node){
-
-
-                //        variableContainerVideoPopularCanvas2=e.target;
-                //        alert("feg");
-                canvasContext2=e.target.getContext("2d");
-                canvasContext2.moveTo(e.target.layerX,e.target.layerY);
-
-                puntoTocadoAnteriorX2=e.event.layerX;
-                puntoTocadoAnteriorY2=e.event.layerY;
-
-            }
-        });
-
-
-
-        Ext.getCmp("containerMyVideos").element.on({
-            touchmove: function(e,node){
-                canvasContext2=e.target.getContext("2d");
-
-                canvasContext2.strokeStyle='rgb(55,55,255)';
-
-                canvasContext2.beginPath();
-
-                canvasContext2.moveTo(puntoTocadoAnteriorX2,puntoTocadoAnteriorY2);
-
-                canvasContext2.lineTo(e.event.layerX,e.event.layerY);
-                canvasContext2.stroke();
-
-                canvasContext2.closePath();
-
-                puntoTocadoAnteriorX2=e.event.layerX;
-                puntoTocadoAnteriorY2=e.event.layerY;
-            }
-        });
     }
 
 });
