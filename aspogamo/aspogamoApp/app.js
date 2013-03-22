@@ -41,9 +41,10 @@ Ext.application({
     name: 'MyApp',
 
     launch: function() {
-
+        //Cuando esta variable esta en 0, no se puede dibujar, mientras que cuando
+        //esta en 1, se puede dibujar
         variableParaDetenerDibujado=0;
-
+        //Esta es la funcion que permite dibujar, con un if adentro, 
         funcionDibujadoEnCanvas=function(){
             //alert("gwerhg");
             if(variableParaDetenerDibujado===1){
