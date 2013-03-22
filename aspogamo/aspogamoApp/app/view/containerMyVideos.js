@@ -73,60 +73,58 @@ Ext.define('MyApp.view.containerMyVideos', {
                             //Se pone a escuchar al containerMyVideosCanvas ante el toque inicial
                             Ext.getCmp("containerMyVideosCanvas").element.on({
                                 touchstart: function(e,node){
-                                    //document.getElementById("videoContainerMyVideos").webkitEnterFullscreen();
-                                    canvasContext=e.target.getContext("2d");
-                                    canvasContext.moveTo(e.target.layerX,e.target.layerY);
-                                    //
-                                    puntoTocadoAnteriorX=e.event.layerX;
-                                    puntoTocadoAnteriorY=e.event.layerY;
-                                    //
-                                    arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);
-                                    arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);
-                                    arregloDePuntosDibujoBool.push(1);
+                                    if(variableHabilitarDibujado==1){
+                                        //document.getElementById("videoContainerMyVideos").webkitEnterFullscreen();
+                                        canvasContext=e.target.getContext("2d");
+                                        canvasContext.moveTo(e.target.layerX,e.target.layerY);
+                                        //
+                                        puntoTocadoAnteriorX=e.event.layerX;
+                                        puntoTocadoAnteriorY=e.event.layerY;
+                                        //
+                                        arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);
+                                        arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);
+                                        arregloDePuntosDibujoBool.push(1);
+                                    }
                                 }
                             });
                             //Se hace que el containerMyVideosCanvas quede escuchando el evento
                             //de continuar tocando despues del toque inicial
                             Ext.getCmp("containerMyVideosCanvas").element.on({
                                 touchmove: function(e,node){
-                                    //----------------------------------------------------------------
-                                    canvasContext=e.target.getContext("2d");
-                                    canvasContext.strokeStyle='rgb(55,55,255)';
-                                    canvasContext.beginPath();
-                                    canvasContext.moveTo(puntoTocadoAnteriorX,puntoTocadoAnteriorY);
-                                    //
-                                    canvasContext.lineTo(e.event.layerX,e.event.layerY);
-                                    canvasContext.stroke();
-                                    canvasContext.closePath();
-                                    //
-                                    puntoTocadoAnteriorX=e.event.layerX;
-                                    puntoTocadoAnteriorY=e.event.layerY;
-                                    //
-                                    arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);
-                                    arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);
-                                    arregloDePuntosDibujoBool.push(0);
-                                    //----------------------------------------------------------------
-                                    /*
-                                    for(var i=0; i<arregloDePuntosDibujoX.length; i++){
-                                    //
-                                    canvasContext=e.target.getContext("2d");
-
-                                    canvasContext.strokeStyle='rgb(55,55,255)';
-
-                                    canvasContext.beginPath();
-                                    if(arregloDePuntosDibujoBool[i]!==1){
-                                        canvasContext.moveTo(arregloDePuntosDibujoX[i-1],arregloDePuntosDibujoY[i-1]);
+                                    if(variableHabilitarDibujado==1){
+                                        //----------------------------------------------------------------
+                                        canvasContext=e.target.getContext("2d");
+                                        canvasContext.strokeStyle='rgb(55,55,255)';
+                                        canvasContext.beginPath();
+                                        canvasContext.moveTo(puntoTocadoAnteriorX,puntoTocadoAnteriorY);
+                                        //
+                                        canvasContext.lineTo(e.event.layerX,e.event.layerY);
+                                        canvasContext.stroke();
+                                        canvasContext.closePath();
+                                        //
+                                        puntoTocadoAnteriorX=e.event.layerX;
+                                        puntoTocadoAnteriorY=e.event.layerY;
+                                        //
+                                        arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);
+                                        arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);
+                                        arregloDePuntosDibujoBool.push(0);
                                     }
-
-                                    canvasContext.lineTo(arregloDePuntosDibujoX[i],arregloDePuntosDibujoY[i]);
-                                    canvasContext.stroke();
-
-                                    canvasContext.closePath();
+                                    //----------------------------------------------------------------
                                 }
-                                */
-                            }
-                        });
-                    },
+                            });
+
+                            Ext.getCmp("containerMyVideosCanvas").element.on({
+                                touchend: function(e,node){
+                                    variableHabilitarDibujado=0;
+                                    Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setText("Seguir jugador");
+                                    Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setUi("normal");
+                                    //falta aqui codigo de enviar informacion de posiciones, un .load
+                                    arregloDePuntosDibujoX=[];
+                                    arregloDePuntosDibujoY=[];
+                                    arregloDePuntosDibujoBool=[];
+                                }
+                            });
+                        },
                         event: 'initialize'
                     }
                 ]
@@ -151,10 +149,35 @@ Ext.define('MyApp.view.containerMyVideos', {
                             }
                         },
                         height: '100%',
+                        id: 'botonPlayVideoContainerMyVideos',
                         ui: 'action',
                         width: '20%',
                         iconCls: 'arrow_right',
                         iconMask: true
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            //Se hace el cambio de estado en la variable para
+                            //habilitado del dibujado en el canvas, y se modifica
+                            //al mismo tiempo el ui del boton
+                            if(variableHabilitarDibujado===0){
+                                variableHabilitarDibujado=1;
+                                Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setUi("action");
+                                Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setText("Siguiendo jugador");
+                            }
+                            else{
+                                variableHabilitarDibujado=0;
+                                Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setUi("normal");
+                                Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setText("Seguir jugador");
+                            }
+                        },
+                        height: '100%',
+                        id: 'botonSeguirJugadorVideoContainerMyVideos',
+                        left: '20%',
+                        width: '30%',
+                        iconMask: true,
+                        text: 'Seguir jugador'
                     }
                 ]
             }

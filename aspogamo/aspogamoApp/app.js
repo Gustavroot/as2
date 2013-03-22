@@ -41,6 +41,8 @@ Ext.application({
     name: 'MyApp',
 
     launch: function() {
+        //Se define inicialmente la variable para habilitar el dibujado
+        variableHabilitarDibujado=0;
         //Cuando esta variable esta en 0, no se puede dibujar, mientras que cuando
         //esta en 1, se puede dibujar
         variableParaDetenerDibujado=0;
