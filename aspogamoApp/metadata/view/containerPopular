@@ -1,0 +1,17 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "containerPopular",
+        "designer|userAlias": "containerPopular",
+        "html": null,
+        "id": "containerPopular",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen20413",
+    "designerId": "94888bc9-1a06-45b1-8b2a-c7650c826fe0"
+}

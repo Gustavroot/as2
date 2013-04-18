@@ -1,0 +1,130 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "modelPrueba"
+        ],
+        "stores": [
+            "storePrueba"
+        ],
+        "views": [
+            "tabPanelPrincipal",
+            "containerHome",
+            "containerMain",
+            "containerHeader",
+            "containerProfile",
+            "containerPopular",
+            "containerMyVideos",
+            "BASURERO"
+        ],
+        "name": "MyApp"
+    },
+    "id": "ExtBox1-ext-gen1783",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "//Se define inicialmente la variable para habilitar el dibujado",
+                    "variableHabilitarDibujado=0;",
+                    "//Cuando esta variable esta en 0, no se puede dibujar, mientras que cuando",
+                    "//esta en 1, se puede dibujar",
+                    "variableParaDetenerDibujado=0;",
+                    "//Esta es la funcion que permite dibujar, con un if adentro",
+                    "//Se corre el for solamente cuando la variable esta en 1... esto significa que",
+                    "//se esta dibujando el video en el canvas",
+                    "funcionDibujadoEnCanvas=function(){",
+                    "    if(variableParaDetenerDibujado===1){",
+                    "        for(var i=0; i<arregloDePuntosDibujoX.length; i++){",
+                    "            //Se crean algunas variables para el canvas que son necesarias",
+                    "            canvasContext=variableContainerVideoPopularCanvas.getContext(\"2d\");",
+                    "            canvasContext.strokeStyle='rgb(55,55,255)';",
+                    "            canvasContext.beginPath();",
+                    "            //En el caso de que el punto en el plano del canvas sea tal que corres-",
+                    "            //ponga a un caso de que se haya despegado el dibujado, entonces",
+                    "            //no se le da continuidad al REdibujado en el canvas, esto a traves",
+                    "            //del arreglo arregloDePuntosDibujoBool",
+                    "            if(arregloDePuntosDibujoBool[i]!==1){",
+                    "                canvasContext.moveTo(arregloDePuntosDibujoX[i-1],arregloDePuntosDibujoY[i-1]);",
+                    "            }",
+                    "            //Para cada punto, se enlaza con el anterior",
+                    "            canvasContext.lineTo(arregloDePuntosDibujoX[i],arregloDePuntosDibujoY[i]);",
+                    "            canvasContext.stroke();",
+                    "            canvasContext.closePath();",
+                    "        }",
+                    "    }",
+                    "    //El REdibujado de las lineas en el canvas se hace cada 10 milisegundos",
+                    "    setTimeout(funcionDibujadoEnCanvas, 5);",
+                    "};",
+                    "//Se esperan dos segundos antes de comenzar con este proceso de dibujado,",
+                    "//para que ya los objetos existan",
+                    "setTimeout(funcionDibujadoEnCanvas,2000);",
+                    "",
+                    "//Funcion de dibujado del video en el canvas",
+                    "draw=function(v,c,bc,w,h) {",
+                    "    if(v.paused || v.ended)\treturn false;",
+                    "    // First, draw it into the backing canvas",
+                    "    bc.drawImage(v,0,0,w,h);",
+                    "    // Grab the pixel data from the backing canvas",
+                    "    if(variableBoolParaDetencionDraw===0){",
+                    "        setTimeout(draw,20,v,c,bc,w,h);",
+                    "    }",
+                    "    else{",
+                    "    }",
+                    "};",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "funcionIniciadoPlayMyVideos=function(video){",
+                    "    video.addEventListener('play', function(){",
+                    "        video.playbackRate=1;",
+                    "        variableBoolParaDetencionDraw=0;",
+                    "        cw = video.clientWidth;",
+                    "        ch = video.clientHeight;",
+                    "        //alert(Ext.getCmp(\"viewportAspogamo\").getWindowWidth());",
+                    "        variableContainerVideoPopularCanvas.width = Ext.getCmp(\"viewportAspogamo\").getWindowWidth()*0.9;",
+                    "        variableContainerVideoPopularCanvas.height = Ext.getCmp(\"viewportAspogamo\").getWindowHeight()*0.8*0.75;",
+                    "        canvasContext=variableContainerVideoPopularCanvas.getContext('2d');",
+                    "        draw(video,canvasContext,canvasContext,variableContainerVideoPopularCanvas.width,variableContainerVideoPopularCanvas.height);",
+                    "    },false);",
+                    "    //En caso de que se detenga el video, se detiene el dibujado del",
+                    "    //video sobre el canvas",
+                    "    video.addEventListener('stop', function(){",
+                    "        variableBoolParaDetencionDraw=1;",
+                    "    },false);",
+                    "};",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "f1e2a64e-9639-4821-a81e-c9657b2e4a49"
+        },
+        {
+            "type": "viewport",
+            "reference": {
+                "name": "viewport",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "Viewport",
+                "id": "viewportAspogamo"
+            },
+            "designerId": "c4791fd0-ae69-407f-86e5-084fc41fb049"
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "fade",
+        "designer|userClassName": "tabPanelPrincipal",
+        "designer|userAlias": "tabpanelprincipal",
+        "height": "80%",
+        "id": "tabPanelMain",
+        "top": "20%",
+        "width": "100%"
+    },
+    "id": "ExtBox1-ext-gen2472",
+    "designerId": "113c8804-658a-4d7b-a54f-bab8647c7e3d",
+    "cn": [
+        {
+            "type": "tabbar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "designer|userClassName": "MyTabBar",
+                "docked": "top",
+                "scrollable": "horizontal",
+                "activeTab": null
+            },
+            "designerId": "ff638b17-bfc4-488f-9f61-a70780af79c4"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Home"
+            },
+            "designerId": "7fd3e507-3af1-472e-a055-c3583e6edbb2",
+            "masterInstanceId": "ExtBox1-ext-gen4943"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "My Profile"
+            },
+            "designerId": "8a654eaa-f785-4b64-b0a7-ad22177633e0",
+            "masterInstanceId": "ExtBox1-ext-gen11248"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Popular"
+            },
+            "designerId": "5f1fe9b4-c40f-4081-a5a8-3155219f40f2",
+            "masterInstanceId": "ExtBox1-ext-gen20413"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabPanelMainActiveItemChange",
+                "fn": "onTabPanelMainActiveItemChange",
+                "implHandler": [
+                    "//Se setea el html del canvas para que tengas las dimensiones adecuadas",
+                    "Ext.getCmp(\"containerMyVideosCanvas\").setHtml(\"<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width=\"+Ext.getCmp(\"viewportAspogamo\").getWindowWidth()*0.9+\"px height=\"+Ext.getCmp(\"viewportAspogamo\").getWindowHeight()*0.8*0.85+\"px></canvas> </div>\");",
+                    "//En caso de que se  pase hacia el containerMyVideos, entonces se obtiene",
+                    "//el objeto canvas del container para dibujar el video, y ademas se",
+                    "//pone un 1 para que se siga dibujando sobre el canvas las lineas que",
+                    "//se han trazado",
+                    "if(value==Ext.getCmp(\"containerMyVideos\")){",
+                    "    variableContainerVideoPopularCanvas=document.getElementById(\"canvasContainerMyVideos\");",
+                    "    variableParaDetenerDibujado=1;",
+                    "}",
+                    "//Si se sale del containerMyVideos, se deshabilita el REdibujado",
+                    "if(oldValue==Ext.getCmp(\"containerMyVideos\")){",
+                    "    //variableParaDetenerDibujado=0;",
+                    "}",
+                    "//Se habilita el REdibujado",
+                    "//variableBoolParaDetencionDraw=1;"
+                ],
+                "name": "activeitemchange"
+            },
+            "designerId": "19cddf83-30a3-4167-93b0-523dc459b974"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "My Videos"
+            },
+            "designerId": "bc9353e6-03f6-4582-80cb-5aeac07dcae1",
+            "masterInstanceId": "ExtBox1-ext-gen21752"
+        }
+    ]
+}
