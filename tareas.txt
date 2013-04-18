@@ -1,0 +1,22 @@
+Tareas AS2:
+
+Tareas aplazadas por el momento:
+ - Decir al profesor que consiga a alguien en diseño gráfico.
+ - Hacer conexión total total de la maraña.
+ - Averiguar cómo funciona algoritmo para aplanar cancha.
+
+
+
+Tareas actuales:
+ALEJANDRO:
+ - Declarar la base de datos (engine.py).
+ - Login, logout y crear cuenta, con cookie y todo listo para ajax request.
+ - Handler para recibir 'x', 'y', 'idVideo' y 'frame'.
+
+GUSTAVO:
+ - Lograr dibujar en dispositivo.
+ - Login con facebook y sin facebook (dejar todo montado para el handler) y crear cuenta: nombre, apellidos, país, propósito (profesional, académico, aficionado), institución (optativo), puesto (optativo), email, clave.
+ - Hacer un arreglo de cuadrupletes: 'x', 'y', 'idVideo' y 'frame'.
+ - Hacer un config.xml básico (configurar que sea landscape, es decir, horizontal).
+
+
