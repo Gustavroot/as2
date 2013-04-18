@@ -4,6 +4,7 @@ Tareas aplazadas por el momento:
  - Decir al profesor que consiga a alguien en diseño gráfico.
  - Hacer conexión total total de la maraña.
  - Averiguar cómo funciona algoritmo para aplanar cancha.
+ - Implementar código para slow motion.
 
 
 
