@@ -26,7 +26,7 @@ Ext.define('MyApp.view.containerMyVideos', {
             {
                 xtype: 'container',
                 height: '10%',
-                hidden: false,
+                hidden: true,
                 html: '<video id="videoContainerMyVideos" width="100%" height="100%" controls loop> <source src="./resources/videos/1.mp4" type=video/mp4> </video>',
                 id: 'containerMyVideosOriginal',
                 itemId: 'mycontainer15',
