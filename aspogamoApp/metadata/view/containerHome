@@ -1,21 +1,20 @@
 {
-    "type": "container",
+    "type": "Ext.Container",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "id": "containerHome",
         "designer|userClassName": "containerHome",
         "designer|userAlias": "containerhome",
-        "id": "containerHome",
         "layout": "fit"
     },
-    "id": "ExtBox1-ext-gen4943",
     "designerId": "06bd750d-fdc5-46e6-b4b8-ed321501aa8c",
     "cn": [
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -23,51 +22,51 @@
             "codeClass": null,
             "userConfig": {
                 "container|align": "start",
-                "designer|userClassName": "MyContainer8",
                 "height": "25%",
                 "id": "containerVideosPopulares",
                 "left": 0,
                 "top": 0,
                 "width": "100%",
+                "designer|userClassName": "MyContainer8",
                 "layout": "hbox",
                 "scrollable": "horizontal"
             },
             "designerId": "1e39face-c92f-4f6d-a6c8-f022dc70c01c"
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer9",
                 "height": "75%",
                 "html": "<p>&nbsp</p> <font size=\"3\"> <p align=\"justify\">The research project 'Sensor-based, Automatic Analysis of Football Games' is an ambitious, mid-term research project that studies the automation of these tasks. The main objectives of the project are (1) the investigation of novel computational mechanisms that enable computer systems to recognize intentional activities, (2) the development of an integrated software system to automate game interpretation and analysis, and (3) the demonstration of the impact of automated game analysis on application areas, such as sport science, football coaching, and sports entertainment.<p></font>",
                 "id": "containerHomeInfo",
                 "left": "3%",
                 "top": "25%",
                 "width": "44%",
+                "designer|userClassName": "MyContainer9",
                 "layout": "fit"
             },
             "designerId": "2d0cae26-0850-4266-be90-64884ce3a1e1"
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer9",
                 "height": "72%",
                 "id": "containerHomeVideo",
                 "left": null,
                 "right": "3%",
                 "top": "25%",
                 "width": "44%",
+                "designer|userClassName": "MyContainer9",
                 "layout": "fit"
             },
             "designerId": "38d1218b-4053-4373-9e80-0c9f7b139165"

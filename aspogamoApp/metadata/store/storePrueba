@@ -6,16 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "storePrueba",
-        "autoSync": false,
         "model": "modelPrueba",
-        "storeId": "storePrueba"
+        "storeId": "storePrueba",
+        "designer|userClassName": "storePrueba"
     },
-    "id": "ExtBox1-ext-gen37128",
     "designerId": "41d1ff9a-baf0-48da-ba85-a417cccbd8db",
     "cn": [
         {
-            "type": "jsonpproxy",
+            "type": "Ext.data.proxy.JsonP",
             "reference": {
                 "name": "proxy",
                 "type": "object"
@@ -28,15 +26,15 @@
             "designerId": "24368bbf-deb7-4ea7-b1ce-e735c2a2f5ea",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader",
-                        "rootProperty": "ptm"
+                        "rootProperty": "ptm",
+                        "designer|userClassName": "MyJsonReader"
                     },
                     "designerId": "48e355cb-3407-4544-935a-5fd534969295"
                 }

@@ -1,5 +1,5 @@
 {
-    "type": "container",
+    "type": "Ext.Container",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,26 +8,25 @@
     "userConfig": {
         "designer|userClassName": "BASURERO"
     },
-    "id": "ExtBox1-ext-gen34399",
     "designerId": "87cb13c2-ed10-436f-905f-df9d97e01f3e",
     "cn": [
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer11",
                 "docked": "left",
                 "id": "containerVideosPopulares01",
-                "width": 100
+                "width": 100,
+                "designer|userClassName": "MyContainer11"
             },
             "designerId": "18e2e0ed-919c-4e1a-90e7-53d9ba2c1217",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -42,22 +41,22 @@
             ]
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer12",
                 "docked": "left",
                 "id": "containerVideosPopulares02",
-                "width": 100
+                "width": 100,
+                "designer|userClassName": "MyContainer12"
             },
             "designerId": "69cce626-2a6a-4668-94ea-2170ac9b1ab6",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -72,22 +71,22 @@
             ]
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer13",
                 "docked": "left",
                 "id": "containerVideosPopulares03",
-                "width": 100
+                "width": 100,
+                "designer|userClassName": "MyContainer13"
             },
             "designerId": "f8289184-013e-4d66-a63c-510b00b40d52",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -102,7 +101,7 @@
             ]
         },
         {
-            "type": "video",
+            "type": "Ext.Video",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -119,7 +118,7 @@
             "designerId": "fab5b29d-de05-4795-aaf3-ab681864e72a"
         },
         {
-            "type": "video",
+            "type": "Ext.Video",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -140,9 +139,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyAreaChart",
                 "docked": "left",
                 "width": "40%",
+                "designer|userClassName": "MyAreaChart",
                 "colors": [
                     "[",
                     "    \"#115fa6\", ",
@@ -162,9 +161,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyCategoryAxis",
                         "grid": null,
-                        "title": null
+                        "title": null,
+                        "designer|userClassName": "MyCategoryAxis"
                     },
                     "designerId": "8838e0b7-71c5-449a-98ba-030211e2fb57"
                 },
@@ -176,7 +175,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyNumericAxis",
                         "grid": [
                             "{",
                             "    odd: {",
@@ -184,7 +182,8 @@
                             "    }",
                             "}"
                         ],
-                        "position": "left"
+                        "position": "left",
+                        "designer|userClassName": "MyNumericAxis"
                     },
                     "designerId": "8b89ced9-efd4-4641-b95d-1c743f13dbe0"
                 },

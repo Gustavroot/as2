@@ -1,5 +1,5 @@
 {
-    "type": "application",
+    "type": "Ext.app.Application",
     "reference": {
         "name": "items",
         "type": "array"
@@ -24,7 +24,6 @@
         ],
         "name": "MyApp"
     },
-    "id": "ExtBox1-ext-gen1783",
     "designerId": "application",
     "cn": [
         {
@@ -114,15 +113,15 @@
             "designerId": "f1e2a64e-9639-4821-a81e-c9657b2e4a49"
         },
         {
-            "type": "viewport",
+            "type": "Ext.Viewport",
             "reference": {
                 "name": "viewport",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "Viewport",
-                "id": "viewportAspogamo"
+                "id": "viewportAspogamo",
+                "designer|userClassName": "Viewport"
             },
             "designerId": "c4791fd0-ae69-407f-86e5-084fc41fb049"
         }

@@ -1,16 +1,15 @@
 {
-    "type": "container",
+    "type": "Ext.Container",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "id": "containerMain",
         "designer|userClassName": "containerMain",
-        "designer|initialView": true,
-        "id": "containerMain"
+        "designer|initialView": true
     },
-    "id": "ExtBox1-ext-gen8039",
     "designerId": "81d01c9c-eda0-437d-a89c-c0f0e70253a7",
     "cn": [
         {
@@ -21,7 +20,7 @@
             },
             "codeClass": null,
             "designerId": "e15cd85e-3fd0-4c49-b223-33012610179d",
-            "masterInstanceId": "ExtBox1-ext-gen2472"
+            "masterInstanceId": "113c8804-658a-4d7b-a54f-bab8647c7e3d"
         },
         {
             "type": "linkedinstance",
@@ -31,7 +30,7 @@
             },
             "codeClass": null,
             "designerId": "8420bb9e-1493-4af1-893b-55285d5a45a9",
-            "masterInstanceId": "ExtBox1-ext-gen9381"
+            "masterInstanceId": "b7ed987d-97d8-45a4-830b-3fecc1161d65"
         }
     ]
 }

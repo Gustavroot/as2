@@ -1,91 +1,90 @@
 {
-    "type": "container",
+    "type": "Ext.Container",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "containerHeader",
-        "designer|userAlias": "containerheader",
         "height": "20%",
         "html": null,
         "id": "containerHeader",
+        "designer|userClassName": "containerHeader",
+        "designer|userAlias": "containerheader",
         "layout": "fit"
     },
-    "id": "ExtBox1-ext-gen9381",
     "designerId": "b7ed987d-97d8-45a4-830b-3fecc1161d65",
     "cn": [
         {
-            "type": "image",
+            "type": "Ext.Img",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyImage",
                 "height": "60%",
                 "html": "<img src=\"http://pris.eie.ucr.ac.cr/pris/images/3/3f/AspogamoLogo.jpeg\" height=\"100%\" width=\"100%\">",
                 "id": "imagenLogoPris",
                 "itemId": "myimage",
                 "left": "5%",
                 "top": "20%",
-                "width": "20%"
+                "width": "20%",
+                "designer|userClassName": "MyImage"
             },
             "designerId": "e297b75f-9398-4730-a7b3-c70630c13fa6"
         },
         {
-            "type": "image",
+            "type": "Ext.Img",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyImage1",
                 "height": "60%",
                 "html": "<img src=\"resources/images/prisLogo.png\" height=\"100%\" width=\"100%\">",
                 "id": "imagenAvatar",
                 "right": "5%",
                 "top": "20%",
-                "width": "20%"
+                "width": "20%",
+                "designer|userClassName": "MyImage1"
             },
             "designerId": "241c7720-193f-4ee5-ab3a-1b87f26af2dc"
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer4",
                 "height": "40%",
                 "html": "<center> <font face=\"Garamond\"> <font size=\"7\"> <p> ASpoGAMo </p></font> </font> </center>",
                 "id": "containerMainTitle",
                 "left": "30%",
                 "top": "15%",
-                "width": "40%"
+                "width": "40%",
+                "designer|userClassName": "MyContainer4"
             },
             "designerId": "b5e718e6-cba2-427b-bf7a-be9ed597537c"
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer4",
                 "height": "20%",
                 "html": "<center>   <p> Automated Football Player Tracking from TV Broadcast </p> </center>",
                 "id": "containerSloganMain",
                 "left": "0%",
                 "top": "80%",
-                "width": "100%"
+                "width": "100%",
+                "designer|userClassName": "MyContainer4"
             },
             "designerId": "6a597246-f48e-45e4-a6f8-1269b7fa75cb"
         }
