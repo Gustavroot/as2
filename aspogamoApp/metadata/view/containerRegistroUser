@@ -1,0 +1,231 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "containerRegistroUser",
+        "designer|userClassName": "containerRegistroUser",
+        "designer|userAlias": "containerregistrouser"
+    },
+    "designerId": "d31a73b0-6152-49c5-b91b-044e154ce8fb",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "designer|userClassName": "MyToolbar1",
+                "title": "Register"
+            },
+            "designerId": "218f49c3-8cb3-43b7-8396-70f40411ac2c",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "90%",
+                        "right": "5%",
+                        "top": "5%",
+                        "width": "20%",
+                        "designer|userClassName": "MyButton8",
+                        "text": "Back"
+                    },
+                    "designerId": "30cb25b0-3e5e-4abc-bf6f-e40777572388",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerInicial\"));"
+                                ]
+                            },
+                            "designerId": "2a0de7e5-dd8f-439a-bc0f-6d86b4355a69"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "70%",
+                "left": "7.5%",
+                "top": "5%",
+                "width": "85%",
+                "designer|userClassName": "MyFieldSet1",
+                "scrollable": "vertical",
+                "title": null
+            },
+            "designerId": "6a1c4cf3-038a-40d0-8699-1466b8fe614a",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField2",
+                        "label": "Name"
+                    },
+                    "designerId": "50541edc-9d0d-4084-ac61-eaf2a16bdc77"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField3",
+                        "label": "Surname"
+                    },
+                    "designerId": "281abfc4-047e-4e5c-8ae4-16afbe75f999"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField4",
+                        "label": "Country"
+                    },
+                    "designerId": "9df391e6-439b-44bc-8b48-c560993305eb"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySelectField",
+                        "label": "Purpose",
+                        "options": [
+                            "[{text: 'Professional',  value: 'first'},{text: 'Academic', value: 'second'},{text: 'Amateur',  value: 'third'}]"
+                        ]
+                    },
+                    "designerId": "7270130f-f1ee-413c-8700-634549a083d6"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField5",
+                        "label": "Institution",
+                        "placeHolder": "Optional"
+                    },
+                    "designerId": "b805e3b5-9b91-4c9c-b465-f6f1a63daa8f"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField6",
+                        "label": "Employment",
+                        "placeHolder": "Optional"
+                    },
+                    "designerId": "d39253a8-0a9b-4918-84be-eca30ee05215"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField7",
+                        "label": "Email"
+                    },
+                    "designerId": "725c36b6-e098-4d22-978c-5f21c77e21ce"
+                },
+                {
+                    "type": "Ext.field.Password",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPasswordField",
+                        "label": "Password"
+                    },
+                    "designerId": "d31c457e-e887-4be4-872c-28a4e8277a1b"
+                },
+                {
+                    "type": "Ext.field.Password",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPasswordField1",
+                        "label": "Repeat password"
+                    },
+                    "designerId": "29e11dcb-0870-4976-bc69-86b7877fb022"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bottom": "5%",
+                "docked": "bottom",
+                "left": "20%",
+                "ui": "action",
+                "width": "60%",
+                "designer|userClassName": "MyButton10",
+                "text": "Done"
+            },
+            "designerId": "c6b7cdab-70b2-4b0b-b943-dbf2fcbda496"
+        }
+    ]
+}

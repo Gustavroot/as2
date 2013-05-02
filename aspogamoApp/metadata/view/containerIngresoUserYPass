@@ -1,0 +1,141 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "containerIngresoUserYPass",
+        "designer|userClassName": "containerIngresoUserYPass",
+        "designer|userAlias": "mycontainer17",
+        "layout": "fit"
+    },
+    "designerId": "20062490-3db2-44d7-b4eb-d0c759070a4e",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "designer|userClassName": "MyToolbar",
+                "title": "Log In"
+            },
+            "designerId": "7b9c89ee-6454-4d71-a0fd-674acd278c4f",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "90%",
+                        "right": "5%",
+                        "top": "5%",
+                        "width": "20%",
+                        "designer|userClassName": "MyButton8",
+                        "text": "Back"
+                    },
+                    "designerId": "a7ae9cff-a77d-423c-ab3d-a05bc4470277",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerInicial\"));"
+                                ]
+                            },
+                            "designerId": "bd89aaf6-853e-4e42-9917-b46c211c7873"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "30%",
+                "left": "5%",
+                "top": "40%",
+                "width": "90%",
+                "designer|userClassName": "MyFieldSet",
+                "title": null
+            },
+            "designerId": "08385203-31f1-4060-b36a-ac0513bb4998",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "50%",
+                        "id": "textFieldLogInUsername",
+                        "designer|userClassName": "MyTextField",
+                        "label": "Username"
+                    },
+                    "designerId": "3eb4f248-c9ee-4c5d-8f1e-057352bab422"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "50%",
+                        "id": "textFieldLogInPassword",
+                        "itemId": "mytextfield1",
+                        "designer|userClassName": "MyTextField1",
+                        "label": "Password"
+                    },
+                    "designerId": "de69c600-5e38-41d9-b450-82697a0cee93",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onTextFieldLogInPasswordAction",
+                                "fn": "onTextFieldLogInPasswordAction",
+                                "implHandler": [
+                                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerMain\"));"
+                                ],
+                                "name": "action"
+                            },
+                            "designerId": "33e20373-a47a-47c6-acdb-7f9f6dd2cac9"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

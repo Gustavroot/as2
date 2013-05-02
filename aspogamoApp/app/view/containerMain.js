@@ -15,6 +15,7 @@
 
 Ext.define('MyApp.view.containerMain', {
     extend: 'Ext.Container',
+    alias: 'widget.containermain',
 
     requires: [
         'MyApp.view.tabPanelPrincipal',

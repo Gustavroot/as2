@@ -1,0 +1,71 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "tabPanelInicial",
+        "designer|userClassName": "tabPanelInicial",
+        "designer|initialView": true
+    },
+    "designerId": "aa158ca9-ea6b-4e81-935b-94df1e85ade0",
+    "cn": [
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "hidden": true,
+                "designer|userClassName": "MyTabBar",
+                "activeTab": 0
+            },
+            "designerId": "b660fde4-2705-4c4e-96ba-a823c6f000e4"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "f8f9649a-ab18-4996-bea2-c68ab5429d45",
+            "masterInstanceId": "f4c0640b-7280-4a53-90de-f9c6a69f47ce"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "05605ce0-58ca-4ec8-87fb-601fe39a4b8c",
+            "masterInstanceId": "20062490-3db2-44d7-b4eb-d0c759070a4e"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "df355fbc-914c-4132-adef-65d6ec5df190",
+            "masterInstanceId": "81d01c9c-eda0-437d-a89c-c0f0e70253a7"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "6028e3d9-8ea9-4bec-a8a2-e6965e95979a",
+            "masterInstanceId": "d31a73b0-6152-49c5-b91b-044e154ce8fb"
+        }
+    ]
+}

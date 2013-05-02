@@ -129,6 +129,56 @@
                         "text": "Tutorials"
                     },
                     "designerId": "1c1f10e4-7559-43b6-a02b-ca30c67e3bed"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "maxHeight": 20,
+                        "minHeight": 20,
+                        "designer|userClassName": "MySpacer2"
+                    },
+                    "designerId": "102750dc-0157-4c27-8717-10bbc6381145"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "ui": "action-round",
+                        "designer|userClassName": "MyButton6",
+                        "text": "Log Out"
+                    },
+                    "designerId": "85e4e483-d256-4db2-985d-69d97884ee60",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "handler",
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerInicial\"));"
+                                ]
+                            },
+                            "designerId": "9a9741ca-0e96-4fad-b104-0a0fa7931165"
+                        }
+                    ]
                 }
             ]
         }

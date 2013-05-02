@@ -66,6 +66,19 @@ Ext.define('MyApp.view.containerProfile', {
                         xtype: 'button',
                         ui: 'round',
                         text: 'Tutorials'
+                    },
+                    {
+                        xtype: 'spacer',
+                        maxHeight: 20,
+                        minHeight: 20
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp("containerInicial"));
+                        },
+                        ui: 'action-round',
+                        text: 'Log Out'
                     }
                 ]
             }

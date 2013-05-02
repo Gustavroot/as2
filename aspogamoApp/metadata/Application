@@ -20,7 +20,11 @@
             "containerProfile",
             "containerPopular",
             "containerMyVideos",
-            "BASURERO"
+            "BASURERO",
+            "containerInicial",
+            "tabPanelInicial",
+            "containerIngresoUserYPass",
+            "containerRegistroUser"
         ],
         "name": "MyApp"
     },

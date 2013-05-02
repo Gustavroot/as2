@@ -106,10 +106,46 @@
                 "metadata/resource/css"
             ],
             "className": "css"
+        },
+        "f4c0640b-7280-4a53-90de-f9c6a69f47ce": {
+            "paths": [
+                "metadata/view/containerInicial",
+                "app/view/override/containerInicial.js",
+                "app/view/containerInicial.js"
+            ],
+            "className": "containerInicial"
+        },
+        "aa158ca9-ea6b-4e81-935b-94df1e85ade0": {
+            "paths": [
+                "metadata/view/tabPanelInicial",
+                "app/view/override/tabPanelInicial.js",
+                "app/view/tabPanelInicial.js"
+            ],
+            "className": "tabPanelInicial"
+        },
+        "20062490-3db2-44d7-b4eb-d0c759070a4e": {
+            "paths": [
+                "metadata/view/containerIngresoUserYPass",
+                "app/view/override/containerIngresoUserYPass.js",
+                "app/view/containerIngresoUserYPass.js"
+            ],
+            "className": "containerIngresoUserYPass"
+        },
+        "d31a73b0-6152-49c5-b91b-044e154ce8fb": {
+            "paths": [
+                "metadata/view/containerRegistroUser",
+                "app/view/override/containerRegistroUser.js",
+                "app/view/containerRegistroUser.js"
+            ],
+            "className": "containerRegistroUser"
         }
     },
     "viewOrderMap": {
         "view": [
+            "aa158ca9-ea6b-4e81-935b-94df1e85ade0",
+            "f4c0640b-7280-4a53-90de-f9c6a69f47ce",
+            "20062490-3db2-44d7-b4eb-d0c759070a4e",
+            "d31a73b0-6152-49c5-b91b-044e154ce8fb",
             "81d01c9c-eda0-437d-a89c-c0f0e70253a7",
             "b7ed987d-97d8-45a4-830b-3fecc1161d65",
             "113c8804-658a-4d7b-a54f-bab8647c7e3d",

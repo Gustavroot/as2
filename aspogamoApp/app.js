@@ -37,7 +37,11 @@ Ext.application({
         'containerProfile',
         'containerPopular',
         'containerMyVideos',
-        'BASURERO'
+        'BASURERO',
+        'containerInicial',
+        'tabPanelInicial',
+        'containerIngresoUserYPass',
+        'containerRegistroUser'
     ],
     name: 'MyApp',
 
@@ -113,7 +117,7 @@ Ext.application({
         };
 
 
-        Ext.create('MyApp.view.containerMain', {fullscreen: true});
+        Ext.create('MyApp.view.tabPanelInicial', {fullscreen: true});
     }
 
 });

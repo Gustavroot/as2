@@ -8,7 +8,7 @@
     "userConfig": {
         "id": "containerMain",
         "designer|userClassName": "containerMain",
-        "designer|initialView": true
+        "designer|userAlias": "containermain"
     },
     "designerId": "81d01c9c-eda0-437d-a89c-c0f0e70253a7",
     "cn": [

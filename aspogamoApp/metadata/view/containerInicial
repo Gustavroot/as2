@@ -1,0 +1,98 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "containerInicial",
+        "designer|userClassName": "containerInicial",
+        "designer|userAlias": "mycontainer16",
+        "layout": "fit"
+    },
+    "designerId": "f4c0640b-7280-4a53-90de-f9c6a69f47ce",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "10%",
+                "left": "5%",
+                "top": "80%",
+                "ui": "action",
+                "width": "35%",
+                "designer|userClassName": "MyButton6",
+                "text": "Log In"
+            },
+            "designerId": "91fdb072-ba5d-484c-9aa0-0cd8cb04b1fb",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "handler",
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerIngresoUserYPass\"));"
+                        ]
+                    },
+                    "designerId": "e5dbdb05-6b92-47fc-8de0-e1f9df33e306"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "10%",
+                "left": null,
+                "right": "5%",
+                "top": "80%",
+                "ui": "action",
+                "width": "35%",
+                "designer|userClassName": "MyButton6",
+                "text": "Register"
+            },
+            "designerId": "bc0b2898-3bb5-4695-a348-41732f14c608",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "handler",
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerRegistroUser\"));"
+                        ]
+                    },
+                    "designerId": "4e91af46-ad68-4d18-bdfc-37adc42d2ac2"
+                }
+            ]
+        }
+    ]
+}
