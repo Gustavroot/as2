@@ -75,7 +75,54 @@ Ext.define('MyApp.view.containerProfile', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
-                            Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp("containerInicial"));
+                            try{
+                                FB.getLoginStatus(function(response) {
+                                    if (response.status=="connected") {
+                                        //-----------------------------------------------------------------------------------------
+                                        FB.logout(function(response) {
+                                            //DiDi.app.getController("FuncionesGeneral").funcionEjecucionLogOut();
+                                        });
+                                    } else {
+                                    }
+                                });
+                                //DiDi.app.getController("FuncionesGeneral").funcionGuardaUsuarioLogeado(3);
+                                Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp("containerInicial"));
+                            }
+                            catch(e){
+                                Ext.Msg.alert('Aviso', 'Problema de conexión...', Ext.emptyFn);
+                            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         },
                         ui: 'action-round',
                         text: 'Log Out'

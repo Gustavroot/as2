@@ -46,6 +46,93 @@ Ext.application({
     name: 'MyApp',
 
     launch: function() {
+        //AQUI VA EL CODIGO DE VERIFICADO DE GUARDADO DEL LOGIN EN 
+        //EL LOCALSTORAGE
+
+
+
+
+
+        funcionAEjecutarLogeoConFacebook=function(){
+            Ext.getCmp("panelEleccionLogInFacebookOrNot").setHidden(1);
+            Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp("containerMain"));
+        };
+
+
+
+
+
+
+
+        try{
+            //alert(Ext.os.deviceType);
+            if(Ext.os.deviceType!="Desktop"){
+                FB.init({ appId: "162179373948765", nativeInterface: CDV.FB, useCachedDialogs: false });
+            }
+            else{
+                window.fbAsyncInit = function() {
+                    // init the FB JS SDK
+                    FB.init({
+                        appId      : '162179373948765', // App ID from the App Dashboard
+                        channelUrl : '//www.didicr.com/channel.html', // Channel File for x-domain communication
+                        status     : true, // check the login status upon init?
+                        cookie     : true, // set sessions cookies to allow your server to access the session?
+                        xfbml      : true  // parse XFBML tags on this page?
+                    });
+                };
+            }
+            testAPI = function(){
+                //FB.api('/me', function(response) {
+                //---------------------------------------------------------------------------------------------------------------------------------------------------------------
+                //alert("entro en testAPI");
+                var url = '/me?fields=name,email,birthday';
+                FB.api(url, function(response) {
+                    funcionAEjecutarLogeoConFacebook();
+                    //DiDi.app.getController("FuncionesGeneral").funcionEjecucionCodigoInternoFBAPI(response);
+                });
+            };
+            login = function() {
+                //    alert("fgey");
+                FB.login(
+                function(response) {
+                    //alert(response.session);
+                    if (response.authResponse) {
+                        Ext.Msg.alert('Aviso', 'Logeado.', Ext.emptyFn);
+                        testAPI();
+                    } else {
+                        Ext.Msg.alert('Aviso', 'No logeado.', Ext.emptyFn);
+                    }
+                },
+                { scope: "email,user_birthday" }
+                );
+            };
+            if(Ext.os.deviceType=="Desktop"){
+                (function(d, debug){
+                    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+                    if (d.getElementById(id)) {return;}
+                    js = d.createElement('script'); js.id = id; js.async = true;
+                    js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+                    ref.parentNode.insertBefore(js, ref);
+                }(document, false));
+            }
+            //--------------------------------------------------------------------------------------------------------------------------------------
+        }
+        catch(e){
+            Ext.Msg.alert('Aviso', 'Fail to connect with facebook.', Ext.emptyFn);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        //------------------------------------------------------------------------
         //Se define inicialmente la variable para habilitar el dibujado
         variableHabilitarDibujado=0;
         //Cuando esta variable esta en 0, no se puede dibujar, mientras que cuando
