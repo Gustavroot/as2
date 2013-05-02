@@ -38,7 +38,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
                     "//Se define inicialmente la variable para habilitar el dibujado",
@@ -124,8 +123,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "viewportAspogamo",
-                "designer|userClassName": "Viewport"
+                "id": "viewportAspogamo"
             },
             "designerId": "c4791fd0-ae69-407f-86e5-084fc41fb049"
         }

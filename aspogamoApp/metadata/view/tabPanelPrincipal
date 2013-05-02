@@ -26,7 +26,6 @@
             "userConfig": {
                 "container|pack": "center",
                 "docked": "top",
-                "designer|userClassName": "MyTabBar",
                 "scrollable": "horizontal",
                 "activeTab": null
             },
@@ -79,7 +78,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTabPanelMainActiveItemChange",
                 "fn": "onTabPanelMainActiveItemChange",
                 "implHandler": [
                     "//Se setea el html del canvas para que tengas las dimensiones adecuadas",

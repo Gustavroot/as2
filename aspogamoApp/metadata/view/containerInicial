@@ -26,7 +26,6 @@
                 "top": "80%",
                 "ui": "action",
                 "width": "35%",
-                "designer|userClassName": "MyButton6",
                 "text": "Log In"
             },
             "designerId": "91fdb072-ba5d-484c-9aa0-0cd8cb04b1fb",
@@ -39,14 +38,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "handler",
                         "fn": "handler",
                         "designer|params": [
                             "button",
                             "event"
                         ],
                         "implHandler": [
-                            "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerIngresoUserYPass\"));"
+                            "Ext.getCmp(\"panelEleccionLogInFacebookOrNot\").setHidden(0);"
                         ]
                     },
                     "designerId": "e5dbdb05-6b92-47fc-8de0-e1f9df33e306"
@@ -67,7 +65,6 @@
                 "top": "80%",
                 "ui": "action",
                 "width": "35%",
-                "designer|userClassName": "MyButton6",
                 "text": "Register"
             },
             "designerId": "bc0b2898-3bb5-4695-a348-41732f14c608",
@@ -80,7 +77,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "handler",
                         "fn": "handler",
                         "designer|params": [
                             "button",
@@ -91,6 +87,109 @@
                         ]
                     },
                     "designerId": "4e91af46-ad68-4d18-bdfc-37adc42d2ac2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "50%",
+                "hidden": true,
+                "id": "panelEleccionLogInFacebookOrNot",
+                "left": "5%",
+                "top": "5%",
+                "width": "90%",
+                "modal": true
+            },
+            "designerId": "307dbfed-d196-46ac-8520-dfca17c2546d",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "title": "Log In with"
+                    },
+                    "designerId": "167a2c96-2e48-454d-949d-8c2f9a5cedbb"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "50%",
+                        "text": "Regular Log In"
+                    },
+                    "designerId": "e90fb0f8-3d55-44ca-becc-a8f47d534c8e",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"panelEleccionLogInFacebookOrNot\").setHidden(1);",
+                                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerIngresoUserYPass\"));"
+                                ]
+                            },
+                            "designerId": "505e2fde-7934-4862-b6f0-35985e5d42ce"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "50%",
+                        "text": "Facebook"
+                    },
+                    "designerId": "4d8e5ea2-7298-4146-98e7-2f6450d5f8c7",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp(\"panelEleccionLogInFacebookOrNot\").setHidden(1);",
+                                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerMain\"));"
+                                ]
+                            },
+                            "designerId": "a49982e5-295b-4f87-bd05-1bacbe5cf6ea"
+                        }
+                    ]
                 }
             ]
         }

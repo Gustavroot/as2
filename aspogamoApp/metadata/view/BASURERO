@@ -20,8 +20,7 @@
             "userConfig": {
                 "docked": "left",
                 "id": "containerVideosPopulares01",
-                "width": 100,
-                "designer|userClassName": "MyContainer11"
+                "width": 100
             },
             "designerId": "18e2e0ed-919c-4e1a-90e7-53d9ba2c1217",
             "cn": [
@@ -33,7 +32,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton",
                         "text": "MyButton"
                     },
                     "designerId": "4db9e50f-193f-41a6-8c55-41360b187f76"
@@ -50,8 +48,7 @@
             "userConfig": {
                 "docked": "left",
                 "id": "containerVideosPopulares02",
-                "width": 100,
-                "designer|userClassName": "MyContainer12"
+                "width": 100
             },
             "designerId": "69cce626-2a6a-4668-94ea-2170ac9b1ab6",
             "cn": [
@@ -63,7 +60,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton1",
                         "text": "MyButton1"
                     },
                     "designerId": "e8e857db-bac6-4e5a-8333-064068227b43"
@@ -80,8 +76,7 @@
             "userConfig": {
                 "docked": "left",
                 "id": "containerVideosPopulares03",
-                "width": 100,
-                "designer|userClassName": "MyContainer13"
+                "width": 100
             },
             "designerId": "f8289184-013e-4d66-a63c-510b00b40d52",
             "cn": [
@@ -93,7 +88,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton2",
                         "text": "MyButton2"
                     },
                     "designerId": "1ca77c70-a4a5-4958-b251-193f449e9e7f"
@@ -108,7 +102,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyVideo",
                 "url": "./resources/videos/2.mp4",
                 "urls": null
             },
@@ -125,7 +118,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyVideo1",
                 "autoResume": true,
                 "url": "./resources/videos/2.mp4"
             },
@@ -141,7 +133,6 @@
             "userConfig": {
                 "docked": "left",
                 "width": "40%",
-                "designer|userClassName": "MyAreaChart",
                 "colors": [
                     "[",
                     "    \"#115fa6\", ",
@@ -162,8 +153,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "grid": null,
-                        "title": null,
-                        "designer|userClassName": "MyCategoryAxis"
+                        "title": null
                     },
                     "designerId": "8838e0b7-71c5-449a-98ba-030211e2fb57"
                 },
@@ -182,8 +172,7 @@
                             "    }",
                             "}"
                         ],
-                        "position": "left",
-                        "designer|userClassName": "MyNumericAxis"
+                        "position": "left"
                     },
                     "designerId": "8b89ced9-efd4-4641-b95d-1c743f13dbe0"
                 },
@@ -195,7 +184,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyAreaSeries",
                         "xField": "Posicion",
                         "yField": [
                             "idBannerPrincipal"
@@ -210,9 +198,6 @@
                         "type": "array"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyPanZoomInteraction"
-                    },
                     "designerId": "82921fea-04df-4e45-b0a5-00da19a435ba"
                 }
             ]

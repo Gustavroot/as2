@@ -20,7 +20,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyJsonPProxy",
                 "url": "http://www.didicr.com/php/bannerPrincipal.php"
             },
             "designerId": "24368bbf-deb7-4ea7-b1ce-e735c2a2f5ea",
@@ -33,8 +32,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "rootProperty": "ptm",
-                        "designer|userClassName": "MyJsonReader"
+                        "rootProperty": "ptm"
                     },
                     "designerId": "48e355cb-3407-4544-935a-5fd534969295"
                 }

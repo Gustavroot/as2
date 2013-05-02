@@ -9,18 +9,12 @@
         "genTimestamps": false,
         "cacheBust": false
     },
-    "xdsVersion": "2.2.0",
-    "xdsBuild": 908,
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 971,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000499,
+    "upgradeVersion": 210000000501,
     "framework": "touch21",
     "topInstanceFileMap": {
-        "c0e70d3c-ea81-4464-9007-2376fe53ccae": {
-            "paths": [
-                "metadata/resource/Library"
-            ],
-            "className": "Library"
-        },
         "113c8804-658a-4d7b-a54f-bab8647c7e3d": {
             "paths": [
                 "metadata/view/tabPanelPrincipal",
@@ -138,6 +132,12 @@
                 "app/view/containerRegistroUser.js"
             ],
             "className": "containerRegistroUser"
+        },
+        "a4139dbc-1f15-4abb-b4ef-d3fef8ca8f2c": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
         }
     },
     "viewOrderMap": {
@@ -163,8 +163,8 @@
             "bcf5cd33-4008-4485-ad60-d409898c0513"
         ],
         "resource": [
-            "4e3e7abc-29d3-4339-981a-a0f35f5f34e2",
-            "c0e70d3c-ea81-4464-9007-2376fe53ccae"
+            "a4139dbc-1f15-4abb-b4ef-d3fef8ca8f2c",
+            "4e3e7abc-29d3-4339-981a-a0f35f5f34e2"
         ],
         "app": [
             "application"

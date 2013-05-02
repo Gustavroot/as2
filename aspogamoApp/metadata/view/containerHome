@@ -27,7 +27,6 @@
                 "left": 0,
                 "top": 0,
                 "width": "100%",
-                "designer|userClassName": "MyContainer8",
                 "layout": "hbox",
                 "scrollable": "horizontal"
             },
@@ -47,7 +46,6 @@
                 "left": "3%",
                 "top": "25%",
                 "width": "44%",
-                "designer|userClassName": "MyContainer9",
                 "layout": "fit"
             },
             "designerId": "2d0cae26-0850-4266-be90-64884ce3a1e1"
@@ -66,7 +64,6 @@
                 "right": "3%",
                 "top": "25%",
                 "width": "44%",
-                "designer|userClassName": "MyContainer9",
                 "layout": "fit"
             },
             "designerId": "38d1218b-4053-4373-9e80-0c9f7b139165"

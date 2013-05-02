@@ -23,7 +23,6 @@
             "userConfig": {
                 "id": "containerProfileButtons",
                 "width": "23%",
-                "designer|userClassName": "MyContainer15",
                 "layout": "vbox",
                 "scrollable": "vertical"
             },
@@ -40,7 +39,6 @@
                         "height": null,
                         "maxHeight": null,
                         "ui": "confirm-round",
-                        "designer|userClassName": "MyButton3",
                         "text": "Notifications"
                     },
                     "designerId": "7c5fb312-9138-4152-8139-ce49877f0ef0"
@@ -55,8 +53,7 @@
                     "userConfig": {
                         "height": null,
                         "maxHeight": 20,
-                        "minHeight": 20,
-                        "designer|userClassName": "MySpacer"
+                        "minHeight": 20
                     },
                     "designerId": "6a2e618d-1e02-4f11-b74d-19d5a596eaa1"
                 },
@@ -69,7 +66,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "ui": "action-round",
-                        "designer|userClassName": "MyButton4",
                         "text": "Account"
                     },
                     "designerId": "f1e6bf99-5485-497e-94c9-bf441f59a046"
@@ -83,8 +79,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "maxHeight": 20,
-                        "minHeight": 20,
-                        "designer|userClassName": "MySpacer1"
+                        "minHeight": 20
                     },
                     "designerId": "00da2eca-c70b-4994-8cef-3f39e5a6fcea"
                 },
@@ -97,7 +92,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "ui": "decline-round",
-                        "designer|userClassName": "MyButton5",
                         "text": "Statistics"
                     },
                     "designerId": "ca1c5764-6631-463a-b030-b439eac1939a"
@@ -111,8 +105,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "maxHeight": 20,
-                        "minHeight": 20,
-                        "designer|userClassName": "MySpacer2"
+                        "minHeight": 20
                     },
                     "designerId": "01b24507-6815-473d-89e1-f4ee4183472f"
                 },
@@ -125,7 +118,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "ui": "round",
-                        "designer|userClassName": "MyButton6",
                         "text": "Tutorials"
                     },
                     "designerId": "1c1f10e4-7559-43b6-a02b-ca30c67e3bed"
@@ -139,8 +131,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "maxHeight": 20,
-                        "minHeight": 20,
-                        "designer|userClassName": "MySpacer2"
+                        "minHeight": 20
                     },
                     "designerId": "102750dc-0157-4c27-8717-10bbc6381145"
                 },
@@ -153,7 +144,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "ui": "action-round",
-                        "designer|userClassName": "MyButton6",
                         "text": "Log Out"
                     },
                     "designerId": "85e4e483-d256-4db2-985d-69d97884ee60",
@@ -166,7 +156,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "handler",
                                 "fn": "handler",
                                 "designer|params": [
                                     "button",

@@ -22,7 +22,6 @@
             "userConfig": {
                 "docked": "top",
                 "hidden": true,
-                "designer|userClassName": "MyTabBar",
                 "activeTab": 0
             },
             "designerId": "b660fde4-2705-4c4e-96ba-a823c6f000e4"

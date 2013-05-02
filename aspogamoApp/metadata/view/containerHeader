@@ -29,8 +29,7 @@
                 "itemId": "myimage",
                 "left": "5%",
                 "top": "20%",
-                "width": "20%",
-                "designer|userClassName": "MyImage"
+                "width": "20%"
             },
             "designerId": "e297b75f-9398-4730-a7b3-c70630c13fa6"
         },
@@ -47,8 +46,7 @@
                 "id": "imagenAvatar",
                 "right": "5%",
                 "top": "20%",
-                "width": "20%",
-                "designer|userClassName": "MyImage1"
+                "width": "20%"
             },
             "designerId": "241c7720-193f-4ee5-ab3a-1b87f26af2dc"
         },
@@ -65,8 +63,7 @@
                 "id": "containerMainTitle",
                 "left": "30%",
                 "top": "15%",
-                "width": "40%",
-                "designer|userClassName": "MyContainer4"
+                "width": "40%"
             },
             "designerId": "b5e718e6-cba2-427b-bf7a-be9ed597537c"
         },
@@ -83,8 +80,7 @@
                 "id": "containerSloganMain",
                 "left": "0%",
                 "top": "80%",
-                "width": "100%",
-                "designer|userClassName": "MyContainer4"
+                "width": "100%"
             },
             "designerId": "6a597246-f48e-45e4-a6f8-1269b7fa75cb"
         }
