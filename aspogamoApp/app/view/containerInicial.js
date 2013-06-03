@@ -65,10 +65,7 @@ Ext.define('MyApp.view.containerInicial', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
-                            Ext.getCmp("panelEleccionLogInFacebookOrNot").setHidden(1);
-                            Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp("containerIngresoUserYPass"));
-
-
+                            MyApp.app.logInSinFacebookSettings();
                         },
                         height: '50%',
                         text: 'Regular Log In'
@@ -83,7 +80,8 @@ Ext.define('MyApp.view.containerInicial', {
                                         FB.api(url, function(response) {
                                             //window.open('http://graph.facebook.com/'+response.id+'/picture');
                                             //alert(response.name);
-                                            funcionAEjecutarLogeoConFacebook();
+                                            //funcionAEjecutarLogeoConFacebook();
+                                            MyApp.app.logInFacebookSettings();
                                             //alert(response.birthday);
                                             //alert(response.picture);
                                             //alert(response.user_birthday);

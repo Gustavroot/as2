@@ -44,17 +44,6 @@
                     "//EL LOCALSTORAGE",
                     "",
                     "",
-                    "funcionAEjecutarLogeoConFacebook=function(){",
-                    "    Ext.getCmp(\"panelEleccionLogInFacebookOrNot\").setHidden(1);",
-                    "    Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerMain\"));",
-                    "};",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
                     "try{",
                     "    //alert(Ext.os.deviceType);",
                     "    if(Ext.os.deviceType!=\"Desktop\"){",
@@ -78,7 +67,8 @@
                     "        //alert(\"entro en testAPI\");",
                     "        var url = '/me?fields=name,email,birthday';",
                     "        FB.api(url, function(response) {",
-                    "            funcionAEjecutarLogeoConFacebook();",
+                    "            //funcionAEjecutarLogeoConFacebook();",
+                    "            MyApp.app.logInFacebookSettings();",
                     "            //DiDi.app.getController(\"FuncionesGeneral\").funcionEjecucionCodigoInternoFBAPI(response);",
                     "        });",
                     "    };",
@@ -210,7 +200,7 @@
                 "fn": "funcionSeteadoConfigInicial",
                 "implHandler": [
                     "//Se setea el html del canvas para que tengas las dimensiones adecuadas",
-                    "Ext.getCmp(\"containerMyVideosCanvas\").setHtml(\"<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width=\"+Ext.getCmp(\"viewportAspogamo\").getWindowWidth()*0.9+\"px height=\"+Ext.getCmp(\"viewportAspogamo\").getWindowHeight()*0.8*0.85+\"px></canvas> </div>\");"
+                    "Ext.getCmp(\"containerMyVideosCanvas\").setHtml(\"<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width=\"+Ext.Viewport.getWindowWidth()*0.9+\"px height=\"+Ext.Viewport.getWindowHeight()*0.8*0.85+\"px></canvas> </div>\");"
                 ]
             },
             "designerId": "c9c1ae65-cd86-4ab7-a0f9-5a217766d179"
@@ -224,7 +214,15 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "funcionLogInGeneral",
+                "designer|params": [
+                    "haciaView"
+                ],
                 "implHandler": [
+                    "Ext.getCmp(\"panelEleccionLogInFacebookOrNot\").setHidden(1);",
+                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(haciaView));",
+                    "",
+                    "",
+                    "",
                     "//Llamado sujeto a paso de parametros",
                     "MyApp.app.funcionSeteadoConfigInicial();"
                 ]
@@ -241,7 +239,7 @@
             "userConfig": {
                 "fn": "logInFacebookSettings",
                 "implHandler": [
-                    ""
+                    "MyApp.app.funcionLogInGeneral('containerMain');"
                 ]
             },
             "designerId": "8dbb765d-a0a4-48af-8915-e0e3528b2e17"
@@ -256,7 +254,7 @@
             "userConfig": {
                 "fn": "logInSinFacebookSettings",
                 "implHandler": [
-                    ""
+                    "MyApp.app.funcionLogInGeneral('containerIngresoUserYPass');"
                 ]
             },
             "designerId": "a2b1dad5-11e2-4035-b927-1849b8c4b6f5"

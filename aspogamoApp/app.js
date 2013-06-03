@@ -46,17 +46,6 @@ Ext.application({
         //EL LOCALSTORAGE
 
 
-        funcionAEjecutarLogeoConFacebook=function(){
-            Ext.getCmp("panelEleccionLogInFacebookOrNot").setHidden(1);
-            Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp("containerMain"));
-        };
-
-
-
-
-
-
-
         try{
             //alert(Ext.os.deviceType);
             if(Ext.os.deviceType!="Desktop"){
@@ -80,7 +69,8 @@ Ext.application({
                 //alert("entro en testAPI");
                 var url = '/me?fields=name,email,birthday';
                 FB.api(url, function(response) {
-                    funcionAEjecutarLogeoConFacebook();
+                    //funcionAEjecutarLogeoConFacebook();
+                    MyApp.app.logInFacebookSettings();
                     //DiDi.app.getController("FuncionesGeneral").funcionEjecucionCodigoInternoFBAPI(response);
                 });
             };
@@ -202,20 +192,25 @@ Ext.application({
 
     funcionSeteadoConfigInicial: function() {
         //Se setea el html del canvas para que tengas las dimensiones adecuadas
-        Ext.getCmp("containerMyVideosCanvas").setHtml("<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width="+Ext.getCmp("viewportAspogamo").getWindowWidth()*0.9+"px height="+Ext.getCmp("viewportAspogamo").getWindowHeight()*0.8*0.85+"px></canvas> </div>");
+        Ext.getCmp("containerMyVideosCanvas").setHtml("<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width="+Ext.Viewport.getWindowWidth()*0.9+"px height="+Ext.Viewport.getWindowHeight()*0.8*0.85+"px></canvas> </div>");
     },
 
-    funcionLogInGeneral: function() {
+    funcionLogInGeneral: function(haciaView) {
+        Ext.getCmp("panelEleccionLogInFacebookOrNot").setHidden(1);
+        Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp(haciaView));
+
+
+
         //Llamado sujeto a paso de parametros
         MyApp.app.funcionSeteadoConfigInicial();
     },
 
     logInFacebookSettings: function() {
-
+        MyApp.app.funcionLogInGeneral('containerMain');
     },
 
     logInSinFacebookSettings: function() {
-
+        MyApp.app.funcionLogInGeneral('containerIngresoUserYPass');
     }
 
 });

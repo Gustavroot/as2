@@ -148,10 +148,7 @@
                                     "event"
                                 ],
                                 "implHandler": [
-                                    "Ext.getCmp(\"panelEleccionLogInFacebookOrNot\").setHidden(1);",
-                                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerIngresoUserYPass\"));",
-                                    "",
-                                    ""
+                                    "MyApp.app.logInSinFacebookSettings();"
                                 ]
                             },
                             "designerId": "505e2fde-7934-4862-b6f0-35985e5d42ce"
@@ -192,7 +189,8 @@
                                     "            FB.api(url, function(response) {",
                                     "                //window.open('http://graph.facebook.com/'+response.id+'/picture');",
                                     "                //alert(response.name);",
-                                    "                funcionAEjecutarLogeoConFacebook();",
+                                    "                //funcionAEjecutarLogeoConFacebook();",
+                                    "                MyApp.app.logInFacebookSettings();",
                                     "                //alert(response.birthday);",
                                     "                //alert(response.picture);",
                                     "                //alert(response.user_birthday);",
@@ -203,21 +201,21 @@
                                     "                //se modifica el boton de Usuario",
                                     "                //Ext.getCmp(\"toolbarDelContainerPerfilDeUsuario\").setTitle(nombreDelUsuarioPerfil);",
                                     "            },{ perms: 'email, user_birthday,access_token' });",
-                                    "                //FUNCION QUE LLEVA A CABO LA MAYORIA DEL CODIGO INICIAL",
-                                    "                //DiDi.app.getController(\"FuncionesGeneral\").funcionBotonLogIn();",
-                                    "                //Ext.Msg.alert('Aviso', 'Su sesión ya está iniciada y autorizada.', Ext.emptyFn);",
-                                    "            } else if (response.status==\"not_authorized\") {",
-                                    "                // not_authorized",
-                                    "                login();",
-                                    "            } else {",
-                                    "                // not_logged_in",
-                                    "                login();",
-                                    "            }",
-                                    "        },{ perms: 'email,user_birthday,access_token'});",
+                                    "            //FUNCION QUE LLEVA A CABO LA MAYORIA DEL CODIGO INICIAL",
+                                    "            //DiDi.app.getController(\"FuncionesGeneral\").funcionBotonLogIn();",
+                                    "            //Ext.Msg.alert('Aviso', 'Su sesión ya está iniciada y autorizada.', Ext.emptyFn);",
+                                    "        } else if (response.status==\"not_authorized\") {",
+                                    "            // not_authorized",
+                                    "            login();",
+                                    "        } else {",
+                                    "            // not_logged_in",
+                                    "            login();",
                                     "        }",
-                                    "        catch(e){",
-                                    "            Ext.Msg.alert('Aviso', 'No se pudo conectar con Facebook.', Ext.emptyFn);",
-                                    "        }"
+                                    "    },{ perms: 'email,user_birthday,access_token'});",
+                                    "}",
+                                    "catch(e){",
+                                    "    Ext.Msg.alert('Aviso', 'No se pudo conectar con Facebook.', Ext.emptyFn);",
+                                    "}"
                                 ]
                             },
                             "designerId": "a49982e5-295b-4f87-bd05-1bacbe5cf6ea"
