@@ -113,7 +113,17 @@ Ext.define('MyApp.view.containerInicial', {
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onContainerInicialPainted',
+                event: 'painted'
+            }
         ]
+    },
+
+    onContainerInicialPainted: function(element, eOpts) {
+        this.setHtml("<img src='./resources/images/prisLogo.png' height='"+Ext.Viewport.getWindowHeight()*0.7+"px' width='100%'/>");
     }
 
 });

@@ -27,7 +27,7 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
     config: {
         height: '80%',
         id: 'tabPanelMain',
-        top: '20%',
+        top: '25%',
         width: '100%',
         layout: {
             animation: 'fade',

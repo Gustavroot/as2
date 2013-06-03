@@ -9,7 +9,7 @@
         "container|animation": "fade",
         "height": "80%",
         "id": "tabPanelMain",
-        "top": "20%",
+        "top": "25%",
         "width": "100%",
         "designer|userClassName": "tabPanelPrincipal",
         "designer|userAlias": "tabpanelprincipal"

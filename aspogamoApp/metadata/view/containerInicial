@@ -223,6 +223,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onContainerInicialPainted",
+                "implHandler": [
+                    "this.setHtml(\"<img src='./resources/images/prisLogo.png' height='\"+Ext.Viewport.getWindowHeight()*0.7+\"px' width='100%'/>\");"
+                ],
+                "name": "painted"
+            },
+            "designerId": "0feb7432-6cc4-4184-87e8-347b67b98336"
         }
     ]
 }

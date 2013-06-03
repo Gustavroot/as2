@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "height": "20%",
+        "height": "25%",
         "html": null,
         "id": "containerHeader",
         "designer|userClassName": "containerHeader",
@@ -59,7 +59,7 @@
             "codeClass": null,
             "userConfig": {
                 "height": "40%",
-                "html": "<center> <font face=\"Garamond\"> <font size=\"7\"> <p> ASpoGAMo </p></font> </font> </center>",
+                "html": "<center> <font face=\"Garamond\" size='100%'> <p> ASpoGAMo </p> </font> </center>",
                 "id": "containerMainTitle",
                 "left": "30%",
                 "top": "15%",

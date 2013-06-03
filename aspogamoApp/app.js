@@ -19,10 +19,6 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
-    viewport: {
-        id: 'viewportAspogamo'
-    },
-
     models: [
         'modelPrueba'
     ],
@@ -48,9 +44,6 @@ Ext.application({
     launch: function() {
         //AQUI VA EL CODIGO DE VERIFICADO DE GUARDADO DEL LOGIN EN 
         //EL LOCALSTORAGE
-
-
-
 
 
         funcionAEjecutarLogeoConFacebook=function(){

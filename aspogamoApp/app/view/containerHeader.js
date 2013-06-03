@@ -18,7 +18,7 @@ Ext.define('MyApp.view.containerHeader', {
     alias: 'widget.containerheader',
 
     config: {
-        height: '20%',
+        height: '25%',
         id: 'containerHeader',
         layout: {
             type: 'fit'
@@ -46,7 +46,7 @@ Ext.define('MyApp.view.containerHeader', {
             {
                 xtype: 'container',
                 height: '40%',
-                html: '<center> <font face="Garamond"> <font size="7"> <p> ASpoGAMo </p></font> </font> </center>',
+                html: '<center> <font face="Garamond" size=\'100%\'> <p> ASpoGAMo </p> </font> </center>',
                 id: 'containerMainTitle',
                 left: '30%',
                 top: '15%',

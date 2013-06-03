@@ -44,9 +44,6 @@
                     "//EL LOCALSTORAGE",
                     "",
                     "",
-                    "",
-                    "",
-                    "",
                     "funcionAEjecutarLogeoConFacebook=function(){",
                     "    Ext.getCmp(\"panelEleccionLogInFacebookOrNot\").setHidden(1);",
                     "    Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerMain\"));",
@@ -59,19 +56,19 @@
                     "",
                     "",
                     "try{",
-                    "//alert(Ext.os.deviceType);",
+                    "    //alert(Ext.os.deviceType);",
                     "    if(Ext.os.deviceType!=\"Desktop\"){",
                     "        FB.init({ appId: \"162179373948765\", nativeInterface: CDV.FB, useCachedDialogs: false });",
                     "    }",
                     "    else{",
                     "        window.fbAsyncInit = function() {",
-                    "        // init the FB JS SDK",
-                    "        FB.init({",
-                    "            appId      : '162179373948765', // App ID from the App Dashboard",
-                    "            channelUrl : '//www.didicr.com/channel.html', // Channel File for x-domain communication",
-                    "            status     : true, // check the login status upon init?",
-                    "            cookie     : true, // set sessions cookies to allow your server to access the session?",
-                    "            xfbml      : true  // parse XFBML tags on this page?",
+                    "            // init the FB JS SDK",
+                    "            FB.init({",
+                    "                appId      : '162179373948765', // App ID from the App Dashboard",
+                    "                channelUrl : '//www.didicr.com/channel.html', // Channel File for x-domain communication",
+                    "                status     : true, // check the login status upon init?",
+                    "                cookie     : true, // set sessions cookies to allow your server to access the session?",
+                    "                xfbml      : true  // parse XFBML tags on this page?",
                     "            });",
                     "        };",
                     "    }",
@@ -201,18 +198,6 @@
                 ]
             },
             "designerId": "f1e2a64e-9639-4821-a81e-c9657b2e4a49"
-        },
-        {
-            "type": "Ext.Viewport",
-            "reference": {
-                "name": "viewport",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "id": "viewportAspogamo"
-            },
-            "designerId": "c4791fd0-ae69-407f-86e5-084fc41fb049"
         }
     ]
 }
