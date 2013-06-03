@@ -1,1 +1,1 @@
- - 
+ - El componente llamado containerMyVideosOriginal es un container oculto, el cual corre el video, y del cual se hace copia para poderlo dibujar en el canvas del container containerMyVideosCanvas.

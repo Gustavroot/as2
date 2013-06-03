@@ -91,38 +91,6 @@ Ext.define('MyApp.view.containerProfile', {
                             catch(e){
                                 Ext.Msg.alert('Aviso', 'Problema de conexión...', Ext.emptyFn);
                             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         },
                         ui: 'action-round',
                         text: 'Log Out'

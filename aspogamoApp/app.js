@@ -167,32 +167,102 @@ Ext.application({
 
 
 
-        funcionIniciadoPlayMyVideos=function(video){
-            video.addEventListener('play', function(){
-                video.playbackRate=1;
-                variableBoolParaDetencionDraw=0;
-                cw = video.clientWidth;
-                ch = video.clientHeight;
-                //alert(Ext.getCmp("viewportAspogamo").getWindowWidth());
-                variableContainerVideoPopularCanvas.width = Ext.getCmp("viewportAspogamo").getWindowWidth()*0.9;
-                variableContainerVideoPopularCanvas.height = Ext.getCmp("viewportAspogamo").getWindowHeight()*0.8*0.75;
-                canvasContext=variableContainerVideoPopularCanvas.getContext('2d');
-                draw(video,canvasContext,canvasContext,variableContainerVideoPopularCanvas.width,variableContainerVideoPopularCanvas.height);
-            },false);
-            //En caso de que se detenga el video, se detiene el dibujado del
-            //video sobre el canvas
-            video.addEventListener('stop', function(){
-                variableBoolParaDetencionDraw=1;
-            },false);
-        };
-
 
         Ext.create('MyApp.view.tabPanelInicial', {fullscreen: true});
     },
 
     funcionSeteadoConfigInicial: function() {
-        //Se setea el html del canvas para que tengas las dimensiones adecuadas
+        Ext.getCmp('containerMyVideosOriginal').setHtml("<p><video id='videoContainerMyVideos' width='100%' autoplay controls src='./resources/videos/SenchaDraw-Demo.mp4' type='video/mp4'>Bla.</video></p>");
+
+
+        //Se setea el html del canvas para que tenga las dimensiones adecuadas
         Ext.getCmp("containerMyVideosCanvas").setHtml("<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width="+Ext.Viewport.getWindowWidth()*0.9+"px height="+Ext.Viewport.getWindowHeight()*0.8*0.85+"px></canvas> </div>");
+
+
+        //INICIALIZACION DE COSAS NECESARIAS PARA EL DIBUJADO
+        //Esto 3 arreglos permite hacer el REdibujado, y el tercero
+        //de estos arreglos es el que permite hacer la identificacion
+        //de cuando se despego del dibujado el dedo o el mouse
+        arregloDePuntosDibujoX=[];
+        arregloDePuntosDibujoY=[];
+        arregloDePuntosDibujoBool=[];
+        //Se pone a escuchar al containerMyVideosCanvas ante el toque inicial
+        Ext.getCmp("containerMyVideosCanvas").element.on({
+            touchstart: function(e,node){
+                alert('se toco!');
+                if(variableHabilitarDibujado==1){
+                    //document.getElementById("videoContainerMyVideos").webkitEnterFullscreen();
+                    canvasContext=e.target.getContext("2d");
+                    canvasContext.moveTo(e.target.layerX,e.target.layerY);
+                    //
+                    puntoTocadoAnteriorX=e.event.layerX;
+                    puntoTocadoAnteriorY=e.event.layerY;
+                    //
+                    arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);
+                    arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);
+                    arregloDePuntosDibujoBool.push(1);
+                }
+            }
+        });
+        //Se hace que el containerMyVideosCanvas quede escuchando el evento
+        //de continuar tocando despues del toque inicial
+        Ext.getCmp("containerMyVideosCanvas").element.on({
+            touchmove: function(e,node){
+                if(variableHabilitarDibujado==1){
+                    //----------------------------------------------------------------
+                    canvasContext=e.target.getContext("2d");
+                    canvasContext.strokeStyle='rgb(55,55,255)';
+                    canvasContext.beginPath();
+                    canvasContext.moveTo(puntoTocadoAnteriorX,puntoTocadoAnteriorY);
+                    //
+                    canvasContext.lineTo(e.event.layerX,e.event.layerY);
+                    canvasContext.stroke();
+                    canvasContext.closePath();
+                    //
+                    puntoTocadoAnteriorX=e.event.layerX;
+                    puntoTocadoAnteriorY=e.event.layerY;
+                    //
+                    arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);
+                    arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);
+                    arregloDePuntosDibujoBool.push(0);
+                }
+                //----------------------------------------------------------------
+            }
+        });
+        Ext.getCmp("containerMyVideosCanvas").element.on({
+            touchend: function(e,node){
+                variableHabilitarDibujado=0;
+                Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setText("Seguir jugador");
+                Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setUi("normal");
+                //falta aqui codigo de enviar informacion de posiciones, un .load
+                arregloDePuntosDibujoX=[];
+                arregloDePuntosDibujoY=[];
+                arregloDePuntosDibujoBool=[];
+            }
+        });
+
+
+        //Se agrega el evevnto de play al video original, de manera tal que dibuje en el
+        //otro canvas
+        document.getElementById("videoContainerMyVideos").addEventListener('play', function(){
+            /*
+            document.getElementById("videoContainerMyVideos").playbackRate=1;
+            variableBoolParaDetencionDraw=0;
+            cw = document.getElementById("videoContainerMyVideos").clientWidth;
+            ch = document.getElementById("videoContainerMyVideos").clientHeight;
+            //alert(Ext.Viewport.getWindowWidth());
+            document.getElementById("canvasContainerMyVideos").width = Ext.Viewport.getWindowWidth()*0.9;
+            document.getElementById("canvasContainerMyVideos").height = Ext.Viewport.getWindowHeight()*0.8*0.75;
+            canvasContext=document.getElementById("canvasContainerMyVideos").getContext('2d');
+            draw(document.getElementById("videoContainerMyVideos"),canvasContext,canvasContext,document.getElementById("canvasContainerMyVideos").width,document.getElementById("canvasContainerMyVideos").height);
+            alert('dibujando');
+            */
+        },false);
+        //En caso de que se detenga el video, se detiene el dibujado del
+        //video sobre el canvas
+        document.getElementById("videoContainerMyVideos").addEventListener('stop', function(){
+            variableBoolParaDetencionDraw=1;
+        },false);
     },
 
     funcionLogInGeneral: function() {

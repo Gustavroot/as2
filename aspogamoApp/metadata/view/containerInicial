@@ -152,7 +152,7 @@
                                     "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp('containerIngresoUserYPass'));",
                                     "",
                                     "",
-                                    "MyApp.app.logInSinFacebookSettings();"
+                                    "//MyApp.app.logInSinFacebookSettings();"
                                 ]
                             },
                             "designerId": "505e2fde-7934-4862-b6f0-35985e5d42ce"

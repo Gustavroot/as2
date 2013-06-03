@@ -69,7 +69,7 @@ Ext.define('MyApp.view.containerInicial', {
                             Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp('containerIngresoUserYPass'));
 
 
-
+                            //MyApp.app.logInSinFacebookSettings();
                         },
                         height: '50%',
                         text: 'Regular Log In'

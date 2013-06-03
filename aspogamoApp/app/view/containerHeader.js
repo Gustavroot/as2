@@ -25,20 +25,17 @@ Ext.define('MyApp.view.containerHeader', {
         },
         items: [
             {
-                xtype: 'image',
+                xtype: 'container',
                 height: '60%',
-                html: '<img src="http://pris.eie.ucr.ac.cr/pris/images/3/3f/AspogamoLogo.jpeg" height="100%" width="100%">',
-                id: 'imagenLogoPris',
-                itemId: 'myimage',
+                html: '<img src="resources/images/prisLogo.png" height="100%" width="100%">',
                 left: '5%',
                 top: '20%',
                 width: '20%'
             },
             {
-                xtype: 'image',
+                xtype: 'container',
                 height: '60%',
                 html: '<img src="resources/images/prisLogo.png" height="100%" width="100%">',
-                id: 'imagenAvatar',
                 right: '5%',
                 top: '20%',
                 width: '20%'
@@ -46,7 +43,7 @@ Ext.define('MyApp.view.containerHeader', {
             {
                 xtype: 'container',
                 height: '40%',
-                html: '<center> <font face="Garamond" size=\'100%\'> <p> ASpoGAMo </p> </font> </center>',
+                html: '<center> <p style=\'font-size:200%; font-face:Garamond;\'>ASpoGAMo</p></center>',
                 id: 'containerMainTitle',
                 left: '30%',
                 top: '15%',
@@ -55,7 +52,7 @@ Ext.define('MyApp.view.containerHeader', {
             {
                 xtype: 'container',
                 height: '20%',
-                html: '<center>   <p> Automated Football Player Tracking from TV Broadcast </p> </center>',
+                html: '<center> <p style=\'font-size:100%; font-face:Garamond;\'>Automated Football Player Tracking from TV Broadcast</p></center>',
                 id: 'containerSloganMain',
                 left: '0%',
                 top: '80%',

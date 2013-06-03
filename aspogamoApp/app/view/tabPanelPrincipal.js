@@ -68,19 +68,11 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
     },
 
     onTabPanelMainActiveItemChange: function(container, value, oldValue, eOpts) {
-
-
-
-
-
-
-
         //En caso de que se  pase hacia el containerMyVideos, entonces se obtiene
         //el objeto canvas del container para dibujar el video, y ademas se
         //pone un 1 para que se siga dibujando sobre el canvas las lineas que
         //se han trazado
         if(value==Ext.getCmp("containerMyVideos")){
-            variableContainerVideoPopularCanvas=document.getElementById("canvasContainerMyVideos");
             variableParaDetenerDibujado=1;
         }
         //Si se sale del containerMyVideos, se deshabilita el REdibujado
