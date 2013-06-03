@@ -425,7 +425,7 @@
         "selectedInstance": "798cd887-3fb1-4715-aeb9-f798648d93e9"
     },
     "codeState": {
-        "topInstance": "641c912f-fb15-4894-8b29-3727a45c3197"
+        "topInstance": null
     },
     "editMode": "design"
 }
