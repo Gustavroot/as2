@@ -214,13 +214,8 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "funcionLogInGeneral",
-                "designer|params": [
-                    "haciaView"
-                ],
                 "implHandler": [
-                    "Ext.getCmp(\"panelEleccionLogInFacebookOrNot\").setHidden(1);",
-                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(haciaView));",
-                    "",
+                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerMain\"));",
                     "",
                     "",
                     "//Llamado sujeto a paso de parametros",
@@ -239,7 +234,11 @@
             "userConfig": {
                 "fn": "logInFacebookSettings",
                 "implHandler": [
-                    "MyApp.app.funcionLogInGeneral('containerMain');"
+                    "Ext.getCmp(\"panelEleccionLogInFacebookOrNot\").setHidden(1);",
+                    "",
+                    "",
+                    "",
+                    "MyApp.app.funcionLogInGeneral();"
                 ]
             },
             "designerId": "8dbb765d-a0a4-48af-8915-e0e3528b2e17"
@@ -254,7 +253,9 @@
             "userConfig": {
                 "fn": "logInSinFacebookSettings",
                 "implHandler": [
-                    "MyApp.app.funcionLogInGeneral('containerIngresoUserYPass');"
+                    "",
+                    "",
+                    "MyApp.app.funcionLogInGeneral();"
                 ]
             },
             "designerId": "a2b1dad5-11e2-4035-b927-1849b8c4b6f5"

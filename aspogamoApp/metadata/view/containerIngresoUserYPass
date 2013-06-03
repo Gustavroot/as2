@@ -120,6 +120,7 @@
                             "userConfig": {
                                 "fn": "onTextFieldLogInPasswordAction",
                                 "implHandler": [
+                                    "MyApp.app.logInSinFacebookSettings();",
                                     "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp(\"containerMain\"));"
                                 ],
                                 "name": "action"

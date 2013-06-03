@@ -195,10 +195,8 @@ Ext.application({
         Ext.getCmp("containerMyVideosCanvas").setHtml("<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width="+Ext.Viewport.getWindowWidth()*0.9+"px height="+Ext.Viewport.getWindowHeight()*0.8*0.85+"px></canvas> </div>");
     },
 
-    funcionLogInGeneral: function(haciaView) {
-        Ext.getCmp("panelEleccionLogInFacebookOrNot").setHidden(1);
-        Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp(haciaView));
-
+    funcionLogInGeneral: function() {
+        Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp("containerMain"));
 
 
         //Llamado sujeto a paso de parametros
@@ -206,11 +204,17 @@ Ext.application({
     },
 
     logInFacebookSettings: function() {
-        MyApp.app.funcionLogInGeneral('containerMain');
+        Ext.getCmp("panelEleccionLogInFacebookOrNot").setHidden(1);
+
+
+
+        MyApp.app.funcionLogInGeneral();
     },
 
     logInSinFacebookSettings: function() {
-        MyApp.app.funcionLogInGeneral('containerIngresoUserYPass');
+
+
+        MyApp.app.funcionLogInGeneral();
     }
 
 });

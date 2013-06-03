@@ -75,7 +75,6 @@
         },
         "20062490-3db2-44d7-b4eb-d0c759070a4e": {
             "id": "20062490-3db2-44d7-b4eb-d0c759070a4e",
-            "expanded": false,
             "cn": [
                 {
                     "id": "7b9c89ee-6454-4d71-a0fd-674acd278c4f",
@@ -417,7 +416,7 @@
     },
     "inspectorState": {
         "topInstance": "application",
-        "selectedInstance": "c9c1ae65-cd86-4ab7-a0f9-5a217766d179"
+        "selectedInstance": "327f69b5-3cc3-40f0-ac9d-ebd7303d7740"
     },
     "codeState": {
         "topInstance": "application"

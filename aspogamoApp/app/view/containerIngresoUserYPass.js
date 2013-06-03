@@ -74,7 +74,7 @@ Ext.define('MyApp.view.containerIngresoUserYPass', {
     },
 
     onTextFieldLogInPasswordAction: function(textfield, e, eOpts) {
-        Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp("containerMain"));
+        MyApp.app.logInSinFacebookSettings();
     }
 
 });

@@ -148,6 +148,10 @@
                                     "event"
                                 ],
                                 "implHandler": [
+                                    "Ext.getCmp(\"panelEleccionLogInFacebookOrNot\").setHidden(1);",
+                                    "Ext.getCmp(\"tabPanelInicial\").setActiveItem(Ext.getCmp('containerIngresoUserYPass'));",
+                                    "",
+                                    "",
                                     "MyApp.app.logInSinFacebookSettings();"
                                 ]
                             },
