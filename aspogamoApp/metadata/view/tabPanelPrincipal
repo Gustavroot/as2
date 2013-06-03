@@ -7,7 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "container|animation": "fade",
-        "height": "80%",
+        "height": "75%",
         "id": "tabPanelMain",
         "top": "25%",
         "width": "100%",
@@ -80,6 +80,13 @@
             "userConfig": {
                 "fn": "onTabPanelMainActiveItemChange",
                 "implHandler": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
                     "//Se setea el html del canvas para que tengas las dimensiones adecuadas",
                     "Ext.getCmp(\"containerMyVideosCanvas\").setHtml(\"<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width=\"+Ext.getCmp(\"viewportAspogamo\").getWindowWidth()*0.9+\"px height=\"+Ext.getCmp(\"viewportAspogamo\").getWindowHeight()*0.8*0.85+\"px></canvas> </div>\");",
                     "//En caso de que se  pase hacia el containerMyVideos, entonces se obtiene",

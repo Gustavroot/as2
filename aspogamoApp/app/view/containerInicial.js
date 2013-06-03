@@ -67,6 +67,8 @@ Ext.define('MyApp.view.containerInicial', {
                         handler: function(button, event) {
                             Ext.getCmp("panelEleccionLogInFacebookOrNot").setHidden(1);
                             Ext.getCmp("tabPanelInicial").setActiveItem(Ext.getCmp("containerIngresoUserYPass"));
+
+
                         },
                         height: '50%',
                         text: 'Regular Log In'

@@ -24,39 +24,14 @@ Ext.define('MyApp.view.containerHome', {
         },
         items: [
             {
-                xtype: 'container',
-                height: '25%',
-                id: 'containerVideosPopulares',
-                left: 0,
-                top: 0,
-                width: '100%',
-                layout: {
-                    align: 'start',
-                    type: 'hbox'
-                },
-                scrollable: 'horizontal'
-            },
-            {
-                xtype: 'container',
-                height: '75%',
-                id: 'containerHomeInfo',
-                left: '3%',
-                top: '25%',
-                width: '44%',
-                layout: {
-                    type: 'fit'
-                }
-            },
-            {
-                xtype: 'container',
-                height: '72%',
-                id: 'containerHomeVideo',
-                right: '3%',
-                top: '25%',
-                width: '44%',
-                layout: {
-                    type: 'fit'
-                }
+                xtype: 'panel',
+                height: '80%',
+                html: '<font color=\'gray\'><center><p>&nbsp</p><p style=\'font-size:120%;\'>Title here</p><p>&nbsp</p><p style=\'font-size:80%;\'>Description here</p></center></font>',
+                left: '5%',
+                top: '5%',
+                width: '90%',
+                modal: true,
+                scrollable: 'vertical'
             }
         ]
     }

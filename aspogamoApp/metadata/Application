@@ -198,6 +198,68 @@
                 ]
             },
             "designerId": "f1e2a64e-9639-4821-a81e-c9657b2e4a49"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "funcionSeteadoConfigInicial",
+                "implHandler": [
+                    "//Se setea el html del canvas para que tengas las dimensiones adecuadas",
+                    "Ext.getCmp(\"containerMyVideosCanvas\").setHtml(\"<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width=\"+Ext.getCmp(\"viewportAspogamo\").getWindowWidth()*0.9+\"px height=\"+Ext.getCmp(\"viewportAspogamo\").getWindowHeight()*0.8*0.85+\"px></canvas> </div>\");"
+                ]
+            },
+            "designerId": "c9c1ae65-cd86-4ab7-a0f9-5a217766d179"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "funcionLogInGeneral",
+                "implHandler": [
+                    "//Llamado sujeto a paso de parametros",
+                    "MyApp.app.funcionSeteadoConfigInicial();"
+                ]
+            },
+            "designerId": "327f69b5-3cc3-40f0-ac9d-ebd7303d7740"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "logInFacebookSettings",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "8dbb765d-a0a4-48af-8915-e0e3528b2e17"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "logInSinFacebookSettings",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "a2b1dad5-11e2-4035-b927-1849b8c4b6f5"
         }
     ]
 }

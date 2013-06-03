@@ -198,6 +198,24 @@ Ext.application({
 
 
         Ext.create('MyApp.view.tabPanelInicial', {fullscreen: true});
+    },
+
+    funcionSeteadoConfigInicial: function() {
+        //Se setea el html del canvas para que tengas las dimensiones adecuadas
+        Ext.getCmp("containerMyVideosCanvas").setHtml("<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width="+Ext.getCmp("viewportAspogamo").getWindowWidth()*0.9+"px height="+Ext.getCmp("viewportAspogamo").getWindowHeight()*0.8*0.85+"px></canvas> </div>");
+    },
+
+    funcionLogInGeneral: function() {
+        //Llamado sujeto a paso de parametros
+        MyApp.app.funcionSeteadoConfigInicial();
+    },
+
+    logInFacebookSettings: function() {
+
+    },
+
+    logInSinFacebookSettings: function() {
+
     }
 
 });

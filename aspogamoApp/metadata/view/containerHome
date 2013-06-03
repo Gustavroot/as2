@@ -14,59 +14,22 @@
     "designerId": "06bd750d-fdc5-46e6-b4b8-ed321501aa8c",
     "cn": [
         {
-            "type": "Ext.Container",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "container|align": "start",
-                "height": "25%",
-                "id": "containerVideosPopulares",
-                "left": 0,
-                "top": 0,
-                "width": "100%",
-                "layout": "hbox",
-                "scrollable": "horizontal"
+                "height": "80%",
+                "html": "<font color='gray'><center><p>&nbsp</p><p style='font-size:120%;'>Title here</p><p>&nbsp</p><p style='font-size:80%;'>Description here</p></center></font>",
+                "left": "5%",
+                "top": "5%",
+                "width": "90%",
+                "modal": true,
+                "scrollable": "vertical"
             },
-            "designerId": "1e39face-c92f-4f6d-a6c8-f022dc70c01c"
-        },
-        {
-            "type": "Ext.Container",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "height": "75%",
-                "html": null,
-                "id": "containerHomeInfo",
-                "left": "3%",
-                "top": "25%",
-                "width": "44%",
-                "layout": "fit"
-            },
-            "designerId": "2d0cae26-0850-4266-be90-64884ce3a1e1"
-        },
-        {
-            "type": "Ext.Container",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "height": "72%",
-                "id": "containerHomeVideo",
-                "left": null,
-                "right": "3%",
-                "top": "25%",
-                "width": "44%",
-                "layout": "fit"
-            },
-            "designerId": "38d1218b-4053-4373-9e80-0c9f7b139165"
+            "designerId": "bd53fe48-99ef-4c21-a6b5-ceed83516f76"
         }
     ]
 }
