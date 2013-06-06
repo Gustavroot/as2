@@ -466,6 +466,7 @@ Ext.define('MyApp.view.containerMyVideos', {
                             //Se pone a escuchar al containerMyVideosCanvas ante el toque inicial
                             Ext.getCmp("containerMyVideosCanvas").element.on({
                                 touchstart: function(e,node){
+                                    alert('opaa!');
                                     //if(variableHabilitarDibujado==1){
                                     //document.getElementById("videoContainerMyVideos").webkitEnterFullscreen();
                                     canvasContext=e.target.getContext("2d");
@@ -508,6 +509,7 @@ Ext.define('MyApp.view.containerMyVideos', {
 
                             Ext.getCmp("containerMyVideosCanvas").element.on({
                                 touchend: function(e,node){
+                                    alert('opaaFin!');
                                     variableHabilitarDibujado=0;
                                     Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setText("Seguir jugador");
                                     Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setUi("normal");
