@@ -184,8 +184,7 @@
             "userConfig": {
                 "fn": "funcionSeteadoConfigInicial",
                 "implHandler": [
-                    "Ext.getCmp('containerMyVideosOriginal').setHtml(\"<p><video id='videoContainerMyVideos' width='100%' controls src='./resources/videos/1.mp4' type='video/mp4'>Bla.</video></p>\");",
-                    "",
+                    "Ext.getCmp('containerMyVideosOriginal').setHtml(\"<p><video id='videoContainerMyVideos' width='100%' controls src='http://didicr.com/Clientes/tazumal/1.mp4' type='video/mp4'>Bla.</video></p>\");",
                     "",
                     "//Se setea el html del canvas para que tenga las dimensiones adecuadas",
                     "Ext.getCmp(\"containerMyVideosCanvas\").setHtml(\"<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width=\"+Ext.Viewport.getWindowWidth()*0.9+\"px height=\"+Ext.Viewport.getWindowHeight()*0.8*0.85+\"px></canvas> </div>\");",
