@@ -267,6 +267,66 @@ Ext.application({
             variableBoolParaDetencionDraw=1;
         },false);
         */
+
+
+
+        // THIS IS THE FUNCTION I HAVE AN ISSUE WITH, THE CONSOLE, LOGS ALL OF THE RIGHT THINGS HOWEVER THE CANVAS SHOWS NOTHING??
+
+
+        //function init() {
+        var canvasL = document.getElementById("canvasContainerMyVideos");
+        alert('antes');
+        var c = canvasL.getContext("2d");
+        alert('antes');
+        function sketch(args)//args:sketchObject
+        {
+            var conf = args;
+            var stroke = 0; // set the stroke to start of counter
+            var s = conf.strokes[stroke];
+            var point = 0; //set the err stroke point to start counter
+            function newStroke()
+            {
+                console.log("newstroke",s)
+                c.save();
+                c.lineWidth = s.lineWidth;
+                c.strokeStyle = s.strokeStyle;
+                c.lineCap = s.lineCap || "round"; 
+                c.lineJoin = s.lineJoin || "round";
+                c.beginPath();
+                c.moveTo.apply(c, s.startPoint);
+                newPoint();
+            }
+            function newPoint()
+            {
+                console.log("newpoint:",conf.strokes[stroke].points[point])
+                c.bezierCurveTo.apply(c, conf.strokes[stroke].points[point]);  //draw a new curve
+
+                c.stroke();
+                c.restore();
+                c.restore();
+                // check if it is the last point to draw to
+                if(point>=(conf.strokes[stroke].points.length-1)) 
+                {
+                    //progress to new stroke if we're not there already
+                    if(stroke<(conf.strokes.length-1)) 
+                    {
+                        stroke++;
+                        point = 0;
+                        newStroke()
+                    }
+                }
+                else // otherwise set a timer to draw the new point/line segment
+                {
+                    point++;
+                    setTimeout(newPoint,conf.strokes[stroke].interval,this)
+                }
+            }
+            newStroke();
+        }
+        sketch(logoSketch);
+        //}
+
+
     },
 
     funcionLogInGeneral: function() {
