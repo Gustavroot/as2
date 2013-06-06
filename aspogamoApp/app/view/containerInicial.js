@@ -49,12 +49,12 @@ Ext.define('MyApp.view.containerInicial', {
             },
             {
                 xtype: 'panel',
-                height: '50%',
+                height: '30%',
                 hidden: true,
                 id: 'panelEleccionLogInFacebookOrNot',
-                left: '5%',
-                top: '5%',
-                width: '90%',
+                left: '20%',
+                top: '25%',
+                width: '60%',
                 modal: true,
                 items: [
                     {

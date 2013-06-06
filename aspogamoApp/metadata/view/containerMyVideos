@@ -24,16 +24,45 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": "40%",
+                "height": "10%",
                 "hidden": false,
                 "html": null,
                 "id": "containerMyVideosOriginal",
                 "itemId": "mycontainer15",
                 "left": 0,
                 "top": 0,
-                "width": "50%"
+                "width": "10%"
             },
-            "designerId": "798cd887-3fb1-4715-aeb9-f798648d93e9"
+            "designerId": "798cd887-3fb1-4715-aeb9-f798648d93e9",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onContainerMyVideosOriginalInitialize",
+                        "implHandler": [
+                            "//La variable que habilita el REdibujado se configura inicialmente",
+                            "//para que no haya dibujado",
+                            "variableBoolParaDetencionDraw=0;",
+                            "//Se pone a escuchar el containerMyVideosOriginal tal que",
+                            "//si se da un click en el canvas, entonces se ejecuta el",
+                            "//codigo de inicializado de un punto para una linea curva",
+                            "Ext.getCmp(\"containerMyVideosOriginal\").element.on({",
+                            "    touchstart: function(e,node){",
+                            "        //Se escucha al Play del video, para poner a correr el otro \"video\"",
+                            "        funcionIniciadoPlayMyVideos(e.target);",
+                            "    }",
+                            "});"
+                        ],
+                        "name": "initialize"
+                    },
+                    "designerId": "ded64b6e-f92a-4b31-953b-6aa7b8f6f556"
+                }
+            ]
         },
         {
             "type": "Ext.Container",
@@ -52,7 +81,84 @@
                 "top": "2.5%",
                 "width": "90%"
             },
-            "designerId": "4dc47544-2974-4931-a7f5-35fbaef97e02"
+            "designerId": "4dc47544-2974-4931-a7f5-35fbaef97e02",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onContainerMyVideosCanvasInitialize",
+                        "implHandler": [
+                            "//Esto 3 arreglos permite hacer el REdibujado, y el tercero",
+                            "//de estos arreglos es el que permite hacer la identificacion",
+                            "//de cuando se despego del dibujado el dedo o el mouse",
+                            "arregloDePuntosDibujoX=[];",
+                            "arregloDePuntosDibujoY=[];",
+                            "arregloDePuntosDibujoBool=[];",
+                            "//Se pone a escuchar al containerMyVideosCanvas ante el toque inicial",
+                            "Ext.getCmp(\"containerMyVideosCanvas\").element.on({",
+                            "    touchstart: function(e,node){",
+                            "        //if(variableHabilitarDibujado==1){",
+                            "            //document.getElementById(\"videoContainerMyVideos\").webkitEnterFullscreen();",
+                            "            canvasContext=e.target.getContext(\"2d\");",
+                            "            canvasContext.moveTo(e.target.layerX,e.target.layerY);",
+                            "            //",
+                            "            puntoTocadoAnteriorX=e.event.layerX;",
+                            "            puntoTocadoAnteriorY=e.event.layerY;",
+                            "            //",
+                            "            arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);",
+                            "            arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);",
+                            "            arregloDePuntosDibujoBool.push(1);",
+                            "        //}",
+                            "    }",
+                            "});",
+                            "//Se hace que el containerMyVideosCanvas quede escuchando el evento",
+                            "//de continuar tocando despues del toque inicial",
+                            "Ext.getCmp(\"containerMyVideosCanvas\").element.on({",
+                            "    touchmove: function(e,node){",
+                            "        //if(variableHabilitarDibujado==1){",
+                            "            //----------------------------------------------------------------",
+                            "            canvasContext=e.target.getContext(\"2d\");",
+                            "            canvasContext.strokeStyle='rgb(55,55,255)';",
+                            "            canvasContext.beginPath();",
+                            "            canvasContext.moveTo(puntoTocadoAnteriorX,puntoTocadoAnteriorY);",
+                            "            //",
+                            "            canvasContext.lineTo(e.event.layerX,e.event.layerY);",
+                            "            canvasContext.stroke();",
+                            "            canvasContext.closePath();",
+                            "            //",
+                            "            puntoTocadoAnteriorX=e.event.layerX;",
+                            "            puntoTocadoAnteriorY=e.event.layerY;",
+                            "            //",
+                            "            arregloDePuntosDibujoX.push(puntoTocadoAnteriorX);",
+                            "            arregloDePuntosDibujoY.push(puntoTocadoAnteriorY);",
+                            "            arregloDePuntosDibujoBool.push(0);",
+                            "        //}",
+                            "        //----------------------------------------------------------------",
+                            "    }",
+                            "});",
+                            "",
+                            "Ext.getCmp(\"containerMyVideosCanvas\").element.on({",
+                            "    touchend: function(e,node){",
+                            "        variableHabilitarDibujado=0;",
+                            "        Ext.getCmp(\"botonSeguirJugadorVideoContainerMyVideos\").setText(\"Seguir jugador\");",
+                            "        Ext.getCmp(\"botonSeguirJugadorVideoContainerMyVideos\").setUi(\"normal\");",
+                            "        //falta aqui codigo de enviar informacion de posiciones, un .load",
+                            "        arregloDePuntosDibujoX=[];",
+                            "        arregloDePuntosDibujoY=[];",
+                            "        arregloDePuntosDibujoBool=[];",
+                            "    }",
+                            "});"
+                        ],
+                        "name": "initialize"
+                    },
+                    "designerId": "c2e5c959-7f60-4e27-a617-153c6cc6cbad"
+                }
+            ]
         },
         {
             "type": "Ext.Container",
@@ -64,7 +170,7 @@
             "userConfig": {
                 "height": "10%",
                 "id": "containerMyVideosMenu",
-                "top": "89%",
+                "top": "90%",
                 "width": "100%"
             },
             "designerId": "2d0e153a-57b6-4cf7-8916-d8039277a78c",
@@ -79,11 +185,11 @@
                     "userConfig": {
                         "height": "100%",
                         "id": "botonSeguirJugadorVideoContainerMyVideos",
-                        "left": "20%",
+                        "left": null,
                         "width": "30%",
                         "iconCls": null,
                         "iconMask": true,
-                        "text": "Load video"
+                        "text": null
                     },
                     "designerId": "032ec17f-f0ea-4c33-a5d1-48ec87b21d74",
                     "cn": [
@@ -154,7 +260,8 @@
                                     "event"
                                 ],
                                 "implHandler": [
-                                    "alert('e');",
+                                    "MyApp.app.funcionIniciadoPlayMyVideos(document.getElementById(\"videoContainerMyVideos\"));",
+                                    "",
                                     "if(document.getElementById(\"videoContainerMyVideos\").paused){",
                                     "    document.getElementById(\"videoContainerMyVideos\").play();",
                                     "}",
