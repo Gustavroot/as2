@@ -151,24 +151,6 @@ Ext.application({
         //para que ya los objetos existan
         setTimeout(funcionDibujadoEnCanvas,2000);
 
-        //Funcion de dibujado del video en el canvas
-        draw=function(v,c,bc,w,h) {
-            try{
-                clearTimeout(variableTimeOutGeneral);
-            }
-            catch(e){}
-            if(v.paused || v.ended)	return false;
-            // First, draw it into the backing canvas
-            bc.drawImage(v,0,0,w,h);
-            // Grab the pixel data from the backing canvas
-            if(variableBoolParaDetencionDraw===0){
-                variableTimeOutGeneral=setTimeout(draw,20,v,c,bc,w,h);
-            }
-            else{
-            }
-        };
-
-
 
         /*
         funcionIniciadoPlayMyVideos=function(video){
@@ -320,7 +302,7 @@ Ext.application({
             document.getElementById("canvasContainerMyVideos").width = Ext.Viewport.getWindowWidth()*0.9;
             document.getElementById("canvasContainerMyVideos").height = Ext.Viewport.getWindowHeight()*0.8*0.75;
             canvasContext=document.getElementById("canvasContainerMyVideos").getContext('2d');
-            draw(video,canvasContext,canvasContext,document.getElementById("canvasContainerMyVideos").width,document.getElementById("canvasContainerMyVideos").height);
+            MyApp.app.dibujarVideoSobreCanvas(video,canvasContext,canvasContext,document.getElementById("canvasContainerMyVideos").width,document.getElementById("canvasContainerMyVideos").height);
         },false);
         //En caso de que se detenga el video, se detiene el dibujado del
         //video sobre el canvas
@@ -329,8 +311,25 @@ Ext.application({
         },false);
     },
 
-    dibujarVideoSobreCanvas: function() {
-
+    dibujarVideoSobreCanvas: function(v, c, bc, w, h) {
+        //Funcion de dibujado del video en el canvas
+        //draw=function(v,c,bc,w,h) {
+        try{
+            clearTimeout(variableTimeOutGeneral);
+        }
+        catch(e){}
+        if(v.paused || v.ended)	return false;
+        // First, draw it into the backing canvas
+        bc.drawImage(v,0,0,w,h);
+        // Grab the pixel data from the backing canvas
+        if(variableBoolParaDetencionDraw===0){
+            variableTimeOutGeneral=setTimeout(function(){
+                MyApp.app.dibujarVideoSobreCanvas(v,c,bc,w,h);
+            },20);
+        }
+        else{
+        }
+        //};
     }
 
 });
