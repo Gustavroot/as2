@@ -151,12 +151,16 @@
                     "",
                     "//Funcion de dibujado del video en el canvas",
                     "draw=function(v,c,bc,w,h) {",
+                    "    try{",
+                    "        clearTimeout(variableTimeOutGeneral);",
+                    "    }",
+                    "    catch(e){}",
                     "    if(v.paused || v.ended)\treturn false;",
                     "    // First, draw it into the backing canvas",
                     "    bc.drawImage(v,0,0,w,h);",
                     "    // Grab the pixel data from the backing canvas",
                     "    if(variableBoolParaDetencionDraw===0){",
-                    "        setTimeout(draw,20,v,c,bc,w,h);",
+                    "        variableTimeOutGeneral=setTimeout(draw,20,v,c,bc,w,h);",
                     "    }",
                     "    else{",
                     "    }",
@@ -164,7 +168,7 @@
                     "",
                     "",
                     "",
-                    "",
+                    "/*",
                     "funcionIniciadoPlayMyVideos=function(video){",
                     "    video.addEventListener('play', function(){",
                     "        video.playbackRate=1;",
@@ -182,7 +186,8 @@
                     "    video.addEventListener('stop', function(){",
                     "        variableBoolParaDetencionDraw=1;",
                     "    },false);",
-                    "};"
+                    "};",
+                    "*/"
                 ]
             },
             "designerId": "f1e2a64e-9639-4821-a81e-c9657b2e4a49"
@@ -380,6 +385,21 @@
                 ]
             },
             "designerId": "83108f04-6025-4781-a4de-32d5ccd66dcd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "dibujarVideoSobreCanvas",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "4841bf17-c171-4b92-a1f8-5aa041e0c8ab"
         }
     ]
 }

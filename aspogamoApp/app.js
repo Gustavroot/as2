@@ -153,12 +153,16 @@ Ext.application({
 
         //Funcion de dibujado del video en el canvas
         draw=function(v,c,bc,w,h) {
+            try{
+                clearTimeout(variableTimeOutGeneral);
+            }
+            catch(e){}
             if(v.paused || v.ended)	return false;
             // First, draw it into the backing canvas
             bc.drawImage(v,0,0,w,h);
             // Grab the pixel data from the backing canvas
             if(variableBoolParaDetencionDraw===0){
-                setTimeout(draw,20,v,c,bc,w,h);
+                variableTimeOutGeneral=setTimeout(draw,20,v,c,bc,w,h);
             }
             else{
             }
@@ -166,26 +170,27 @@ Ext.application({
 
 
 
-
+        /*
         funcionIniciadoPlayMyVideos=function(video){
-            video.addEventListener('play', function(){
-                video.playbackRate=1;
-                variableBoolParaDetencionDraw=0;
-                cw = video.clientWidth;
-                ch = video.clientHeight;
-                //alert(Ext.getCmp("viewportAspogamo").getWindowWidth());
-                document.getElementById("canvasContainerMyVideos").width = Ext.Viewport.getWindowWidth()*0.9;
-                document.getElementById("canvasContainerMyVideos").height = Ext.Viewport.getWindowHeight()*0.8*0.75;
-                canvasContext=document.getElementById("canvasContainerMyVideos").getContext('2d');
-                draw(video,canvasContext,canvasContext,document.getElementById("canvasContainerMyVideos").width,document.getElementById("canvasContainerMyVideos").height);
-            },false);
-            //En caso de que se detenga el video, se detiene el dibujado del
-            //video sobre el canvas
-            video.addEventListener('stop', function(){
-                variableBoolParaDetencionDraw=1;
-            },false);
-        };
-        Ext.create('MyApp.view.tabPanelInicial', {fullscreen: true});
+        video.addEventListener('play', function(){
+        video.playbackRate=1;
+        variableBoolParaDetencionDraw=0;
+        cw = video.clientWidth;
+        ch = video.clientHeight;
+        //alert(Ext.getCmp("viewportAspogamo").getWindowWidth());
+        document.getElementById("canvasContainerMyVideos").width = Ext.Viewport.getWindowWidth()*0.9;
+        document.getElementById("canvasContainerMyVideos").height = Ext.Viewport.getWindowHeight()*0.8*0.75;
+        canvasContext=document.getElementById("canvasContainerMyVideos").getContext('2d');
+        draw(video,canvasContext,canvasContext,document.getElementById("canvasContainerMyVideos").width,document.getElementById("canvasContainerMyVideos").height);
+    },false);
+    //En caso de que se detenga el video, se detiene el dibujado del
+    //video sobre el canvas
+    video.addEventListener('stop', function(){
+        variableBoolParaDetencionDraw=1;
+    },false);
+    };
+    */
+    Ext.create('MyApp.view.tabPanelInicial', {fullscreen: true});
     },
 
     funcionSeteadoConfigInicial: function() {
@@ -322,6 +327,10 @@ Ext.application({
         video.addEventListener('stop', function(){
             variableBoolParaDetencionDraw=1;
         },false);
+    },
+
+    dibujarVideoSobreCanvas: function() {
+
     }
 
 });
