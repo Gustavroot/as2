@@ -54,7 +54,8 @@ Ext.define('MyApp.view.containerMyVideos', {
             },
             {
                 xtype: 'container',
-                height: '85%',
+                centered: true,
+                height: '80%',
                 id: 'containerMyVideosCanvas',
                 itemId: 'mycontainer16',
                 left: '5%',
@@ -139,9 +140,9 @@ Ext.define('MyApp.view.containerMyVideos', {
             },
             {
                 xtype: 'container',
-                height: '13%',
+                bottom: 0,
+                height: '15%',
                 id: 'containerMyVideosMenu',
-                top: '87%',
                 width: '100%',
                 layout: {
                     type: 'fit'
@@ -150,8 +151,8 @@ Ext.define('MyApp.view.containerMyVideos', {
                     {
                         xtype: 'fieldset',
                         centered: true,
-                        height: '100%',
-                        width: '100%',
+                        height: '90%',
+                        width: '90%',
                         items: [
                             {
                                 xtype: 'selectfield',
@@ -181,6 +182,7 @@ Ext.define('MyApp.view.containerMyVideos', {
                 xtype: 'toolbar',
                 docked: 'bottom',
                 height: '15%',
+                style: 'background: #0096D7',
                 scrollable: 'horizontal',
                 items: [
                     {
@@ -221,9 +223,34 @@ Ext.define('MyApp.view.containerMyVideos', {
                                 //Ext.getCmp("botonSeguirJugadorVideoContainerMyVideos").setText("Seguir jugador");
                             }
                         },
+                        hidden: true,
                         text: 'Follow'
                     }
                 ]
+            },
+            {
+                xtype: 'container',
+                height: '0.5%',
+                left: '5%',
+                style: 'background-color: black',
+                top: '2.2%',
+                width: '90%'
+            },
+            {
+                xtype: 'container',
+                height: '97.8%',
+                left: '4.8%',
+                style: 'background-color: black',
+                top: '2.2%',
+                width: '0.2%'
+            },
+            {
+                xtype: 'container',
+                height: '97.8%',
+                right: '4.8%',
+                style: 'background-color: black',
+                top: '2.2%',
+                width: '0.2%'
             }
         ],
         listeners: [

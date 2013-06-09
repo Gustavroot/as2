@@ -33,7 +33,6 @@ Ext.application({
         'tabPanelPrincipal',
         'containerHome',
         'containerMain',
-        'containerHeader',
         'containerProfile',
         'containerStatistics',
         'containerMyVideos',
@@ -176,14 +175,23 @@ Ext.application({
     },false);
     };
     */
-    Ext.create('MyApp.view.tabPanelInicial', {fullscreen: true});
+
+
+
+    //LINEA TEMPORAL!!!
+    setTimeout(function(){
+    MyApp.app.funcionSeteadoConfigInicial();
+    //Ext.getCmp('tabPanelPrincipal').getTabBar().addCls('my-tabbar-tablet');
+    },2000);
+    Ext.create('MyApp.view.tabPanelPrincipal', {fullscreen: true});
     },
 
     funcionSeteadoConfigInicial: function() {
         Ext.getCmp('containerMyVideosOriginal').setHtml("<p><video id='videoContainerMyVideos' width='100%' controls src='http://didicr.com/Clientes/tazumal/1.mp4' type='video/mp4'>Bla.</video></p>");
 
         //Se setea el html del canvas para que tenga las dimensiones adecuadas
-        Ext.getCmp("containerMyVideosCanvas").setHtml("<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width="+Ext.Viewport.getWindowWidth()*0.9+"px height="+Ext.Viewport.getWindowHeight()*0.8*0.85+"px></canvas> </div>");
+        var heightCanvas=Ext.Viewport.getWindowHeight()*0.8*0.85*0.85;
+        Ext.getCmp("containerMyVideosCanvas").setHtml("<div id='divDelCanvasContainerMyVideos'> <canvas id='canvasContainerMyVideos' width="+Ext.Viewport.getWindowWidth()*0.9+"px height="+heightCanvas+"px></canvas> </div>");
 
 
         /*

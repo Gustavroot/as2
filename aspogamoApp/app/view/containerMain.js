@@ -18,8 +18,7 @@ Ext.define('MyApp.view.containerMain', {
     alias: 'widget.containermain',
 
     requires: [
-        'MyApp.view.tabPanelPrincipal',
-        'MyApp.view.containerHeader'
+        'MyApp.view.tabPanelPrincipal'
     ],
 
     config: {
@@ -27,9 +26,6 @@ Ext.define('MyApp.view.containerMain', {
         items: [
             {
                 xtype: 'tabpanelprincipal'
-            },
-            {
-                xtype: 'containerheader'
             }
         ]
     }

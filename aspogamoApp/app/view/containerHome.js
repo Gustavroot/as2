@@ -24,11 +24,55 @@ Ext.define('MyApp.view.containerHome', {
         },
         items: [
             {
+                xtype: 'container',
+                height: '25%',
+                id: 'containerHeader',
+                layout: {
+                    type: 'fit'
+                },
+                items: [
+                    {
+                        xtype: 'container',
+                        height: '60%',
+                        html: '<img src="resources/images/Acelogo.svg" height="100%" width="100%">',
+                        left: '5%',
+                        top: '20%',
+                        width: '20%'
+                    },
+                    {
+                        xtype: 'container',
+                        height: '60%',
+                        html: '<img src="resources/images/logopris.svg" height="100%" width="100%">',
+                        right: '5%',
+                        top: '20%',
+                        width: '20%'
+                    },
+                    {
+                        xtype: 'container',
+                        height: '40%',
+                        html: '<center> <p style=\'font-size:300%; font-face:Garamond;\'>ACE</p></center>',
+                        id: 'containerMainTitle',
+                        left: '30%',
+                        top: '30%',
+                        width: '40%'
+                    },
+                    {
+                        xtype: 'container',
+                        height: '20%',
+                        html: '<center> <p style=\'font-size:120%; font-face:Garamond;\'>Automated Sport Analysis System</p></center>',
+                        id: 'containerSloganMain',
+                        left: '0%',
+                        top: '75%',
+                        width: '100%'
+                    }
+                ]
+            },
+            {
                 xtype: 'panel',
-                height: '80%',
-                html: '<font color=\'gray\'><center><p>&nbsp</p><p style=\'font-size:120%;\'>Description</p><p>&nbsp</p><p style=\'font-size:80%;\'>The research project \'Sensor-based, Automatic Analysis of Football Games\' is an ambitious, mid-term research project that studies the automation of these tasks. The main objectives of the project are (1) the investigation of novel computational mechanisms that enable computer systems to recognize intentional activities, (2) the development of an integrated software system to automate game interpretation and analysis, and (3) the demonstration of the impact of automated game analysis on application areas, such as sport science, football coaching, and sports entertainment.</p></center></font>',
+                height: '60%',
+                html: '<font color=\'gray\'><center><p>&nbsp</p><p style=\'font-size:180%;\'>Description</p><p>&nbsp</p><p style=\'font-size:110%;\'>The purpose of this research line is to develop computational modelling systems for the automated analysis of sports, with the aim to provide effective and efficient mechanisms for obtaining relevant information to interpret the sports in the interest of several related groups: coaches, journalists, sports scientists, physical therapists, and others. The investigated algorithms cover the perception stages in order to obtain relevant information taken from sensors, like video cameras, and the cognition stages to build the interpretation models for representing the actions, events and episodes occurred during the performed activities. Currently, the main sport being studied is association football, with the research project Automated Football Player Tracking from TV Broadcast, but the intention in the near future is to extend our current system to other outdoor games, such as hockey, and rugby; as well as martial arts.</p></center></font>',
                 left: '5%',
-                top: '5%',
+                top: '35%',
                 width: '90%',
                 modal: true,
                 scrollable: 'vertical'

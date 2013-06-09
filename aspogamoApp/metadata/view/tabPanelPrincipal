@@ -7,12 +7,13 @@
     "codeClass": null,
     "userConfig": {
         "container|animation": "fade",
-        "height": "75%",
-        "id": "tabPanelMain",
-        "top": "25%",
+        "height": null,
+        "id": "tabPanelPrincipal",
+        "top": null,
         "width": "100%",
         "designer|userClassName": "tabPanelPrincipal",
-        "designer|userAlias": "tabpanelprincipal"
+        "designer|userAlias": "tabpanelprincipal",
+        "designer|initialView": true
     },
     "designerId": "113c8804-658a-4d7b-a54f-bab8647c7e3d",
     "cn": [
@@ -25,7 +26,9 @@
             "codeClass": null,
             "userConfig": {
                 "container|pack": "center",
-                "docked": "top",
+                "docked": "bottom",
+                "height": "15%",
+                "style": "background: #323C46",
                 "scrollable": "horizontal",
                 "activeTab": null
             },
@@ -39,9 +42,17 @@
             },
             "codeClass": null,
             "userConfig": {
+                "iconCls": "home",
                 "title": "Home"
             },
             "designerId": "7fd3e507-3af1-472e-a055-c3583e6edbb2",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "iconCls",
+                    "type": "string"
+                }
+            ],
             "masterInstanceId": "06bd750d-fdc5-46e6-b4b8-ed321501aa8c"
         },
         {
@@ -52,7 +63,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "My Profile"
+                "hidden": true,
+                "title": "My Profile",
+                "iconCls": "info"
             },
             "designerId": "8a654eaa-f785-4b64-b0a7-ad22177633e0",
             "masterInstanceId": "842cb5c7-b5d5-4f98-8458-4f82377130ca"
@@ -65,9 +78,17 @@
             },
             "codeClass": null,
             "userConfig": {
+                "iconCls": "bookmarks",
                 "title": "Statistics"
             },
             "designerId": "5f1fe9b4-c40f-4081-a5a8-3155219f40f2",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "iconCls",
+                    "type": "string"
+                }
+            ],
             "masterInstanceId": "94888bc9-1a06-45b1-8b2a-c7650c826fe0"
         },
         {
@@ -106,9 +127,17 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "My Videos"
+                "iconCls": "action",
+                "title": "Videos"
             },
             "designerId": "bc9353e6-03f6-4582-80cb-5aeac07dcae1",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "iconCls",
+                    "type": "string"
+                }
+            ],
             "masterInstanceId": "641c912f-fb15-4894-8b29-3727a45c3197"
         }
     ]

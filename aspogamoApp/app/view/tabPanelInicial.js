@@ -26,22 +26,26 @@ Ext.define('MyApp.view.tabPanelInicial', {
     config: {
         id: 'tabPanelInicial',
         tabBar: {
-            docked: 'top',
+            docked: 'bottom',
             hidden: true,
             activeTab: 0
         },
         items: [
             {
-                xtype: 'mycontainer16'
+                xtype: 'mycontainer16',
+                iconCls: 'info'
             },
             {
-                xtype: 'mycontainer17'
+                xtype: 'mycontainer17',
+                iconCls: 'info'
             },
             {
-                xtype: 'containermain'
+                xtype: 'containermain',
+                iconCls: 'info'
             },
             {
-                xtype: 'containerregistrouser'
+                xtype: 'containerregistrouser',
+                iconCls: 'info'
             }
         ]
     }

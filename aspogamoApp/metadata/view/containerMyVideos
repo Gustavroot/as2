@@ -72,7 +72,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": "85%",
+                "centered": true,
+                "height": "80%",
                 "html": null,
                 "id": "containerMyVideosCanvas",
                 "itemId": "mycontainer16",
@@ -177,9 +178,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": "13%",
+                "bottom": 0,
+                "height": "15%",
                 "id": "containerMyVideosMenu",
-                "top": "87%",
+                "top": null,
                 "width": "100%",
                 "layout": "fit"
             },
@@ -194,8 +196,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "centered": true,
-                        "height": "100%",
-                        "width": "100%",
+                        "height": "90%",
+                        "width": "90%",
                         "title": null
                     },
                     "designerId": "0b80bfef-1032-4ec5-8cc1-2d32ed86679f",
@@ -251,6 +253,7 @@
             "userConfig": {
                 "docked": "bottom",
                 "height": "15%",
+                "style": "background: #0096D7",
                 "scrollable": "horizontal"
             },
             "designerId": "0dd8d825-2c0e-4fa8-bb6b-2bbe79b5c98e",
@@ -303,6 +306,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "hidden": true,
                         "text": "Follow"
                     },
                     "designerId": "a809d9b1-3fc6-4b08-a0fc-af6a4f7598fc",
@@ -348,6 +352,55 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "0.5%",
+                "left": "5%",
+                "style": "background-color: black",
+                "top": "2.2%",
+                "width": "90%"
+            },
+            "designerId": "be8eafdd-fe7c-4b7d-a16c-9ffc4b6be0ff"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "97.8%",
+                "left": "4.8%",
+                "style": "background-color: black",
+                "top": "2.2%",
+                "width": "0.2%"
+            },
+            "designerId": "abcd9bda-4f2b-4e6e-ac60-5702f78e8498"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "97.8%",
+                "left": null,
+                "right": "4.8%",
+                "style": "background-color: black",
+                "top": "2.2%",
+                "width": "0.2%"
+            },
+            "designerId": "1874c7c3-d959-4e58-bef4-06fc7959e4e1"
         }
     ]
 }

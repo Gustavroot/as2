@@ -31,6 +31,7 @@ Ext.define('MyApp.view.containerStatistics', {
                         xtype: 'toolbar',
                         docked: 'top',
                         id: 'toolbarTitleStatistics',
+                        style: 'background: #0096D7',
                         title: 'Passes per player'
                     },
                     {
@@ -203,33 +204,6 @@ Ext.define('MyApp.view.containerStatistics', {
                             '#7c7474',
                             '#a66111'
                         ],
-                        store: 'storeTest1',
-                        series: [
-                            {
-                                type: 'pie3d',
-                                donut: true,
-                                field: 'data4'
-                            }
-                        ],
-                        interactions: [
-                            {
-                                type: 'rotatePie3d'
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'polar',
-                        colors: [
-                            '#115fa6',
-                            '#94ae0a',
-                            '#a61120',
-                            '#ff8809',
-                            '#ffd13e',
-                            '#a61187',
-                            '#24ad9a',
-                            '#7c7474',
-                            '#a66111'
-                        ],
                         store: 'storePlayer',
                         series: [
                             {
@@ -261,13 +235,13 @@ Ext.define('MyApp.view.containerStatistics', {
             Ext.getCmp('toolbarTitleStatistics').setTitle('Passes per player');
         }
         if(value==Ext.getCmp('pieChart1Statistics')){
-            Ext.getCmp('toolbarTitleStatistics').setTitle('Por def 1');
-        }
-        if(value==Ext.getCmp('pieChart2Statistics')){
-            Ext.getCmp('toolbarTitleStatistics').setTitle('Por def 2');
+            Ext.getCmp('toolbarTitleStatistics').setTitle('Passes-percentage');
         }
         if(value==Ext.getCmp('containerDetailsOrderJugadores')){
             Ext.getCmp('toolbarTitleStatistics').setTitle('Details');
+        }
+        if(value==Ext.getCmp('pieChart2Statistics')){
+            Ext.getCmp('toolbarTitleStatistics').setTitle('Por def 2');
         }
     }
 

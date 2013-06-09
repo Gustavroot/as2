@@ -25,16 +25,16 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
     ],
 
     config: {
-        height: '75%',
-        id: 'tabPanelMain',
-        top: '25%',
+        id: 'tabPanelPrincipal',
         width: '100%',
         layout: {
             animation: 'fade',
             type: 'card'
         },
         tabBar: {
-            docked: 'top',
+            docked: 'bottom',
+            height: '15%',
+            style: 'background: #323C46',
             scrollable: 'horizontal',
             layout: {
                 pack: 'center',
@@ -44,19 +44,24 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
         items: [
             {
                 xtype: 'containerhome',
+                iconCls: 'home',
                 title: 'Home'
             },
             {
                 xtype: 'containerprofile',
-                title: 'My Profile'
+                hidden: true,
+                title: 'My Profile',
+                iconCls: 'info'
             },
             {
                 xtype: 'containerPopular',
+                iconCls: 'bookmarks',
                 title: 'Statistics'
             },
             {
                 xtype: 'containermyvideos',
-                title: 'My Videos'
+                iconCls: 'action',
+                title: 'Videos'
             }
         ],
         listeners: [

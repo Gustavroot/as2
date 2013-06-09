@@ -7,8 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "id": "tabPanelInicial",
-        "designer|userClassName": "tabPanelInicial",
-        "designer|initialView": true
+        "designer|userClassName": "tabPanelInicial"
     },
     "designerId": "aa158ca9-ea6b-4e81-935b-94df1e85ade0",
     "cn": [
@@ -20,7 +19,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top",
+                "docked": "bottom",
                 "hidden": true,
                 "activeTab": 0
             },
@@ -33,6 +32,9 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "iconCls": "info"
+            },
             "designerId": "f8f9649a-ab18-4996-bea2-c68ab5429d45",
             "masterInstanceId": "f4c0640b-7280-4a53-90de-f9c6a69f47ce"
         },
@@ -43,6 +45,9 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "iconCls": "info"
+            },
             "designerId": "05605ce0-58ca-4ec8-87fb-601fe39a4b8c",
             "masterInstanceId": "20062490-3db2-44d7-b4eb-d0c759070a4e"
         },
@@ -53,6 +58,9 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "iconCls": "info"
+            },
             "designerId": "df355fbc-914c-4132-adef-65d6ec5df190",
             "masterInstanceId": "81d01c9c-eda0-437d-a89c-c0f0e70253a7"
         },
@@ -63,6 +71,9 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "iconCls": "info"
+            },
             "designerId": "6028e3d9-8ea9-4bec-a8a2-e6965e95979a",
             "masterInstanceId": "d31a73b0-6152-49c5-b91b-044e154ce8fb"
         }

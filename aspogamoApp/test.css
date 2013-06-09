@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "blanch";
+    src: url("./resources/css/font/BLANCH_CAPS.otf") format("truetype");
+}
+p.customfont { 
+    font-family: "blanch", Verdana, Tahoma;
+}
+
+html, body, header, paragraph, p, div {
+    font-family : "blanch", Verdana, Tahoma;
+}
+
+
+
+.my-tabbar-tablet.x-docked-bottom .x-tab .x-button-icon {   
+   width: 3.65em;
+   height: 3.65em;
+ }
+
+.my-tabbar-tablet.x-docked-bottom .x-tab {     
+        min-width: 5em;
+}

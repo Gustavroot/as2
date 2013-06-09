@@ -39,14 +39,6 @@
             ],
             "className": "containerMain"
         },
-        "b7ed987d-97d8-45a4-830b-3fecc1161d65": {
-            "paths": [
-                "metadata/view/containerHeader",
-                "app/view/override/containerHeader.js",
-                "app/view/containerHeader.js"
-            ],
-            "className": "containerHeader"
-        },
         "842cb5c7-b5d5-4f98-8458-4f82377130ca": {
             "paths": [
                 "metadata/view/containerProfile",
@@ -179,7 +171,6 @@
             "20062490-3db2-44d7-b4eb-d0c759070a4e",
             "d31a73b0-6152-49c5-b91b-044e154ce8fb",
             "81d01c9c-eda0-437d-a89c-c0f0e70253a7",
-            "b7ed987d-97d8-45a4-830b-3fecc1161d65",
             "113c8804-658a-4d7b-a54f-bab8647c7e3d",
             "06bd750d-fdc5-46e6-b4b8-ed321501aa8c",
             "842cb5c7-b5d5-4f98-8458-4f82377130ca",
