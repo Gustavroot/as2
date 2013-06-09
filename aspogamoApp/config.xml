@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns    = "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		    = "cr.ace.ace"
+	version 	= "1.0">
+
+	<name>ACE</name>
+
+	<description>
+        Sports analysis system.
+	</description>
+
+	<author href="http://pris.eie.ucr.ac.cr" email="fsiles@eie.ucr.ac.cr">
+		PRIS-LAB
+	</author>
+
+        <preference name="phonegap-version" value="2.5.0" />
+        <preference name="fullscreen" value="true" />
+        <gap:splash src="splashscreenCliente.png" />
+        <preference name="splash-screen-duration" value="7000" />
+        <preference name="auto-hide-splash-screen" value="false" />
+    	<icon src="./resources/images/Acelogo.svg" width="72" height="72" />
+    	<preference name="permissions" value="none"/>
+        <preference name="orientation" value="landscape" />
+</widget>
