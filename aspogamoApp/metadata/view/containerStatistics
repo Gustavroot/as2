@@ -58,7 +58,9 @@
                             "if(value==Ext.getCmp('containerDetailsOrderJugadores')){",
                             "    Ext.getCmp('toolbarTitleStatistics').setTitle('Details');",
                             "}",
-                            ""
+                            "if(value==Ext.getCmp('barChartPossession')){",
+                            "    Ext.getCmp('toolbarTitleStatistics').setTitle('Possession');",
+                            "}"
                         ],
                         "name": "activeitemchange"
                     },
@@ -76,8 +78,7 @@
                         "colors": [
                             "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
                         ],
-                        "store": "storePlayer",
-                        "flipXY": true
+                        "store": "storePlayer"
                     },
                     "designerId": "af5888ed-f713-4134-9cc3-361212bca800",
                     "isBuiltIn": true,
@@ -234,49 +235,181 @@
                                     "designerId": "13daf141-0923-4a96-b502-2c4bf54830e0"
                                 }
                             ]
+                        },
+                        {
+                            "type": "Ext.chart.CartesianChart",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "100%",
+                                "left": "50%",
+                                "width": "50%",
+                                "colors": [
+                                    "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                                ],
+                                "store": "storeTeam"
+                            },
+                            "designerId": "fe62ac63-18ed-44ab-828f-03f4dfdd277e",
+                            "isBuiltIn": true,
+                            "iconCls": "icon-bar-chart",
+                            "autoName": "MyBarChart",
+                            "cn": [
+                                {
+                                    "type": "Ext.chart.axis.Category",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fields": [
+                                            "nameTeam"
+                                        ],
+                                        "grid": null,
+                                        "increment": 1,
+                                        "title": "Team"
+                                    },
+                                    "designerId": "c4b55435-62e6-4683-af62-98089da6fd01"
+                                },
+                                {
+                                    "type": "Ext.chart.axis.Numeric",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fields": [
+                                            "totalDistance"
+                                        ],
+                                        "grid": [
+                                            "{",
+                                            "    odd: {",
+                                            "        fill: '#e8e8e8'",
+                                            "    }",
+                                            "}"
+                                        ],
+                                        "increment": 1,
+                                        "position": "left",
+                                        "title": "Total distance"
+                                    },
+                                    "designerId": "a23127b1-9aac-462a-9612-c5655d34188b"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Bar",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "xField": "nameTeam",
+                                        "yField": [
+                                            "totalDistance"
+                                        ]
+                                    },
+                                    "designerId": "02735e17-edd1-4e04-aefc-03acf68eed5e"
+                                },
+                                {
+                                    "type": "Ext.chart.interactions.PanZoom",
+                                    "reference": {
+                                        "name": "interactions",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "designerId": "3ec0b2b4-d78e-4dc8-941b-92b8309f5f15"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "type": "Ext.chart.PolarChart",
+                    "type": "Ext.chart.CartesianChart",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "pieChart2Statistics",
+                        "id": "barChartPossession",
                         "colors": [
                             "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
                         ],
-                        "store": "storePlayer"
+                        "store": "storeTeam",
+                        "flipXY": true
                     },
-                    "designerId": "9ca40fc4-5b2a-4dee-9f6d-f5543362135d",
+                    "designerId": "8501db73-2558-4b7b-ba93-c8e142980254",
                     "isBuiltIn": true,
-                    "iconCls": "icon-pie-chart",
-                    "autoName": "MyPieChart",
+                    "iconCls": "icon-bar-chart",
+                    "autoName": "MyBarChart",
                     "cn": [
                         {
-                            "type": "Ext.chart.series.Pie",
+                            "type": "Ext.chart.axis.Category",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "nameTeam"
+                                ],
+                                "grid": null,
+                                "increment": 1,
+                                "position": "left",
+                                "title": "Team"
+                            },
+                            "designerId": "1ad32222-e72a-4f95-b19c-bc0e132d565c"
+                        },
+                        {
+                            "type": "Ext.chart.axis.Numeric",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "ballPossession"
+                                ],
+                                "grid": [
+                                    "{",
+                                    "    odd: {",
+                                    "        fill: '#e8e8e8'",
+                                    "    }",
+                                    "}"
+                                ],
+                                "increment": 1,
+                                "title": "Possession"
+                            },
+                            "designerId": "69dbebb6-b770-4747-9e80-ea61914914a7"
+                        },
+                        {
+                            "type": "Ext.chart.series.Bar",
                             "reference": {
                                 "name": "series",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "labelField": "name",
-                                "xField": "distance"
+                                "xField": "nameTeam",
+                                "yField": [
+                                    "ballPossession"
+                                ]
                             },
-                            "designerId": "d82eefb5-7d3d-476a-a3e6-49d0d4ff3bdf"
+                            "designerId": "1c2d1464-1c8c-4802-89e9-94c3b39870f3"
                         },
                         {
-                            "type": "Ext.chart.interactions.Rotate",
+                            "type": "Ext.chart.interactions.PanZoom",
                             "reference": {
                                 "name": "interactions",
                                 "type": "array"
                             },
                             "codeClass": null,
-                            "designerId": "c82fdcc4-b3f5-4129-b9f8-d9bbbadc3795"
+                            "designerId": "52f7ce71-db62-4d01-acad-c761474c0f03"
                         }
                     ]
                 }

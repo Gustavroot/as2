@@ -20,3 +20,20 @@ html, body, header, paragraph, p, div {
 .my-tabbar-tablet.x-docked-bottom .x-tab {     
         min-width: 5em;
 }
+
+
+
+
+/*
+.botonInicioTabpanel {
+ 	content: url(./resources/images/ddTabbarEventos.png);    
+}
+
+.botonEventoTabpanel{
+    content: url(./resources/css/esp/skin/ddTabbarEventos.png);
+}
+
+.botonMapaTabpanel{
+	content: url(./resources/css/esp/skin/ddTabbarMapa.png);
+}
+*/

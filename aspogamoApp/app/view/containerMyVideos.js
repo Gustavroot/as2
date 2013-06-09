@@ -25,13 +25,13 @@ Ext.define('MyApp.view.containerMyVideos', {
         items: [
             {
                 xtype: 'container',
-                height: '10%',
-                hidden: true,
+                height: '80%',
+                hidden: false,
                 id: 'containerMyVideosOriginal',
                 itemId: 'mycontainer15',
-                left: 0,
-                top: 0,
-                width: '10%',
+                left: '5%',
+                top: '2.5%',
+                width: '90%',
                 listeners: [
                     {
                         fn: function(component, eOpts) {
@@ -56,6 +56,7 @@ Ext.define('MyApp.view.containerMyVideos', {
                 xtype: 'container',
                 centered: true,
                 height: '80%',
+                hidden: true,
                 id: 'containerMyVideosCanvas',
                 itemId: 'mycontainer16',
                 left: '5%',

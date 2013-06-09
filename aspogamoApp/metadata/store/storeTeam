@@ -1,0 +1,44 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "model": "modelTeam",
+        "storeId": "storeTeam",
+        "designer|userClassName": "storeTeam"
+    },
+    "designerId": "28b9a0de-2e8d-438f-8a96-f68f7bdfa4ae",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://192.168.43.237/as2PhP/team.php"
+            },
+            "designerId": "4c411a75-362c-479b-8d27-a6775f4bc3eb",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "b0988f3f-f07c-4f6d-ae0f-c45c26999278"
+                }
+            ]
+        }
+    ]
+}

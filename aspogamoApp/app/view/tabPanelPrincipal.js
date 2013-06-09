@@ -20,8 +20,8 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
     requires: [
         'MyApp.view.containerHome',
         'MyApp.view.containerProfile',
-        'MyApp.view.containerStatistics',
-        'MyApp.view.containerMyVideos'
+        'MyApp.view.containerMyVideos',
+        'MyApp.view.containerStatistics'
     ],
 
     config: {
@@ -54,14 +54,14 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
                 iconCls: 'info'
             },
             {
-                xtype: 'containerPopular',
-                iconCls: 'bookmarks',
-                title: 'Statistics'
-            },
-            {
                 xtype: 'containermyvideos',
                 iconCls: 'action',
                 title: 'Videos'
+            },
+            {
+                xtype: 'containerPopular',
+                iconCls: 'bookmarks',
+                title: 'Statistics'
             }
         ],
         listeners: [

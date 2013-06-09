@@ -109,6 +109,18 @@
                 "name": "photo"
             },
             "designerId": "458eff07-aa47-4b44-9d64-6b735a823b47"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "idTeam"
+            },
+            "designerId": "4b504bfc-c20e-4065-b4b1-b517292f2721"
         }
     ]
 }

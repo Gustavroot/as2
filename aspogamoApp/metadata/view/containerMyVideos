@@ -24,14 +24,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": "10%",
-                "hidden": true,
+                "height": "80%",
+                "hidden": false,
                 "html": null,
                 "id": "containerMyVideosOriginal",
                 "itemId": "mycontainer15",
-                "left": 0,
-                "top": 0,
-                "width": "10%"
+                "left": "5%",
+                "top": "2.5%",
+                "width": "90%"
             },
             "designerId": "798cd887-3fb1-4715-aeb9-f798648d93e9",
             "cn": [
@@ -74,6 +74,7 @@
             "userConfig": {
                 "centered": true,
                 "height": "80%",
+                "hidden": true,
                 "html": null,
                 "id": "containerMyVideosCanvas",
                 "itemId": "mycontainer16",

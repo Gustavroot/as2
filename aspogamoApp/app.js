@@ -22,12 +22,14 @@ Ext.application({
     models: [
         'modelPrueba',
         'modelPlayer',
-        'modelTest1'
+        'modelTest1',
+        'modelTeam'
     ],
     stores: [
         'storePrueba',
         'storePlayer',
-        'storeTest1'
+        'storeTest1',
+        'storeTeam'
     ],
     views: [
         'tabPanelPrincipal',
@@ -288,7 +290,6 @@ Ext.application({
         MyApp.app.funcionIniciadoPlayMyVideos(document.getElementById("videoContainerMyVideos"));
 
         Ext.getCmp('listaDistanciasOrderJugadores').setLoadingText(null);
-
 
         /*
 
@@ -742,8 +743,8 @@ Ext.application({
             //alert(Ext.getCmp("viewportAspogamo").getWindowWidth());
             document.getElementById("canvasContainerMyVideos").width = Ext.Viewport.getWindowWidth()*0.9;
             document.getElementById("canvasContainerMyVideos").height = Ext.Viewport.getWindowHeight()*0.8*0.75;
-            canvasContext=document.getElementById("canvasContainerMyVideos").getContext('2d');
-            MyApp.app.dibujarVideoSobreCanvas(video,canvasContext,canvasContext,document.getElementById("canvasContainerMyVideos").width,document.getElementById("canvasContainerMyVideos").height);
+            //canvasContext=document.getElementById("canvasContainerMyVideos").getContext('2d');
+            //MyApp.app.dibujarVideoSobreCanvas(video);
         },false);
         //En caso de que se detenga el video, se detiene el dibujado del
         //video sobre el canvas
@@ -753,7 +754,7 @@ Ext.application({
         },false);
     },
 
-    dibujarVideoSobreCanvas: function(v, c, bc, w, h) {
+    dibujarVideoSobreCanvas: function(v) {
         //Funcion de dibujado del video en el canvas
         //draw=function(v,c,bc,w,h) {
         try{
@@ -762,11 +763,11 @@ Ext.application({
         catch(e){}
         if(v.paused || v.ended)	return false;
         // First, draw it into the backing canvas
-        bc.drawImage(v,0,0,w,h);
+        //bc.drawImage(v,0,0,w,h);
         // Grab the pixel data from the backing canvas
         if(variableBoolParaDetencionDraw===0){
             variableTimeOutGeneral=setTimeout(function(){
-                MyApp.app.dibujarVideoSobreCanvas(v,c,bc,w,h);
+                MyApp.app.dibujarVideoSobreCanvas(v);
             },20);
         }
         else{

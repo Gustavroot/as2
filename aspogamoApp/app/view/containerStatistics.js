@@ -49,7 +49,6 @@ Ext.define('MyApp.view.containerStatistics', {
                             '#a66111'
                         ],
                         store: 'storePlayer',
-                        flipXY: true,
                         axes: [
                             {
                                 type: 'category',
@@ -152,12 +151,68 @@ Ext.define('MyApp.view.containerStatistics', {
                                     '</div>'
                                 ],
                                 store: 'storePlayer'
+                            },
+                            {
+                                xtype: 'chart',
+                                height: '100%',
+                                left: '50%',
+                                width: '50%',
+                                colors: [
+                                    '#115fa6',
+                                    '#94ae0a',
+                                    '#a61120',
+                                    '#ff8809',
+                                    '#ffd13e',
+                                    '#a61187',
+                                    '#24ad9a',
+                                    '#7c7474',
+                                    '#a66111'
+                                ],
+                                store: 'storeTeam',
+                                axes: [
+                                    {
+                                        type: 'category',
+                                        fields: [
+                                            'nameTeam'
+                                        ],
+                                        increment: 1,
+                                        title: 'Team'
+                                    },
+                                    {
+                                        type: 'numeric',
+                                        fields: [
+                                            'totalDistance'
+                                        ],
+                                        grid: {
+                                            odd: {
+                                                fill: '#e8e8e8'
+                                            }
+                                        },
+                                        increment: 1,
+                                        position: 'left',
+                                        title: 'Total distance'
+                                    }
+                                ],
+                                series: [
+                                    {
+                                        type: 'bar',
+                                        xField: 'nameTeam',
+                                        yField: [
+                                            'totalDistance'
+                                        ]
+                                    }
+                                ],
+                                interactions: [
+                                    {
+                                        type: 'panzoom'
+                                    }
+                                ]
                             }
                         ]
                     },
                     {
-                        xtype: 'polar',
-                        id: 'pieChart2Statistics',
+                        xtype: 'chart',
+                        id: 'barChartPossession',
                         colors: [
                             '#115fa6',
                             '#94ae0a',
@@ -169,17 +224,44 @@ Ext.define('MyApp.view.containerStatistics', {
                             '#7c7474',
                             '#a66111'
                         ],
-                        store: 'storePlayer',
+                        store: 'storeTeam',
+                        flipXY: true,
+                        axes: [
+                            {
+                                type: 'category',
+                                fields: [
+                                    'nameTeam'
+                                ],
+                                increment: 1,
+                                position: 'left',
+                                title: 'Team'
+                            },
+                            {
+                                type: 'numeric',
+                                fields: [
+                                    'ballPossession'
+                                ],
+                                grid: {
+                                    odd: {
+                                        fill: '#e8e8e8'
+                                    }
+                                },
+                                increment: 1,
+                                title: 'Possession'
+                            }
+                        ],
                         series: [
                             {
-                                type: 'pie',
-                                labelField: 'name',
-                                xField: 'distance'
+                                type: 'bar',
+                                xField: 'nameTeam',
+                                yField: [
+                                    'ballPossession'
+                                ]
                             }
                         ],
                         interactions: [
                             {
-                                type: 'rotate'
+                                type: 'panzoom'
                             }
                         ]
                     }
@@ -202,7 +284,9 @@ Ext.define('MyApp.view.containerStatistics', {
         if(value==Ext.getCmp('containerDetailsOrderJugadores')){
             Ext.getCmp('toolbarTitleStatistics').setTitle('Details');
         }
-
+        if(value==Ext.getCmp('barChartPossession')){
+            Ext.getCmp('toolbarTitleStatistics').setTitle('Possession');
+        }
     }
 
 });

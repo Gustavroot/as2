@@ -17,7 +17,7 @@
         <preference name="phonegap-version" value="2.5.0" />
         <preference name="fullscreen" value="true" />
         <gap:splash src="./resources/images/splashace.png" />
-        <preference name="splash-screen-duration" value="5000" />
+        <preference name="splash-screen-duration" value="8000" />
         <preference name="auto-hide-splash-screen" value="false" />
     	<icon src="./resources/images/Acelogo.png" width="72" height="72" />
     	<preference name="permissions" value="none"/>

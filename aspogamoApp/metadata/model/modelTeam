@@ -1,0 +1,89 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelTeam"
+    },
+    "designerId": "59edc507-b1a6-47e3-a251-76b14ceca7d1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nameTeam"
+            },
+            "designerId": "ad63f0cc-4e19-46cf-97f6-392e8adce5d0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "totalDistance",
+                "type": "float"
+            },
+            "designerId": "fe844e27-22f0-43c6-93d0-c2402b57a29d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ballPossession",
+                "type": "float"
+            },
+            "designerId": "744fc47c-5667-4177-83ab-65f9269f9546"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "idTeam"
+            },
+            "designerId": "418ebcca-dc2a-4419-b31b-d09a2c439b16"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "totalPasses",
+                "type": "float"
+            },
+            "designerId": "51c866b5-b1dd-4fcb-8a37-f738b3fdda01"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "logo"
+            },
+            "designerId": "65198e91-35d1-4d36-ac49-5e65d0c7d3ae"
+        }
+    ]
+}

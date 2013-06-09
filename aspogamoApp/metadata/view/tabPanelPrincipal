@@ -78,6 +78,27 @@
             },
             "codeClass": null,
             "userConfig": {
+                "iconCls": "action",
+                "title": "Videos"
+            },
+            "designerId": "bc9353e6-03f6-4582-80cb-5aeac07dcae1",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "iconCls",
+                    "type": "string"
+                }
+            ],
+            "masterInstanceId": "641c912f-fb15-4894-8b29-3727a45c3197"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "iconCls": "bookmarks",
                 "title": "Statistics"
             },
@@ -118,27 +139,6 @@
                 "name": "activeitemchange"
             },
             "designerId": "19cddf83-30a3-4167-93b0-523dc459b974"
-        },
-        {
-            "type": "linkedinstance",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "iconCls": "action",
-                "title": "Videos"
-            },
-            "designerId": "bc9353e6-03f6-4582-80cb-5aeac07dcae1",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "iconCls",
-                    "type": "string"
-                }
-            ],
-            "masterInstanceId": "641c912f-fb15-4894-8b29-3727a45c3197"
         }
     ]
 }
