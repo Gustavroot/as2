@@ -49,6 +49,7 @@ Ext.define('MyApp.view.containerStatistics', {
                             '#a66111'
                         ],
                         store: 'storePlayer',
+                        flipXY: true,
                         axes: [
                             {
                                 type: 'category',
@@ -124,6 +125,7 @@ Ext.define('MyApp.view.containerStatistics', {
                             {
                                 xtype: 'list',
                                 id: 'listaDistanciasOrderJugadores',
+                                width: '50%',
                                 scrollable: 'vertical',
                                 itemTpl: [
                                     '<div>',
@@ -200,9 +202,7 @@ Ext.define('MyApp.view.containerStatistics', {
         if(value==Ext.getCmp('containerDetailsOrderJugadores')){
             Ext.getCmp('toolbarTitleStatistics').setTitle('Details');
         }
-        if(value==Ext.getCmp('pieChart2Statistics')){
-            Ext.getCmp('toolbarTitleStatistics').setTitle('Por def 2');
-        }
+
     }
 
 });

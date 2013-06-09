@@ -58,9 +58,7 @@
                             "if(value==Ext.getCmp('containerDetailsOrderJugadores')){",
                             "    Ext.getCmp('toolbarTitleStatistics').setTitle('Details');",
                             "}",
-                            "if(value==Ext.getCmp('pieChart2Statistics')){",
-                            "    Ext.getCmp('toolbarTitleStatistics').setTitle('Por def 2');",
-                            "}"
+                            ""
                         ],
                         "name": "activeitemchange"
                     },
@@ -78,7 +76,8 @@
                         "colors": [
                             "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
                         ],
-                        "store": "storePlayer"
+                        "store": "storePlayer",
+                        "flipXY": true
                     },
                     "designerId": "af5888ed-f713-4134-9cc3-361212bca800",
                     "isBuiltIn": true,
@@ -191,7 +190,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "listaDistanciasOrderJugadores",
-                                "width": null,
+                                "width": "50%",
                                 "scrollable": "vertical",
                                 "loadingText": null,
                                 "store": "storePlayer"
