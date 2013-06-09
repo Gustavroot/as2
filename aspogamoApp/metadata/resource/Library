@@ -6,7 +6,16 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Library"
+        "theme": null,
+        "designer|userClassName": "Library",
+        "basePath": "http://cdn.sencha.com/touch/sencha-touch-2.2.1/"
     },
-    "designerId": "a4139dbc-1f15-4abb-b4ef-d3fef8ca8f2c"
+    "designerId": "a4139dbc-1f15-4abb-b4ef-d3fef8ca8f2c",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "theme",
+            "type": "string"
+        }
+    ]
 }

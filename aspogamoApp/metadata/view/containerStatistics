@@ -1,0 +1,406 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": null,
+        "id": "containerPopular",
+        "designer|userClassName": "containerStatistics",
+        "designer|userAlias": "containerPopular",
+        "layout": "fit"
+    },
+    "designerId": "94888bc9-1a06-45b1-8b2a-c7650c826fe0",
+    "cn": [
+        {
+            "type": "Ext.carousel.Carousel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "mycarousel",
+                "direction": null
+            },
+            "designerId": "a19b60dc-1d18-467b-bbf1-740aba4aa2e3",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "id": "toolbarTitleStatistics",
+                        "title": "Passes per player"
+                    },
+                    "designerId": "1e4d7d05-a75a-4953-92a3-0e789c3704ac"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onMycarouselActiveItemChange",
+                        "implHandler": [
+                            "if(value==Ext.getCmp('barChart1Statistics')){",
+                            "    Ext.getCmp('toolbarTitleStatistics').setTitle('Passes per player');",
+                            "}",
+                            "if(value==Ext.getCmp('pieChart1Statistics')){",
+                            "    Ext.getCmp('toolbarTitleStatistics').setTitle('Por def 1');",
+                            "}",
+                            "if(value==Ext.getCmp('pieChart2Statistics')){",
+                            "    Ext.getCmp('toolbarTitleStatistics').setTitle('Por def 2');",
+                            "}",
+                            "if(value==Ext.getCmp('containerDetailsOrderJugadores')){",
+                            "    Ext.getCmp('toolbarTitleStatistics').setTitle('Details');",
+                            "}"
+                        ],
+                        "name": "activeitemchange"
+                    },
+                    "designerId": "54e6b99a-17b6-4519-b4f1-547fb064ddea"
+                },
+                {
+                    "type": "Ext.chart.CartesianChart",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "barChart1Statistics",
+                        "colors": [
+                            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                        ],
+                        "store": "storePlayer"
+                    },
+                    "designerId": "af5888ed-f713-4134-9cc3-361212bca800",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-bar-chart",
+                    "autoName": "MyBarChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.axis.Category",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "name"
+                                ],
+                                "grid": null,
+                                "increment": 1,
+                                "labelInSpan": true,
+                                "title": "Player"
+                            },
+                            "designerId": "81978326-c97f-4086-9ddb-ac64b6242664"
+                        },
+                        {
+                            "type": "Ext.chart.axis.Numeric",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "fPass",
+                                    "sPass"
+                                ],
+                                "grid": [
+                                    "{",
+                                    "    odd: {",
+                                    "        fill: '#e8e8e8'",
+                                    "    }",
+                                    "}"
+                                ],
+                                "increment": 1,
+                                "position": "left",
+                                "title": "Passes"
+                            },
+                            "designerId": "9b574470-61d0-4553-83aa-15de7443f5b9"
+                        },
+                        {
+                            "type": "Ext.chart.series.Bar",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "xField": "name",
+                                "yField": [
+                                    "sPass",
+                                    "fPass"
+                                ]
+                            },
+                            "designerId": "2ffd7ad9-cc51-487f-bae4-8d52d867c159"
+                        },
+                        {
+                            "type": "Ext.chart.interactions.PanZoom",
+                            "reference": {
+                                "name": "interactions",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "designerId": "19690844-a336-4031-b656-55412627a7a5"
+                        },
+                        {
+                            "type": "Ext.chart.interactions.ItemInfo",
+                            "reference": {
+                                "name": "interactions",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "panel": [
+                                    "{\"html\":\"Details!\",\"modal\":true,\"centered\":true,\"width\":250,\"height\":300,\"styleHtmlContent\":true,\"scrollable\":\"vertical\",\"hideOnMaskTap\":true,\"fullscreen\":false,\"hidden\":true,\"zIndex\":30,\"items\":[{\"docked\":\"top\",\"xtype\":\"toolbar\",\"title\":\"Item Detail\"}]}"
+                                ]
+                            },
+                            "designerId": "bc855673-4cc6-429e-a06d-2590ed0a629a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "containerDetailsOrderJugadores",
+                        "layout": "fit"
+                    },
+                    "designerId": "e8aa5469-1621-402b-9a20-cdb6a3d6d54f",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "listaDistanciasOrderJugadores",
+                                "width": "50%",
+                                "scrollable": "vertical",
+                                "loadingText": null,
+                                "store": "storePlayer"
+                            },
+                            "designerId": "bc62834b-9a96-48d1-a965-6b216cf2d168",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "implHandler": [
+                                            "<div>",
+                                            "    <p><b>{name}</b></p>",
+                                            "</div>",
+                                            "<div>",
+                                            "    <table border=\"0\" height=\"100\">",
+                                            "        <col width=\"25%\">",
+                                            "        <col width=\"50%\">",
+                                            "        <col width=\"25%\">",
+                                            "        <tr>",
+                                            "            <td>",
+                                            "                <p> <img src={photo} height=\"80\" width=\"80\" /> </p>",
+                                            "            </td>",
+                                            "            <td  class=\"customfont\">",
+                                            "                <p><font size=\"2\"><font face=\"verdana\"><p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {distance} m </p></font></font></p>",
+                                            "            </td>",
+                                            "            <td align=\"right\">",
+                                            "                <div id=\"botonVerDescEmpresaFavoritaPerfilUsuario\" class=\"ddDescripcionDescripcion\" name=\"\" style=\"padding:3px; color:green; height:35px; width: 85%; background-size: 1606% 250%\"></div>",
+                                            "                <div id=\"botonBorrarEmpresaFavoritaPerfilUsuario\" class=\"ddDescripcionBorrar\" name=\"\" style=\"padding:3px; color:green; height:35px; width: 85%; background-size: 1606% 250%\"></div>",
+                                            "            </td>",
+                                            "        </tr>",
+                                            "    </table>",
+                                            "</div>"
+                                        ],
+                                        "designer|displayName": "itemTpl"
+                                    },
+                                    "designerId": "13daf141-0923-4a96-b502-2c4bf54830e0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "100%",
+                                "left": "50%",
+                                "width": "50%"
+                            },
+                            "designerId": "bc8c2db4-2a5b-45e1-a3a8-41f318807079",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "implHandler": [
+                                            "<div>List Item {string}</div>"
+                                        ],
+                                        "designer|displayName": "itemTpl"
+                                    },
+                                    "designerId": "0d6ccffb-9ac0-454c-abc8-abdbe4d9b7d5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.chart.PolarChart",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pieChart1Statistics",
+                        "colors": [
+                            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                        ],
+                        "store": "storePlayer"
+                    },
+                    "designerId": "c8eb46ed-f73b-4652-b033-c05d7271077f",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-pie3d-chart",
+                    "autoName": "My3DPieChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.series.Pie3D",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "field": "distance"
+                            },
+                            "designerId": "9cc1b847-8f1e-4424-a531-87d1aa0424a8"
+                        },
+                        {
+                            "type": "Ext.chart.interactions.RotatePie3D",
+                            "reference": {
+                                "name": "interactions",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "designerId": "b3bfca58-e238-408f-993f-a82cec51525c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.chart.PolarChart",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "pieChart2Statistics",
+                        "colors": [
+                            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                        ],
+                        "store": "storeTest1"
+                    },
+                    "designerId": "0048e6db-587e-4383-93e8-4ff1a78da211",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-pie3d-chart",
+                    "autoName": "My3DPieChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.series.Pie3D",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "labelField": null,
+                                "xField": null,
+                                "donut": true,
+                                "field": "data4"
+                            },
+                            "designerId": "fab7187f-b3ee-4019-96e4-2678119e3838"
+                        },
+                        {
+                            "type": "Ext.chart.interactions.RotatePie3D",
+                            "reference": {
+                                "name": "interactions",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "designerId": "84fe0282-82a5-4485-9c29-4e8b485c0b39"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.chart.PolarChart",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "colors": [
+                            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                        ],
+                        "store": "storePlayer"
+                    },
+                    "designerId": "9ca40fc4-5b2a-4dee-9f6d-f5543362135d",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-pie-chart",
+                    "autoName": "MyPieChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.series.Pie",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "labelField": "x",
+                                "xField": "distance"
+                            },
+                            "designerId": "d82eefb5-7d3d-476a-a3e6-49d0d4ff3bdf"
+                        },
+                        {
+                            "type": "Ext.chart.interactions.Rotate",
+                            "reference": {
+                                "name": "interactions",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "designerId": "c82fdcc4-b3f5-4129-b9f8-d9bbbadc3795"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -20,7 +20,7 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
     requires: [
         'MyApp.view.containerHome',
         'MyApp.view.containerProfile',
-        'MyApp.view.containerPopular',
+        'MyApp.view.containerStatistics',
         'MyApp.view.containerMyVideos'
     ],
 
@@ -52,7 +52,7 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
             },
             {
                 xtype: 'containerPopular',
-                title: 'Popular'
+                title: 'Statistics'
             },
             {
                 xtype: 'containermyvideos',

@@ -22,7 +22,7 @@
             "codeClass": null,
             "userConfig": {
                 "height": "80%",
-                "html": "<font color='gray'><center><p>&nbsp</p><p style='font-size:120%;'>Title here</p><p>&nbsp</p><p style='font-size:80%;'>Description here</p></center></font>",
+                "html": "<font color='gray'><center><p>&nbsp</p><p style='font-size:120%;'>Description</p><p>&nbsp</p><p style='font-size:80%;'>The research project 'Sensor-based, Automatic Analysis of Football Games' is an ambitious, mid-term research project that studies the automation of these tasks. The main objectives of the project are (1) the investigation of novel computational mechanisms that enable computer systems to recognize intentional activities, (2) the development of an integrated software system to automate game interpretation and analysis, and (3) the demonstration of the impact of automated game analysis on application areas, such as sport science, football coaching, and sports entertainment.</p></center></font>",
                 "left": "5%",
                 "top": "5%",
                 "width": "90%",

@@ -57,11 +57,11 @@
         },
         "94888bc9-1a06-45b1-8b2a-c7650c826fe0": {
             "paths": [
-                "metadata/view/containerPopular",
-                "app/view/override/containerPopular.js",
-                "app/view/containerPopular.js"
+                "metadata/view/containerStatistics",
+                "app/view/override/containerStatistics.js",
+                "app/view/containerStatistics.js"
             ],
-            "className": "containerPopular"
+            "className": "containerStatistics"
         },
         "641c912f-fb15-4894-8b29-3727a45c3197": {
             "paths": [
@@ -138,6 +138,38 @@
                 "metadata/resource/Library"
             ],
             "className": "Library"
+        },
+        "8b425b51-cc8d-486e-954d-483c9646ace1": {
+            "paths": [
+                "metadata/model/modelPlayer",
+                "app/model/override/modelPlayer.js",
+                "app/model/modelPlayer.js"
+            ],
+            "className": "modelPlayer"
+        },
+        "edd14a66-5ba5-43b4-b16f-e567dc64abe7": {
+            "paths": [
+                "metadata/store/storePlayer",
+                "app/store/override/storePlayer.js",
+                "app/store/storePlayer.js"
+            ],
+            "className": "storePlayer"
+        },
+        "62faae73-e0ac-4ab4-a8fe-ce767da8a5fc": {
+            "paths": [
+                "metadata/model/modelTest1",
+                "app/model/override/modelTest1.js",
+                "app/model/modelTest1.js"
+            ],
+            "className": "modelTest1"
+        },
+        "ec0aecff-6ad0-4dc7-a8d9-d274ee73baf6": {
+            "paths": [
+                "metadata/store/storeTest1",
+                "app/store/override/storeTest1.js",
+                "app/store/storeTest1.js"
+            ],
+            "className": "storeTest1"
         }
     },
     "viewOrderMap": {
@@ -156,11 +188,15 @@
             "87cb13c2-ed10-436f-905f-df9d97e01f3e"
         ],
         "store": [
-            "41d1ff9a-baf0-48da-ba85-a417cccbd8db"
+            "41d1ff9a-baf0-48da-ba85-a417cccbd8db",
+            "edd14a66-5ba5-43b4-b16f-e567dc64abe7",
+            "ec0aecff-6ad0-4dc7-a8d9-d274ee73baf6"
         ],
         "controller": [],
         "model": [
-            "bcf5cd33-4008-4485-ad60-d409898c0513"
+            "bcf5cd33-4008-4485-ad60-d409898c0513",
+            "8b425b51-cc8d-486e-954d-483c9646ace1",
+            "62faae73-e0ac-4ab4-a8fe-ce767da8a5fc"
         ],
         "resource": [
             "a4139dbc-1f15-4abb-b4ef-d3fef8ca8f2c",
