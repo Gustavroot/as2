@@ -104,7 +104,7 @@ Ext.application({
             //--------------------------------------------------------------------------------------------------------------------------------------
         }
         catch(e){
-            Ext.Msg.alert('Aviso', 'Fail to connect with facebook.', Ext.emptyFn);
+            //Ext.Msg.alert('Aviso', 'Fail to connect with facebook.', Ext.emptyFn);
         }
 
 

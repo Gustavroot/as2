@@ -16,10 +16,10 @@
 
         <preference name="phonegap-version" value="2.5.0" />
         <preference name="fullscreen" value="true" />
-        <gap:splash src="splashscreenCliente.png" />
+        <gap:splash src="./resources/images/splashace.png" />
         <preference name="splash-screen-duration" value="7000" />
         <preference name="auto-hide-splash-screen" value="false" />
-    	<icon src="./resources/images/logopris.png" width="72" height="72" />
+    	<icon src="./resources/images/Acelogo.png" width="72" height="72" />
     	<preference name="permissions" value="none"/>
         <preference name="orientation" value="landscape" />
 </widget>
