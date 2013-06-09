@@ -124,7 +124,6 @@ Ext.define('MyApp.view.containerStatistics', {
                             {
                                 xtype: 'list',
                                 id: 'listaDistanciasOrderJugadores',
-                                width: '50%',
                                 scrollable: 'vertical',
                                 itemTpl: [
                                     '<div>',
@@ -151,42 +150,6 @@ Ext.define('MyApp.view.containerStatistics', {
                                     '</div>'
                                 ],
                                 store: 'storePlayer'
-                            },
-                            {
-                                xtype: 'list',
-                                height: '100%',
-                                left: '50%',
-                                width: '50%',
-                                itemTpl: [
-                                    '<div>List Item {string}</div>'
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'polar',
-                        id: 'pieChart1Statistics',
-                        colors: [
-                            '#115fa6',
-                            '#94ae0a',
-                            '#a61120',
-                            '#ff8809',
-                            '#ffd13e',
-                            '#a61187',
-                            '#24ad9a',
-                            '#7c7474',
-                            '#a66111'
-                        ],
-                        store: 'storePlayer',
-                        series: [
-                            {
-                                type: 'pie3d',
-                                field: 'distance'
-                            }
-                        ],
-                        interactions: [
-                            {
-                                type: 'rotatePie3d'
                             }
                         ]
                     },
@@ -208,7 +171,7 @@ Ext.define('MyApp.view.containerStatistics', {
                         series: [
                             {
                                 type: 'pie',
-                                labelField: 'x',
+                                labelField: 'name',
                                 xField: 'distance'
                             }
                         ],
@@ -233,9 +196,6 @@ Ext.define('MyApp.view.containerStatistics', {
     onMycarouselActiveItemChange: function(container, value, oldValue, eOpts) {
         if(value==Ext.getCmp('barChart1Statistics')){
             Ext.getCmp('toolbarTitleStatistics').setTitle('Passes per player');
-        }
-        if(value==Ext.getCmp('pieChart1Statistics')){
-            Ext.getCmp('toolbarTitleStatistics').setTitle('Passes-percentage');
         }
         if(value==Ext.getCmp('containerDetailsOrderJugadores')){
             Ext.getCmp('toolbarTitleStatistics').setTitle('Details');

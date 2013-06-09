@@ -37,7 +37,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "height": "60%",
-                        "html": "<img src=\"resources/images/Acelogo.svg\" height=\"100%\" width=\"100%\">",
+                        "html": null,
+                        "id": "containerLogoSupIzquierda",
                         "left": "5%",
                         "top": "20%",
                         "width": "20%"
@@ -53,7 +54,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "height": "60%",
-                        "html": "<img src=\"resources/images/logopris.svg\" height=\"100%\" width=\"100%\">",
+                        "html": null,
+                        "id": "containerLogoSupDerecha",
                         "right": "5%",
                         "top": "20%",
                         "width": "20%"

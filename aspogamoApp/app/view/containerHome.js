@@ -34,7 +34,7 @@ Ext.define('MyApp.view.containerHome', {
                     {
                         xtype: 'container',
                         height: '60%',
-                        html: '<img src="resources/images/Acelogo.svg" height="100%" width="100%">',
+                        id: 'containerLogoSupIzquierda',
                         left: '5%',
                         top: '20%',
                         width: '20%'
@@ -42,7 +42,7 @@ Ext.define('MyApp.view.containerHome', {
                     {
                         xtype: 'container',
                         height: '60%',
-                        html: '<img src="resources/images/logopris.svg" height="100%" width="100%">',
+                        id: 'containerLogoSupDerecha',
                         right: '5%',
                         top: '20%',
                         width: '20%'
