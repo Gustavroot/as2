@@ -798,7 +798,7 @@ Ext.application({
 
 
             Ext.Ajax.request({
-                url: 'http://192.168.2.105/as2PhP/pases.php',
+                url: 'http://192.168.43.237/as2PhP/pases.php',
                 disableCaching: true,
                 widhCredentials: true, //CONFIRMAR
                 useDefaultXhrHeader: false,
@@ -813,7 +813,7 @@ Ext.application({
             });
 
             Ext.Ajax.request({
-                url: 'http://192.168.2.105/as2PhP/distancia.php',
+                url: 'http://192.168.43.237/as2PhP/distancia.php',
                 disableCaching: true,
                 widhCredentials: true, //CONFIRMAR
                 useDefaultXhrHeader: false,

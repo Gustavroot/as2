@@ -27,7 +27,7 @@ Ext.define('MyApp.store.storePlayer', {
         storeId: 'storePlayer',
         proxy: {
             type: 'jsonp',
-            url: 'http://192.168.2.105/as2PhP/player.php',
+            url: 'http://192.168.43.237/as2PhP/player.php',
             reader: {
                 type: 'json',
                 rootProperty: 'ptm'
