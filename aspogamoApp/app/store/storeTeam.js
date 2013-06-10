@@ -27,7 +27,7 @@ Ext.define('MyApp.store.storeTeam', {
         storeId: 'storeTeam',
         proxy: {
             type: 'jsonp',
-            url: 'http://192.168.43.237/as2PhP/team.php',
+            url: 'http://tecmo.webfactional.com/ace/team.php',
             reader: {
                 type: 'json',
                 rootProperty: 'ptm'

@@ -27,7 +27,7 @@ Ext.define('MyApp.store.storePlayerPasses', {
         storeId: 'storePlayerPasses',
         proxy: {
             type: 'jsonp',
-            url: 'http://192.168.43.237/as2PhP/player.php',
+            url: 'http://tecmo.webfactional.com/ace/player.php',
             reader: {
                 type: 'json',
                 rootProperty: 'ptm'

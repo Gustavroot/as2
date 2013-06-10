@@ -199,7 +199,7 @@ Ext.application({
     },
 
     funcionSeteadoConfigInicial: function() {
-        Ext.getCmp('containerMyVideosOriginal').setHtml("<p><video id='videoContainerMyVideos' width='100%' controls src='./resources/videos/1.mp4' type='video/mp4'>Bla.</video></p>");
+        Ext.getCmp('containerMyVideosOriginal').setHtml("<p><video id='videoContainerMyVideos' width='100%' controls src='http://www.didicr.com/DIDIVIEJO/As2/CRvsTurkey2002.mp4' type='video/mp4'>Bla.</video></p>");
         //'<iframe id="player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com" frameborder="0"></iframe>'
         //Ext.getCmp('containerMyVideosOriginal').setHtml('<center><iframe id="videoContainerMyVideos" width="420" height="315" src="http://www.youtube.com/embed/pYqyYyIDCh4" frameborder="0" allowfullscreen></iframe></center>');
 
@@ -305,7 +305,7 @@ Ext.application({
 
 
         Ext.Ajax.request({
-            url: 'http://192.168.43.237/as2PhP/reset.php',
+            url: 'http://tecmo.webfactional.com/ace/reset.php',
             useDefaultXhrHeader: false,
             disableCaching: true,
             widhCredentials: true, //CONFIRMAR
@@ -370,23 +370,7 @@ Ext.application({
             clearTimeout(variableTimeOutGeneral);
         }
         catch(e){}
-        if(v.paused || v.ended){
-            Ext.Ajax.request({
-                url: 'http://192.168.43.237/as2PhP/reset.php',
-                useDefaultXhrHeader: false,
-                disableCaching: true,
-                widhCredentials: true, //CONFIRMAR
-                method: "POST",
-                failure: function(response){
-                },
-                success: function(response){
-                }
-            });
-            Ext.getStore("storePlayer").load();
-            Ext.getStore("storePlayerPasses").load();
-            Ext.getStore("storeTeam").load();
-            return false;
-        }
+        if(v.paused || v.ended){return false;}
 
 
 
@@ -431,7 +415,7 @@ Ext.application({
 
 
             Ext.Ajax.request({
-                url: 'http://192.168.43.237/as2PhP/pases.php',
+                url: 'http://tecmo.webfactional.com/ace/pases.php',
                 disableCaching: true,
                 widhCredentials: true, //CONFIRMAR
                 useDefaultXhrHeader: false,
@@ -446,7 +430,7 @@ Ext.application({
             });
 
             Ext.Ajax.request({
-                url: 'http://192.168.43.237/as2PhP/distancia.php',
+                url: 'http://tecmo.webfactional.com/ace/distancia.php',
                 disableCaching: true,
                 widhCredentials: true, //CONFIRMAR
                 useDefaultXhrHeader: false,

@@ -162,16 +162,16 @@ Ext.define('MyApp.view.containerMyVideos', {
                                 label: 'Video',
                                 options: [
                                     {
-                                        text: 'First',
-                                        value: 'http://didicr.com/Clientes/tazumal/1.mp4'
+                                        text: 'Costa Rica vs Turkey',
+                                        value: 'http://www.didicr.com/DIDIVIEJO/As2/CRvsTurkey2002.mp4'
                                     },
                                     {
-                                        text: 'Second',
-                                        value: './resources/videos/1.mp4'
+                                        text: 'Costa Rica vs China',
+                                        value: 'http://www.didicr.com/DIDIVIEJO/As2/CRvsTurkey2002.mp4'
                                     },
                                     {
-                                        text: 'Third',
-                                        value: './resources/videos/SenchaDraw-Demo.mp4'
+                                        text: 'Costa Rica vs Brasil',
+                                        value: 'http://www.didicr.com/DIDIVIEJO/As2/CRvsTurkey2002.mp4'
                                     }
                                 ]
                             }
@@ -189,6 +189,42 @@ Ext.define('MyApp.view.containerMyVideos', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
+                            if(document.getElementById("videoContainerMyVideos").ended){
+                                alert('reset!');
+                                Ext.Ajax.request({
+                                    url: 'http://tecmo.webfactional.com/ace/reset.php',
+                                    useDefaultXhrHeader: false,
+                                    disableCaching: true,
+                                    widhCredentials: true, //CONFIRMAR
+                                    method: "POST",
+                                    failure: function(response){
+                                    },
+                                    success: function(response){
+                                        Ext.getStore("storePlayer").load();
+                                        Ext.getStore("storePlayerPasses").load();
+                                        Ext.getStore("storeTeam").load();
+                                    }
+                                });
+                            }
+
+                            /*
+                            Ext.Ajax.request({
+                            url: 'http://tecmo.webfactional.com/ace/reset.php',
+                            useDefaultXhrHeader: false,
+                            disableCaching: true,
+                            widhCredentials: true, //CONFIRMAR
+                            method: "POST",
+                            failure: function(response){
+                            },
+                            success: function(response){
+                            }
+                            });
+                            Ext.getStore("storePlayer").load();
+                            Ext.getStore("storePlayerPasses").load();
+                            Ext.getStore("storeTeam").load();
+
+                            */
+
                             if(document.getElementById("videoContainerMyVideos").paused || document.getElementById("videoContainerMyVideos").ended){
                                 document.getElementById("videoContainerMyVideos").play();
                             }
@@ -270,7 +306,7 @@ Ext.define('MyApp.view.containerMyVideos', {
 
 
         Ext.Ajax.request({
-            url: 'http://192.168.43.237/as2PhP/reset.php',
+            url: 'http://tecmo.webfactional.com/ace/reset.php',
             useDefaultXhrHeader: false,
             disableCaching: true,
             widhCredentials: true, //CONFIRMAR
@@ -278,11 +314,11 @@ Ext.define('MyApp.view.containerMyVideos', {
             failure: function(response){
             },
             success: function(response){
+                Ext.getStore("storePlayer").load();
+                Ext.getStore("storePlayerPasses").load();
+                Ext.getStore("storeTeam").load();    
             }
         });
-        Ext.getStore("storePlayer").load();
-        Ext.getStore("storePlayerPasses").load();
-        Ext.getStore("storeTeam").load();
     }
 
 });
