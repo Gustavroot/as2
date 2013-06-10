@@ -24,13 +24,13 @@ html, body, header, paragraph, p, div {
 
 
 .botonInicioTabpanel {
- 	content: url(./resources/images/ddTabbarEventos.png);    
+ 	content: url(./resources/images/BALN-D~1.png);
 }
 
 .botonEventoTabpanel{
-    content: url(./resources/images/ddTabbarInicio.png);
+    content: url(./resources/images/video3.png);
 }
 
 .botonMapaTabpanel{
-	content: url(./resources/images/ddTabbarMapa.png);
+	content: url(./resources/images/statistics2.png);
 }
