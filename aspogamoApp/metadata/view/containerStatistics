@@ -419,6 +419,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "labelField": "ballPossession",
                                 "xField": "nameTeam",
                                 "yField": [
                                     "ballPossession"

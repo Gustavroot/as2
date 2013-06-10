@@ -189,7 +189,7 @@ Ext.define('MyApp.view.containerMyVideos', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
-                            if(document.getElementById("videoContainerMyVideos").paused){
+                            if(document.getElementById("videoContainerMyVideos").paused || document.getElementById("videoContainerMyVideos").ended){
                                 document.getElementById("videoContainerMyVideos").play();
                             }
                             else{
@@ -280,6 +280,9 @@ Ext.define('MyApp.view.containerMyVideos', {
             success: function(response){
             }
         });
+        Ext.getStore("storePlayer").load();
+        Ext.getStore("storePlayerPasses").load();
+        Ext.getStore("storeTeam").load();
     }
 
 });

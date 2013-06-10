@@ -261,6 +261,7 @@ Ext.define('MyApp.view.containerStatistics', {
 
                                     return attributes;
                                 },
+                                labelField: 'ballPossession',
                                 xField: 'nameTeam',
                                 yField: [
                                     'ballPossession'
