@@ -267,6 +267,19 @@ Ext.define('MyApp.view.containerMyVideos', {
         Ext.getCmp('containerMyVideosOriginal').setHtml("<p><video id='videoContainerMyVideos' width='100%' controls src='"+newValue+"' type='video/mp4'>Bla.</video></p>");
         //alert(newValue);
         document.getElementById("videoContainerMyVideos").pause();
+
+
+        Ext.Ajax.request({
+            url: 'http://192.168.43.237/as2PhP/reset.php',
+            useDefaultXhrHeader: false,
+            disableCaching: true,
+            widhCredentials: true, //CONFIRMAR
+            method: "POST",
+            failure: function(response){
+            },
+            success: function(response){
+            }
+        });
     }
 
 });

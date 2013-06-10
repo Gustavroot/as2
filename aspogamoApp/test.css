@@ -13,8 +13,8 @@ html, body, header, paragraph, p, div {
 
 
 .my-tabbar-tablet.x-docked-bottom .x-tab .x-button-icon {   
-   width: 3.65em;
-   height: 3.65em;
+   width: 2.15em;
+   height: 2.15em;
  }
 
 .my-tabbar-tablet.x-docked-bottom .x-tab {     
@@ -23,17 +23,14 @@ html, body, header, paragraph, p, div {
 
 
 
-
-/*
 .botonInicioTabpanel {
  	content: url(./resources/images/ddTabbarEventos.png);    
 }
 
 .botonEventoTabpanel{
-    content: url(./resources/css/esp/skin/ddTabbarEventos.png);
+    content: url(./resources/images/ddTabbarInicio.png);
 }
 
 .botonMapaTabpanel{
-	content: url(./resources/css/esp/skin/ddTabbarMapa.png);
+	content: url(./resources/images/ddTabbarMapa.png);
 }
-*/

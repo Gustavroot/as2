@@ -1,0 +1,44 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "model": "modelPlayer",
+        "storeId": "storePlayerPasses",
+        "designer|userClassName": "storePlayerPasses"
+    },
+    "designerId": "2a76c6d0-5e62-4647-bf0f-f3eb7138c1c4",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://192.168.43.237/as2PhP/player.php"
+            },
+            "designerId": "d27a0a18-84c2-4e60-b68c-290f8273eb59",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "ptm"
+                    },
+                    "designerId": "05161a79-e43a-421d-852e-73ec3ca9ce01"
+                }
+            ]
+        }
+    ]
+}

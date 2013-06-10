@@ -186,6 +186,14 @@
                 "app/view/containerHeader.js"
             ],
             "className": "containerHeader"
+        },
+        "2a76c6d0-5e62-4647-bf0f-f3eb7138c1c4": {
+            "paths": [
+                "metadata/store/storePlayerPasses",
+                "app/store/override/storePlayerPasses.js",
+                "app/store/storePlayerPasses.js"
+            ],
+            "className": "storePlayerPasses"
         }
     },
     "viewOrderMap": {
@@ -206,6 +214,7 @@
         "store": [
             "41d1ff9a-baf0-48da-ba85-a417cccbd8db",
             "edd14a66-5ba5-43b4-b16f-e567dc64abe7",
+            "2a76c6d0-5e62-4647-bf0f-f3eb7138c1c4",
             "ec0aecff-6ad0-4dc7-a8d9-d274ee73baf6",
             "28b9a0de-2e8d-438f-8a96-f68f7bdfa4ae"
         ],

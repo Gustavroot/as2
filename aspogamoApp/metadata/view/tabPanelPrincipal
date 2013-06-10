@@ -42,8 +42,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "iconCls": "home",
-                "title": "Home"
+                "iconCls": "botonInicioTabpanel",
+                "baseCls": null,
+                "title": "<p style='font-size: 170%;'>Home</p>"
             },
             "designerId": "7fd3e507-3af1-472e-a055-c3583e6edbb2",
             "customConfigs": [
@@ -78,8 +79,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "iconCls": "action",
-                "title": "Videos"
+                "iconCls": "botonEventoTabpanel",
+                "title": "<p style='font-size: 170%;'>Videos</p>"
             },
             "designerId": "bc9353e6-03f6-4582-80cb-5aeac07dcae1",
             "customConfigs": [
@@ -99,8 +100,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "iconCls": "bookmarks",
-                "title": "Statistics"
+                "iconCls": "botonMapaTabpanel",
+                "title": "<p style='font-size: 170%;'>Statistics</p>"
             },
             "designerId": "5f1fe9b4-c40f-4081-a5a8-3155219f40f2",
             "customConfigs": [

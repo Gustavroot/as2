@@ -29,7 +29,8 @@ Ext.application({
         'storePrueba',
         'storePlayer',
         'storeTest1',
-        'storeTeam'
+        'storeTeam',
+        'storePlayerPasses'
     ],
     views: [
         'tabPanelPrincipal',
@@ -179,18 +180,20 @@ Ext.application({
     */
 
 
+    setTimeout(function(){
+    Ext.getCmp('tabPanelPrincipal').getTabBar().addCls('my-tabbar-tablet');
+    },500);
 
     //LINEA TEMPORAL!!!
     setTimeout(function(){
-    MyApp.app.funcionSeteadoConfigInicial();
-    //Ext.getCmp('tabPanelPrincipal').getTabBar().addCls('my-tabbar-tablet');
-    Ext.getCmp('containerLogoSupIzquierda').setHtml('<img src="resources/images/Acelogo.svg" height="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'" width="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'">');
-    Ext.getCmp('containerLogoSupDerecha').setHtml('<img src="resources/images/logopris.svg" height="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'" width="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'">');
+    MyApp.app.funcionSeteadoConfigInicial(); 
+    Ext.getCmp('containerLogoSupIzquierda').setHtml('<img src="resources/images/Acelogo.svg" height="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'" width="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'">'); 
+    Ext.getCmp('containerLogoSupDerecha').setHtml('<img align="right" src="resources/images/logopris.svg" height="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'" width="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'">');
     },2000);
 
 
 
-    //
+    //Este arreglo de colores es para el chart 1
     colors=['blue','red'];
     Ext.create('MyApp.view.tabPanelPrincipal', {fullscreen: true});
     },
@@ -297,6 +300,26 @@ Ext.application({
         MyApp.app.funcionIniciadoPlayMyVideos(document.getElementById("videoContainerMyVideos"));
 
         Ext.getCmp('listaDistanciasOrderJugadores').setLoadingText(null);
+
+
+
+
+        Ext.Ajax.request({
+            url: 'http://192.168.43.237/as2PhP/reset.php',
+            useDefaultXhrHeader: false,
+            disableCaching: true,
+            widhCredentials: true, //CONFIRMAR
+            method: "POST",
+            failure: function(response){
+            },
+            success: function(response){
+            }
+        });
+        Ext.getStore("storePlayer").load();
+        Ext.getStore("storePlayerPasses").load();
+
+
+
 
         /*
 
@@ -802,6 +825,7 @@ Ext.application({
             //alert(data31)
             // alert("1");
             Ext.getStore("storePlayer").load();
+            Ext.getStore("storePlayerPasses").load();
 
 
 

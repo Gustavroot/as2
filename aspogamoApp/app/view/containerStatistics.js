@@ -32,7 +32,7 @@ Ext.define('MyApp.view.containerStatistics', {
                         docked: 'top',
                         id: 'toolbarTitleStatistics',
                         style: 'background: #0096D7',
-                        title: 'Passes per player'
+                        title: '<p style=\'font-size: 120%;\'>Passes per player</p>'
                     },
                     {
                         xtype: 'chart',
@@ -48,7 +48,7 @@ Ext.define('MyApp.view.containerStatistics', {
                             '#7c7474',
                             '#a66111'
                         ],
-                        store: 'storePlayer',
+                        store: 'storePlayerPasses',
                         axes: [
                             {
                                 type: 'category',
@@ -287,13 +287,13 @@ Ext.define('MyApp.view.containerStatistics', {
 
     onMycarouselActiveItemChange: function(container, value, oldValue, eOpts) {
         if(value==Ext.getCmp('barChart1Statistics')){
-            Ext.getCmp('toolbarTitleStatistics').setTitle('Passes per player');
+            Ext.getCmp('toolbarTitleStatistics').setTitle("<p style='font-size: 140%;'>Passes per player</p>");
         }
         if(value==Ext.getCmp('containerDetailsOrderJugadores')){
-            Ext.getCmp('toolbarTitleStatistics').setTitle('Details');
+            Ext.getCmp('toolbarTitleStatistics').setTitle("<p style='font-size: 140%;'>Details</p>");
         }
         if(value==Ext.getCmp('barChartPossession')){
-            Ext.getCmp('toolbarTitleStatistics').setTitle('Possession');
+            Ext.getCmp('toolbarTitleStatistics').setTitle("<p style='font-size: 140%;'>Possession</p>");
         }
     }
 

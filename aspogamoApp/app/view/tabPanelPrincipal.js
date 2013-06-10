@@ -44,8 +44,8 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
         items: [
             {
                 xtype: 'containerhome',
-                iconCls: 'home',
-                title: 'Home'
+                iconCls: 'botonInicioTabpanel',
+                title: '<p style=\'font-size: 170%;\'>Home</p>'
             },
             {
                 xtype: 'containerprofile',
@@ -55,13 +55,13 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
             },
             {
                 xtype: 'containermyvideos',
-                iconCls: 'action',
-                title: 'Videos'
+                iconCls: 'botonEventoTabpanel',
+                title: '<p style=\'font-size: 170%;\'>Videos</p>'
             },
             {
                 xtype: 'containerPopular',
-                iconCls: 'bookmarks',
-                title: 'Statistics'
+                iconCls: 'botonMapaTabpanel',
+                title: '<p style=\'font-size: 170%;\'>Statistics</p>'
             }
         ],
         listeners: [
