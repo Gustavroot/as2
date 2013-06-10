@@ -243,6 +243,25 @@ Ext.define('MyApp.view.containerMyVideos', {
                         handler: function(button, event) {
                             if(this.getUi()=='normal'){
                                 this.setUi('confirm');
+                                MyApp.app.functionFillCharts();
+                            }
+                            else{
+                                this.setUi('normal');
+                                clearTimeout(timeOutFillCharts);
+                            }
+                        },
+                        height: '50px',
+                        id: 'buttonPlayWIthoutVideo',
+                        width: '50px',
+                        iconCls: 'locate',
+                        iconMask: true,
+                        text: ''
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            if(this.getUi()=='normal'){
+                                this.setUi('confirm');
                             }
                             else{
                                 this.setUi('normal');
@@ -321,6 +340,10 @@ Ext.define('MyApp.view.containerMyVideos', {
                 Ext.getStore("storeTeam").load();    
             }
         });
+
+
+        clearTimeout(timeOutFillCharts);
+        Ext.getCmp('buttonPlayWIthoutVideo').setUi('normal');
     }
 
 });

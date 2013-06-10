@@ -248,7 +248,11 @@
                                             "        Ext.getStore(\"storePlayerPasses\").load();",
                                             "        Ext.getStore(\"storeTeam\").load();    ",
                                             "    }",
-                                            "});"
+                                            "});",
+                                            "",
+                                            "",
+                                            "clearTimeout(timeOutFillCharts);",
+                                            "Ext.getCmp('buttonPlayWIthoutVideo').setUi('normal');"
                                         ],
                                         "name": "change"
                                     },
@@ -324,20 +328,20 @@
                                     "}",
                                     "",
                                     "/*",
-                                    "    Ext.Ajax.request({",
-                                    "        url: 'http://tecmo.webfactional.com/ace/reset.php',",
-                                    "        useDefaultXhrHeader: false,",
-                                    "        disableCaching: true,",
-                                    "        widhCredentials: true, //CONFIRMAR",
-                                    "        method: \"POST\",",
-                                    "        failure: function(response){",
-                                    "        },",
-                                    "        success: function(response){",
-                                    "        }",
-                                    "    });",
-                                    "    Ext.getStore(\"storePlayer\").load();",
-                                    "    Ext.getStore(\"storePlayerPasses\").load();",
-                                    "    Ext.getStore(\"storeTeam\").load();",
+                                    "Ext.Ajax.request({",
+                                    "url: 'http://tecmo.webfactional.com/ace/reset.php',",
+                                    "useDefaultXhrHeader: false,",
+                                    "disableCaching: true,",
+                                    "widhCredentials: true, //CONFIRMAR",
+                                    "method: \"POST\",",
+                                    "failure: function(response){",
+                                    "},",
+                                    "success: function(response){",
+                                    "}",
+                                    "});",
+                                    "Ext.getStore(\"storePlayer\").load();",
+                                    "Ext.getStore(\"storePlayerPasses\").load();",
+                                    "Ext.getStore(\"storeTeam\").load();",
                                     "",
                                     "*/",
                                     "",
@@ -350,6 +354,51 @@
                                 ]
                             },
                             "designerId": "cde9be89-f4b5-4749-92dc-46ccc5a705dd"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "50px",
+                        "id": "buttonPlayWIthoutVideo",
+                        "width": "50px",
+                        "iconCls": "locate",
+                        "iconMask": true,
+                        "text": ""
+                    },
+                    "designerId": "0d49b626-0768-4c9a-9c15-a0020d2f6c0b",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "if(this.getUi()=='normal'){",
+                                    "    this.setUi('confirm');",
+                                    "    MyApp.app.functionFillCharts();",
+                                    "}",
+                                    "else{",
+                                    "    this.setUi('normal');",
+                                    "    clearTimeout(timeOutFillCharts);",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "cc1a3b65-17fd-428d-bdb1-bdbed396740c"
                         }
                     ]
                 },
