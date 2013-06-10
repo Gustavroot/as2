@@ -74,7 +74,7 @@ Ext.define('MyApp.view.containerHome', {
                 left: '5%',
                 top: '35%',
                 width: '90%',
-                modal: true,
+                modal: false,
                 scrollable: 'vertical'
             }
         ]

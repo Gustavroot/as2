@@ -111,7 +111,7 @@
                 "left": "5%",
                 "top": "35%",
                 "width": "90%",
-                "modal": true,
+                "modal": false,
                 "scrollable": "vertical"
             },
             "designerId": "bd53fe48-99ef-4c21-a6b5-ceed83516f76"
