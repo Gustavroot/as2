@@ -163,15 +163,15 @@ Ext.define('MyApp.view.containerMyVideos', {
                                 options: [
                                     {
                                         text: 'Costa Rica vs Turkey',
-                                        value: './resources/videos/CRvsTurkey2002.mp4'
+                                        value: './resources/videos/1.mp4'
                                     },
                                     {
                                         text: 'Costa Rica vs China',
-                                        value: './resources/videos/CRvsTurkey2002.mp4'
+                                        value: './resources/videos/1.mp4'
                                     },
                                     {
                                         text: 'Costa Rica vs Brasil',
-                                        value: './resources/videos/CRvsTurkey2002.mp4'
+                                        value: './resources/videos/1.mp4'
                                     }
                                 ]
                             }
