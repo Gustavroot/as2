@@ -208,9 +208,6 @@
                                     "userConfig": {
                                         "implHandler": [
                                             "<div>",
-                                            "    <p><b>{name}</b></p>",
-                                            "</div>",
-                                            "<div>",
                                             "    <table border=\"0\" height=\"100\">",
                                             "        <col width=\"25%\">",
                                             "        <col width=\"50%\">",
@@ -220,7 +217,8 @@
                                             "                <p> <img src={photo} height=\"80\" width=\"80\" /> </p>",
                                             "            </td>",
                                             "            <td  class=\"customfont\">",
-                                            "                <p><font size=\"2\"><font face=\"verdana\"><p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {distance} m </p></font></font></p>",
+                                            "                <p style='font-size: 170%;'><b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {name}</b></p>",
+                                            "                <p style='font-size: 170%;'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {distance} meters </p>",
                                             "            </td>",
                                             "            <td align=\"right\">",
                                             "                <div id=\"botonVerDescEmpresaFavoritaPerfilUsuario\" class=\"ddDescripcionDescripcion\" name=\"\" style=\"padding:3px; color:green; height:35px; width: 85%; background-size: 1606% 250%\"></div>",
@@ -311,7 +309,33 @@
                                             "totalDistance"
                                         ]
                                     },
-                                    "designerId": "02735e17-edd1-4e04-aefc-03acf68eed5e"
+                                    "designerId": "02735e17-edd1-4e04-aefc-03acf68eed5e",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "renderer",
+                                                "designer|params": [
+                                                    "sprite",
+                                                    "record",
+                                                    "attributes",
+                                                    "index",
+                                                    "store"
+                                                ],
+                                                "implHandler": [
+                                                    "attributes.fill=colors[index%colors.length];",
+                                                    "",
+                                                    "return attributes;"
+                                                ]
+                                            },
+                                            "designerId": "4be7a927-8f23-498b-97c8-2f7e27592e26"
+                                        }
+                                    ]
                                 },
                                 {
                                     "type": "Ext.chart.interactions.PanZoom",
@@ -400,7 +424,33 @@
                                     "ballPossession"
                                 ]
                             },
-                            "designerId": "1c2d1464-1c8c-4802-89e9-94c3b39870f3"
+                            "designerId": "1c2d1464-1c8c-4802-89e9-94c3b39870f3",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "renderer",
+                                        "designer|params": [
+                                            "sprite",
+                                            "record",
+                                            "attributes",
+                                            "index",
+                                            "store"
+                                        ],
+                                        "implHandler": [
+                                            "attributes.fill=colors[index%colors.length];",
+                                            "",
+                                            "return attributes;"
+                                        ]
+                                    },
+                                    "designerId": "cea2bb16-fc2a-452f-ae6d-7fb5afea2ba3"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.chart.interactions.PanZoom",

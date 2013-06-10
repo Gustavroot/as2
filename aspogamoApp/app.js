@@ -187,6 +187,11 @@ Ext.application({
     Ext.getCmp('containerLogoSupIzquierda').setHtml('<img src="resources/images/Acelogo.svg" height="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'" width="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'">');
     Ext.getCmp('containerLogoSupDerecha').setHtml('<img src="resources/images/logopris.svg" height="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'" width="'+Ext.Viewport.getWindowWidth()*0.85*0.25*0.6+'">');
     },2000);
+
+
+
+    //
+    colors=['blue','red'];
     Ext.create('MyApp.view.tabPanelPrincipal', {fullscreen: true});
     },
 

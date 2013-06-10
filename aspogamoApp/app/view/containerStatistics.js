@@ -128,9 +128,6 @@ Ext.define('MyApp.view.containerStatistics', {
                                 scrollable: 'vertical',
                                 itemTpl: [
                                     '<div>',
-                                    '    <p><b>{name}</b></p>',
-                                    '</div>',
-                                    '<div>',
                                     '    <table border="0" height="100">',
                                     '        <col width="25%">',
                                     '        <col width="50%">',
@@ -140,7 +137,8 @@ Ext.define('MyApp.view.containerStatistics', {
                                     '                <p> <img src={photo} height="80" width="80" /> </p>',
                                     '            </td>',
                                     '            <td  class="customfont">',
-                                    '                <p><font size="2"><font face="verdana"><p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {distance} m </p></font></font></p>',
+                                    '                <p style=\'font-size: 170%;\'><b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {name}</b></p>',
+                                    '                <p style=\'font-size: 170%;\'> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {distance} meters </p>',
                                     '            </td>',
                                     '            <td align="right">',
                                     '                <div id="botonVerDescEmpresaFavoritaPerfilUsuario" class="ddDescripcionDescripcion" name="" style="padding:3px; color:green; height:35px; width: 85%; background-size: 1606% 250%"></div>',
@@ -196,6 +194,11 @@ Ext.define('MyApp.view.containerStatistics', {
                                 series: [
                                     {
                                         type: 'bar',
+                                        renderer: function(sprite, record, attributes, index, store) {
+                                            attributes.fill=colors[index%colors.length];
+
+                                            return attributes;
+                                        },
                                         xField: 'nameTeam',
                                         yField: [
                                             'totalDistance'
@@ -253,6 +256,11 @@ Ext.define('MyApp.view.containerStatistics', {
                         series: [
                             {
                                 type: 'bar',
+                                renderer: function(sprite, record, attributes, index, store) {
+                                    attributes.fill=colors[index%colors.length];
+
+                                    return attributes;
+                                },
                                 xField: 'nameTeam',
                                 yField: [
                                     'ballPossession'
