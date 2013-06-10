@@ -178,10 +178,19 @@
                 "app/model/modelTeam.js"
             ],
             "className": "modelTeam"
+        },
+        "b7ed987d-97d8-45a4-830b-3fecc1161d65": {
+            "paths": [
+                "metadata/view/containerHeader",
+                "app/view/override/containerHeader.js",
+                "app/view/containerHeader.js"
+            ],
+            "className": "containerHeader"
         }
     },
     "viewOrderMap": {
         "view": [
+            "b7ed987d-97d8-45a4-830b-3fecc1161d65",
             "aa158ca9-ea6b-4e81-935b-94df1e85ade0",
             "f4c0640b-7280-4a53-90de-f9c6a69f47ce",
             "20062490-3db2-44d7-b4eb-d0c759070a4e",

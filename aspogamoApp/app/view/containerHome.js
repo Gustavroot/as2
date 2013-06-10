@@ -26,7 +26,7 @@ Ext.define('MyApp.view.containerHome', {
             {
                 xtype: 'container',
                 height: '25%',
-                id: 'containerHeader',
+                id: 'containerHeader1',
                 layout: {
                     type: 'fit'
                 },
@@ -51,7 +51,7 @@ Ext.define('MyApp.view.containerHome', {
                         xtype: 'container',
                         height: '40%',
                         html: '<center> <p style=\'font-size:300%; font-face:Garamond;\'>ACE</p></center>',
-                        id: 'containerMainTitle',
+                        id: 'containerMainTitle1',
                         left: '30%',
                         top: '30%',
                         width: '40%'
@@ -60,7 +60,7 @@ Ext.define('MyApp.view.containerHome', {
                         xtype: 'container',
                         height: '20%',
                         html: '<center> <p style=\'font-size:120%; font-face:Garamond;\'>Automated Sport Analysis System</p></center>',
-                        id: 'containerSloganMain',
+                        id: 'containerSloganMain1',
                         left: '0%',
                         top: '75%',
                         width: '100%'
