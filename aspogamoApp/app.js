@@ -436,7 +436,7 @@ Ext.application({
                 useDefaultXhrHeader: false,
                 method: "POST",
                 failure: function(response){
-                    Ext.Msg.alert('Aviso', 'Problema de conexión, inténtelo de nuevo más tarde.', Ext.emptyFn);
+                    //Ext.Msg.alert('Aviso', 'Problema de conexión, inténtelo de nuevo más tarde.', Ext.emptyFn);
                 },
                 success: function(response){
                     var text = response.responseText;
