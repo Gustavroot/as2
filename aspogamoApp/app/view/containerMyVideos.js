@@ -163,15 +163,15 @@ Ext.define('MyApp.view.containerMyVideos', {
                                 options: [
                                     {
                                         text: 'Costa Rica vs Turkey',
-                                        value: 'http://www.didicr.com/DIDIVIEJO/As2/CRvsTurkey2002.mp4'
+                                        value: './resources/videos/CRvsTurkey2002.mp4'
                                     },
                                     {
                                         text: 'Costa Rica vs China',
-                                        value: 'http://www.didicr.com/DIDIVIEJO/As2/CRvsTurkey2002.mp4'
+                                        value: './resources/videos/CRvsTurkey2002.mp4'
                                     },
                                     {
                                         text: 'Costa Rica vs Brasil',
-                                        value: 'http://www.didicr.com/DIDIVIEJO/As2/CRvsTurkey2002.mp4'
+                                        value: './resources/videos/CRvsTurkey2002.mp4'
                                     }
                                 ]
                             }
@@ -232,6 +232,8 @@ Ext.define('MyApp.view.containerMyVideos', {
                                 document.getElementById("videoContainerMyVideos").pause();
                             }
                         },
+                        height: '50px',
+                        width: '50px',
                         iconCls: 'arrow_right',
                         iconMask: true,
                         text: ''
